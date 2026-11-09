@@ -1,0 +1,640 @@
+{
+ "schools": [
+  {
+   "id": "brown",
+   "name": "Brown",
+   "route": "Veterans Application",
+   "pri": "core",
+   "talked": 1,
+   "one": "Compare aid and your credit plan before you choose the optional binding plan.",
+   "facts": [
+    "The 90-second video is an optional introduction.",
+    "Feb 15 is a complete-file timing marker, not an early deadline."
+   ],
+   "next": "Confirm aid and the optional binding plan. Ask how aid works without GI Bill benefits. Share an essay outline once it is ready for useful feedback.",
+   "src": "https://admission.brown.edu/veterans/application-details",
+   "d": [
+    [
+     "2027-03-01",
+     "Application and veteran aid",
+     "v",
+     "https://admission.brown.edu/veterans/application-details"
+    ]
+   ]
+  },
+  {
+   "id": "cornell",
+   "name": "Cornell ILR",
+   "route": "ILR external transfer",
+   "pri": "core",
+   "talked": 1,
+   "one": "Get ILR to review your course titles, descriptions and grades, and confirm sophomore or junior entry.",
+   "facts": [
+    "ILR says most admitted transfers have a 3.4+ college average.",
+    "Cornell as a whole admitted 9.3% of Fall 2024 transfer applicants. That is not an ILR rate."
+   ],
+   "next": "Map writing, economics, math and science courses with ILR. Choose next courses for ILR readiness and your real direction.",
+   "src": "https://www.ilr.cornell.edu/programs/undergraduate-admissions/apply-ilr/transfer-guidelines",
+   "d": [
+    [
+     "2027-03-15",
+     "Application",
+     "v",
+     "https://www.ilr.cornell.edu/programs/undergraduate-admissions/apply-ilr/transfer-guidelines"
+    ]
+   ]
+  },
+  {
+   "id": "nd",
+   "name": "Notre Dame",
+   "route": "Major-specific transfer",
+   "pri": "core",
+   "talked": 1,
+   "one": "Pick a college and major, then get credit guidance from the military-connected admissions counselor.",
+   "facts": [
+    "Lists 24 transferable credits.",
+    "Recent admitted transfers averaged a 3.75+ GPA."
+   ],
+   "next": "Choose the college and major. Send all prior college transcripts for credit and curriculum advice. Fall 2027 submission opens January 15.",
+   "src": "https://admissions.nd.edu/information-for/transfer-applicants/",
+   "d": [
+    [
+     "2027-01-15",
+     "Earliest Fall 2027 application submission",
+     "p",
+     "https://admissions.nd.edu/information-for/transfer-applicants/apply/"
+    ],
+    [
+     "2027-03-15",
+     "Application",
+     "p",
+     "https://admissions.nd.edu/information-for/transfer-applicants/"
+    ]
+   ]
+  },
+  {
+   "id": "yale",
+   "name": "Yale",
+   "route": "Eli Whitney Students Program",
+   "pri": "core",
+   "talked": 1,
+   "one": "Build recent liberal-arts and quantitative coursework, and confirm your current course record before following up.",
+   "facts": [
+    "Needs two recommendation letters and every college and high-school transcript.",
+    "No admissions credit floor or ceiling, but degree credit is capped.",
+    "Meets demonstrated need; EWSP students are financially independent for aid."
+   ],
+   "next": "Strengthen recent English and math work, then follow up with an updated record. Consider whether a later cycle fits better.",
+   "src": "https://admissions.yale.edu/eli-whitney-apply",
+   "d": [
+    [
+     "2027-03-01",
+     "Application",
+     "v",
+     "https://admissions.yale.edu/eli-whitney-apply"
+    ],
+    [
+     "2027-03-15",
+     "Supporting materials",
+     "v",
+     "https://admissions.yale.edu/eli-whitney-apply"
+    ],
+    [
+     "2027-04-01",
+     "Financial aid",
+     "v",
+     "https://admissions.yale.edu/eli-whitney-apply"
+    ]
+   ]
+  },
+  {
+   "id": "princeton",
+   "name": "Princeton",
+   "route": "Transfer",
+   "pri": "core",
+   "talked": 1,
+   "one": "Lock down a graded paper that qualifies, and confirm the one-year transferable-credit threshold.",
+   "facts": [
+    "The graded paper is an academic course paper with its prompt, grade and any comments. Expository, thesis-driven writing is preferred.",
+    "Princeton posts these dates as subject to change."
+   ],
+   "next": "Ask the office for written guidance on transfer credit and on which recent course papers qualify. Plan the economics and statistics coursework.",
+   "src": "https://admission.princeton.edu/apply/application-dates-deadlines/transfer-application-dates-deadlines",
+   "d": [
+    [
+     "2027-03-01",
+     "Application and graded paper",
+     "s",
+     "https://admission.princeton.edu/apply/application-dates-deadlines/transfer-application-dates-deadlines"
+    ],
+    [
+     "2027-03-09",
+     "Financial aid",
+     "s",
+     "https://admission.princeton.edu/apply/application-dates-deadlines/transfer-application-dates-deadlines"
+    ],
+    [
+     "2027-03-09",
+     "Optional arts supplement",
+     "s",
+     "https://admission.princeton.edu/apply/application-dates-deadlines/transfer-application-dates-deadlines"
+    ]
+   ]
+  },
+  {
+   "id": "tufts",
+   "name": "Tufts REAL",
+   "route": "REAL, for adults and veterans",
+   "pri": "core",
+   "talked": 0,
+   "one": "Ask REAL how your credits count and whether you must study full-time.",
+   "facts": [
+    "Financial-aid materials are due in mid-April 2027. The official page does not publish the exact day."
+   ],
+   "next": "Ask about credits, full-time study and recent coursework. Request an aid estimate.",
+   "src": "https://admissions.tufts.edu/apply/applying-as-a-transfer-candida/real-application/",
+   "d": [
+    [
+     "2027-03-15",
+     "Application",
+     "p",
+     "https://admissions.tufts.edu/apply/applying-as-a-transfer-candida/real-application/"
+    ]
+   ]
+  },
+  {
+   "id": "washu",
+   "name": "WashU",
+   "route": "School-specific transfer",
+   "pri": "core",
+   "talked": 0,
+   "one": "Choose your undergraduate school, then confirm the major, credit path and aid.",
+   "facts": [
+    "A portfolio is required only for College of Art or College of Architecture applicants.",
+    "St. Louis is a minor location plus."
+   ],
+   "next": "Pick the school and major, confirm credits and aid, and judge whether a visit is feasible.",
+   "src": "https://admissions.washu.edu/how-to-apply/transfer-students-us-and-international/",
+   "d": [
+    [
+     "2027-03-01",
+     "Application and financial aid",
+     "p",
+     "https://admissions.washu.edu/how-to-apply/transfer-students-us-and-international/"
+    ]
+   ]
+  },
+  {
+   "id": "nu",
+   "name": "Northwestern",
+   "route": "Regular transfer",
+   "pri": "core",
+   "talked": 0,
+   "one": "Verify the conflicting April aid dates before you rely on either one.",
+   "facts": [
+    "The binding transfer plan conflicts with keeping Brown first, so use the regular route.",
+    "The admissions table lists aid on Apr 1. The aid office lists FAFSA and CSS Profile on Apr 15 and tax forms on Apr 20."
+   ],
+   "next": "Assess academic fit and credit transfer, then ask the aid office which aid date applies.",
+   "src": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+   "d": [
+    [
+     "2027-04-01",
+     "Regular application (admissions table also lists aid)",
+     "x",
+     "https://admissions.northwestern.edu/apply/application-deadlines.html"
+    ],
+    [
+     "2027-04-15",
+     "FAFSA and CSS Profile, aid office date",
+     "x",
+     "https://undergradaid.northwestern.edu/apply-for-aid/prospective-domestic-students/"
+    ],
+    [
+     "2027-04-20",
+     "Federal tax forms, aid office date",
+     "x",
+     "https://undergradaid.northwestern.edu/apply-for-aid/prospective-domestic-students/"
+    ]
+   ]
+  },
+  {
+   "id": "gt",
+   "name": "Georgetown",
+   "route": "School- and major-specific transfer",
+   "pri": "core",
+   "talked": 0,
+   "one": "Pick your school and major, and check the four-full-semester ceiling.",
+   "facts": [
+    "The Jan 15 priority date applies only to junior Public Policy or Environment and Sustainability routes.",
+    "First core school to swap out if the list stays too reach-heavy."
+   ],
+   "next": "Confirm the intended school and major and full-time semester eligibility. If applying as a junior to Public Policy or Environment and Sustainability, decide before January 15.",
+   "src": "https://uadmissions.georgetown.edu/apply/transfer-applicants/",
+   "d": [
+    [
+     "2027-01-15",
+     "Junior Public Policy or Environment and Sustainability priority application",
+     "p",
+     "https://uadmissions.georgetown.edu/apply/transfer-applicants/"
+    ],
+    [
+     "2027-03-01",
+     "Application and aid",
+     "p",
+     "https://uadmissions.georgetown.edu/apply/transfer-applicants/"
+    ]
+   ]
+  },
+  {
+   "id": "vandy",
+   "name": "Vanderbilt",
+   "route": "School-specific transfer",
+   "pri": "core",
+   "talked": 0,
+   "one": "Confirm where you would land academically, the four-semester residency and your aid plan.",
+   "facts": [
+    "More transfer seats and a full-need policy for admitted transfers."
+   ],
+   "next": "Confirm the program, residence requirement and aid plan, and show recent full-time rigor.",
+   "src": "https://admissions.vanderbilt.edu/apply/transfer-process",
+   "d": [
+    [
+     "2027-02-01",
+     "FAFSA and CSS Profile priority",
+     "p",
+     "https://admissions.vanderbilt.edu/apply/"
+    ],
+    [
+     "2027-02-15",
+     "Priority application",
+     "p",
+     "https://admissions.vanderbilt.edu/apply/transfer-process"
+    ]
+   ]
+  },
+  {
+   "id": "usc",
+   "name": "USC Iovine and Young",
+   "route": "Iovine and Young Academy",
+   "pri": "conditional",
+   "talked": 0,
+   "one": "Calculate the 3 to 4 year time and cost, and verify MATH 118 or 125 equivalency, before investing.",
+   "facts": [
+    "USC overall transfer rate was 26.1% in the Fall 2026 profile, with admitted GPAs of 3.70 to 3.97. Those are not Academy figures.",
+    "Academy essays go in SlideRoom, with up to four optional portfolio pieces."
+   ],
+   "next": "Work out the realistic finish date and aid. If you apply, submit the required Academy essays and choose optional portfolio items.",
+   "src": "https://admission.usc.edu/prospective-students/how-to-apply/transfer-students/",
+   "d": [
+    [
+     "2027-02-15",
+     "Application and Academy materials",
+     "p",
+     "https://admission.usc.edu/prospective-students/how-to-apply/transfer-students/"
+    ],
+    [
+     "2027-03-02",
+     "FAFSA and CSS Profile priority",
+     "p",
+     "https://admission.usc.edu/prospective-students/how-to-apply/transfer-students/"
+    ]
+   ]
+  },
+  {
+   "id": "smu",
+   "name": "SMU",
+   "route": "Transfer, academic unit to select",
+   "pri": "conditional",
+   "talked": 0,
+   "one": "Confirm at least 24 credits transfer and your transfer GPA clears 2.7, then check the real aid offer.",
+   "facts": [
+    "The admission-balance option: 1,190 of 1,542 Fall 2025 transfer applicants were admitted (77.2%).",
+    "Automatic transfer merit consideration starts at a 3.3 GPA."
+   ],
+   "next": "Confirm major and credit fit, campus enjoyment and an actual aid estimate.",
+   "src": "https://www.smu.edu/admission/apply/transfer/application-process",
+   "d": [
+    [
+     "2027-02-01",
+     "FAFSA and CSS Profile priority for fall transfer",
+     "p",
+     "https://www.smu.edu/enrollment-services/student-financial-services/apply-for-aid"
+    ],
+    [
+     "2027-04-01",
+     "Priority fall transfer application",
+     "v",
+     "https://www.smu.edu/admission/apply/transfer/application-process"
+    ],
+    [
+     "2027-08-01",
+     "Final fall transfer application",
+     "v",
+     "https://www.smu.edu/admission/apply/transfer/application-process"
+    ]
+   ]
+  }
+ ],
+ "bench": [
+  {
+   "id": "duke",
+   "name": "Duke",
+   "one": "Revisit if recent grades get substantially stronger.",
+   "facts": [
+    "2025-26: 160 transfer admits from 2,460 applicants."
+   ]
+  },
+  {
+   "id": "rice",
+   "name": "Rice",
+   "one": "Revisit with a verified current record.",
+   "facts": [
+    "Recent-college GPA minimum of 3.2; admitted transfers are typically 3.5+."
+   ]
+  },
+  {
+   "id": "uchicago",
+   "name": "UChicago",
+   "one": "Check the current transfer cohort and curricular fit before adding.",
+   "facts": [
+    "Not yet researched against the current cycle."
+   ]
+  },
+  {
+   "id": "columbia",
+   "name": "Columbia GS",
+   "one": "Only with a verified financing plan.",
+   "facts": [
+    "GS says it cannot meet every student's full financial need."
+   ]
+  }
+ ],
+ "lens": {
+  "brown": {
+   "di": "none",
+   "diText": "Brown publishes no transfer interest score. The binding rolling option is a contractual commitment, not a signal.",
+   "path": "Open Curriculum: Computer Science or Data Science combined with Science, Technology and Society, Modern Culture and Media, or sociology.",
+   "know": [
+    [
+     "Suresh Venkatasubramanian",
+     "Computer science and data science; directs the Center for Technological Responsibility, Reimagination and Redesign (CNTR)."
+    ],
+    [
+     "Harini Suresh",
+     "Sociotechnical dimensions of AI, fairness and how affected communities experience automated systems."
+    ]
+   ],
+   "res": "CNTR and the Socially Responsible Computing program",
+   "evi": "Since 2019, trained Socially Responsible Computing teaching assistants work inside technical courses. CNTR and the CS program built a public handbook of teachable primers, and the 2025-26 teams spanned CS, public policy, graphic design, philosophy and STS.",
+   "who": "Becky (Veterans admissions, call held). Brown is a Service to School VetLink partner.",
+   "ask": "How have project-based courses typically mapped into Brown credit, and what sequencing would remain for CS, STS or Modern Culture and Media?",
+   "show": "One finished project plus one unresolved question. Use the optional 90-second video for voice, not a résumé recap. Include the JST, résumé and VetLink Addendum.",
+   "dont": "Do not submit the Common App or RUE in parallel. Do not cold-email the CNTR director."
+  },
+  "cornell": {
+   "di": "none",
+   "diText": "Cornell publishes no transfer interest factor. Choosing the right college and finishing its prerequisites matter far more.",
+   "path": "ILR BS: labor, technology, workplace systems, policy and economics. The earlier research was written for Information Science, so treat its faculty as method anchors until ILR faculty are researched.",
+   "know": [
+    [
+     "Claire Cardie",
+     "Natural-language processing, argumentation and human-centered NLP."
+    ],
+    [
+     "Allison Koenecke",
+     "Algorithmic fairness, including automated systems in public benefits and health."
+    ],
+    [
+     "René Kizilcec",
+     "Directs the Future of Learning Lab; education technology and computational social science."
+    ]
+   ],
+   "res": "Future of Learning Lab (René Kizilcec)",
+   "evi": "A field study of 1.4 million registrations across 159 online courses at 20 institutions found that course discipline, stated prerequisites and gender cues predicted who enrolled, while instructor skin color, diversity references and description style did not show the expected effects.",
+   "who": "Kyle (admissions, call held), ILR transfer admissions, and the Cornell veterans admissions ambassador.",
+   "ask": "Please evaluate these exact course titles, descriptions and grades for ILR sophomore or junior entry.",
+   "show": "One finished project with its human consequences, tied to a specific Cornell method. The required recommendation comes from a college instructor who graded substantial work.",
+   "dont": "Do not mass-contact faculty or mail packages. Name a professor only after reading one current project or paper."
+  },
+  "nd": {
+   "di": "none",
+   "diText": "Notre Dame says it does not track prospective-student interest. What counts is prerequisites at B or higher, college performance, a specific transfer statement and space in the major.",
+   "path": "College of Arts and Letters with a chosen major (Africana Studies is one plausible path), plus the cross-college Tech Ethics minor. The IDEA Center is a resource, not a degree.",
+   "know": [
+    [
+     "Mohammad Rashidujjaman Rifat",
+     "HCI; AI ethics and cultural and value pluralism."
+    ],
+    [
+     "Nitesh Chawla",
+     "Founding director of the Lucy Family Institute for Data and Society."
+    ],
+    [
+     "Meghan Sullivan",
+     "Director of the Institute for Ethics and the Common Good."
+    ]
+   ],
+   "res": "Notre Dame-IBM Technology Ethics Lab",
+   "evi": "The BenchmarkCards project standardized documentation of LLM benchmark properties, bias and evaluation methods, with a public benchmark database. The Ethical Cities program pairs students and faculty with South Bend organizations.",
+   "who": "Montanna Kirven (veteran liaison) or the Office of Military and Veterans Affairs. Michael (call held).",
+   "ask": "How will the 24-credit threshold and Arts and Letters prerequisites treat my quarter-based SCAD Applied AI studios?",
+   "show": "A PDF syllabus for every post-high-school course, named exactly by course number. A transfer statement built on technology ethics and the common good. The optional 60 to 90 second Glimpse video only if it adds voice.",
+   "dont": "Do not ask the liaison, a professor or an alumnus for a recommendation. Do not mail extras."
+  },
+  "yale": {
+   "di": "none",
+   "diText": "Yale states that it does not track event registration or contact with admissions staff.",
+   "path": "Computing and the Arts (BA), possibly paired with Black Studies. It ends in a jointly supervised senior project.",
+   "know": [
+    [
+     "Marynel Vázquez",
+     "Human-robot interaction and social AI."
+    ],
+    [
+     "Theodore Kim",
+     "Computer graphics and the Critical Computing Initiative."
+    ]
+   ],
+   "res": "Anti-Racist Graphics initiative (Theodore Kim)",
+   "evi": "The group traced bias in rendering back to data, physical assumptions and algorithms. Its 2023 \"Lifted Curls\" model for tightly coiled hair won best paper at the Symposium on Computer Animation.",
+   "who": "The Eli Whitney (EWSP) office, Patricia Wei (call held), and the Yale veteran and military student office.",
+   "ask": "Given my exact timeline, should I use EWSP rather than conventional transfer, and how are studio computing courses evaluated toward Computing and the Arts?",
+   "show": "One strong graded analytical paper, recent coursework across writing, quantitative reasoning, humanities and science, and a focused academic statement. Prepare for a possible interview.",
+   "dont": "Do not mail creative packages, lobby after no interview, or ask faculty to advocate."
+  },
+  "princeton": {
+   "di": "none",
+   "diText": "Princeton says explicitly that it does not track demonstrated interest and that attending an information session does not affect admission.",
+   "path": "Computer Science AB with the Computing, Society and Policy or Technology and Society minor. The BSE needs a much heavier math and science foundation. The Keller Center is a resource, not a degree.",
+   "know": [
+    [
+     "Olga Russakovsky",
+     "Visual AI Lab: computer vision, human-centered AI and fairness."
+    ],
+    [
+     "Arvind Narayanan",
+     "Directs the Center for Information Technology Policy."
+    ],
+    [
+     "Ruha Benjamin",
+     "African American Studies; science, technology and social inequity."
+    ]
+   ],
+   "res": "H-ARC, a public human abstraction and reasoning dataset",
+   "evi": "Solution attempts from more than 1,700 people on all 800 original ARC tasks, published with action traces and natural-language rule descriptions, so abstraction can be studied beyond accuracy.",
+   "who": "Alex Bustin (military admissions, meeting held), Keith Shaw (transfer and veteran program), Silvia Rodriguez (veteran financial aid).",
+   "ask": "How are SCAD Applied AI and studio courses evaluated toward distribution and prerequisites, and which graded paper best shows readiness?",
+   "show": "The graded paper with its prompt, grade and instructor comments, and two academic recommenders including one college instructor. The arts supplement only if the work truly fits.",
+   "dont": "Do not send physical portfolios outside the arts supplement, mass-email professors or ask an alumnus to endorse."
+  },
+  "tufts": {
+   "di": "counts",
+   "diText": "Tufts says it records legitimate engagement such as official visits, email or phone contact and virtual events. No REAL-specific weight is published. The supplement asks how you have engaged with Tufts, so only true engagement counts.",
+   "path": "Arts and Sciences or Engineering BA/BS: Computer Science with the AI focus plus Science, Technology and Society, cognitive and brain science or sociology. SMFA studio work needs written confirmation from REAL and SMFA.",
+   "know": [
+    [
+     "Elaine Schaertl Short",
+     "Disability-centered, human-in-the-loop machine learning and assistive robotics."
+    ],
+    [
+     "Matthias Scheutz",
+     "Directs human-robot interaction research; robot ethics."
+    ]
+   ],
+   "res": "HCI Lab fNIRS mental-workload dataset and the public STS Lunch Seminar",
+   "evi": "Brain-activity recordings from 87 participants during n-back tasks at four workload levels (68 meet the quality threshold), released with code under CC BY 4.0 to study interfaces that adapt to mental workload.",
+   "who": "REAL admissions: real.admissions@tufts.edu, 617-627-3170.",
+   "ask": "Which course descriptions or syllabi should I supply to separate CS and AI credit from general electives, and can REAL students use SMFA studio courses?",
+   "show": "Two recent-instructor recommendations, an Applied AI case study and a credit worksheet. Complete at least two genuine engagement steps: a REAL information session and one direct question.",
+   "dont": "Do not submit both REAL and conventional transfer. Do not claim a visit, event or conversation that did not happen."
+  },
+  "washu": {
+   "di": "ask",
+   "diText": "WashU announced it will consider demonstrated interest for Fall 2027 high-school applicants. It has not said this applies to transfers. Ask once and give attendance no weight until it answers.",
+   "path": "Arts and Sciences (computer science, anthropology, digital humanities) or Sam Fox for the BA in Design. A new 15-credit computational AI minor is open across schools.",
+   "know": [
+    [
+     "Alvitta Ottley",
+     "Adaptive visualization, decision-making and human-computer interaction."
+    ],
+    [
+     "Gabi Kirilloff",
+     "Digital humanities; computational methods for literature and culture."
+    ]
+   ],
+   "res": "\"AI Style\" (Humanities Digital Workshop)",
+   "evi": "Uses computational stylometry and interpretation to test how generative models imitate nineteenth-century literary style. The Digital Transformation Research Corps also runs St. Louis cultural-asset mapping.",
+   "who": "Transfer admissions: admissions@wustl.edu, 314-935-6000.",
+   "ask": "Does the Fall 2027 demonstrated-interest policy apply to transfer applicants, and how will my SCAD quarter courses convert?",
+   "show": "The instructor evaluation and College Report. A portfolio is required only for College of Art or Architecture applicants. A short research note on AI Style or a St. Louis project, where it explains real fit.",
+   "dont": "Do not cold-contact faculty for admission guidance."
+  },
+  "nu": {
+   "di": "ted",
+   "diText": "Northwestern publishes no interest scoring for regular transfer. Its binding Transfer Early Decision (TED) is the one legitimate signal, and it conflicts with keeping Brown first.",
+   "path": "Computer Science (Weinberg or McCormick) or a liberal-arts major with access to HCI and design courses. Segal Design Institute and The Garage are resources, not degrees.",
+   "know": [
+    [
+     "Elizabeth Gerber",
+     "Co-directs the Center for Human-Computer Interaction + Design; teaches Designing with AI."
+    ],
+    [
+     "Nicholas Diakopoulos",
+     "Directs the Computational Journalism Lab; algorithmic accountability."
+    ]
+   ],
+   "res": "Center for Human-Computer Interaction + Design (HCI+D)",
+   "evi": "Links design, learning sciences, communication, computing, psychology and social behavior, and runs public Thought Leader Dialogues that anyone can follow.",
+   "who": "Transfer admissions: transfer@northwestern.edu, 847-491-7271.",
+   "ask": "If I apply to Weinberg, what access do undergraduates realistically have to HCI+D, Segal, communication and computer science courses?",
+   "show": "A school-specific reason that names a real major and cites cross-school pathways accurately.",
+   "dont": "Do not cold-email Gerber or Diakopoulos for admissions help."
+  },
+  "gt": {
+   "di": "none",
+   "diText": "Georgetown publishes no transfer interest scoring. School-specific knowledge belongs in the supplement.",
+   "path": "BS in Science, Technology and International Affairs (STIA) in the School of Foreign Service. The Beeck Center is a center, not a degree.",
+   "know": [
+    [
+     "Beeck Center for Social Impact and Innovation",
+     "A resource to cite carefully. It is not an academic program."
+    ]
+   ],
+   "res": "Beeck Center for Social Impact and Innovation",
+   "evi": "",
+   "gap": "No research-library brief exists for Georgetown yet. Read one current Beeck or STIA project and record what it found.",
+   "who": "Transfer admissions: transferadmissions@georgetown.edu, 202-687-3600.",
+   "ask": "How should I sequence the recommended economics, statistics or calculus and language preparation for STIA, and how many full-time semesters can I still count?",
+   "show": "Aligned coursework (B+ or higher is recommended) and a supplement that shows real knowledge of STIA.",
+   "dont": "Confirm the maximum prior full-time enrollment rule in writing before investing heavily."
+  },
+  "vandy": {
+   "di": "none",
+   "diText": "Vanderbilt marks interest not considered in its first-year data and gives transfer applicants no basis for interest points. One concise curricular question is enough.",
+   "path": "Arts and Science (Computer Science, Data Science minor, sociology of technology) or Peabody Human and Organizational Development. The Innovation and Design Strategy minor is new.",
+   "know": [
+    [
+     "Jenny L. Davis",
+     "Sociology; the politics and ethics of technological design and algorithmic systems."
+    ],
+    [
+     "Jules White",
+     "Computer science; generative AI and its practical use."
+    ],
+    [
+     "Nilanjan Sarkar",
+     "Human-robot interaction, affective computing and virtual environments."
+    ]
+   ],
+   "res": "Vanderbilt Smart Cities work with Nashville",
+   "evi": "Transit tools built with WeGo, and a 2022 NSF Civic Innovation Challenge project exploring an AI-supported system that routes appropriate non-emergency incidents away from emergency response.",
+   "who": "Your assigned admissions counselor (use the official lookup), admissions@vanderbilt.edu, 615-322-2561. The VA School Certifying Official handles benefits.",
+   "ask": "How would quarter-based SCAD courses be evaluated for Arts and Science preparation versus elective credit, and what syllabus evidence helps?",
+   "show": "Two instructor recommendations, at least one from a college instructor. A theme of responsible AI in civic or organizational systems, anchored in the Nashville emergency-routing project.",
+   "dont": "Do not ask an alumnus, adviser or professor for a letter. Do not mail an interest letter."
+  },
+  "usc": {
+   "di": "none",
+   "diText": "USC states directly that it does not track demonstrated interest. Event attendance and emails add no points.",
+   "path": "Iovine and Young Academy BS. Dornsife BA Cognitive Science and Annenberg are the liberal-arts alternates. The sequential curriculum can mean 3 to 4 years.",
+   "know": [
+    [
+     "Kate Crawford",
+     "Annenberg; the power, labor and politics of AI; Anatomy of an AI System."
+    ],
+    [
+     "Bistra Dilkina",
+     "Co-directs the Center for AI in Society."
+    ]
+   ],
+   "res": "Center for AI in Society",
+   "evi": "An AI-assisted network intervention with youth experiencing homelessness reported a 40% increase in HIV testing. A three-year collaboration with the Los Angeles Homeless Services Authority and UCLA's California Policy Lab identified racial bias in housing triage and developed fairer decision support.",
+   "who": "Iovine and Young admissions: iyaadmission@usc.edu (one email with a one-page course list). The Veterans Resource Center handles transition and benefits.",
+   "ask": "Which Academy requirements are non-waivable for an external transfer, and should I budget three or four USC years?",
+   "show": "Required Academy essays in SlideRoom and up to four optional portfolio items. Lead with one case study covering problem framing, research, prototype, testing and what was learned.",
+   "dont": "Do not ask faculty for a pre-review or recommendation. Do not mail a creative package."
+  },
+  "smu": {
+   "di": "firstyear",
+   "diText": "SMU's first-year data considers interest, and no transfer factor is published. One precise question helps you plan. It earns no points.",
+   "path": "Meadows BA in Creative Computing. Computer Science BA or BS is the alternative.",
+   "know": [
+    [
+     "Ira Greenberg",
+     "Creative coding, data visualization and agentic or LLM systems."
+    ],
+    [
+     "Corey Clark",
+     "Gaming technology, AI and societal challenges at the Guildhall."
+    ]
+   ],
+   "res": "Intelligent Systems and Bias Examination Lab (ISaBEL)",
+   "evi": "Generated more than one million diverse synthetic facial images to study demographic bias in facial recognition. The \"Dark Shadows\" game helps organize real human-trafficking information from Department of Justice releases while protecting victim identity.",
+   "who": "Your assigned transfer counselor: transfer@smu.edu, 214-768-2058. MilVets supports military-connected students.",
+   "ask": "Can SCAD Applied AI, creative coding, UX and computing courses satisfy Creative Computing requirements, or do they enter as electives?",
+   "show": "Two to four portfolio works with role, method, result and reflection, sent only if requested. Use the April 1 priority date for scholarship consideration.",
+   "dont": "Do not send physical materials or cold-message faculty. Give SMU the same seriousness as a reach."
+  }
+ }
+}

@@ -1,0 +1,1354 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Transfer Ninja Zine</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Special+Elite&display=swap">
+<style>
+/* Layout concept: a xerox-cut zine laid on a dark desk. Paper cutouts with hard shadows hold the data; the one loud thing per card is the yellow "one thing" block. Pizza Ninjas palette lifted from the Robotic Discipline portal. */
+:root{
+  --bg:#141416; --bg-2:#1d1d20; --fg:#d9d3c7; --dim:#9d978c; --head:#f1ebdd; --line:#3a3a40;
+  --edge:#ffd400; --focus:#ffd400; --dots:rgba(255,212,0,.08);
+  --logo:#ffd400; --logo-shadow:#fe5400; --hot:#ff7a3d;
+  --card:#EFE6D4; --card-ink:#141413; --card-dim:#5b564c; --card-sub:#e0d5bb; --field:#fffdf6;
+  --yellow:#ffd400; --orange:#fe5400; --lime:#D8FF3E; --blush:#FF5E8E; --ink:#141413;
+  --shadow:#000;
+  --f-disp:'Barlow Condensed','Arial Narrow',Impact,sans-serif;
+  --f-body:'Barlow',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-type:'Special Elite','Courier New',monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --bg:#F6EDBF; --bg-2:#FFF8D8; --fg:#2a2820; --dim:#615b46; --head:#141413; --line:#cfc48f;
+    --edge:#141413; --focus:#141413; --dots:rgba(20,20,19,.08);
+    --logo:#141413; --logo-shadow:#fe5400; --hot:#b83300;
+    --card:#FFFDF3; --card-ink:#141413; --card-dim:#5a5546; --card-sub:#F3EBCB; --field:#ffffff;
+    --shadow:#141413;
+    color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#F6EDBF; --bg-2:#FFF8D8; --fg:#2a2820; --dim:#615b46; --head:#141413; --line:#cfc48f;
+  --edge:#141413; --focus:#141413; --dots:rgba(20,20,19,.08);
+  --logo:#141413; --logo-shadow:#fe5400; --hot:#b83300;
+  --card:#FFFDF3; --card-ink:#141413; --card-dim:#5a5546; --card-sub:#F3EBCB; --field:#ffffff;
+  --shadow:#141413;
+  color-scheme:light;
+}
+
+html{scroll-padding-top:76px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 var(--f-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--bg)}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:2px dashed var(--edge)}
+.top .wrap{display:flex;align-items:center;gap:14px;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:8px;font:800 1.3rem/1 var(--f-disp);text-transform:uppercase;letter-spacing:.04em;color:var(--head);text-decoration:none;flex:none}
+.brand svg{width:28px;height:31px}
+.links{display:flex;gap:4px;overflow-x:auto;min-width:0;scrollbar-width:none;margin-left:auto}
+.links::-webkit-scrollbar{display:none}
+.links a{font:700 1rem/1 var(--f-disp);letter-spacing:.09em;text-transform:uppercase;color:var(--fg);text-decoration:none;padding:8px 10px;border:2px solid transparent;white-space:nowrap}
+.links a:hover{border-color:var(--edge);color:var(--head)}
+
+/* masthead */
+.mast{padding-top:34px;padding-bottom:30px;background-image:radial-gradient(var(--dots) 1.6px,transparent 1.9px);background-size:12px 12px}
+.mast-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
+.tape{display:inline-block;font:400 .95rem/1.2 var(--f-type);background:var(--lime);color:var(--ink);padding:5px 14px;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--shadow);margin-bottom:16px;text-transform:uppercase;letter-spacing:.08em}
+h1{margin:0;font:800 clamp(3.5rem,13.5vw,9.2rem)/.84 var(--f-disp);text-transform:uppercase;color:var(--logo);letter-spacing:-.01em;text-shadow:4px 4px 0 var(--logo-shadow);text-wrap:balance}
+.lede{margin:18px 0 6px;max-width:36ch;font:600 clamp(1.15rem,2.4vw,1.5rem)/1.3 var(--f-body);color:var(--head)}
+.byline{margin:0;font:400 .9rem/1.4 var(--f-type);color:var(--dim)}
+.mascot{width:clamp(130px,21vw,250px);transform:rotate(7deg);filter:drop-shadow(6px 6px 0 var(--shadow))}
+.mascot svg{display:block;width:100%;height:auto}
+
+.board{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}
+.sheet{background:var(--card);color:var(--card-ink);border:2px solid var(--card-ink);box-shadow:6px 6px 0 var(--shadow);color-scheme:light}
+.nextup{background:var(--yellow);padding:14px 16px;display:flex;flex-direction:column;gap:2px;justify-content:center}
+.lbl{font:400 .8rem/1.2 var(--f-type);text-transform:uppercase;letter-spacing:.1em;color:var(--card-dim)}
+.nextup .lbl{color:var(--ink)}
+.nextup .big{font:800 clamp(1.5rem,3.4vw,2.1rem)/1 var(--f-disp);text-transform:uppercase}
+.nextup .sm{font-weight:600}
+.stat{padding:12px 16px;display:flex;flex-direction:column;gap:4px}
+.stat b{font:800 2.3rem/1 var(--f-disp);font-variant-numeric:tabular-nums}
+.stat b small{font:700 1.2rem var(--f-disp);color:var(--card-dim)}
+.meter{height:8px;background:var(--card-sub);border:2px solid var(--ink)}
+.meter i{display:block;height:100%;background:var(--orange);width:0}
+.fine{margin:14px 0 0;font:400 .85rem/1.4 var(--f-type);color:var(--dim)}
+
+/* sections */
+.sec{padding-top:46px;padding-bottom:8px}
+.kick{display:flex;align-items:center;gap:8px;font:400 .95rem/1.2 var(--f-type);letter-spacing:.1em;text-transform:uppercase;color:var(--hot)}
+.kick svg{width:18px;height:18px;fill:var(--orange);flex:none}
+h2{margin:6px 0 10px;font:800 clamp(2.5rem,7.5vw,4.6rem)/.92 var(--f-disp);text-transform:uppercase;color:var(--head);text-wrap:balance}
+h2 em{font-style:normal;background:var(--yellow);color:var(--ink);padding:0 .16em;display:inline-block;transform:rotate(-1.2deg)}
+.sec-lede{max-width:62ch;margin:0 0 18px;color:var(--fg)}
+.sec-lede b{color:var(--head)}
+.bar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:700 1rem/1 var(--f-disp);letter-spacing:.08em;text-transform:uppercase;background:transparent;color:var(--fg);border:2px solid var(--edge);padding:9px 14px;cursor:pointer;border-radius:0}
+.chip[aria-pressed="true"],.chip[aria-selected="true"]{background:var(--yellow);color:var(--ink);border-color:var(--ink);box-shadow:3px 3px 0 var(--shadow)}
+.chip:hover{color:var(--head)}
+.chip[aria-pressed="true"]:hover,.chip[aria-selected="true"]:hover{color:var(--ink)}
+.sortbox{display:flex;align-items:center;gap:8px;margin-left:auto;font:400 .85rem var(--f-type);color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
+select,input[type=text],input[type=number],input[type=date],textarea{font:500 .95rem/1.3 var(--f-body);color:var(--card-ink);background:var(--field);border:2px solid var(--card-ink);padding:7px 9px;border-radius:0;min-width:0;max-width:100%}
+.sortbox select{color:var(--card-ink)}
+textarea{width:100%;min-height:72px;resize:vertical}
+
+/* school cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:26px 22px;align-items:start}
+.card{position:relative;padding:20px 18px 16px;display:flex;flex-direction:column;gap:12px;min-width:0;transition:transform .15s ease}
+.card::before{content:"";position:absolute;top:-11px;left:50%;width:84px;height:22px;margin-left:-42px;background:rgba(255,212,0,.82);transform:rotate(-3deg);border-left:2px dotted rgba(20,20,19,.25);border-right:2px dotted rgba(20,20,19,.25)}
+.card:nth-child(3n+1){transform:rotate(-.5deg)}
+.card:nth-child(3n+2){transform:rotate(.4deg)}
+.card:nth-child(3n){transform:rotate(-.2deg)}
+.card:hover{transform:rotate(0) translateY(-3px)}
+.card-head{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.pri{font:400 .78rem/1 var(--f-type);text-transform:uppercase;letter-spacing:.1em;padding:4px 8px;border:2px solid var(--ink);background:var(--orange);color:var(--ink)}
+.pri.conditional{background:var(--lime)}
+.pri.bench{background:var(--card-sub)}
+.stagepill{font:700 .85rem/1 var(--f-disp);text-transform:uppercase;letter-spacing:.08em;color:var(--card-dim);text-align:right}
+.card h3{margin:0;font:800 clamp(2rem,4.6vw,2.55rem)/.9 var(--f-disp);text-transform:uppercase;letter-spacing:-.005em;text-wrap:balance}
+.route{margin:-6px 0 0;font:400 .88rem/1.3 var(--f-type);color:var(--card-dim)}
+.one{position:relative;background:var(--yellow);border:2px solid var(--ink);padding:20px 14px 12px;margin-top:6px}
+.one .tag{position:absolute;top:-11px;left:10px;background:var(--ink);color:var(--yellow);font:400 .78rem/1 var(--f-type);text-transform:uppercase;letter-spacing:.1em;padding:4px 8px;transform:rotate(-1.5deg)}
+.one p{margin:0;font:600 1.05rem/1.35 var(--f-body);color:var(--ink)}
+.facts{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:5px;font-size:.9rem;color:var(--card-dim)}
+.facts li{padding-left:18px;position:relative}
+.facts li::before{content:"+";position:absolute;left:2px;top:-1px;font:800 1.1rem var(--f-disp);color:var(--orange)}
+.dl{display:flex;flex-direction:column;border-top:2px solid var(--ink)}
+.dlrow{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto;gap:8px;align-items:center;padding:7px 0;border-bottom:1px dashed var(--card-dim);cursor:pointer}
+.dlrow .dt{font:800 1.1rem/1 var(--f-disp);background:var(--ink);color:var(--card);padding:4px 7px;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.dlrow .dlt{font-size:.9rem;line-height:1.25;min-width:0}
+.dlrow.is-done .dlt{text-decoration:line-through;color:var(--card-dim)}
+.dlrow.is-done .dt{background:var(--card-dim)}
+.dd{font:400 .78rem/1 var(--f-type);padding:3px 6px;border:2px solid var(--ink);background:var(--card);white-space:nowrap;font-variant-numeric:tabular-nums}
+.dd.soon{background:var(--orange)}
+.dd.past{background:var(--blush)}
+.dd.done{background:var(--lime)}
+.flag{font:400 .72rem/1 var(--f-type);text-transform:uppercase;letter-spacing:.06em;padding:3px 6px;background:var(--blush);border:2px solid var(--ink);color:var(--ink);white-space:nowrap}
+input[type=checkbox].ck{appearance:none;-webkit-appearance:none;width:22px;height:22px;margin:0;border:2px solid var(--ink);background:var(--field);border-radius:3px;display:grid;place-content:center;cursor:pointer;flex:none}
+input.ck:checked{background:var(--lime)}
+input.ck:checked::after{content:"";width:11px;height:6px;border-left:3px solid var(--ink);border-bottom:3px solid var(--ink);transform:rotate(-45deg) translate(1px,-1px)}
+.pipe{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 10px;align-items:center}
+.pipe label{font:400 .8rem var(--f-type);text-transform:uppercase;letter-spacing:.08em;color:var(--card-dim)}
+.pips{grid-column:1/-1;display:grid;grid-template-columns:repeat(8,1fr);gap:3px}
+.pips i{height:8px;background:var(--card-sub);border:1.5px solid var(--ink)}
+.pips i.on{background:var(--orange)}
+details{border-top:2px solid var(--ink);padding-top:8px}
+.card details{margin-top:auto}
+summary{cursor:pointer;font:700 1rem/1.2 var(--f-disp);text-transform:uppercase;letter-spacing:.08em;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:800 1.4rem/1 var(--f-disp)}
+details[open] summary::after{content:"\2013"}
+details .next{margin:10px 0;font-size:.92rem}
+.src{display:inline-block;margin-top:10px;font:700 .95rem/1 var(--f-disp);letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--card);padding:8px 12px;text-decoration:none}
+.src:hover{background:var(--orange);color:var(--ink)}
+.bench-title{margin:34px 0 14px;font:800 1.9rem/1 var(--f-disp);text-transform:uppercase;color:var(--head)}
+.bench-title span{font:400 .9rem var(--f-type);color:var(--dim);text-transform:none;letter-spacing:.04em;margin-left:8px}
+.card.mini{gap:8px}
+.card.mini p{margin:0;font-size:.92rem}
+
+/* clock */
+.clock{padding:6px 18px 14px}
+.month{margin:0;padding:16px 0 6px;font:800 1.6rem/1 var(--f-disp);text-transform:uppercase;letter-spacing:.04em;border-bottom:3px solid var(--ink)}
+.crow{display:grid;grid-template-columns:auto 62px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--card-dim)}
+.crow.is-done .cwhat{text-decoration:line-through;color:var(--card-dim)}
+.cdate{text-align:center;background:var(--ink);color:var(--card);padding:4px 0;font:800 1.7rem/1 var(--f-disp)}
+.cdate small{display:block;font:400 .75rem var(--f-type);letter-spacing:.1em;text-transform:uppercase;color:var(--yellow)}
+.cschool{font:800 1.3rem/1.05 var(--f-disp);text-transform:uppercase}
+.cwhat{font-size:.92rem;line-height:1.3}
+.cmeta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:flex-end}
+.cmeta a{font:700 .9rem var(--f-disp);letter-spacing:.08em;text-transform:uppercase}
+.empty{padding:22px 4px;color:var(--card-dim);font:400 .95rem var(--f-type)}
+
+/* gear check */
+.gear{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:26px 22px}
+.group{padding:18px 18px 14px;min-width:0}
+.group h3{margin:0 0 2px;font:800 1.9rem/.95 var(--f-disp);text-transform:uppercase}
+.group .why{margin:0 0 10px;font:400 .85rem/1.35 var(--f-type);color:var(--card-dim)}
+.gmeter{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.gmeter .meter{flex:1}
+.gmeter span{font:700 1rem var(--f-disp);font-variant-numeric:tabular-nums}
+.item{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:start;padding:8px 0;border-bottom:1px dashed var(--card-dim);cursor:pointer}
+.item span{font-size:.94rem;line-height:1.3}
+.item.is-done span{text-decoration:line-through;color:var(--card-dim)}
+.x{background:transparent;border:2px solid var(--ink);color:var(--ink);width:26px;height:26px;font:800 1rem/1 var(--f-disp);cursor:pointer;padding:0}
+.x:hover{background:var(--blush)}
+.addrow{display:flex;gap:8px;margin-top:12px}
+.addrow input{flex:1}
+.btn{font:700 1rem/1 var(--f-disp);letter-spacing:.08em;text-transform:uppercase;background:var(--orange);color:var(--ink);border:2px solid var(--ink);padding:9px 14px;cursor:pointer;box-shadow:3px 3px 0 var(--shadow);border-radius:0}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--shadow)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--shadow)}
+.btn.alt{background:var(--card-sub)}
+.btn.danger{background:var(--blush)}
+
+/* dojo */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.panel{padding:18px}
+.panel h3{margin:0 0 4px;font:800 1.9rem/.95 var(--f-disp);text-transform:uppercase}
+.panel .why{margin:0 0 14px;max-width:70ch;font-size:.92rem;color:var(--card-dim)}
+.tbl{overflow-x:auto;margin:0 -2px}
+table{border-collapse:collapse;width:100%;min-width:680px;font-size:.92rem}
+th{font:400 .75rem/1.2 var(--f-type);text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:8px 8px;border-bottom:3px solid var(--ink);color:var(--card-dim);vertical-align:bottom}
+th small{display:block;color:var(--orange);font:800 1rem var(--f-disp)}
+td{padding:8px;border-bottom:1px dashed var(--card-dim);vertical-align:middle}
+td.n{font-variant-numeric:tabular-nums;text-align:right}
+.tot{font:800 1.5rem/1 var(--f-disp);font-variant-numeric:tabular-nums}
+.rank{display:inline-block;background:var(--ink);color:var(--yellow);font:800 1rem/1 var(--f-disp);padding:3px 7px}
+.tbl select{padding:5px 6px}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:10px;align-items:end;margin:16px 0 6px;padding:14px;background:var(--card-sub);border:2px dashed var(--ink)}
+.form label{display:flex;flex-direction:column;gap:3px;font:400 .75rem var(--f-type);text-transform:uppercase;letter-spacing:.06em;color:var(--card-dim)}
+.form label.wide{grid-column:span 2}
+.form .btn{height:40px}
+.ex{color:var(--ink);font:400 .75rem/1 var(--f-type);text-transform:uppercase;letter-spacing:.08em;background:var(--yellow);border:1.5px solid var(--ink);padding:2px 5px;margin-left:6px;white-space:nowrap}
+.cov{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.cov span{font:700 .95rem/1 var(--f-disp);text-transform:uppercase;letter-spacing:.06em;padding:6px 10px;border:2px solid var(--ink);background:var(--card)}
+.cov span.has{background:var(--lime)}
+.cov b{font-variant-numeric:tabular-nums}
+.clearex{margin-top:10px}
+.notes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px;margin-top:16px}
+.note{background:var(--field);border:2px solid var(--ink);padding:12px 12px 10px;display:flex;flex-direction:column;gap:6px;position:relative}
+.note h4{margin:0;font:800 1.3rem/1 var(--f-disp);text-transform:uppercase}
+.note .meta{font:400 .78rem var(--f-type);color:var(--card-dim)}
+.note p{margin:0;font-size:.9rem;line-height:1.35}
+.note p b{font:400 .75rem var(--f-type);text-transform:uppercase;letter-spacing:.06em;color:var(--card-dim);margin-right:4px}
+.note .x{position:absolute;top:8px;right:8px}
+.tagt{align-self:flex-start;font:400 .72rem/1 var(--f-type);text-transform:uppercase;letter-spacing:.06em;padding:3px 6px;border:2px solid var(--ink);background:var(--lime)}
+.tagt.pg{background:var(--yellow)}
+
+/* back page */
+.back{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px 22px}
+.vow{padding:20px 20px 18px;background:var(--ink);color:#EFE6D4;border:2px solid var(--yellow);box-shadow:6px 6px 0 var(--orange)}
+.vow h3{margin:0 0 10px;font:800 2.3rem/.9 var(--f-disp);text-transform:uppercase;color:var(--yellow)}
+.vow ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px}
+.vow li{font-size:1rem}
+.vow li b{color:var(--yellow)}
+.bk{padding:20px 18px 16px}
+.bk h3{margin:0 0 4px;font:800 1.9rem/.95 var(--f-disp);text-transform:uppercase}
+.bk p{margin:0 0 10px;font-size:.92rem;color:var(--card-dim)}
+.bk textarea{font:400 .75rem/1.3 var(--f-type);min-height:84px;word-break:break-all}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.msg{min-height:1.4em;font:400 .85rem var(--f-type);color:var(--card-ink)}
+.confirm{margin-top:8px;padding:10px;background:var(--blush);border:2px solid var(--ink)}
+.confirm p{color:var(--ink);margin:0 0 8px}
+footer{padding-top:30px;padding-bottom:max(40px,env(safe-area-inset-bottom,0px));color:var(--dim);font:400 .85rem/1.5 var(--f-type)}
+footer p{max-width:80ch;margin:0 0 8px}
+
+/* tutor board, briefs, vault */
+.di{display:inline-block;font:400 .75rem/1 var(--f-type);text-transform:uppercase;letter-spacing:.06em;padding:4px 7px;border:2px solid var(--ink);background:var(--card);color:var(--ink);white-space:nowrap}
+.di-none{background:var(--card-sub)}
+.di-counts{background:var(--lime)}
+.di-ted{background:var(--blush)}
+.di-ask{background:var(--yellow)}
+.tutor table{min-width:1240px}
+.tutor th:nth-child(1){width:150px}
+.tutor th:nth-child(2){width:270px}
+.tutor th:nth-child(3){width:220px}
+.tutor th:nth-child(4){width:190px}
+.tutor th:nth-child(5){width:290px}
+.tutor th:nth-child(6){width:100px}
+.tutor th:nth-child(7){width:90px}
+.tutor td{vertical-align:top;font-size:.9rem;line-height:1.35}
+.tutor td b.nm{font:800 1.3rem/1 var(--f-disp);text-transform:uppercase}
+.tutor td a{color:inherit}
+.tutor .route{margin:3px 0 0}
+.tutor .ppl{color:var(--card-dim);font-size:.85rem}
+.rc{display:flex;align-items:center;gap:8px;font:800 1.15rem/1 var(--f-disp);font-variant-numeric:tabular-nums}
+.rc .meter{width:64px}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px;margin-top:26px}
+.legend .sheet{padding:16px 16px 14px}
+.legend h3{margin:0 0 8px;font:800 1.6rem/1 var(--f-disp);text-transform:uppercase}
+.legend ol,.legend ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:5px;font-size:.9rem}
+.legend li b{font:800 1.05rem var(--f-disp);text-transform:uppercase;letter-spacing:.03em}
+.brief{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+.brief h4{margin:0 0 3px;font:800 1.2rem/1 var(--f-disp);text-transform:uppercase;letter-spacing:.04em}
+.brief h4 span{font:400 .75rem var(--f-type);color:var(--card-dim);text-transform:uppercase;letter-spacing:.08em;margin-left:8px}
+.brief p{margin:0;font-size:.9rem}
+.brief ul,.brief ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:.88rem}
+.brief .quote{border-left:4px solid var(--orange);padding-left:10px;margin-top:4px}
+.brief .dont{background:var(--card-sub);border:2px dashed var(--ink);padding:8px 10px;font-size:.85rem}
+.brief a{color:var(--card-ink);font-weight:600;overflow-wrap:anywhere}
+.seed{font-size:.85rem;background:var(--card-sub);border:2px solid var(--ink);padding:6px 8px;margin-top:6px}
+.seed b{font:800 1rem var(--f-disp);text-transform:uppercase;margin-right:6px}
+.recap{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.recap label{display:flex;flex-direction:column;gap:3px;font:400 .75rem/1.3 var(--f-type);text-transform:uppercase;letter-spacing:.05em;color:var(--card-dim)}
+.recap textarea{min-height:54px;font-size:.88rem}
+.fulln{border-top:1px dashed var(--card-dim);padding-top:6px}
+.fulln summary{font-size:.9rem}
+.fulln p{margin:8px 0;font-size:.85rem;line-height:1.45}
+.vbar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:18px}
+.vbar .sortbox input{width:min(100%,260px)}
+.vlist{display:flex;flex-direction:column;gap:12px}
+.vitem{background:var(--card);color:var(--card-ink);border:2px solid var(--card-ink);box-shadow:4px 4px 0 var(--shadow);color-scheme:light}
+.vitem>details{border-top:0;padding:0}
+.vitem summary,.vitem .vrow{padding:12px 14px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.vitem summary::after{margin-left:auto}
+.vname{font:800 1.45rem/1 var(--f-disp);text-transform:uppercase}
+.vname a{text-decoration:none}
+.vsub{flex:1 1 100%;order:3;font:400 .85rem/1.35 var(--f-body);color:var(--card-dim);text-transform:none;letter-spacing:0}
+.vchips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.vbody{padding:6px 14px 14px;border-top:2px solid var(--ink);display:flex;flex-direction:column;gap:12px}
+.vbody p{margin:0;font-size:.9rem}
+.vbody h4{margin:0 0 3px;font:800 1.1rem/1 var(--f-disp);text-transform:uppercase}
+.vbody ul,.vbody ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:.88rem}
+.vbody a{color:var(--card-ink);font-weight:600;overflow-wrap:anywhere}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:10px 18px}
+.fg div{font-size:.86rem;min-width:0;overflow-wrap:anywhere}
+.fg b{display:block;font:400 .75rem/1.2 var(--f-type);text-transform:uppercase;letter-spacing:.06em;color:var(--card-dim)}
+.stale{font:400 .8rem/1.3 var(--f-type);color:var(--card-dim)}
+/* gate, apps, money */
+#appsnote{color:var(--dim);font:400 .85rem/1.4 var(--f-type)}
+.unlockbtn{flex:none;padding:8px 12px;font-size:.95rem}
+#gatebox{border-top:2px dashed var(--edge);background:var(--bg-2)}
+.gateform{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-top:10px;padding-bottom:10px}
+.gateform input{width:9em;font-size:1.1rem;letter-spacing:.2em}
+.lockp{max-width:520px}
+.lockrow{font:400 .8rem/1.3 var(--f-type);color:var(--card-dim);border-top:2px solid var(--ink);padding-top:8px;text-transform:uppercase;letter-spacing:.06em}
+.gate{background:var(--yellow);border:2px solid var(--ink);padding:8px 10px;font-size:.88rem;color:var(--ink)}
+.egroup{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:14px;align-items:start}
+.entry{background:var(--field);border:2px solid var(--ink);padding:10px 12px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.entry .eh{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.entry .eh b{font:800 1.2rem/1 var(--f-disp);text-transform:uppercase}
+.entry .cnt{font:400 .8rem var(--f-type);margin-left:auto;font-variant-numeric:tabular-nums}
+.entry .cnt.over{color:#b00020;font-weight:700}
+.entry textarea{min-height:92px}
+.entry .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:8px}
+.entry .upd{font:400 .75rem var(--f-type);color:var(--card-dim);margin-left:auto}
+@media (max-width:900px){
+  .board{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .nextup{grid-column:1/-1}
+  .back{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:620px){
+  .mast-grid{grid-template-columns:minmax(0,1fr)}
+  .mascot{width:120px;justify-self:end;margin-top:-8px;order:-1}
+  .board{grid-template-columns:minmax(0,1fr)}
+  .links a{padding:8px 8px}
+  .brand span{display:none}
+  .crow{grid-template-columns:auto 56px minmax(0,1fr)}
+  .cmeta{grid-column:1/-1;justify-content:flex-start}
+  .form label.wide{grid-column:auto}
+  .sortbox{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .card,.btn{transition:none}
+  .card:nth-child(n){transform:none}
+  .card:hover{transform:none}
+  .btn:hover,.btn:active{transform:none}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="pn" viewBox="0 0 214 232">
+      <path d="M18 36 Q106 2 194 36 L106 212 Z" fill="#EFE6D4" stroke="#EFE6D4" stroke-width="20" stroke-linejoin="round"/>
+      <path d="M22 40 Q106 8 190 40 L106 208 Z" fill="#FFD400" stroke="#141413" stroke-width="5" stroke-linejoin="round"/>
+      <circle cx="82" cy="120" r="13" fill="#fe5400" stroke="#141413" stroke-width="4"/>
+      <circle cx="126" cy="112" r="12" fill="#fe5400" stroke="#141413" stroke-width="4"/>
+      <circle cx="104" cy="160" r="10.5" fill="#fe5400" stroke="#141413" stroke-width="4"/>
+      <path d="M14 36 Q106 -4 198 36 Q204 54 190 58 Q106 24 22 58 Q8 54 14 36 Z" fill="#E8902B" stroke="#141413" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M33 66 L179 66 L167 92 L45 92 Z" fill="#141413"/>
+      <path d="M178 72 L208 56 L201 78 Z" fill="#141413"/>
+      <path d="M174 84 L210 96 L192 100 Z" fill="#141413"/>
+      <ellipse cx="82" cy="79" rx="15" ry="7" fill="#fff" transform="rotate(-12 82 79)"/>
+      <ellipse cx="130" cy="79" rx="15" ry="7" fill="#fff" transform="rotate(12 130 79)"/>
+      <circle cx="87" cy="80" r="4" fill="#141413"/>
+      <circle cx="125" cy="80" r="4" fill="#141413"/>
+    </symbol>
+    <symbol id="sh" viewBox="0 0 24 24"><path d="M12 0 L15 9 L24 12 L15 15 L12 24 L9 15 L0 12 L9 9 Z"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Transfer Ninja Zine, top of page"><svg aria-hidden="true"><use href="#pn"/></svg><span>Transfer Ninja</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#tutor">Tutor board</a>
+      <a href="#lineup">Lineup</a>
+      <a href="#vault">Vault</a>
+      <a href="#clock">Clock</a>
+      <a href="#gear">Gear</a>
+      <a href="#apps">Apps</a>
+      <a href="#dojo">Dojo</a>
+      <a href="#back">Rules</a>
+    </nav>
+    <button type="button" class="chip unlockbtn" id="unlockbtn" data-act="togglegate">Unlock</button>
+  </div>
+  <div id="gatebox" hidden>
+    <div class="wrap">
+      <form class="gateform" data-form="gate" autocomplete="off">
+        <label for="codeinput" class="lbl" style="color:var(--fg)">Tutor and admin code</label>
+        <input id="codeinput" type="password" inputmode="numeric" autocomplete="off" maxlength="12">
+        <button class="btn" type="submit">Unlock</button>
+        <span id="gatemsg" role="status" aria-live="polite" style="font:400 .85rem var(--f-type);color:var(--fg)"></span>
+      </form>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="mast">
+    <div class="wrap">
+      <div class="mast-grid">
+        <div>
+          <span class="tape">Fall 2027 transfer cycle</span>
+          <h1>Transfer<br>Ninja<br>Zine</h1>
+          <p class="lede">One move per school. A checklist, trackers and a Common App log you can run from this page.</p>
+          <p class="byline">Field guide by Kendren Cornish. Your ticks and notes save in this browser only.</p>
+        </div>
+        <div class="mascot" aria-hidden="true"><svg viewBox="0 0 214 232"><use href="#pn"/></svg></div>
+      </div>
+      <div class="board" id="board" aria-live="polite"></div>
+      <p class="fine">Ticks mean work completed, not admission chances. Conversations with admissions offices do not guarantee admission.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="tutor">
+    <div class="wrap">
+      <div class="kick"><svg aria-hidden="true"><use href="#sh"/></svg>Tutor board</div>
+      <h2>Fit, <em>interest</em>, proof</h2>
+      <p class="sec-lede">One row per core school: the real degree path, the research worth knowing, whether interest counts, who to ask and what to ask, and how far the <b>RECAP</b> proof test has come. Open a card in the lineup for the full brief and to fill in the proof.</p>
+      <div class="sheet tbl tutor" id="tutorbox"></div>
+      <div class="legend" id="tutorlegend">
+        <div class="sheet">
+          <h3>RECAP test</h3>
+          <ol>
+            <li><b>Resource.</b> Name a real course, lab, dataset, paper, public initiative or cross-school mechanism.</li>
+            <li><b>Evidence.</b> State what it actually studied, built or found, with the primary source.</li>
+            <li><b>Connection.</b> Say which part of your own work gives you a reason to care.</li>
+            <li><b>Application.</b> Propose a feasible undergraduate action.</li>
+            <li><b>Proof.</b> Show what you already did because of the research.</li>
+          </ol>
+        </div>
+        <div class="sheet">
+          <h3>The order that counts</h3>
+          <ol>
+            <li>The correct route and a complete file</li>
+            <li>Academic readiness and a clear transfer reason</li>
+            <li>School-specific essays that show tested fit</li>
+            <li>Any required interview, portfolio or supplement</li>
+            <li>One official session and one precise question, when needed</li>
+            <li>A campus visit, if it improves the decision</li>
+            <li>Everything else only if it is useful on its own</li>
+          </ol>
+        </div>
+        <div class="sheet">
+          <h3>What earns nothing</h3>
+          <ul>
+            <li>Email opens, link clicks, newsletters and repeat browsing</li>
+            <li>Mass emails to faculty, or a faculty name you have not read</li>
+            <li>Mailed letters, gifts and creative packages</li>
+            <li>A recommendation from someone you met a month ago</li>
+            <li>Calling a professor a connection without real two-way contact</li>
+            <li>Claiming a partner or endorser without documentation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sheet panel" id="connpanel" style="margin-top:22px">
+        <h3>Profile to school map</h3>
+        <p class="why">Which parts of the story fit which schools, and the question each one supports. Use the smallest truthful version of the story that matches each school's route and allowed materials.</p>
+        <div class="tbl" id="connmap"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="lineup">
+    <div class="wrap">
+      <div class="kick"><svg aria-hidden="true"><use href="#sh"/></svg>The lineup</div>
+      <h2>One <em>move</em> per school</h2>
+      <p class="sec-lede">Each card leads with <b>the one thing</b> that decides whether that school stays on the list. Dates, route and a pipeline stage sit underneath. Open a card for the next step and private notes.</p>
+      <div class="bar">
+        <div class="chips" role="group" aria-label="Filter schools" id="filters"></div>
+        <label class="sortbox">Order
+          <select id="sortsel" data-chg="sort"><option value="priority">Priority</option><option value="deadline">First deadline</option><option value="stage">Pipeline stage</option></select>
+        </label>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div id="benchwrap"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="vault">
+    <div class="wrap">
+      <div class="kick"><svg aria-hidden="true"><use href="#sh"/></svg>The vault</div>
+      <h2>Every <em>school</em> on file</h2>
+      <p class="sec-lede" id="vaultlede"></p>
+      <div class="vbar">
+        <div class="chips" role="group" aria-label="Filter the vault" id="vfilters"></div>
+        <label class="sortbox">Search <input type="search" id="vsearch" placeholder="School or route" autocomplete="off"></label>
+      </div>
+      <div class="vlist" id="vlist"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="clock">
+    <div class="wrap">
+      <div class="kick"><svg aria-hidden="true"><use href="#sh"/></svg>The clock</div>
+      <h2>Every <em>date</em>, in order</h2>
+      <p class="sec-lede">Every dated milestone from the shortlist, earliest first. Tick a date when the work is finished. Chips flag dates that conflict between offices or may shift.</p>
+      <div class="bar">
+        <label class="chip" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" class="ck" id="hidedone" data-chg="hidedone"> Hide finished</label>
+      </div>
+      <div class="sheet clock" id="clocklist"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="gear">
+    <div class="wrap">
+      <div class="kick"><svg aria-hidden="true"><use href="#sh"/></svg>Gear check</div>
+      <h2>Build the <em>profile</em></h2>
+      <p class="sec-lede">The strongest shared evidence across schools is <b>recent rigorous grades, a clear course path, two instructors who know your work, and one documented project</b>. This checklist turns that into moves. Add your own at the bottom of any group.</p>
+      <div class="gear" id="gearlist"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="apps">
+    <div class="wrap">
+      <div class="kick"><svg aria-hidden="true"><use href="#sh"/></svg>Applications</div>
+      <h2>Common App <em>entries</em></h2>
+      <p class="sec-lede" id="appslede"></p>
+      <div id="appsbox"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="dojo">
+    <div class="wrap">
+      <div class="kick"><svg aria-hidden="true"><use href="#sh"/></svg>The dojo</div>
+      <h2>Four <em>trackers</em></h2>
+      <p class="sec-lede">Score the schools, inventory the credits, keep the recommenders moving, and log every conversation. Rows marked <span class="ex" style="margin:0">example</span> are samples. Clear them when you start.</p>
+      <div class="tabs" role="tablist" aria-label="Trackers" id="tabs"></div>
+      <div id="tabpanel"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="back">
+    <div class="wrap">
+      <div class="kick"><svg aria-hidden="true"><use href="#sh"/></svg>Back page</div>
+      <h2>The <em>rules</em></h2>
+      <div class="back">
+        <div class="vow">
+          <h3>What stays mine</h3>
+          <ol>
+            <li><b>My voice.</b> Every essay is drafted and refined in my own words. Tools can organize arguments and ask questions. They never write the final prose.</li>
+            <li><b>My facts.</b> Every date, service record, project outcome and transcript credit stays true and backed by proof.</li>
+            <li><b>My call.</b> Where to apply, what to study and how much history to share is my decision.</li>
+          </ol>
+        </div>
+        <div class="sheet bk" id="bkpanel">
+          <h3>Save, move, reset</h3>
+          <p>Progress lives in this browser on this device. Copy the backup code to keep it safe or to open the same progress somewhere else.</p>
+          <label class="lbl" for="bkcode">Backup code</label>
+          <textarea id="bkcode" readonly></textarea>
+          <div class="row">
+            <button class="btn" type="button" data-act="copy">Copy backup code</button>
+          </div>
+          <label class="lbl" for="restorecode">Restore from a backup code</label>
+          <textarea id="restorecode" placeholder="Paste a backup code here"></textarea>
+          <div class="row">
+            <button class="btn alt" type="button" data-act="restore">Restore</button>
+            <button class="btn danger" type="button" data-act="reset">Reset everything</button>
+          </div>
+          <div id="confirmbox" class="confirm" hidden>
+            <p>This wipes every tick, score, note and row in this browser. It cannot be undone.</p>
+            <div class="row"><button class="btn danger" type="button" data-act="reset-yes">Yes, wipe it</button><button class="btn alt" type="button" data-act="reset-no">Keep my progress</button></div>
+          </div>
+          <div class="msg" id="backmsg" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Dates and routes follow the November 2026 audit of each school's official transfer pages, linked on every card and on the clock. Standing dates can change for Fall 2027. Recheck the official page before you rely on any date, rate or aid rule.</p>
+    <p>Admit rates and GPA figures describe past cohorts at the school or program level. They are not personal odds. Faculty names are research anchors, not contacts or recommenders.</p>
+    <p>Left out on purpose: transcripts, grades, call debriefs and essay drafts. The research briefs were written in July 2026, so check any date or step against the Clock before acting.</p>
+  </div>
+</footer>
+
+<script>
+var GATE_MODE='server';var CODEHASH=0;var PUB={"schools":[{"id":"brown","name":"Brown","route":"Veterans Application","pri":"core","talked":1,"one":"Compare aid and your credit plan before you choose the optional binding plan.","facts":["The 90-second video is an optional introduction.","Feb 15 is a complete-file timing marker, not an early deadline."],"next":"Confirm aid and the optional binding plan. Ask how aid works without GI Bill benefits. Share an essay outline once it is ready for useful feedback.","src":"https://admission.brown.edu/veterans/application-details","d":[["2027-03-01","Application and veteran aid","v","https://admission.brown.edu/veterans/application-details"]],"di":"none","fin":{"waiver":"No application fee for veterans, who use the separate Veterans Application.","model":"Veterans are admitted need-blind. General transfer admission is need-aware. Brown meets full demonstrated need.","aid":"Veterans submit the FAFSA, a prior-year tax return and a VA Certificate of Eligibility. Veteran aid materials were due March 1 in the 2026 cycle, so recheck 2027. On your call: VR&E pays out like a Post-9/11 GI Bill.","vet":"Service to School VetLink partner with an unlimited undergraduate Yellow Ribbon program for eligible students.","note":"The binding rolling option means you withdraw other applications if admitted. Compare aid first."},"abroad":"Brown students in good standing can study abroad for a semester or year in sophomore, junior or senior year, after declaring a concentration. Brown aid can apply if aid requirements are met and a Consortium Agreement is filed for non-Brown programs. Courses need pre-approval to earn credit. No rule specific to transfer or veteran-route entrants was found: ask Brown study abroad advising.","links":[["Veterans Application","https://admission.brown.edu/veterans/application-details"],["Veteran financial aid","https://admission.brown.edu/veterans/financial-aid"],["Veteran students and aid","https://finaid.brown.edu/veteran-students-new-and-current"],["Study abroad FAQs","https://studyabroad.brown.edu/explore/study-abroad-faqs"],["Study abroad and aid","https://studyabroad.brown.edu/apply/you-apply/financial-planning/financial-aid"],["Transfer credit guidelines","https://college.brown.edu/design-your-education/review-academic-policies/transfer-credit-guidelines"]]},{"id":"cornell","name":"Cornell ILR","route":"ILR external transfer","pri":"core","talked":1,"one":"Get ILR to review your course titles, descriptions and grades, and confirm sophomore or junior entry.","facts":["ILR says most admitted transfers have a 3.4+ college average.","Cornell as a whole admitted 9.3% of Fall 2024 transfer applicants. That is not an ILR rate."],"next":"Map writing, economics, math and science courses with ILR. Choose next courses for ILR readiness and your real direction.","src":"https://www.ilr.cornell.edu/programs/undergraduate-admissions/apply-ilr/transfer-guidelines","d":[["2027-03-15","Application","v","https://www.ilr.cornell.edu/programs/undergraduate-admissions/apply-ilr/transfer-guidelines"]],"di":"none","fin":{"waiver":"No transfer fee-waiver rule was found. Ask ILR admissions.","model":"ILR says transfer aid follows the same need-based policies as first-year students. Whether domestic transfer admission is need-blind was not confirmed.","aid":"ILR admits transfers for fall only, with a March 15 application deadline. The CSS Profile transfer deadline was March 15 in the 2026 cycle.","vet":"Yellow Ribbon participant with a Veterans Summer Bridge and a veteran admissions pathway that can waive some documents.","note":""},"abroad":"ILR says transfer students are eligible to apply for semester study abroad and ILR credit internship programs (Ireland, England, Australia). The usual rules: full-time, junior or senior year, good standing and the ILR core finished. Aid transfers for Office of Global Learning programs and is revised for the term abroad. Meet the ILR study abroad advisor to check how transfer status counts.","links":[["ILR transfer guidelines","https://www.ilr.cornell.edu/programs/undergraduate-admissions/apply-ilr/transfer-guidelines"],["Cornell transfer instructions","https://admissions.cornell.edu/resources/transfer-option-instructions"],["ILR financial aid","https://www.ilr.cornell.edu/current-students/credit-internships/students/financial-aid"],["ILR exchange programs","https://www.ilr.cornell.edu/current-students/international-opportunities/exchange-programs"],["ILR global learning","https://www.ilr.cornell.edu/current-students/international-opportunities/office-global-learning"],["Aid for study abroad","https://www.finaid.cornell.edu/study-abroadoff-campus-programs"]]},{"id":"nd","name":"Notre Dame","route":"Major-specific transfer","pri":"core","talked":1,"one":"Pick a college and major, then get credit guidance from the military-connected admissions counselor.","facts":["Lists 24 transferable credits.","Recent admitted transfers averaged a 3.75+ GPA."],"next":"Choose the college and major. Send all prior college transcripts for credit and curriculum advice. Fall 2027 submission opens January 15.","src":"https://admissions.nd.edu/information-for/transfer-applicants/","d":[["2027-01-15","Earliest Fall 2027 application submission","p","https://admissions.nd.edu/information-for/transfer-applicants/apply/"],["2027-03-15","Application","p","https://admissions.nd.edu/information-for/transfer-applicants/"]],"di":"none","fin":{"waiver":"No transfer fee-waiver rule was found. Ask admissions.","model":"A VetLink guide lists Notre Dame as need-blind for all admitted students. An official statement for transfers was not found. Transfer students are not eligible for merit scholarships.","aid":"From your call: a household income of $60,000 or less covers tuition, fees, housing and food, and up to $150,000 covers at least full tuition. You do not have to use the GI Bill to attend. Fall transfer deadline March 15.","vet":"Yellow Ribbon school. On your call, a 100% GI Bill pays up to about $30,000 a year more or less. Service to School VetLink, Warrior-Scholar Project and a veterans law clinic.","note":""},"abroad":"Students in approved programs count as enrolled at Notre Dame for federal aid. Aid is not guaranteed abroad, and non-Notre Dame programs need a Consortium Agreement. Because Notre Dame meets need, outside funds can adjust your aid. Same fees as campus plus a $750 study abroad fee. No rule specific to transfer entrants was found: ask Global Study Abroad.","links":[["Transfer applicants","https://admissions.nd.edu/information-for/transfer-applicants/"],["Admitted transfers: financial aid","https://admissions.nd.edu/admitted-transfers/financial-aid/"],["Transfer student aid","https://financialaid.nd.edu/apply-or-renew/transfer-students/"],["Study abroad aid policy","https://financialaid.nd.edu/policies/study-abroad/"],["Veterans","https://admissions.nd.edu/apply/resources-for/veterans/"],["Service to School VetLink","https://omva.nd.edu/prospective-students/service-to-school-vetlink/"],["Global study abroad","https://studyabroad.nd.edu/"]]},{"id":"yale","name":"Yale","route":"Eli Whitney Students Program","pri":"core","talked":1,"one":"Build recent liberal-arts and quantitative coursework, and confirm your current course record before following up.","facts":["Needs two recommendation letters and every college and high-school transcript.","No admissions credit floor or ceiling, but degree credit is capped.","Meets demonstrated need; EWSP students are financially independent for aid."],"next":"Strengthen recent English and math work, then follow up with an updated record. Consider whether a later cycle fits better.","src":"https://admissions.yale.edu/eli-whitney-apply","d":[["2027-03-01","Application","v","https://admissions.yale.edu/eli-whitney-apply"],["2027-03-15","Supporting materials","v","https://admissions.yale.edu/eli-whitney-apply"],["2027-04-01","Financial aid","v","https://admissions.yale.edu/eli-whitney-apply"]],"di":"none","fin":{"waiver":"Automatic for U.S. veterans and active duty: answer Yes to the military fee waiver question in the Program Materials section.","model":"Yale admits without regard to ability to pay and meets 100% of demonstrated need for Eli Whitney students. EWSP students are treated as independent, so parental income is not counted.","aid":"Financial aid application due April 1. Materials due March 15 (one Yale page says March 18, so confirm).","vet":"Yellow Ribbon participant. Yale's veteran and military student office handles benefit coordination.","note":""},"abroad":"Eli Whitney students can study abroad for a year or term with approval from the program director and the Committee on the Year or Term Abroad, doing full-time university-level work. Yale aid carries abroad with a budget form, capped at two terms. After returning you must enroll in Yale College: the catalog says two terms and a study abroad page says one, so confirm.","links":[["EWSP application","https://admissions.yale.edu/eli-whitney-apply"],["EWSP financial aid","https://admissions.yale.edu/eli-whitney-students-program-financial-aid"],["Yale aid for EWSP","https://finaid.yale.edu/ewsp"],["Veterans","https://admissions.yale.edu/veterans"],["Year or term abroad eligibility","https://studyabroad.yale.edu/node/1233"],["EWSP catalog rules","https://catalog.yale.edu/ycps/academic-regulations/eli-whitney-students-program"],["Veteran and military office","https://vetmil.yale.edu/undergraduate-students"]]},{"id":"princeton","name":"Princeton","route":"Transfer","pri":"core","talked":1,"one":"Lock down a graded paper that qualifies, and confirm the one-year transferable-credit threshold.","facts":["The graded paper is an academic course paper with its prompt, grade and any comments. Expository, thesis-driven writing is preferred.","Princeton posts these dates as subject to change."],"next":"Ask the office for written guidance on transfer credit and on which recent course papers qualify. Plan the economics and statistics coursework.","src":"https://admission.princeton.edu/apply/application-dates-deadlines/transfer-application-dates-deadlines","d":[["2027-03-01","Application and graded paper","s","https://admission.princeton.edu/apply/application-dates-deadlines/transfer-application-dates-deadlines"],["2027-03-09","Financial aid","s","https://admission.princeton.edu/apply/application-dates-deadlines/transfer-application-dates-deadlines"],["2027-03-09","Optional arts supplement","s","https://admission.princeton.edu/apply/application-dates-deadlines/transfer-application-dates-deadlines"]],"di":"none","fin":{"waiver":"Automatic: choose the US military veterans and servicemembers fee waiver option on the application. Lower-income applicants who apply for aid also get a waiver.","model":"Aid is need-based and Princeton aims to meet 100% of need. A clear official statement of need-blind transfer admission was not retrieved. Princeton aid can supplement or replace veterans benefits.","aid":"Princeton uses its own Princeton Financial Aid Application (PFAA) and does not require or accept the CSS Profile or IDOC. Transfer aid deadline March 9.","vet":"Participates in Service to School VetLink, Warrior-Scholar Project and the Leadership Scholar Program. Yellow Ribbon coordination through financial aid.","note":""},"abroad":"Study abroad is open to spring-term sophomores, juniors and fall-term seniors with a 3.0 or higher GPA the prior year, and most students go no earlier than spring of sophomore year. Princeton need-based aid carries to approved academic-year programs, but the Princeton Grant does not cover summer programs. Transfer-specific rules were not found: ask the Study Abroad Program.","links":[["Transfer dates and deadlines","https://admission.princeton.edu/apply/application-dates-deadlines/transfer-application-dates-deadlines"],["Transfer checklist","https://admission.princeton.edu/how-apply/transfer-students/transfer-application-checklist"],["Graded written paper","https://admission.princeton.edu/apply/graded-written-paper"],["Military applicants","https://admission.princeton.edu/apply/us-military-applicants"],["Apply for aid","https://finaid.princeton.edu/apply-aid-prospective-students"],["Study abroad and aid","https://finaid.princeton.edu/policies-procedures/study-abroad"],["Study abroad policy","https://www.princeton.edu/oip/sap/policies/academic-year/"],["ORFE department","https://orfe.princeton.edu/"],["African American Studies","https://aas.princeton.edu/"],["Computer Science","https://www.cs.princeton.edu/"]]},{"id":"tufts","name":"Tufts REAL","route":"REAL, for adults and veterans","pri":"core","talked":0,"one":"Ask REAL how your credits count and whether you must study full-time.","facts":["Financial-aid materials are due in mid-April 2027. The official page does not publish the exact day."],"next":"Ask about credits, full-time study and recent coursework. Request an aid estimate.","src":"https://admissions.tufts.edu/apply/applying-as-a-transfer-candida/real-application/","d":[["2027-03-15","Application","p","https://admissions.tufts.edu/apply/applying-as-a-transfer-candida/real-application/"]],"di":"counts","fin":{"waiver":"No automatic waiver is stated on the REAL page: contact REAL if the fee is a hardship. Tufts Engineering lists an $85 waiver for military and veterans, so confirm for REAL.","model":"Need-based aid for eligible REAL students, meeting 100% of demonstrated need. Need-blind status was not confirmed. File the Tufts Financial Aid Form as well as the FAFSA. If you do not apply for aid now, you are not eligible for institutional aid in later years.","aid":"Application due March 15, 2027. Aid materials are due mid-April, with the exact day unpublished. Say on the REAL application that you intend to use VA benefits.","vet":"Yellow Ribbon: $5,000 a year from Tufts, matched by the VA, for veterans at 100% Post-9/11 eligibility.","note":""},"abroad":"Aid transfers automatically for Tufts-run programs. For external programs only federal and state aid and loans transfer, through a Consortium Agreement, and Tufts grants do not. Courses need department approval. Whether REAL students can use study abroad was not found: ask REAL.","links":[["REAL application","https://admissions.tufts.edu/apply/applying-as-a-transfer-candida/real-application/"],["REAL for veterans","https://students.tufts.edu/academic-advising-and-undergraduate-studies/real-program-veterans"],["Apply for aid","https://students.tufts.edu/financial-services/undergraduate-aid/prospectiveadmitted-students/apply-aid-prospective-undergraduate-students"],["Transfer student aid","https://admissions.tufts.edu/tuition-and-aid/applying-for-aid/transfer-student-aid"],["Semester and year programs","https://students.tufts.edu/tufts-global-education/explore/semesteryear-programs"],["Study abroad funding","https://students.tufts.edu/tufts-global-education/prepare/accepted-students/financial-aid-and-funding"]]},{"id":"washu","name":"WashU","route":"School-specific transfer","pri":"core","talked":0,"one":"Choose your undergraduate school, then confirm the major, credit path and aid.","facts":["A portfolio is required only for College of Art or College of Architecture applicants.","St. Louis is a minor location plus."],"next":"Pick the school and major, confirm credits and aid, and judge whether a visit is feasible.","src":"https://admissions.washu.edu/how-to-apply/transfer-students-us-and-international/","d":[["2027-03-01","Application and financial aid","p","https://admissions.washu.edu/how-to-apply/transfer-students-us-and-international/"]],"di":"ask","fin":{"waiver":"The $75 fee is waived for U.S. veterans applying for first-year or transfer admission: indicate eligibility on the Common App or Coalition App. It is also waived for applicants applying for need-based aid.","model":"International transfer applicants are not eligible for aid. Need-blind status for domestic transfers was not confirmed.","aid":"Application and aid working date March 1, 2027. Verify when WashU relabels the Fall 2027 calendar.","vet":"Yellow Ribbon was not confirmed in this search: ask financial aid.","note":""},"abroad":"Need-based aid and scholarships can apply to approved WashU study abroad programs, but generally not to summer programs. A 3.0 GPA is required, and a C or better for credit. Transfer-specific rules were not found: ask Overseas Programs.","links":[["Transfer admission","https://admissions.washu.edu/how-to-apply/transfer-students-us-and-international/"],["Financial aid","https://financialaid.washu.edu/"],["Overseas programs","https://overseas.washu.edu/"],["Study abroad eligibility","https://overseas.washu.edu/plan"]]},{"id":"nu","name":"Northwestern","route":"Regular transfer","pri":"core","talked":0,"one":"Verify the conflicting April aid dates before you rely on either one.","facts":["The binding transfer plan conflicts with keeping Brown first, so use the regular route.","The admissions table lists aid on Apr 1. The aid office lists FAFSA and CSS Profile on Apr 15 and tax forms on Apr 20."],"next":"Assess academic fit and credit transfer, then ask the aid office which aid date applies.","src":"https://admissions.northwestern.edu/apply/application-deadlines.html","d":[["2027-04-01","Regular application (admissions table also lists aid)","x","https://admissions.northwestern.edu/apply/application-deadlines.html"],["2027-04-15","FAFSA and CSS Profile, aid office date","x","https://undergradaid.northwestern.edu/apply-for-aid/prospective-domestic-students/"],["2027-04-20","Federal tax forms, aid office date","x","https://undergradaid.northwestern.edu/apply-for-aid/prospective-domestic-students/"]],"di":"ted","fin":{"waiver":"Armed Forces or Veteran Fee Waiver, plus hardship waivers, requested through a Common App or Coalition profile question. The fee is $75 otherwise. Requesting a waiver does not disadvantage you.","model":"Need-aware or need-blind status for transfers was not established. Verify with admissions.","aid":"FAFSA and CSS Profile are both required (Northwestern CSS code 1565). Your audited list shows April 1 for the application, April 15 for FAFSA and CSS, and April 20 for tax forms. A search result cited March 15 and the admissions table lists aid on April 1, so verify before relying on any date.","vet":"Yellow Ribbon was not confirmed in this search: ask the aid office.","note":""},"abroad":"Study abroad eligibility starts the summer after you finish your first year at Northwestern, and this applies to transfers too, with a 2.5 GPA. Need-based aid covers Northwestern, exchange and partner programs but not independent programs. Summer aid covers one summer. Study abroad credit is treated as transfer credit.","links":[["Application deadlines","https://admissions.northwestern.edu/apply/application-deadlines.html"],["Transfer FAQ","https://admissions.northwestern.edu/faqs/transferring-to-northwestern/"],["Fee waiver","https://admissions.northwestern.edu/tuition-aid/fee-waiver.html"],["Aid deadlines","https://undergradaid.northwestern.edu/apply-for-aid/application-deadlines.html"],["Study abroad aid","https://undergradaid.northwestern.edu/types-of-aid/study-abroad-aid.html"],["Apply to study abroad","https://www.northwestern.edu/abroad/study-abroad/apply/"],["School of Education and Social Policy","https://www.sesp.northwestern.edu/"]]},{"id":"gt","name":"Georgetown","route":"School- and major-specific transfer","pri":"core","talked":0,"one":"Pick your school and major, and check the four-full-semester ceiling.","facts":["The Jan 15 priority date applies only to junior Public Policy or Environment and Sustainability routes.","First core school to swap out if the list stays too reach-heavy."],"next":"Confirm the intended school and major and full-time semester eligibility. If applying as a junior to Public Policy or Environment and Sustainability, decide before January 15.","src":"https://uadmissions.georgetown.edu/apply/transfer-applicants/","d":[["2027-01-15","Junior Public Policy or Environment and Sustainability priority application","p","https://uadmissions.georgetown.edu/apply/transfer-applicants/"],["2027-03-01","Application and aid","p","https://uadmissions.georgetown.edu/apply/transfer-applicants/"]],"di":"none","fin":{"waiver":"Fee waiver requests are accepted from any applicant for whom the fee is a significant burden, using the NACAC or College Board form. The deadline does not move for waiver requests.","model":"Need-based aid only. Georgetown meets 100% of demonstrated need for U.S. citizens and permanent residents. International transfers are not eligible for aid.","aid":"Submit both the FAFSA and the CSS Profile. Application and aid March 1, with the junior Public Policy or Environment and Sustainability priority date January 15. Decisions by June 1.","vet":"Dossier lists Yellow Ribbon with a full tuition match in the College. Confirm on Georgetown's military and veterans page.","note":""},"abroad":"All aid except Federal Work-Study applies to Georgetown-approved and independent petition study abroad programs, and students in Global Education programs stay matriculated. No study abroad while on probation. Summer aid needs 6 or more credits. Georgetown Qatar covers one semester. Transfer-specific rules were not found: ask the Office of Global Education.","links":[["Transfer applicants","https://uadmissions.georgetown.edu/apply/transfer-applicants/"],["Financial aid","https://uadmissions.georgetown.edu/financial-aid/"],["Study abroad costs and aid","https://studyabroad.georgetown.edu/?p=238"],["Aid for study abroad","https://finaid.georgetown.edu/?p=219"]]},{"id":"vandy","name":"Vanderbilt","route":"School-specific transfer","pri":"core","talked":0,"one":"Confirm where you would land academically, the four-semester residency and your aid plan.","facts":["More transfer seats and a full-need policy for admitted transfers."],"next":"Confirm the program, residence requirement and aid plan, and show recent full-time rigor.","src":"https://admissions.vanderbilt.edu/apply/transfer-process","d":[["2027-02-01","FAFSA and CSS Profile priority","p","https://admissions.vanderbilt.edu/apply/"],["2027-02-15","Priority application","p","https://admissions.vanderbilt.edu/apply/transfer-process"]],"di":"none","fin":{"waiver":"$50 application fee or a fee waiver for qualified students, through the Common App or Coalition transfer application. Vanderbilt issues no CSS fee-waiver codes: the CSS Profile may waive its own fee based on your answers.","model":"A secondary source says Vanderbilt meets 100% of demonstrated need for admitted transfers. Verify on Vanderbilt's own site.","aid":"Your audited list shows February 1 for FAFSA and CSS priority and February 15 for the priority application.","vet":"The registrar certifies VA benefits. Yellow Ribbon contributions vary by school, so get a written estimate from the VA School Certifying Official.","note":""},"abroad":"Transfer students can apply to study abroad after completing their first semester at Vanderbilt per the policies page, though another source says two semesters, so reconcile with the Study Abroad office. Semester and academic-year programs through Vanderbilt are eligible for federal and Vanderbilt aid, and the package can increase if a program costs more than a comparable term. Summer aid is limited.","links":[["Transfer process","https://admissions.vanderbilt.edu/apply/transfer-process"],["Financial aid deadlines","https://www.vanderbilt.edu/financialaid/deadlines/"],["Study abroad policies","https://www.vanderbilt.edu/study-abroad/policies/"],["Study abroad finances","https://www.vanderbilt.edu/study-abroad/finances/"],["Peabody College","https://peabody.vanderbilt.edu/"]]},{"id":"williams","name":"Williams","route":"Liberal Arts Transfer","pri":"core","talked":0,"one":"Plan around the two-year residence rule: a junior-entry transfer must give up transfer credit to study away.","facts":["Transfer credit is capped at two years of credit, and Williams requires two years in residence.","Offers only need-based aid, with no merit scholarships. The CSS Profile is required for non-federal aid.","Official dates conflict: the aid page lists March 3, the Common App March 2, an older catalog March 1."],"next":"Confirm the March date on the official page, decide sophomore or junior entry, and ask the admission office how a veteran transfer is reviewed.","src":"https://www.williams.edu/admission-aid/apply/transfer/","d":[["2027-03-01","Application and financial aid (official page may list March 3)","x","https://www.williams.edu/admission-aid/apply/transfer/"]],"di":"ask","fin":{"waiver":"The $65 fee can be waived, and Williams says asking does not disadvantage you. Veterans can request a waiver on the Common App. The CSS Profile fee can also be waived, and the $200 enrollment deposit too.","model":"Williams offers only need-based aid with no merit scholarships. Need-blind status for transfers was not stated. The CSS Profile is required for non-federal aid.","aid":"Admission and aid applications are due together, with no extra materials for transfer aid. The official date is unclear (March 1 to 3).","vet":"Williams encourages veterans to apply, as first-year or transfer depending on college coursework. Service to School VetLink guidebook has a Williams page.","note":""},"abroad":"Williams requires two years in residence and caps transfer credit at two years. A student who enrolls as a junior and wants to study away must give up a semester or year of transfer credit to meet residence. Aid recipients submit a budget proposal for study away. A new tuition model removes a $1,500 study away fee from the Class of 2029, except for Williams-Exeter and Williams-Mystic. Whether transfers can join Williams-Exeter was not stated.","links":[["Transfer admission","https://www.williams.edu/admission-aid/apply/transfer/"],["Transfer financial aid","https://www.williams.edu/admission-aid/financial-aid/transfers/"],["Apply for aid","https://www.williams.edu/admission-aid/financial-aid/apply-for-aid/"],["Study away","https://williams.edu/sfs/study-abroad"],["Williams-Exeter Programme","https://exeter.williams.edu/the-program/"],["VetLink guidebook: Williams","https://service2school.gitbook.io/vetlink-guidebook/williams-college"]]},{"id":"wesleyan","name":"Wesleyan","route":"Transfer (Common App for Transfer)","pri":"core","talked":0,"one":"Apply for aid with the application: the fee is waived then, and skipping aid costs you aid eligibility for a year.","facts":["Fall transfer applications are due March 15, with notification on May 15 (a Wesleyan aid page gives a conflicting late-April date).","Meets 100% of demonstrated need with loan-free packages, but is need-aware for transfer admission.","Applicants who say they will not seek aid are not eligible for Wesleyan aid until after one year enrolled."],"next":"Confirm the Fall 2027 dates, file the aid request with the application, and ask how a veteran transfer is reviewed.","src":"https://www.wesleyan.edu/admission/apply/transfer.html","d":[["2027-03-15","Application and financial aid request (confirm Fall 2027 date)","x","https://www.wesleyan.edu/admission/apply/transfer.html"]],"di":"ask","fin":{"waiver":"The application fee is automatically waived for any student applying for financial aid.","model":"Meets 100% of demonstrated need with loan-free packages for domestic students, but is need-aware for transfer admission. International transfers get very limited aid.","aid":"Aid request due March 15. If you say you will not seek aid, you are not eligible for Wesleyan aid until after one year (two full semesters) enrolled.","vet":"Veterans benefits and Yellow Ribbon were not researched: ask financial aid.","note":""},"abroad":"Semester and year study abroad for credit counts as Wesleyan enrollment, so Wesleyan tuition is charged and aid applies. The Office of Study Abroad prepares a budget sheet and aid is revised from it. Work-study is replaced by a grant. Wesleyan aid does not cover summer or winter programs. Transfer-specific rules were not found: ask the Office of Study Abroad.","links":[["Transfer applicants","https://www.wesleyan.edu/admission/apply/transfer.html"],["Study abroad rules","https://catalog.wesleyan.edu/academic-regulations/study-abroad"],["Study abroad and aid","https://wesleyan.edu/finaid/current-students/non-resident-study.html"]]},{"id":"amherst","name":"Amherst","route":"Liberal Arts Transfer","pri":"core","talked":1,"one":"Send the transfer essay (250 to 500 words on your reasons for transferring) and confirm the Fall 2027 date.","facts":["Transfer applicants submit the Common App or Coalition transfer application plus the Amherst supplement.","A Veteran Fee Waiver is listed on the Common App, and the fee can also be waived through Quick Pass.","No interview is required for admission consideration."],"next":"Follow up after your admissions call, confirm the March date on the official page, and ask about transfer aid and study abroad.","src":"https://www.amherst.edu/admission/apply/transfer","d":[["2027-03-01","Application (confirm on the official page)","x","https://www.amherst.edu/admission/apply/transfer"]],"di":"ask","fin":{"waiver":"A $65 fee or a fee waiver request through the Common App, Coalition App or Quick Pass. The Common App lists a Veteran Fee Waiver.","model":"A secondary source says Amherst aims to meet 100% of demonstrated need for transfers and is need-blind for U.S. applicants. Amherst's own transfer aid page was not retrieved.","aid":"No transfer-specific aid deadlines could be verified. Confirm on the official page.","vet":"Dossier lists a veterans program with Posse Veterans and VetLink. Unverified: ask admissions.","note":""},"abroad":"No official Amherst rule on study abroad or aid for transfer students was found. Ask admissions or the financial aid office.","links":[["Transfer admission","https://www.amherst.edu/admission/apply/transfer"],["Common App page","https://www.commonapp.org/explore/amherst-college"]]},{"id":"usc","name":"USC Iovine and Young","route":"Iovine and Young Academy","pri":"conditional","talked":0,"one":"Calculate the 3 to 4 year time and cost, and verify MATH 118 or 125 equivalency, before investing.","facts":["USC overall transfer rate was 26.1% in the Fall 2026 profile, with admitted GPAs of 3.70 to 3.97. Those are not Academy figures.","Academy essays go in SlideRoom, with up to four optional portfolio pieces."],"next":"Work out the realistic finish date and aid. If you apply, submit the required Academy essays and choose optional portfolio items.","src":"https://admission.usc.edu/prospective-students/how-to-apply/transfer-students/","d":[["2027-02-15","Application and Academy materials","p","https://admission.usc.edu/prospective-students/how-to-apply/transfer-students/"],["2027-03-02","FAFSA and CSS Profile priority","p","https://admission.usc.edu/prospective-students/how-to-apply/transfer-students/"]],"di":"none","fin":{"waiver":"Veteran or service member waiver: select it under the school-specific question in the USC Questions section of the Common App. Hardship waivers are also available.","model":"USC describes itself as need-blind for admission. Veterans should file the FAFSA and CSS Profile even when planning to use VA benefits, and can choose the GI Bill after seeing the aid package.","aid":"Your audited list shows February 15 for the application and March 2 for FAFSA and CSS priority filing. Other USC pages cite earlier dates, so verify.","vet":"Yellow Ribbon participant with an unlimited undergraduate program for eligible students. USC says eligible undergraduates with remaining GI Bill can graduate debt-free.","note":""},"abroad":"Iovine and Young BS students can fulfil up to 12 major units abroad with faculty approval, limited to major electives, with spring of junior year preferred. Whether aid applies to an Academy study abroad term was not found: ask. Outside-transfer eligibility for the Academy also needs written confirmation.","links":[["Transfer students","https://admission.usc.edu/prospective-students/how-to-apply/transfer-students/"],["Military and veterans","https://military.usc.edu/"],["Iovine and Young study abroad","https://dornsife.usc.edu/overseas-studies/iovine-and-young-academy/"],["Why USC does not track interest","https://www.admissionblog.usc.edu/p/why-we-dont-track-demonstrated-and"]]},{"id":"smu","name":"SMU","route":"Transfer, academic unit to select","pri":"conditional","talked":0,"one":"Apply only if a scholarship plus benefits makes SMU close to free. Get a written net-cost estimate first.","facts":["The admission-balance option: 1,190 of 1,542 Fall 2025 transfer applicants were admitted (77.2%).","Automatic transfer merit consideration starts at a 3.3 GPA."],"next":"Confirm major and credit fit, campus enjoyment and an actual aid estimate.","src":"https://www.smu.edu/admission/apply/transfer/application-process","d":[["2027-02-01","FAFSA and CSS Profile priority for fall transfer","p","https://www.smu.edu/enrollment-services/student-financial-services/apply-for-aid"],["2027-04-01","Priority fall transfer application","v","https://www.smu.edu/admission/apply/transfer/application-process"],["2027-08-01","Final fall transfer application","v","https://www.smu.edu/admission/apply/transfer/application-process"]],"gate":"Stays on the list only with a full, decent scholarship. Automatic transfer merit needs 24 transferable hours and a 3.3 GPA, and the larger awards need 3.5 or higher.","di":"firstyear","fin":{"waiver":"The veterans page says SMU automatically waives the application fee for all undergraduate U.S. military veteran applicants. A newer sheet says all undergraduates this cycle, so confirm.","model":"Merit comes automatically with 24 transferable hours and a 3.30 GPA: the Founders Scholarship is $15,000 a year for up to six terms, the Transfer Honor Scholarship is half tuition at 3.5, and a full-tuition-and-fees award needs 3.7 (North Texas community college students). Your gate is a full, decent scholarship.","aid":"FAFSA and CSS priority February 1. Priority application April 1. Final application August 1.","vet":"Yellow Ribbon guarantees a 100% tuition benefit for eligible Post-9/11 veterans for the length of their entitlement. Veterans apply as transfer students.","note":"Ask for a written net-cost estimate, with scholarship and benefits combined, before applying."},"abroad":"No transfer-specific study abroad award was found. Study abroad appears as an add-on in some first-year awards only.","links":[["Transfer scholarships","https://www.smu.edu/admission/apply/transfer/scholarships"],["Veterans","https://smu.edu/admission/apply/veterans"],["Yellow Ribbon","https://www.smu.edu/EnrollmentServices/Registrar/VeteransAffairs/YellowRibbonProgram"],["Transfer FAQs","https://www.smu.edu/admission/apply/transfer/faqs"],["Application process","https://www.smu.edu/admission/apply/transfer/application-process"]]}],"bench":[{"id":"duke","name":"Duke","one":"Revisit if recent grades get substantially stronger.","facts":["2025-26: 160 transfer admits from 2,460 applicants."]},{"id":"rice","name":"Rice","one":"Revisit with a verified current record.","facts":["Recent-college GPA minimum of 3.2; admitted transfers are typically 3.5+."]},{"id":"uchicago","name":"UChicago","one":"Check the current transfer cohort and curricular fit before adding.","facts":["Not yet researched against the current cycle."]},{"id":"columbia","name":"Columbia GS","one":"Only with a verified financing plan.","facts":["GS says it cannot meet every student's full financial need."]}]};var DATA={"lib":{},"dossier":{},"routes":[],"connections":[],"lens":{}};
+(function(){
+'use strict';
+var KEY='transfer-ninja-zine.v1';
+function $(s,r){return (r||document).querySelector(s)}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function pad(n){return n<10?'0'+n:''+n}
+function isoOf(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
+function parseD(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
+var TODAY=new Date();TODAY.setHours(0,0,0,0);
+function daysTo(s){return Math.round((parseD(s)-TODAY)/864e5)}
+function fmtShort(s){return parseD(s).toLocaleDateString('en-US',{month:'short',day:'numeric'})}
+function fmtLong(s){return parseD(s).toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'})}
+
+/* ---------- data ---------- */
+var STAGES=['Scouting','Talked to admissions','Route and major chosen','Credits mapped','Aid checked','Recommenders set','Essays drafted','Submitted','Decision in'];
+var KINDS={v:'Date verified',p:'Posted',x:'Verify first',s:'May shift'};
+
+var SCHOOLS=PUB.schools;
+var BENCH=PUB.bench;
+
+var DEADLINES=[];
+SCHOOLS.forEach(function(s){s.d.forEach(function(d,i){DEADLINES.push({id:s.id+'|'+d[0]+'|'+i,school:s.id,sname:s.name,date:d[0],label:d[1],kind:d[2],src:d[3]})})});
+DEADLINES.sort(function(a,b){return a.date<b.date?-1:a.date>b.date?1:a.sname<b.sname?-1:1});
+var SCH={};SCHOOLS.forEach(function(s){SCH[s.id]=s});
+
+var GEAR=[
+{id:'paper',title:'Paper trail',why:'Every school starts from your full record.',items:[
+ ['p1','Pull current unofficial transcripts from every college attended'],
+ ['p2','Collect course descriptions or syllabi for every course'],
+ ['p3','Build one course inventory in semester-credit equivalents (Courses tracker)'],
+ ['p4','Request official transcripts for each application and note how each school wants them sent'],
+ ['p5','Gather the military and veteran documents your routes ask for'],
+ ['p6','Open each application account and note which school uses which platform']]},
+{id:'profile',title:'Profile power-ups',why:'Recent, rigorous and documented beats long and old.',items:[
+ ['u1','Finish this term with strong grades and send updated transcripts when final'],
+ ['u2','Take recent quantitative coursework, such as statistics'],
+ ['u3','Take recent writing-intensive and liberal-arts coursework'],
+ ['u4','Complete an economics course for the routes that ask for it'],
+ ['u5','Choose a graded academic paper that could serve as a writing sample'],
+ ['u6','Write the through-line in one sentence: how should automated systems affect access to work, services and opportunity?'],
+ ['u7','Write one bounded project case study. Label each feature implemented, tested or proposed, and keep the proof']]},
+{id:'team',title:'Dream team',why:'Two instructors who know your recent work.',items:[
+ ['t1','Pick two instructors who can speak to recent academic work'],
+ ['t2','Send each a briefing packet: facts sheet, school list and deadlines'],
+ ['t3','Ask early and confirm each recommender\'s own deadline'],
+ ['t4','Confirm how each school receives recommendations']]},
+{id:'money',title:'Money moves',why:'Compare real net cost and time to degree.',items:[
+ ['m1','Ask each school for an aid estimate that does not assume GI Bill or VR&E benefits'],
+ ['m2','Set up FAFSA and CSS Profile, and note priority dates (Vanderbilt and SMU Feb 1)'],
+ ['m3','Gather tax forms for schools that ask for them (Northwestern, Apr 20)'],
+ ['m4','Calculate net cost and finish date for each school, including USC at 3 to 4 years']]},
+{id:'voice',title:'Voice and truth',why:'Nothing goes in the file that is not mine and true.',items:[
+ ['v1','Draft every essay in my own words'],
+ ['v2','Check every date, hour, project outcome and credit against proof'],
+ ['v3','Decide how much personal history to share with each school'],
+ ['v4','Log any AI help used, and keep it to organizing and questions']]},
+{id:'launch',title:'Launch pad',why:'Ten to twelve applications, not twenty.',items:[
+ ['l1','Cut any school that fails its route, fit, credit or cost gate'],
+ ['l2','Choose the college and major for each remaining school'],
+ ['l3','Put every date on the calendar from the Clock section'],
+ ['l4','Submit a week early and confirm each portal shows the file complete'],
+ ['l5','Send grade updates to schools that ask for them after submission']]}
+];
+var CRIT=[{k:'adm',n:'Admission chance',w:40},{k:'fit',n:'Academic fit',w:30},{k:'joy',n:'Enjoyment',w:20},{k:'cost',n:'Cost and time',w:6},{k:'near',n:'St. Louis or Texas',w:4}];
+var CATS=['Writing','Quantitative','Economics','Science','Humanities','Design and tech','Other'];
+var RSTAT=[['toask','To ask'],['asked','Asked'],['agreed','Agreed'],['sent','Submitted']];
+var TODAYISO=isoOf(TODAY);
+
+/* ---------- state ---------- */
+function fresh(){
+  return {v:1,stage:{},notes:{},done:{},check:{},custom:[],score:{},recap:{},offer:{},
+    courses:[
+      {id:'ex1',course:'Statistics',inst:'Your college',cr:3,grade:'',status:'plan',cat:'Quantitative',ex:1},
+      {id:'ex2',course:'Expository Writing',inst:'Your college',cr:3,grade:'',status:'prog',cat:'Writing',ex:1},
+      {id:'ex3',course:'Macroeconomics',inst:'Your college',cr:3,grade:'',status:'plan',cat:'Economics',ex:1}],
+    recs:[
+      {id:'ex1',name:'Professor name',rel:'Instructor, recent course',schools:'Cornell, Yale',status:'toask',ex:1},
+      {id:'ex2',name:'Advisor name',rel:'Academic advisor',schools:'All schools',status:'asked',ex:1}],
+    log:[
+      {id:'ex1',date:TODAYISO,school:'brown',contact:'Admissions officer',q:'How does aid work without GI Bill benefits?',a:'Write what they said, as close to their words as you can.',type:'pg',next:'Ask the aid office the same question in writing.',ex:1}],
+    ui:{filter:'all',sort:'priority',tab:'score',hideDone:false,vf:'all',vq:''}};
+}
+function load(){
+  var f=fresh();
+  try{var r=localStorage.getItem(KEY);if(r){var p=JSON.parse(r);if(p&&p.v===1){for(var k in p){if(k==='ui'){for(var u in p.ui)f.ui[u]=p.ui[u]}else f[k]=p[k]}}}}catch(e){}
+  return f;
+}
+var S=load();
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function stageOf(id){var v=S.stage[id];return v==null?(SCH[id]&&SCH[id].talked?1:0):v}
+var openSet={};
+
+/* ---------- helpers ---------- */
+function ddChip(d){
+  if(S.done[d.id])return '<span class="dd done">done</span>';
+  var n=daysTo(d.date);
+  if(n<0)return '<span class="dd past">past</span>';
+  if(n===0)return '<span class="dd soon">today</span>';
+  return '<span class="dd'+(n<=30?' soon':'')+'">'+n+'d</span>';
+}
+function flagHTML(k){return (k==='x'||k==='s')?'<span class="flag">'+KINDS[k]+'</span>':''}
+function totalFor(id){
+  var sc=S.score[id]||{},t=0;
+  for(var i=0;i<CRIT.length;i++){var v=+sc[CRIT[i].k];if(!v)return null;t+=CRIT[i].w*v/5}
+  return Math.round(t);
+}
+function gearAll(){
+  var all=[];GEAR.forEach(function(g){g.items.forEach(function(it){all.push(it[0])})});
+  S.custom.forEach(function(c){all.push(c.id)});return all;
+}
+
+/* ---------- research lens (core schools) ---------- */
+var DI={
+  none:['Not scored','The school publishes no interest scoring for transfers.'],
+  counts:['Counts','The school says interest is considered.'],
+  firstyear:['Transfer rule unpublished','First-year data counts interest. No transfer rule is published.'],
+  ted:['Binding early option','Transfer Early Decision is the one legitimate interest signal, and it is binding.'],
+  ask:['Ask once','No clear published rule. Ask once.']
+};
+function diChip(k){var d=DI[k]?k:'ask';return '<span class="di di-'+d+'" title="'+esc(DI[d][1])+'">'+DI[d][0]+'</span>'}
+function classDi(t){return /(does not (track|consider)|no published|not track|not scored|no transfer|not considered)/i.test(t||'')?'none':'ask'}
+
+var LENS=DATA.lens||{};
+
+
+/* ---------- the vault: every school found on this computer ---------- */
+var VG={core:'Core 12',bench:'Bench',alt:'Other alternate',researched:'Researched',dossier:'Dossier only',routes:'Route plan'};
+var VAULT=[
+['duke','Duke','bench','Dossier on file. Revisit if recent grades get substantially stronger.'],
+['rice','Rice','bench','Research brief and dossier on file.'],
+['uchicago','University of Chicago','bench','Research brief and dossier. Binding Transfer Early Decision exists.'],
+['columbia','Columbia General Studies','bench','Research brief and dossier. Needs a verified financing plan first.'],
+['michigan','University of Michigan','alt','Older alternative. Research brief and dossier on file.'],
+['uiuc','Univ. of Illinois Urbana-Champaign','alt','Older alternative. Information Sciences.'],
+['emory','Emory University','researched','Research brief and dossier.'],
+['northeastern','Northeastern University','researched','Research brief and dossier.'],
+['nyu','New York University','researched','Research brief and dossier.'],
+['penn','University of Pennsylvania','researched','Research brief and dossier. Prior-credit limits flagged.'],
+['dartmouth','Dartmouth College','researched','Research brief and dossier. Prior-credit limits flagged.'],
+['jhu','Johns Hopkins University','researched','Research brief and dossier.'],
+['unc','UNC Chapel Hill','researched','Research brief and dossier.'],
+['tulane','Tulane University','researched','Research brief and dossier.'],
+['uga','University of Georgia','researched','Research brief and dossier.'],
+['uva','University of Virginia','researched','Research brief and dossier.'],
+['miami','University of Miami','researched','Research brief and dossier.'],
+['case','Case Western Reserve','researched','Research brief only.'],
+['morehouse','Morehouse College','researched','Research brief only.'],
+['howard','Howard University','researched','Research brief only.'],
+['utaustin','UT Austin','researched','Research brief only.'],
+['florida','University of Florida','researched','Research brief only.'],
+['gwu','George Washington University','researched','Research brief only.'],
+['harvard','Harvard University','dossier','Dossier only. Art-school credit eligibility flagged.'],
+['stanford','Stanford University','dossier','Dossier only.'],
+['mit','MIT','dossier','Dossier only.'],
+['caltech','Caltech','dossier','Dossier only.'],
+['berkeley','UC Berkeley','dossier','Dossier only.'],
+['ucla','UCLA','dossier','Dossier only.'],
+['cmu','Carnegie Mellon','dossier','Dossier only.'],
+['tcu','TCU','dossier','Dossier only.'],
+['calarts','CalArts','dossier','Dossier only.'],
+['swarthmore','Swarthmore College','dossier','Dossier only.'],
+['bowdoin','Bowdoin College','dossier','Dossier only.']
+];
+var ROUTE_ONLY=['DePaul','University of South Florida','Fordham','Boston University'];
+var NAMES={};
+SCHOOLS.forEach(function(s){NAMES[s.id]=s.name});
+BENCH.forEach(function(b){NAMES[b.id]=b.name});
+VAULT.forEach(function(v){NAMES[v[0]]=v[1]});
+var ALIAS={nd:['Notre Dame'],nu:['Northwestern'],gt:['Georgetown'],vandy:['Vanderbilt'],washu:['WashU'],tufts:['Tufts'],usc:['USC'],cornell:['Cornell'],columbia:['Columbia'],uchicago:['UChicago'],jhu:['Johns Hopkins'],uva:['UVA'],uiuc:['UIUC'],miami:['Miami'],penn:['Penn'],unc:['UNC'],uga:['UGA'],nyu:['NYU'],gwu:['GW']};
+function aliasesFor(id){return ALIAS[id]||[(NAMES[id]||id).split(' ')[0]]}
+function evidenceFor(id){var al=aliasesFor(id);return (DATA.connections||[]).filter(function(r){return al.some(function(a){return r.schools.indexOf(a)>=0})})}
+
+function linkify(s){
+  return esc(s).replace(/(https?:\/\/[^\s<]+[^\s<.,;:)])/g,function(u){return '<a href="'+u+'" target="_blank" rel="noopener">source &#8599;</a>'});
+}
+function linkRow(str){
+  var m=String(str).match(/^(.*?):\s*(https?:\/\/\S+)(.*)$/);
+  if(m)return '<li><a href="'+esc(m[2])+'" target="_blank" rel="noopener">'+esc(m[1])+' &#8599;</a></li>';
+  return '<li>'+esc(str)+'</li>';
+}
+function fitPara(lib){
+  var best=null,sc=-1;
+  (lib.paras||[]).forEach(function(p,i){
+    if(i===0)return;
+    var n=(p.match(/professor|faculty|director|laborator|center|institute|minor|major|program/gi)||[]).length;
+    if(n>sc){sc=n;best=p}
+  });
+  return best||(lib.paras||[])[1]||'';
+}
+function recapCount(id){
+  var L=LENS[id]||{},r=S.recap[id]||{};
+  return (L.res?1:0)+(L.evi?1:0)+['c','a','p'].filter(function(f){return r[f]&&r[f].trim()}).length;
+}
+function nextDateFor(id){
+  var d=DEADLINES.filter(function(x){return x.school===id&&!S.done[x.id]&&daysTo(x.date)>=0})[0];
+  return d?fmtShort(d.date)+' <span class="dd'+(daysTo(d.date)<=30?' soon':'')+'">'+daysTo(d.date)+'d</span>':'<span class="dd done">clear</span>';
+}
+
+/* ---------- core school research brief (inside each card) ---------- */
+function briefDetails(s){
+  if(!UNLOCKED)return '<div class="lockrow">Research brief and proof test: locked</div>';var L=LENS[s.id];if(!L)return '';
+  var key='br-'+s.id,lib=DATA.lib[s.id],rc=S.recap[s.id]||{};
+  var h='<details data-key="'+key+'"'+(openSet[key]?' open':'')+'><summary>Research brief: fit, interest, connect, prove</summary><div class="brief">';
+  h+='<div><h4>Fit<span>the real degree path</span></h4><p>'+esc(L.path)+'</p></div>';
+  if(L.know&&L.know.length)h+='<div><h4>People and research to know<span>anchors, not contacts</span></h4><ul>'+L.know.map(function(k){return '<li><b>'+esc(k[0])+'.</b> '+esc(k[1])+'</li>'}).join('')+'</ul></div>';
+  h+='<div><h4>Interest<span>does contact count?</span></h4><p>'+diChip(L.di)+' '+esc(L.diText)+'</p></div>';
+  h+='<div><h4>Connect</h4><p><b>Who:</b> '+esc(L.who)+'</p><p class="quote">'+esc(L.ask)+'</p></div>';
+  h+='<div><h4>Show your knowledge<span>RECAP</span></h4><p>'+esc(L.show)+'</p>';
+  if(L.res)h+='<div class="seed"><b>R</b>'+esc(L.res)+'</div>';
+  if(L.evi)h+='<div class="seed"><b>E</b>'+esc(L.evi)+'</div>';
+  if(L.gap)h+='<div class="seed">'+esc(L.gap)+'</div>';
+  h+='<div class="recap">'+[['c','Connection: which part of my own work gives me a reason to care?'],['a','Application: a feasible undergraduate action (course sequence, replication, research prep, public event)'],['p','Proof: what I already did because of this research (notebook, design change, reading memo, revised question)']].map(function(f){
+    return '<label for="rc-'+s.id+'-'+f[0]+'">'+esc(f[1])+'<textarea id="rc-'+s.id+'-'+f[0]+'" data-recap="'+s.id+'" data-f="'+f[0]+'">'+esc(rc[f[0]]||'')+'</textarea></label>';
+  }).join('')+'</div></div>';
+  var ev=evidenceFor(s.id);
+  if(ev.length)h+='<div><h4>Profile evidence that fits</h4><ul>'+ev.map(function(r){return '<li><b>'+esc(r.evidence)+'.</b> Supports: '+esc(r.question)+' Best use: '+esc(r.use)+'</li>'}).join('')+'</ul></div>';
+  h+='<div class="dont"><b>Avoid.</b> '+esc(L.dont)+'</div>';
+  if(lib){
+    if(lib.safest)h+='<div><h4>Approved channels</h4><p>'+esc(lib.channel||'')+'</p><p style="margin-top:4px"><b>Safest use:</b> '+esc(lib.safest)+'</p></div>';
+    if(lib.actions&&lib.actions.length)h+='<div><h4>Steps from the research<span>written July 2026</span></h4><ol>'+lib.actions.map(function(a){return '<li>'+esc(a)+'</li>'}).join('')+'</ol></div>';
+    if(lib.links&&lib.links.length)h+='<div><h4>Official links and contacts</h4><ul>'+lib.links.map(linkRow).join('')+'</ul></div>';
+    h+='<details class="fulln" data-key="fn-'+s.id+'"'+(openSet['fn-'+s.id]?' open':'')+'><summary>Full research notes</summary>'+lib.paras.map(function(p){return '<p>'+linkify(p)+'</p>'}).join('')+'</details>';
+  }else{
+    h+='<p class="stale">No research-library brief on file for this school yet. Facts below come from the older vault dossier.</p>'+factsGrid(DATA.dossier[s.id]);
+  }
+  return h+'</div></details>';
+}
+function factsGrid(d){
+  if(!d)return '';
+  var rows=[['Route',d.route],['Application deadline (archive)',d.deadline],['Aid deadline (archive)',d.aid],['Portal',d.portal],['Testing',d.testing],['Veteran support',d.vet],['Yellow Ribbon',d.yr],['Winter grades',d.winter]].filter(function(r){return r[1]});
+  return '<div class="fg">'+rows.map(function(r){return '<div><b>'+esc(r[0])+'</b>'+esc(r[1])+'</div>'}).join('')+'</div>';
+}
+
+/* ---------- tutor board ---------- */
+function renderTutor(){
+  if(!UNLOCKED){$('#tutorbox').innerHTML=lockedPanel('Tutor board');$('#tutorlegend').hidden=true;$('#connpanel').hidden=true;return}
+  $('#tutorlegend').hidden=false;$('#connpanel').hidden=false;
+  var rows=SCHOOLS.map(function(s){
+    var L=LENS[s.id],n=recapCount(s.id);
+    return '<tr><td><b class="nm"><a href="#s-'+s.id+'">'+esc(s.name)+'</a></b><div class="route">'+esc(s.route)+'</div></td>'+
+      '<td>'+esc(L.path)+'</td>'+
+      '<td><b>'+esc(L.res||'Not researched yet')+'</b><div class="ppl">'+esc((L.know||[]).map(function(k){return k[0]}).join(', '))+(L.gap?'<br>'+esc(L.gap):'')+'</div></td>'+
+      '<td>'+diChip(L.di)+'<div class="ppl" style="margin-top:6px">'+esc(L.diText.split('. ')[0].replace(/\.$/,''))+'.</div></td>'+
+      '<td>'+esc(L.who)+'<div class="ppl" style="margin-top:6px">Ask: '+esc(L.ask)+'</div></td>'+
+      '<td><div class="rc">'+n+'/5<div class="meter" aria-hidden="true"><i style="width:'+(n/5*100)+'%"></i></div></div></td>'+
+      '<td>'+nextDateFor(s.id)+'</td></tr>';
+  }).join('');
+  $('#tutorbox').innerHTML='<table><thead><tr><th>School</th><th>Fit: real degree path</th><th>Research to know</th><th>Interest</th><th>Connect</th><th>RECAP</th><th>Next date</th></tr></thead><tbody>'+rows+'</tbody></table>';
+  var cm=(DATA.connections||[]).map(function(r){return '<tr><td><b>'+esc(r.evidence)+'</b></td><td>'+esc(r.question)+'</td><td>'+esc(r.schools)+'</td><td>'+esc(r.use)+'</td></tr>'}).join('');
+  $('#connmap').innerHTML='<table style="min-width:760px"><thead><tr><th>Profile evidence</th><th>Question it supports</th><th>Strongest schools</th><th>Best use</th></tr></thead><tbody>'+cm+'</tbody></table>';
+}
+
+/* ---------- vault ---------- */
+function vaultItems(){
+  var items=[];
+  VAULT.forEach(function(v){items.push({key:'v-'+v[0],id:v[0],name:v[1],group:v[2],note:v[3],kind:'inst'})});
+  (DATA.routes||[]).forEach(function(r,i){items.push({key:'vr-'+i,id:String(i),name:r.name,group:'routes',note:r.type,kind:'route'})});
+  SCHOOLS.forEach(function(s){items.push({key:'v-'+s.id,id:s.id,name:s.name,group:'core',note:s.route+'. Already on the lineup above.',kind:'core'})});
+  return items;
+}
+function vaultBody(kind,id){
+  if(kind==='route'){
+    var r=DATA.routes[+id];if(!r)return '';
+    var rows=[['Route type',r.type],['Recommended degree',r.degree],['Secondary degree',r.second],['Review basis',r.basis],['Deadline',r.deadline+(r.confidence?' ('+r.confidence+')':'')],['Portfolio',r.portfolio],['Aid outlook',r.aid],['Transfer-credit reality',r.credit],['Key condition',r.condition],['Next action',r.next]].filter(function(x){return x[1]&&x[1]!=='()'});
+    return '<div class="vbody"><div class="fg">'+rows.map(function(x){return '<div><b>'+esc(x[0])+'</b>'+esc(x[1])+'</div>'}).join('')+'</div>'+
+      (/^https?:\/\//.test(r.src)?'<p><a href="'+esc(r.src)+'" target="_blank" rel="noopener">Official source &#8599;</a></p>':'')+
+      '<p class="stale">From the SCAD transfer execution spreadsheet. Check the date against the school\'s official page.</p></div>';
+  }
+  var lib=DATA.lib[id],dos=DATA.dossier[id],h='<div class="vbody">';
+  var di=lib?lib.di:(dos?classDi(dos.di):'ask'),dit=lib?lib.diText:(dos?dos.di:'');
+  h+='<div><h4>Interest</h4><p>'+diChip(di)+' '+esc(dit||DI[di][1])+'</p></div>';
+  if(lib){
+    h+='<div><h4>Fit and people to know</h4><p>'+esc(fitPara(lib))+'</p></div>';
+    if(lib.safest)h+='<div><h4>Approved channels</h4><p>'+esc(lib.channel||'')+'</p><p style="margin-top:4px"><b>Safest use:</b> '+esc(lib.safest)+'</p></div>';
+  }
+  if(dos)h+='<div><h4>Vault dossier facts<span class="stale"> older, verify before use</span></h4>'+factsGrid(dos)+'</div>';
+  var ev=evidenceFor(id);
+  if(ev.length)h+='<div><h4>Profile evidence that fits</h4><ul>'+ev.map(function(r){return '<li><b>'+esc(r.evidence)+'.</b> '+esc(r.question)+'</li>'}).join('')+'</ul></div>';
+  if(lib&&lib.actions&&lib.actions.length)h+='<div><h4>Steps from the research<span class="stale"> written July 2026</span></h4><ol>'+lib.actions.map(function(a){return '<li>'+esc(a)+'</li>'}).join('')+'</ol></div>';
+  if(lib&&lib.links&&lib.links.length)h+='<div><h4>Official links and contacts</h4><ul>'+lib.links.map(linkRow).join('')+'</ul></div>';
+  if(dos&&/^https?:\/\//.test(dos.url))h+='<p><a href="'+esc(dos.url)+'" target="_blank" rel="noopener">Official page from the dossier &#8599;</a></p>';
+  if(lib)h+='<details class="fulln" data-key="fn-'+id+'"'+(openSet['fn-'+id]?' open':'')+'><summary>Full research notes</summary>'+lib.paras.map(function(p){return '<p>'+linkify(p)+'</p>'}).join('')+'</details>';
+  if(!lib)h+='<p class="stale">No research-library brief exists for this school. Only the older dossier facts above are on file.</p>';
+  return h+'</div>';
+}
+function vaultItemHTML(it){
+  if(it.kind==='core'){
+    return '<div class="vitem"><div class="vrow"><span class="vname"><a href="#s-'+it.id+'">'+esc(it.name)+'</a></span><span class="vchips"><span class="pri '+(SCH[it.id].pri)+'">'+(SCH[it.id].pri==='core'?'Core':'Conditional')+'</span>'+diChip(SCH[it.id].di)+'<a class="src" href="#s-'+it.id+'">Open card</a></span><span class="vsub">'+esc(it.note)+'</span></div></div>';
+  }
+  var lib=it.kind==='inst'?DATA.lib[it.id]:null,dos=it.kind==='inst'?DATA.dossier[it.id]:null,chips='<span class="pri '+(it.group==='bench'?'bench':it.group==='routes'?'bench':'conditional')+'">'+VG[it.group]+'</span>';
+  if(it.kind==='inst'){var di=lib?lib.di:(dos?classDi(dos.di):'ask');chips+=diChip(di)}
+  var open=openSet[it.key];
+  return '<div class="vitem"><details data-key="'+it.key+'" data-vault="'+it.kind+':'+it.id+'"'+(open?' open':'')+'><summary><span class="vname">'+esc(it.name)+'</span><span class="vchips">'+chips+'</span><span class="vsub">'+esc(it.note)+'</span></summary>'+(open?vaultBody(it.kind,it.id):'')+'</details></div>';
+}
+function renderVaultList(){
+  var f=S.ui.vf,q=(S.ui.vq||'').toLowerCase().trim();
+  var items=vaultItems().filter(function(it){
+    var g=it.group;
+    if(f==='bench'&&!(g==='bench'||g==='alt'))return false;
+    if(f!=='all'&&f!=='bench'&&g!==f)return false;
+    return !q||(it.name+' '+it.note).toLowerCase().indexOf(q)>=0;
+  });
+  $('#vlist').innerHTML=items.length?items.map(vaultItemHTML).join(''):'<div class="sheet panel"><p class="empty">No school or route matches that search.</p></div>';
+}
+function renderVault(){
+  var vs=document.querySelector('.vbar .sortbox');
+  if(!UNLOCKED){$('#vaultlede').textContent='The full vault of schools and routes is for the tutor and admin.';$('#vfilters').innerHTML='';$('#vlist').innerHTML=lockedPanel('Vault');if(vs)vs.hidden=true;return}
+  if(vs)vs.hidden=false;
+  var all=vaultItems(),cnt=function(fn){return all.filter(fn).length};
+  var inst=SCHOOLS.length+VAULT.length+ROUTE_ONLY.length;
+  $('#vaultlede').innerHTML='<b>'+inst+' institutions</b> turn up across '+Object.keys(DATA.dossier).length+' vault dossiers, '+Object.keys(DATA.lib).length+' research briefs and '+(DATA.routes||[]).length+' planned routes in the SCAD execution plan. '+ROUTE_ONLY.join(', ')+' appear only as routes. Open any row for fit, interest policy, people and steps. Dossier dates are older, so use the Clock for live dates.';
+  var defs=[['all','All',all.length],['core','On the lineup',cnt(function(i){return i.group==='core'})],['bench','Bench and alternates',cnt(function(i){return i.group==='bench'||i.group==='alt'})],['researched','Researched',cnt(function(i){return i.group==='researched'})],['dossier','Dossier only',cnt(function(i){return i.group==='dossier'})],['routes','Route plans',cnt(function(i){return i.group==='routes'})]];
+  $('#vfilters').innerHTML=defs.map(function(d){return '<button type="button" class="chip" data-act="vfilter" data-v="'+d[0]+'" aria-pressed="'+(S.ui.vf===d[0])+'">'+d[1]+' '+d[2]+'</button>'}).join('');
+  $('#vsearch').value=S.ui.vq||'';
+  renderVaultList();
+}
+
+/* ---------- proof inventory ---------- */
+var OFFER=[
+['o1','strong','Club SCAD to Victory Hall event case study','Initiative, iteration, stakeholder coordination, campus trust and scaling a small test.','Dates, exact role, approval, attendee or completion count, images or flyer, gift-card details and a staff confirmation. Use Victory Hall, not Halsey.'],
+['o2','strong','Student-government campaign record','Courage across age and background, coalition-building, faculty trust and an honest response to loss.','Ballot, endorsement letters, platform, campaign material, dates and the precise outcome. Do not imply winning or institutional endorsement.'],
+['o3','strong','One SCAD academic project with visible revision','Current academic readiness, design process, teachability and authorship.','Assignment brief, original work, critique, revision, instructor context and a short reflection.'],
+['o4','strong','Great Books Semantic Engine, transparent MVP','Technical curiosity, cross-cultural inquiry and willingness to expose limitations.','Corpus manifest, licenses, method, current scale, authorship, demo, benchmark and failure examples. Say working MVP until validated.'],
+['o5','strong','NYC systems-design case study','Systems thinking, creative technology, mapping and interaction design.','Personal role, process, design decisions, source attribution and limitations.'],
+['o6','later','LocalOps offline veteran-resource navigator','Privacy-protecting resource navigation with human judgment.','Public corpus, privacy design, benchmark, citations and documented escalation behavior.'],
+['o7','later','Messaging-to-meetup prototype','Making an existing messaging pattern lead to a time, place and action.','A real prototype, tested without overstating behavior change.'],
+['o8','later','AI-focused student club','Leadership and community.','Official status, dates, membership, events and outcomes.'],
+['o9','later','Service and mentoring log','Human-scale results under constraint.','Hours, responsibilities, supervisor, organization relationship and a verified specific result.'],
+['o10','later','Graded academic paper','Analytical writing readiness.','Genuinely graded, analytical, legible, with the instructor\'s original comments.']
+];
+var NOTYET=['A 94% retrieval accuracy claim, without the benchmark and results file','"500+ classical volumes," if the live prototype uses a much smaller disclosed corpus','Native-speaker evaluation or community-led Indigenous-language work, without named and consented partners','"25 structured participant interviews" or any usability study, without protocol, consent, dates, notes and results','A "100/100 Lighthouse" score, without a dated report','A 180-quarter-hour syllabus archive, unless the files exist and match the claim','Any professor, center, nonprofit or school as a partner, endorser or collaborator, without documentation'];
+var OST=[['none','Not started'],['gather','Gathering proof'],['ready','Evidence ready']];
+function panelProof(){
+  var ready=OFFER.filter(function(o){return S.offer[o[0]]==='ready'}).length;
+  function card(o){
+    var v=S.offer[o[0]]||'none';
+    return '<article class="note"><h4>'+esc(o[2])+'</h4><div class="meta">What it can prove: '+esc(o[3])+'</div><p><b>Needed</b>'+esc(o[4])+'</p><label class="sr" for="of-'+o[0]+'">Status for '+esc(o[2])+'</label><select id="of-'+o[0]+'" data-chg="offer" data-id="'+o[0]+'">'+OST.map(function(s){return '<option value="'+s[0]+'"'+(v===s[0]?' selected':'')+'>'+s[1]+'</option>'}).join('')+'</select></article>';
+  }
+  return '<h3>Proof inventory</h3><p class="why">What can honestly be put forward, and the evidence each piece still needs. Move an item to Evidence ready only when every needed file exists. '+ready+' of '+OFFER.length+' ready.</p>'+
+    '<h4 style="font:800 1.3rem var(--f-disp);text-transform:uppercase;margin:6px 0 0">Strongest after basic proof collection</h4><div class="notes">'+OFFER.filter(function(o){return o[1]==='strong'}).map(card).join('')+'</div>'+
+    '<h4 style="font:800 1.3rem var(--f-disp);text-transform:uppercase;margin:18px 0 0">Promising after development</h4><div class="notes">'+OFFER.filter(function(o){return o[1]==='later'}).map(card).join('')+'</div>'+
+    '<h4 style="font:800 1.3rem var(--f-disp);text-transform:uppercase;margin:18px 0 6px">Do not offer as proven yet</h4><ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:5px;font-size:.92rem">'+NOTYET.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>';
+}
+
+/* ---------- code gate (tutor and admin tools) ---------- */
+function cyrb53(str){var h1=0xdeadbeef,h2=0x41c6ce57;for(var i=0,ch;i<str.length;i++){ch=str.charCodeAt(i);h1=Math.imul(h1^ch,2654435761);h2=Math.imul(h2^ch,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return 4294967296*(2097151&h2)+(h1>>>0)}
+var UNLOCKED=false;
+try{if(GATE_MODE==='soft'&&sessionStorage.getItem('tn-ok')==='1')UNLOCKED=true}catch(e){}
+function lockedPanel(t){return '<div class="sheet panel lockp"><h3>'+esc(t)+'</h3><p class="why">This area is for the tutor and admin. Enter the code to open it.</p><button class="btn" type="button" data-act="opengate">Enter code</button></div>'}
+function setGateUI(){var b=$('#unlockbtn');if(b)b.textContent=UNLOCKED?'Lock':'Unlock';if(UNLOCKED)$('#gatebox').hidden=true}
+function showGate(){$('#gatebox').hidden=false;setTimeout(function(){var i=$('#codeinput');if(i)i.focus()},0)}
+function doUnlock(){
+  var code=($('#codeinput').value||'').trim(),msg=$('#gatemsg');
+  if(!code){msg.textContent='Enter the code.';return}
+  msg.textContent='Checking.';
+  function finish(ok){
+    if(ok){msg.textContent='';$('#codeinput').value='';setGateUI();renderAll();entryStoreInit()}
+    else msg.textContent='That code did not work.';
+  }
+  if(GATE_MODE==='soft'){
+    if(cyrb53('tn:'+code)===CODEHASH){UNLOCKED=true;try{sessionStorage.setItem('tn-ok','1')}catch(e){}finish(true)}else finish(false);
+    return;
+  }
+  fetch('/api/unlock',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({code:code})})
+    .then(function(r){return r.ok?r.json():null})
+    .then(function(j){if(j&&j.ok){DATA=j.data;LENS=DATA.lens||{};UNLOCKED=true;finish(true)}else finish(false)})
+    .catch(function(){finish(false)});
+}
+function doLock(){
+  UNLOCKED=false;try{sessionStorage.removeItem('tn-ok')}catch(e){}
+  if(GATE_MODE!=='soft'){DATA={lib:{},dossier:{},routes:[],connections:[],lens:{}};LENS={}}
+  setGateUI();renderAll();
+}
+
+/* ---------- money, study abroad and links (public, on every card) ---------- */
+function moneyDetails(s){
+  var f=s.fin||{},key='mo-'+s.id;
+  function row(t,x){return x?'<div><h4>'+t+'</h4><p>'+esc(x)+'</p></div>':''}
+  var h='<details data-key="'+key+'"'+(openSet[key]?' open':'')+'><summary>Money, study abroad and links</summary><div class="brief">';
+  h+=row('Application fee',f.waiver)+row('Aid model',f.model)+row('Aid forms and dates',f.aid)+row('Veterans benefits',f.vet);
+  if(f.note)h+='<div class="dont"><b>Note.</b> '+esc(f.note)+'</div>';
+  h+=row('Study abroad',s.abroad);
+  var ls=(s.links||[]).filter(function(l){return /^https?:\/\//.test(l[1])});
+  if(ls.length)h+='<div><h4>Links</h4><ul>'+ls.map(function(l){return '<li><a href="'+esc(l[1])+'" target="_blank" rel="noopener">'+esc(l[0])+' &#8599;</a></li>'}).join('')+'</ul></div>';
+  return h+'<p class="stale">Researched November 2026 from official pages and your call notes. A line that says not found means the school does not publish it for transfers. Verify before relying on it.</p></div></details>';
+}
+
+/* ---------- Common App entries and school questions (admin) ---------- */
+var CAPP=[
+ {g:'Writing',items:[['ca-essay','Personal essay',650,'words'],['ca-transfer','Reasons for transferring',650,'words'],['ca-addl','Additional information',650,'words']]},
+ {g:'Activities',items:[]},
+ {g:'Honors',items:[]},
+ {g:'Notes',items:[['ca-edu','Education history notes',0,''],['ca-test','Testing notes',0,'']]}
+];
+(function(){for(var n=1;n<=10;n++)CAPP[1].items.push(['ca-act-'+n,'Activity '+n,150,'chars','act']);for(n=1;n<=5;n++)CAPP[2].items.push(['ca-hon-'+n,'Honor '+n,100,'chars','hon'])})();
+var EST=[['none','Not started'],['draft','Drafting'],['ready','Ready'],['entered','Entered']];
+var ENT={},ESTORE={mode:'local',started:false,err:''},CANEDIT=true,saveTimers={},pendingEnt={};
+function countOf(text,unit){text=text||'';return unit==='words'?(text.trim()?text.trim().split(/\s+/).length:0):text.length}
+function entryStoreInit(){
+  if(!UNLOCKED||ESTORE.started)return;
+  ESTORE.started=true;
+  function localInit(note){ESTORE.mode='local';ESTORE.err=note||'';ENT=S.ent||(S.ent={});renderApps()}
+  if(window.claude&&window.claude.use){
+    window.claude.use('db').then(function(db){
+      if(!db){localInit('');return}
+      ESTORE.mode='db';ESTORE.db=db;
+      var timer=setTimeout(function(){ESTORE.err='slow';renderApps()},10000);
+      db.collection('entries').onSnapshot(function(snap){
+        clearTimeout(timer);ESTORE.err='';
+        var m={};snap.docs.forEach(function(d){m[d.id]=d.data()});
+        ENT=m;
+        var a=document.activeElement;
+        if(!(a&&a.dataset&&a.dataset.ent))renderApps();
+      },function(err){ESTORE.err=(err&&err.code)||'error';clearTimeout(timer);localInit(ESTORE.err)});
+      window.claude.use('user').then(function(u){if(u&&typeof u.canEdit==='function'){CANEDIT=!!u.canEdit();renderApps()}}).catch(function(){});
+    }).catch(function(){localInit('')});
+  }else localInit('');
+}
+function saveEntry(id,patch){
+  var e={};var old=ENT[id]||{};for(var k in old)e[k]=old[k];for(var k2 in patch)e[k2]=patch[k2];
+  e.updated=new Date().toISOString();ENT[id]=e;
+  if(ESTORE.mode==='db'){ESTORE.db.collection('entries').doc(id).set(e).catch(function(err){ESTORE.err=(err&&err.code)||'error';renderAppsNote()})}
+  else{S.ent=ENT;save()}
+  return e;
+}
+function deleteEntry(id){
+  delete ENT[id];
+  if(ESTORE.mode==='db'){ESTORE.db.collection('entries').doc(id).delete().catch(function(){})}
+  else{S.ent=ENT;save()}
+}
+function queueEntry(id,patch){
+  var p=pendingEnt[id]=pendingEnt[id]||{};for(var k in patch)p[k]=patch[k];
+  clearTimeout(saveTimers[id]);
+  saveTimers[id]=setTimeout(function(){var pp=pendingEnt[id];delete pendingEnt[id];if(pp)saveEntry(id,pp);renderAppsSummary()},700);
+}
+function appsNote(){
+  if(ESTORE.mode==='db')return 'Entries save to the shared store: people you invite through Share see them live'+(CANEDIT?'. Only editors can change them.':'. You can read them but not change them.');
+  return 'Entries save in this browser only'+(ESTORE.err&&ESTORE.err!=='slow'?' (the shared store did not answer)':'')+'. Use the backup code under Rules to keep or move them. The shared store runs on the claude.ai version.';
+}
+function renderAppsNote(){var n=$('#appsnote');if(n)n.textContent=appsNote()}
+function entryHTML(def){
+  var id=def[0],e=ENT[id]||{},unit=e.unit!=null&&e.unit!==''?e.unit:def[3],lim=e.limit!=null&&e.limit!==''?+e.limit:def[2];
+  var dis=CANEDIT?'':' disabled',n=countOf(e.text,unit),over=lim&&n>lim;
+  var h='<article class="entry" data-eid="'+id+'"><div class="eh"><b>'+esc(def[1])+'</b><label class="sr" for="st-'+id+'">Status</label><select id="st-'+id+'" data-chg="ent" data-id="'+id+'" data-k="status"'+dis+'>'+EST.map(function(s){return '<option value="'+s[0]+'"'+((e.status||'none')===s[0]?' selected':'')+'>'+s[1]+'</option>'}).join('')+'</select><span class="cnt'+(over?' over':'')+'">'+n+(lim?' / '+lim:'')+' '+esc(unit||'')+'</span></div>';
+  if(def[4]==='act')h+='<div class="two"><label class="sr" for="nm-'+id+'">Position and organization</label><input type="text" id="nm-'+id+'" data-ent="'+id+'" data-f="name" placeholder="Position and organization" value="'+esc(e.name||'')+'"'+dis+'><label class="sr" for="mt-'+id+'">Years, hours a week, weeks a year</label><input type="text" id="mt-'+id+'" data-ent="'+id+'" data-f="meta" placeholder="Years, hours a week, weeks a year" value="'+esc(e.meta||'')+'"'+dis+'></div>';
+  h+='<label class="sr" for="tx-'+id+'">'+esc(def[1])+' text</label><textarea id="tx-'+id+'" data-ent="'+id+'" data-f="text"'+dis+'>'+esc(e.text||'')+'</textarea>';
+  h+='<div class="eh"><label for="lm-'+id+'" class="lbl">Limit</label><input type="number" id="lm-'+id+'" min="0" style="width:6em" data-ent="'+id+'" data-f="limit" value="'+(lim||'')+'"'+dis+'><label class="sr" for="un-'+id+'">Unit</label><select id="un-'+id+'" data-chg="ent" data-id="'+id+'" data-k="unit"'+dis+'><option value="words"'+(unit==='words'?' selected':'')+'>words</option><option value="chars"'+(unit==='chars'?' selected':'')+'>characters</option></select><span class="upd">'+(e.updated?'saved '+esc(new Date(e.updated).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})):'not saved yet')+'</span></div></article>';
+  return h;
+}
+function questionHTML(id){
+  var e=ENT[id]||{},unit=e.unit||'words',lim=+e.limit||0,dis=CANEDIT?'':' disabled',n=countOf(e.text,unit),over=lim&&n>lim;
+  return '<article class="entry" data-eid="'+id+'"><div class="eh"><b>Question</b><label class="sr" for="st-'+id+'">Status</label><select id="st-'+id+'" data-chg="ent" data-id="'+id+'" data-k="status"'+dis+'>'+EST.map(function(s){return '<option value="'+s[0]+'"'+((e.status||'none')===s[0]?' selected':'')+'>'+s[1]+'</option>'}).join('')+'</select><span class="cnt'+(over?' over':'')+'">'+n+(lim?' / '+lim:'')+' '+unit+'</span>'+(CANEDIT?'<button type="button" class="x" data-act="qdel" data-id="'+id+'" aria-label="Delete this question">&times;</button>':'')+'</div>'+
+    '<label for="pr-'+id+'" class="lbl">Prompt, copied from the application</label><textarea id="pr-'+id+'" data-ent="'+id+'" data-f="prompt" style="min-height:56px"'+dis+'>'+esc(e.prompt||'')+'</textarea>'+
+    '<label for="tx-'+id+'" class="lbl">Your draft, in your own words</label><textarea id="tx-'+id+'" data-ent="'+id+'" data-f="text"'+dis+'>'+esc(e.text||'')+'</textarea>'+
+    '<div class="eh"><label for="lm-'+id+'" class="lbl">Limit</label><input type="number" id="lm-'+id+'" min="0" style="width:6em" data-ent="'+id+'" data-f="limit" value="'+(lim||'')+'"'+dis+'><label class="sr" for="un-'+id+'">Unit</label><select id="un-'+id+'" data-chg="ent" data-id="'+id+'" data-k="unit"'+dis+'><option value="words"'+(unit==='words'?' selected':'')+'>words</option><option value="chars"'+(unit==='chars'?' selected':'')+'>characters</option></select><span class="upd">'+(e.updated?'saved '+esc(new Date(e.updated).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})):'not saved yet')+'</span></div></article>';
+}
+function appsStats(){
+  var ca=[];CAPP.forEach(function(g){if(g.g!=='Notes')g.items.forEach(function(d){ca.push(d[0])})});
+  var q=Object.keys(ENT).filter(function(k){return k.indexOf('q-')===0});
+  var c=function(arr,st){return arr.filter(function(k){return (ENT[k]||{}).status===st}).length};
+  return {caTotal:ca.length,caEntered:c(ca,'entered'),caReady:c(ca,'ready'),qTotal:q.length,qReady:c(q,'ready'),qEntered:c(q,'entered')};
+}
+function renderAppsSummary(){
+  var el=$('#appssum');if(!el)return;var a=appsStats();
+  el.innerHTML='<div class="sheet stat"><span class="lbl">Common App entered</span><b>'+a.caEntered+'<small> / '+a.caTotal+'</small></b><div class="meter" aria-hidden="true"><i style="width:'+(a.caTotal?a.caEntered/a.caTotal*100:0)+'%"></i></div></div>'+
+    '<div class="sheet stat"><span class="lbl">Common App ready</span><b>'+a.caReady+'<small> / '+a.caTotal+'</small></b></div>'+
+    '<div class="sheet stat"><span class="lbl">School questions</span><b>'+a.qTotal+'</b><span class="why" style="font-size:.85rem">'+a.qReady+' ready, '+a.qEntered+' entered</span></div>';
+}
+function renderApps(){
+  var box=$('#appsbox');if(!box)return;
+  if(!UNLOCKED){$('#appslede').textContent='Entry tracking is an admin tool.';box.innerHTML=lockedPanel('Common App and school questions');return}
+  $('#appslede').innerHTML='Enter, update and track every Common App entry and every school question here. Write the words yourself: these boxes organize your drafts, they do not write them. Limits are starting values: set each from your application screenshots.';
+  var tab=S.ui.atab||'common',tabs=[['common','Common App'],['questions','School questions']];
+  var h='<div class="tabs" role="tablist" aria-label="Applications">'+tabs.map(function(t){return '<button type="button" role="tab" class="chip" data-act="atab" data-v="'+t[0]+'" aria-selected="'+(tab===t[0])+'">'+t[1]+'</button>'}).join('')+'</div>';
+  h+='<div class="legend" id="appssum" style="margin:0 0 18px"></div><p class="stale" id="appsnote" style="margin-bottom:14px">'+esc(appsNote())+'</p>';
+  if(tab==='common'){
+    h+=CAPP.map(function(g){return '<div class="sheet panel" style="margin-bottom:18px"><h3>'+esc(g.g)+'</h3><div class="egroup">'+g.items.map(entryHTML).join('')+'</div></div>'}).join('');
+  }else{
+    var cur=S.ui.aschool&&SCH[S.ui.aschool]?S.ui.aschool:SCHOOLS[0].id;
+    var cnt=function(id){return Object.keys(ENT).filter(function(k){return k.indexOf('q-'+id+'-')===0}).length};
+    h+='<div class="chips" style="margin-bottom:14px" role="group" aria-label="School">'+SCHOOLS.map(function(s){return '<button type="button" class="chip" data-act="aschool" data-v="'+s.id+'" aria-pressed="'+(cur===s.id)+'">'+esc(s.name)+(cnt(s.id)?' '+cnt(s.id):'')+'</button>'}).join('')+'</div>';
+    var qs=Object.keys(ENT).filter(function(k){return k.indexOf('q-'+cur+'-')===0}).sort(function(a,b){return (ENT[a].created||'')<(ENT[b].created||'')?-1:1});
+    h+='<div class="sheet panel"><h3>'+esc(SCH[cur].name)+' questions</h3><p class="why">Paste each prompt from the application, then draft your answer. Track the status as it moves to Entered.</p><div class="egroup">'+(qs.length?qs.map(questionHTML).join(''):'<p class="empty">No questions added for '+esc(SCH[cur].name)+' yet.</p>')+'</div>'+(CANEDIT?'<div class="row" style="margin-top:12px"><button type="button" class="btn" data-act="qadd" data-id="'+cur+'">Add a question</button></div>':'')+'</div>';
+  }
+  box.innerHTML=h;renderAppsSummary();
+}
+function entryInput(t){
+  var id=t.dataset.ent,f=t.dataset.f,v=t.value,patch={};
+  patch[f]=f==='limit'?(v===''?'':+v):v;
+  queueEntry(id,patch);
+  var a=t.closest('.entry'),cnt=a&&a.querySelector('.cnt');
+  if(cnt){
+    var cur=ENT[id]||{},pend=pendingEnt[id]||{},txt=pend.text!=null?pend.text:(cur.text||''),unit=pend.unit||cur.unit||(id.indexOf('q-')===0?'words':(CAPP.reduce(function(m,g){return m||g.items.filter(function(d){return d[0]===id})[0]},null)||[])[3])||'';
+    var lim=pend.limit!=null?+pend.limit:(+cur.limit||(CAPP.reduce(function(m,g){return m||g.items.filter(function(d){return d[0]===id})[0]},null)||[])[2]||0);
+    var n=countOf(txt,unit);cnt.textContent=n+(lim?' / '+lim:'')+' '+unit;cnt.className='cnt'+(lim&&n>lim?' over':'');
+  }
+}
+function entryChange(t){
+  var patch={};patch[t.dataset.k]=t.value;
+  var id=t.dataset.id;clearTimeout(saveTimers[id]);var pp=pendingEnt[id]||{};delete pendingEnt[id];
+  for(var k in pp)patch[k]=pp[k];
+  saveEntry(id,patch);
+}
+function flushEntries(){Object.keys(pendingEnt).forEach(function(id){clearTimeout(saveTimers[id]);var pp=pendingEnt[id];delete pendingEnt[id];if(pp)saveEntry(id,pp)})}
+
+/* ---------- renderers ---------- */
+function renderBoard(){
+  var upcoming=DEADLINES.filter(function(d){return !S.done[d.id]&&daysTo(d.date)>=0});
+  var nu='';
+  if(upcoming.length){
+    var first=upcoming[0].date,same=upcoming.filter(function(d){return d.date===first});
+    var names=[];same.forEach(function(d){if(names.indexOf(d.sname)<0)names.push(d.sname)});
+    var n=daysTo(first);
+    nu='<div class="sheet nextup"><span class="lbl">Next deadline</span><span class="big">'+esc(names.join(' + '))+'</span><span class="sm">'+esc(fmtLong(first))+' &middot; '+(n===0?'today':n+' days left')+'</span></div>';
+  }else{nu='<div class="sheet nextup"><span class="lbl">Next deadline</span><span class="big">All clear</span><span class="sm">No open dates left.</span></div>'}
+  var sub=SCHOOLS.filter(function(s){return stageOf(s.id)>=7}).length;
+  var g=gearAll(),gd=g.filter(function(id){return S.check[id]}).length;
+  var dn=DEADLINES.filter(function(d){return S.done[d.id]}).length;
+  function stat(l,a,b){var p=b?Math.round(a/b*100):0;return '<div class="sheet stat"><span class="lbl">'+l+'</span><b>'+a+'<small> / '+b+'</small></b><div class="meter" aria-hidden="true"><i style="width:'+p+'%"></i></div></div>'}
+  $('#board').innerHTML=nu+stat('Applications submitted',sub,SCHOOLS.length)+stat('Gear checked',gd,g.length)+stat('Dates cleared',dn,DEADLINES.length);
+}
+function dlRow(d){
+  var done=!!S.done[d.id];
+  return '<label class="dlrow'+(done?' is-done':'')+'"><input type="checkbox" class="ck" data-chg="done" data-id="'+esc(d.id)+'"'+(done?' checked':'')+' aria-label="Mark '+esc(d.label)+' done"><span class="dt">'+fmtShort(d.date)+'</span><span class="dlt">'+esc(d.label)+(flagHTML(d.kind)?' '+flagHTML(d.kind):'')+'</span>'+ddChip(d)+'</label>';
+}
+function cardHTML(s){
+  var st=stageOf(s.id),pips='';
+  for(var i=0;i<STAGES.length-1;i++)pips+='<i class="'+(i<st?'on':'')+'"></i>';
+  var opts=STAGES.map(function(n,i){return '<option value="'+i+'"'+(i===st?' selected':'')+'>'+esc(n)+'</option>'}).join('');
+  var dls=DEADLINES.filter(function(d){return d.school===s.id}).map(dlRow).join('');
+  return '<article class="sheet card" id="s-'+s.id+'">'+
+   '<div class="card-head"><span class="pri '+s.pri+'">'+(s.pri==='core'?'Core':'Conditional')+'</span>'+diChip(s.di)+'<span class="stagepill">'+esc(STAGES[st])+'</span></div>'+
+   '<h3>'+esc(s.name)+'</h3><p class="route">'+esc(s.route)+'</p>'+(s.gate?'<div class="gate"><b>Gate.</b> '+esc(s.gate)+'</div>':'')+
+   '<div class="one"><span class="tag">The one thing</span><p>'+esc(s.one)+'</p></div>'+
+   '<ul class="facts">'+s.facts.map(function(f){return '<li>'+esc(f)+'</li>'}).join('')+'</ul>'+
+   '<div class="dl">'+dls+'</div>'+
+   '<div class="pipe"><label for="st-'+s.id+'">Pipeline</label><select id="st-'+s.id+'" data-chg="stage" data-id="'+s.id+'">'+opts+'</select><div class="pips" aria-hidden="true">'+pips+'</div></div>'+
+   moneyDetails(s)+briefDetails(s)+'<details data-key="'+s.id+'"'+(openSet[s.id]?' open':'')+'><summary>Next move and my notes</summary><p class="next">'+esc(s.next)+'</p><label class="sr" for="nt-'+s.id+'">Private notes for '+esc(s.name)+'</label><textarea id="nt-'+s.id+'" data-note="'+s.id+'" placeholder="Private notes. They stay in this browser.">'+esc(S.notes[s.id]||'')+'</textarea><a class="src" href="'+esc(s.src)+'" target="_blank" rel="noopener">Official page &#8599;</a></details>'+
+  '</article>';
+}
+function benchHTML(b){
+  return '<article class="sheet card mini" id="s-'+b.id+'"><div class="card-head"><span class="pri bench">On the bench</span></div><h3>'+esc(b.name)+'</h3><div class="one"><span class="tag">Revisit when</span><p>'+esc(b.one)+'</p></div><ul class="facts">'+b.facts.map(function(f){return '<li>'+esc(f)+'</li>'}).join('')+'</ul></article>';
+}
+function renderLineup(){
+  var f=S.ui.filter,defs=[['all','All '+SCHOOLS.length],['core','Core'],['conditional','Conditional'],['bench','Bench']];
+  $('#filters').innerHTML=defs.map(function(d){return '<button type="button" class="chip" data-act="filter" data-v="'+d[0]+'" aria-pressed="'+(f===d[0])+'">'+d[1]+'</button>'}).join('');
+  $('#sortsel').value=S.ui.sort;
+  var list=SCHOOLS.filter(function(s){return f==='all'||f===s.pri});
+  if(f==='bench')list=[];
+  if(S.ui.sort==='deadline'){
+    var firstOf=function(s){return s.d.map(function(x){return x[0]}).sort()[0]};
+    list=list.slice().sort(function(a,b){return firstOf(a)<firstOf(b)?-1:firstOf(a)>firstOf(b)?1:0});
+  }else if(S.ui.sort==='stage'){
+    list=list.slice().sort(function(a,b){return stageOf(b.id)-stageOf(a.id)});
+  }
+  $('#grid').innerHTML=list.map(cardHTML).join('');
+  var showBench=(f==='all'||f==='bench');
+  $('#benchwrap').innerHTML=showBench?'<h3 class="bench-title">On the bench<span>Alternates to revisit if the record or the list changes</span></h3><div class="grid">'+BENCH.map(benchHTML).join('')+'</div>':'';
+}
+function renderClock(){
+  $('#hidedone').checked=!!S.ui.hideDone;
+  var rows=DEADLINES.filter(function(d){return !(S.ui.hideDone&&S.done[d.id])});
+  if(!rows.length){$('#clocklist').innerHTML='<p class="empty">Every date is cleared. Nice work.</p>';return}
+  var html='',cur='';
+  rows.forEach(function(d){
+    var dt=parseD(d.date),m=dt.toLocaleDateString('en-US',{month:'long',year:'numeric'});
+    if(m!==cur){cur=m;html+='<h3 class="month">'+m+'</h3>'}
+    var done=!!S.done[d.id];
+    html+='<div class="crow'+(done?' is-done':'')+'"><input type="checkbox" class="ck" data-chg="done" data-id="'+esc(d.id)+'"'+(done?' checked':'')+' aria-label="Mark '+esc(d.sname+' '+d.label)+' done">'+
+      '<div class="cdate"><small>'+dt.toLocaleDateString('en-US',{weekday:'short'})+'</small>'+dt.getDate()+'</div>'+
+      '<div><div class="cschool">'+esc(d.sname)+'</div><div class="cwhat">'+esc(d.label)+'</div></div>'+
+      '<div class="cmeta">'+(flagHTML(d.kind)||'<span class="dd">'+KINDS[d.kind]+'</span>')+ddChip(d)+'<a href="'+esc(d.src)+'" target="_blank" rel="noopener">Source &#8599;</a></div></div>';
+  });
+  $('#clocklist').innerHTML=html;
+}
+function renderGear(){
+  var html=GEAR.map(function(g){
+    var items=g.items.map(function(i){return {id:i[0],t:i[1],c:0}}).concat(S.custom.filter(function(c){return c.group===g.id}).map(function(c){return {id:c.id,t:c.text,c:1}}));
+    var done=items.filter(function(i){return S.check[i.id]}).length,p=items.length?Math.round(done/items.length*100):0;
+    return '<section class="sheet group" aria-labelledby="g-'+g.id+'"><h3 id="g-'+g.id+'">'+esc(g.title)+'</h3><p class="why">'+esc(g.why)+'</p>'+
+     '<div class="gmeter"><div class="meter" aria-hidden="true"><i style="width:'+p+'%"></i></div><span>'+done+'/'+items.length+'</span></div>'+
+     items.map(function(i){var on=!!S.check[i.id];return '<label class="item'+(on?' is-done':'')+'"><input type="checkbox" class="ck" data-chg="check" data-id="'+esc(i.id)+'"'+(on?' checked':'')+'><span>'+esc(i.t)+'</span>'+(i.c?'<button type="button" class="x" data-act="delcustom" data-id="'+esc(i.id)+'" aria-label="Remove my item">&times;</button>':'<span></span>')+'</label>'}).join('')+
+     '<form class="addrow" data-form="custom" data-group="'+g.id+'"><label class="sr" for="add-'+g.id+'">Add your own item to '+esc(g.title)+'</label><input type="text" id="add-'+g.id+'" placeholder="Add my own move" autocomplete="off"><button class="btn" type="submit">Add</button></form></section>';
+  }).join('');
+  $('#gearlist').innerHTML=html;
+}
+function schoolOptions(sel){
+  return SCHOOLS.concat(BENCH).map(function(s){return '<option value="'+s.id+'"'+(s.id===sel?' selected':'')+'>'+esc(s.name)+'</option>'}).join('')+'<option value="other"'+(sel==='other'?' selected':'')+'>Other</option>';
+}
+function nameOf(id){var s=SCH[id]||BENCH.filter(function(b){return b.id===id})[0];return s?s.name:'Other'}
+function hasEx(arr){return arr.some(function(r){return r.ex})}
+function clearBtn(which,arr){return hasEx(arr)?'<div class="clearex"><button type="button" class="btn alt" data-act="clearex" data-v="'+which+'">Clear example rows</button></div>':''}
+function exTag(r){return r.ex?'<span class="ex">example</span>':''}
+
+function panelScore(){
+  var totals={};SCHOOLS.forEach(function(s){totals[s.id]=totalFor(s.id)});
+  var ranked=SCHOOLS.filter(function(s){return totals[s.id]!=null}).sort(function(a,b){return totals[b.id]-totals[a.id]});
+  var rk={};ranked.forEach(function(s,i){rk[s.id]=i+1});
+  var head=CRIT.map(function(c){return '<th>'+esc(c.n)+'<small>'+c.w+'%</small></th>'}).join('');
+  var rows=SCHOOLS.map(function(s){
+    var sc=S.score[s.id]||{};
+    var cells=CRIT.map(function(c){
+      var o='<option value="">&ndash;</option>';for(var i=1;i<=5;i++)o+='<option value="'+i+'"'+(+sc[c.k]===i?' selected':'')+'>'+i+'</option>';
+      return '<td><label class="sr" for="sc-'+s.id+'-'+c.k+'">'+esc(s.name+' '+c.n)+'</label><select id="sc-'+s.id+'-'+c.k+'" data-chg="score" data-id="'+s.id+'" data-k="'+c.k+'">'+o+'</select></td>';
+    }).join('');
+    var t=totals[s.id];
+    return '<tr><td><b>'+esc(s.name)+'</b></td>'+cells+'<td class="n">'+(t==null?'<span class="lbl">unscored</span>':'<span class="tot">'+t+'</span>')+'</td><td>'+(rk[s.id]?'<span class="rank">#'+rk[s.id]+'</span>':'')+'</td></tr>';
+  }).join('');
+  return '<h3>School scorecard</h3><p class="why">Score each school from 1 to 5 on each row. The weights set what matters most: admission chance and academic fit lead, then enjoyment. The total is out of 100 and appears once all five are scored. These are decision weights, not an admissions formula.</p>'+
+   '<div class="tbl"><table><thead><tr><th>School</th>'+head+'<th>Total</th><th>Rank</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+}
+function panelCourses(){
+  var tot={done:0,prog:0,plan:0},cov={};CATS.forEach(function(c){cov[c]=0});
+  S.courses.forEach(function(c){var v=+c.cr||0;if(tot[c.status]!=null)tot[c.status]+=v;if(c.status!=='plan'&&cov[c.cat]!=null)cov[c.cat]++});
+  var STN={done:'Completed',prog:'In progress',plan:'Planned'};
+  var rows=S.courses.map(function(c,i){return '<tr><td><b>'+esc(c.course)+'</b>'+exTag(c)+'</td><td>'+esc(c.inst)+'</td><td class="n">'+(+c.cr||0)+'</td><td>'+esc(c.grade||'')+'</td><td>'+esc(STN[c.status]||'')+'</td><td>'+esc(c.cat)+'</td><td><button type="button" class="x" data-act="delcourse" data-i="'+i+'" aria-label="Delete '+esc(c.course)+'">&times;</button></td></tr>'}).join('');
+  return '<h3>Course inventory</h3><p class="why">List every course from every school in semester-credit equivalents. Each school decides what transfers, so use this to spot gaps in writing, quantitative, economics and science work before you ask.</p>'+
+   '<div class="cov">'+CATS.map(function(c){return '<span class="'+(cov[c]?'has':'')+'">'+esc(c)+' <b>'+cov[c]+'</b></span>'}).join('')+'</div>'+
+   '<div class="cov"><span>Completed <b>'+tot.done+'</b> cr</span><span>In progress <b>'+tot.prog+'</b> cr</span><span>Planned <b>'+tot.plan+'</b> cr</span></div>'+
+   '<div class="tbl"><table><thead><tr><th>Course</th><th>School</th><th>Credits</th><th>Grade</th><th>Status</th><th>Counts as</th><th></th></tr></thead><tbody>'+(rows||'<tr><td colspan="7"><p class="empty">No courses yet. Add the first one below.</p></td></tr>')+'</tbody></table></div>'+
+   '<form class="form" data-form="course">'+
+   '<label class="wide">Course<input type="text" id="c-name" required autocomplete="off"></label>'+
+   '<label>School<input type="text" id="c-inst" autocomplete="off"></label>'+
+   '<label>Credits<input type="number" id="c-cr" step="0.5" min="0" value="3"></label>'+
+   '<label>Grade<input type="text" id="c-grade" autocomplete="off"></label>'+
+   '<label>Status<select id="c-status"><option value="done">Completed</option><option value="prog">In progress</option><option value="plan">Planned</option></select></label>'+
+   '<label>Counts as<select id="c-cat">'+CATS.map(function(c){return '<option>'+esc(c)+'</option>'}).join('')+'</select></label>'+
+   '<button class="btn" type="submit">Add course</button></form>'+clearBtn('courses',S.courses);
+}
+function panelRecs(){
+  var rows=S.recs.map(function(r,i){
+    var o=RSTAT.map(function(s){return '<option value="'+s[0]+'"'+(r.status===s[0]?' selected':'')+'>'+s[1]+'</option>'}).join('');
+    return '<tr><td><b>'+esc(r.name)+'</b>'+exTag(r)+'</td><td>'+esc(r.rel)+'</td><td>'+esc(r.schools)+'</td><td><label class="sr" for="rs-'+i+'">Status for '+esc(r.name)+'</label><select id="rs-'+i+'" data-chg="recstatus" data-i="'+i+'">'+o+'</select></td><td><button type="button" class="x" data-act="delrec" data-i="'+i+'" aria-label="Delete '+esc(r.name)+'">&times;</button></td></tr>';
+  }).join('');
+  var sent=S.recs.filter(function(r){return r.status==='sent'}).length;
+  return '<h3>Recommenders</h3><p class="why">Aim for two instructors who know your recent work. Move each one from To ask to Submitted, and record which schools they cover. '+sent+' of '+S.recs.length+' submitted.</p>'+
+   '<div class="tbl"><table><thead><tr><th>Name</th><th>Relationship</th><th>Schools</th><th>Status</th><th></th></tr></thead><tbody>'+(rows||'<tr><td colspan="5"><p class="empty">No recommenders yet. Add the first one below.</p></td></tr>')+'</tbody></table></div>'+
+   '<form class="form" data-form="rec">'+
+   '<label>Name<input type="text" id="r-name" required autocomplete="off"></label>'+
+   '<label>Relationship<input type="text" id="r-rel" autocomplete="off" placeholder="Instructor, advisor"></label>'+
+   '<label class="wide">Schools covered<input type="text" id="r-schools" autocomplete="off" placeholder="Cornell, Yale"></label>'+
+   '<label>Status<select id="r-status">'+RSTAT.map(function(s){return '<option value="'+s[0]+'">'+s[1]+'</option>'}).join('')+'</select></label>'+
+   '<button class="btn" type="submit">Add recommender</button></form>'+clearBtn('recs',S.recs);
+}
+function panelLog(){
+  var list=S.log.map(function(l,i){return {l:l,i:i}}).sort(function(a,b){return a.l.date<b.l.date?1:a.l.date>b.l.date?-1:b.i-a.i});
+  var notes=list.map(function(o){var l=o.l;return '<article class="note"><button type="button" class="x" data-act="dellog" data-i="'+o.i+'" aria-label="Delete this entry">&times;</button><h4>'+esc(nameOf(l.school))+exTag(l)+'</h4><div class="meta">'+esc(l.date)+(l.contact?' &middot; '+esc(l.contact):'')+'</div><span class="tagt '+(l.type==='pg'?'pg':'')+'">'+(l.type==='pg'?'Personal guidance':'Official rule')+'</span><p><b>Asked</b>'+esc(l.q)+'</p><p><b>Heard</b>'+esc(l.a)+'</p><p><b>Next</b>'+esc(l.next)+'</p></article>'}).join('');
+  return '<h3>Conversation log</h3><p class="why">After every call, capture who you spoke with, the exact question, their answer, whether it was an official rule or personal guidance, and one next action. Move a school forward only when route, fit, credit loss and net cost are clear.</p>'+
+   '<form class="form" data-form="log">'+
+   '<label>Date<input type="date" id="l-date" value="'+TODAYISO+'"></label>'+
+   '<label>School<select id="l-school">'+schoolOptions('')+'</select></label>'+
+   '<label>Contact<input type="text" id="l-contact" autocomplete="off"></label>'+
+   '<label>Kind of answer<select id="l-type"><option value="of">Official rule</option><option value="pg">Personal guidance</option></select></label>'+
+   '<label class="wide">Question you asked<input type="text" id="l-q" required autocomplete="off"></label>'+
+   '<label class="wide">What they said<input type="text" id="l-a" autocomplete="off"></label>'+
+   '<label class="wide">One next action<input type="text" id="l-next" autocomplete="off"></label>'+
+   '<button class="btn" type="submit">Add to log</button></form>'+
+   '<div class="notes">'+(notes||'<p class="empty">No conversations logged yet.</p>')+'</div>'+clearBtn('log',S.log);
+}
+function renderDojo(){
+  if(!UNLOCKED){$('#tabs').innerHTML='';$('#tabpanel').innerHTML=lockedPanel('Trackers');return}
+  var tabs=[['score','Scorecard'],['courses','Courses'],['recs','Recommenders'],['log','Conversations'],['proof','Proof inventory']];
+  $('#tabs').innerHTML=tabs.map(function(t){return '<button type="button" role="tab" class="chip" data-act="tab" data-v="'+t[0]+'" aria-selected="'+(S.ui.tab===t[0])+'">'+t[1]+'</button>'}).join('');
+  var fn={score:panelScore,courses:panelCourses,recs:panelRecs,log:panelLog,proof:panelProof}[S.ui.tab]||panelScore;
+  $('#tabpanel').innerHTML='<div class="sheet panel" role="tabpanel">'+fn()+'</div>';
+}
+function enc(){try{return btoa(unescape(encodeURIComponent(JSON.stringify(S))))}catch(e){return ''}}
+var BK_HTML=null;
+function renderBack(){
+  var pn=$('#bkpanel');if(BK_HTML===null)BK_HTML=pn.innerHTML;
+  if(!UNLOCKED){pn.innerHTML='<h3>Save, move, reset</h3><p>Backup, restore and reset are admin tools. Unlock them with the code.</p><button class="btn" type="button" data-act="opengate">Enter code</button>';pn.dataset.on='0';return}
+  if(pn.dataset.on!=='1'){pn.innerHTML=BK_HTML;pn.dataset.on='1'}
+  var c=$('#bkcode');if(c)c.value=enc();
+}
+function renderAll(){
+  flushEntries();
+  var a=document.activeElement,key=null,idx=-1;
+  if(a&&a.dataset&&(a.dataset.chg||a.dataset.act)){
+    key=a.dataset.chg?'[data-chg="'+a.dataset.chg+'"]':'[data-act="'+a.dataset.act+'"]';
+    ['id','k','i','v'].forEach(function(n){if(a.dataset[n]!=null)key+='[data-'+n+'="'+String(a.dataset[n]).replace(/"/g,'\\"')+'"]'});
+    try{idx=[].indexOf.call(document.querySelectorAll(key),a)}catch(e){key=null}
+  }
+  renderBoard();renderTutor();renderLineup();renderVault();renderClock();renderGear();renderApps();renderDojo();renderBack();
+  if(key&&idx>=0){try{var n=document.querySelectorAll(key)[idx];if(n)n.focus()}catch(e){}}
+}
+function say(t){$('#backmsg').textContent=t}
+
+/* ---------- events ---------- */
+document.addEventListener('toggle',function(e){
+  var d=e.target;
+  if(d&&d.matches&&d.matches('details[data-key]')){
+    if(d.open)openSet[d.dataset.key]=1;else delete openSet[d.dataset.key];
+    if(d.open&&d.dataset.vault&&!d.querySelector('.vbody')){var p=d.dataset.vault.split(':');d.insertAdjacentHTML('beforeend',vaultBody(p[0],p.slice(1).join(':')))}
+  }
+},true);
+document.addEventListener('input',function(e){
+  var t=e.target;
+  if(t.dataset&&t.dataset.note){S.notes[t.dataset.note]=t.value;save();renderBack()}
+  else if(t.dataset&&t.dataset.recap){var r=S.recap[t.dataset.recap]=S.recap[t.dataset.recap]||{};r[t.dataset.f]=t.value;save();renderTutor();renderBack()}
+  else if(t.dataset&&t.dataset.ent){entryInput(t)}
+  else if(t.id==='vsearch'){S.ui.vq=t.value;save();renderVaultList()}
+});
+document.addEventListener('change',function(e){
+  var t=e.target,c=t.dataset&&t.dataset.chg;if(!c)return;
+  if(c==='stage'){S.stage[t.dataset.id]=+t.value}
+  else if(c==='done'){if(t.checked)S.done[t.dataset.id]=1;else delete S.done[t.dataset.id]}
+  else if(c==='check'){if(t.checked)S.check[t.dataset.id]=1;else delete S.check[t.dataset.id]}
+  else if(c==='hidedone'){S.ui.hideDone=t.checked}
+  else if(c==='sort'){S.ui.sort=t.value}
+  else if(c==='score'){var id=t.dataset.id;S.score[id]=S.score[id]||{};if(t.value)S.score[id][t.dataset.k]=+t.value;else delete S.score[id][t.dataset.k]}
+  else if(c==='recstatus'){S.recs[+t.dataset.i].status=t.value}
+  else if(c==='offer'){S.offer[t.dataset.id]=t.value}
+  else if(c==='ent'){entryChange(t)}
+  save();renderAll();
+});
+document.addEventListener('click',function(e){
+  var b=e.target.closest&&e.target.closest('[data-act]');if(!b)return;
+  var a=b.dataset.act;
+  if(a==='delcustom'){e.preventDefault();var id=b.dataset.id;S.custom=S.custom.filter(function(c){return c.id!==id});delete S.check[id]}
+  else if(a==='filter'){S.ui.filter=b.dataset.v}
+  else if(a==='tab'){S.ui.tab=b.dataset.v}
+  else if(a==='vfilter'){S.ui.vf=b.dataset.v}
+  else if(a==='togglegate'){if(UNLOCKED){doLock()}else{var gb=$('#gatebox');if(gb.hidden)showGate();else gb.hidden=true}return}
+  else if(a==='opengate'){showGate();return}
+  else if(a==='atab'){S.ui.atab=b.dataset.v}
+  else if(a==='aschool'){S.ui.aschool=b.dataset.v}
+  else if(a==='qadd'){saveEntry('q-'+b.dataset.id+'-'+Date.now().toString(36),{kind:'question',school:b.dataset.id,prompt:'',text:'',limit:'',unit:'words',status:'none',created:new Date().toISOString()})}
+  else if(a==='qdel'){deleteEntry(b.dataset.id)}
+  else if(a==='delcourse'){S.courses.splice(+b.dataset.i,1)}
+  else if(a==='delrec'){S.recs.splice(+b.dataset.i,1)}
+  else if(a==='dellog'){S.log.splice(+b.dataset.i,1)}
+  else if(a==='clearex'){var w=b.dataset.v;S[w]=S[w].filter(function(r){return !r.ex})}
+  else if(a==='copy'){
+    var ta=$('#bkcode');ta.value=enc();
+    var fallback=function(){ta.focus();ta.select();say('Select the code and copy it with your keyboard.')};
+    try{navigator.clipboard.writeText(ta.value).then(function(){say('Backup code copied.')},fallback)}catch(err){fallback()}
+    return;
+  }
+  else if(a==='restore'){
+    var code=$('#restorecode').value.trim();
+    try{
+      var p=JSON.parse(decodeURIComponent(escape(atob(code))));
+      if(!p||p.v!==1)throw new Error('bad');
+      var f=fresh();for(var k in p){if(k==='ui'){for(var u in p.ui)f.ui[u]=p.ui[u]}else f[k]=p[k]}
+      S=f;save();renderAll();say('Progress restored.');$('#restorecode').value='';
+    }catch(err){say('That code did not work. Copy the whole backup code and try again.')}
+    return;
+  }
+  else if(a==='reset'){$('#confirmbox').hidden=false;return}
+  else if(a==='reset-no'){$('#confirmbox').hidden=true;return}
+  else if(a==='reset-yes'){S=fresh();save();openSet={};renderAll();$('#confirmbox').hidden=true;say('Everything is reset.');return}
+  save();renderAll();
+});
+document.addEventListener('submit',function(e){
+  var f=e.target,kind=f.dataset&&f.dataset.form;if(!kind)return;
+  e.preventDefault();
+  if(kind==='gate'){doUnlock();return}
+  function val(id){return ($('#'+id).value||'').trim()}
+  function uid(){return 'u'+Date.now().toString(36)+Math.random().toString(36).slice(2,5)}
+  if(kind==='custom'){
+    var inp=f.querySelector('input'),t=inp.value.trim();if(!t)return;
+    S.custom.push({id:uid(),group:f.dataset.group,text:t});
+  }else if(kind==='course'){
+    if(!val('c-name'))return;
+    S.courses.push({id:uid(),course:val('c-name'),inst:val('c-inst'),cr:parseFloat($('#c-cr').value)||0,grade:val('c-grade'),status:$('#c-status').value,cat:$('#c-cat').value});
+  }else if(kind==='rec'){
+    if(!val('r-name'))return;
+    S.recs.push({id:uid(),name:val('r-name'),rel:val('r-rel'),schools:val('r-schools'),status:$('#r-status').value});
+  }else if(kind==='log'){
+    if(!val('l-q'))return;
+    S.log.push({id:uid(),date:$('#l-date').value||TODAYISO,school:$('#l-school').value,contact:val('l-contact'),q:val('l-q'),a:val('l-a'),type:$('#l-type').value,next:val('l-next')});
+  }
+  save();renderAll();
+});
+
+setGateUI();renderAll();entryStoreInit();
+})();
+</script>
+</body></html>
