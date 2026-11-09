@@ -4,6 +4,11 @@ Fall 2027 transfer-cycle field guide: one move per school, a deadline clock, a p
 a tutor board with per-school research briefs, a vault of every school on file, and a Common App and
 school-questions log. Pizza Ninjas styling from the Robotic Discipline portal.
 
+**Live (Vercel build):** https://transfer-ninja-zine.vercel.app  
+**Artifact (claude.ai):** https://claude.ai/artifact/Fef8b37redK5XTqiUYYsxW
+
+Vercel needs `TUTOR_CODE` set as a production environment variable. Redeploy with `cd vercel && vercel deploy --prod --yes`.
+
 ## Layout
 
 | Path | What it is |
