@@ -22,6 +22,15 @@ Vercel needs `TUTOR_CODE` set as a production environment variable. Redeploy wit
 | `vault/` | Obsidian vault. Open this folder as a vault. One note per school, plus Common App and questions. |
 | `.env` | `TUTOR_CODE` (gitignored). |
 
+## Agent and source library
+
+Admin-only (behind the code). On the claude.ai artifact, a source library lets you add folders, files (PDF, TXT, MD,
+SRT, VTT, CSV, JSON) or pasted text. An agent chat reads it with tools: `search_sources`, `read_source`,
+`analyze_text` (stats, keywords, readability, speaker share), `school_data` and `tracker_status`. It runs on the
+viewer's own Claude account through the `sample` capability. Library collections (`folders`, `docs`, `chunks`) are
+readable and writable by editors only, so a view-only tutor cannot read your transcripts. On the Vercel build the
+library stores in the browser and the agent is off, because it needs the artifact runtime.
+
 ## Rebuild
 
 ```bash

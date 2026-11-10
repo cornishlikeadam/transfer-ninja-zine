@@ -318,7 +318,28 @@ footer p{max-width:80ch;margin:0 0 8px}
 .entry textarea{min-height:92px}
 .entry .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:8px}
 .entry .upd{font:400 .75rem var(--f-type);color:var(--card-dim);margin-left:auto}
+/* agent and library */
+.sheet .chip{color:var(--card-ink);border-color:var(--card-ink)}
+.sheet .chip:hover{background:var(--yellow);color:var(--ink)}
+.sheet .chip[aria-pressed="true"]{background:var(--yellow);color:var(--ink)}
+.agentgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:22px;align-items:start}
+.docrow{border-bottom:1px dashed var(--card-dim);padding:8px 0}
+.docrow .dr1{display:flex;flex-direction:column;gap:2px}
+.docrow .dr2{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.docrow select{padding:4px 6px;max-width:100%}
+.x2{background:var(--card-sub);border:2px solid var(--ink);color:var(--ink);font:700 .9rem/1 var(--f-disp);letter-spacing:.06em;text-transform:uppercase;padding:6px 9px;cursor:pointer;border-radius:0}
+.x2:hover{background:var(--yellow)}
+.docview{white-space:pre-wrap;overflow-wrap:anywhere;font:400 .8rem/1.4 var(--f-type);background:var(--field);border:2px solid var(--ink);padding:10px;margin:8px 0 0;max-height:260px;overflow:auto}
+.agmsgs{display:flex;flex-direction:column;gap:10px;max-height:420px;min-height:160px;overflow:auto;padding:4px 2px 8px}
+.msg{border:2px solid var(--ink);padding:8px 10px;background:var(--field);min-width:0}
+.msg.user{background:var(--card-sub)}
+.msg .who{font:400 .75rem var(--f-type);text-transform:uppercase;letter-spacing:.08em;color:var(--card-dim);margin-bottom:3px}
+.msg .body p{margin:0 0 6px;font-size:.92rem}
+.msg .body ul{margin:0 0 6px;padding-left:18px;font-size:.9rem}
+.msg .x2{margin-top:6px}
+.msg .body{overflow-wrap:anywhere}
 @media (max-width:900px){
+  .agentgrid{grid-template-columns:minmax(0,1fr)}
   .board{grid-template-columns:repeat(3,minmax(0,1fr))}
   .nextup{grid-column:1/-1}
   .back{grid-template-columns:minmax(0,1fr)}
@@ -373,6 +394,7 @@ footer p{max-width:80ch;margin:0 0 8px}
       <a href="#clock">Clock</a>
       <a href="#gear">Gear</a>
       <a href="#apps">Apps</a>
+      <a href="#agent">Agent</a>
       <a href="#dojo">Dojo</a>
       <a href="#back">Rules</a>
     </nav>
@@ -512,6 +534,15 @@ footer p{max-width:80ch;margin:0 0 8px}
       <h2>Common App <em>entries</em></h2>
       <p class="sec-lede" id="appslede"></p>
       <div id="appsbox"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="agent">
+    <div class="wrap">
+      <div class="kick"><svg aria-hidden="true"><use href="#sh"/></svg>Agent and library</div>
+      <h2>Ask the <em>agent</em></h2>
+      <p class="sec-lede" id="agentlede"></p>
+      <div id="agentbox"></div>
     </div>
   </section>
 
@@ -929,7 +960,7 @@ function doUnlock(){
   if(!code){msg.textContent='Enter the code.';return}
   msg.textContent='Checking.';
   function finish(ok){
-    if(ok){msg.textContent='';$('#codeinput').value='';setGateUI();renderAll();entryStoreInit()}
+    if(ok){msg.textContent='';$('#codeinput').value='';setGateUI();renderAll();entryStoreInit();libInit()}
     else msg.textContent='That code did not work.';
   }
   if(GATE_MODE==='soft'){
@@ -1078,6 +1109,294 @@ function entryChange(t){
 }
 function flushEntries(){Object.keys(pendingEnt).forEach(function(id){clearTimeout(saveTimers[id]);var pp=pendingEnt[id];delete pendingEnt[id];if(pp)saveEntry(id,pp)})}
 
+/* ---------- source library (admin builder) and agent ---------- */
+var LIBKEY='transfer-ninja-zine.lib.v1',CH_SIZE=60000,PDFJS_VER='3.11.174';
+var LIBS={folders:{},docs:{},ready:false,mode:'none',started:false,err:'',cache:{},status:'',confirm:'',view:'',viewText:'',target:'',paste:{title:'',text:''},local:{chunks:{}}};
+var AG={sample:null,checked:false,busy:false,status:'',draft:'',ctl:null,think:false,limit:0};
+var CHAT=[];
+function rid(p){return p+Date.now().toString(36)+Math.random().toString(36).slice(2,5)}
+function slugId(n){return (String(n).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'folder').slice(0,40)+'-'+Math.random().toString(36).slice(2,5)}
+function libSetStatus(m){LIBS.status=m;var e=$('#lstatus');if(e)e.textContent=m}
+
+function libInit(){
+  if(!UNLOCKED||LIBS.started)return;
+  LIBS.started=true;
+  try{CHAT=(S.chat||[]).slice(-30)}catch(e){CHAT=[]}
+  if(window.claude&&window.claude.use){
+    window.claude.use('db').then(function(db){
+      if(!db){libLocal();return}
+      LIBS.mode='db';LIBS.db=db;
+      db.collection('folders').onSnapshot(function(sn){var m={};sn.docs.forEach(function(d){m[d.id]=d.data()});LIBS.folders=m;LIBS.ready=true;renderAgent()},function(e){LIBS.err=(e&&e.code)||'error';libLocal()});
+      db.collection('docs').onSnapshot(function(sn){var m={};sn.docs.forEach(function(d){m[d.id]=d.data()});LIBS.docs=m;renderAgent()},function(){});
+    }).catch(libLocal);
+    window.claude.use('sample').then(function(sm){AG.sample=sm;AG.checked=true;if(sm&&sm.limits){sm.limits().then(function(l){AG.limit=(l&&l.tools&&l.tools.maxCount)||0;renderAgent()}).catch(function(){})}renderAgent()}).catch(function(){AG.checked=true;renderAgent()});
+  }else{AG.checked=true;libLocal()}
+}
+function libLocal(){
+  LIBS.mode='local';
+  var raw={};try{raw=JSON.parse(localStorage.getItem(LIBKEY)||'{}')}catch(e){}
+  LIBS.folders=raw.folders||{};LIBS.docs=raw.docs||{};LIBS.local={chunks:raw.chunks||{}};LIBS.ready=true;renderAgent();
+}
+function libPersist(){try{localStorage.setItem(LIBKEY,JSON.stringify({folders:LIBS.folders,docs:LIBS.docs,chunks:LIBS.local.chunks}))}catch(e){LIBS.err='quota';libSetStatus('Browser storage is full. Remove documents or use the claude.ai version for a bigger library.')}}
+function dbOk(p){return p}
+function libPutFolder(id,o){LIBS.folders[id]=o;if(LIBS.mode==='db')return LIBS.db.collection('folders').doc(id).set(o);libPersist();return Promise.resolve()}
+function libPutDocMeta(id,o){LIBS.docs[id]=o;if(LIBS.mode==='db')return LIBS.db.collection('docs').doc(id).set(o);libPersist();return Promise.resolve()}
+function libPutChunk(did,n,text){if(LIBS.mode==='db')return LIBS.db.collection('chunks').doc(did+'_'+n).set({doc:did,n:n,text:text});LIBS.local.chunks[did+'_'+n]=text;libPersist();return Promise.resolve()}
+function libDelChunk(did,n){if(LIBS.mode==='db')return LIBS.db.collection('chunks').doc(did+'_'+n).delete().catch(function(){});delete LIBS.local.chunks[did+'_'+n];return Promise.resolve()}
+function libGetChunks(did){
+  if(LIBS.cache[did])return Promise.resolve(LIBS.cache[did]);
+  var meta=LIBS.docs[did];if(!meta)return Promise.reject(new Error('Unknown document'));
+  var ps=[];
+  for(var n=1;n<=meta.parts;n++)(function(n){
+    ps.push(LIBS.mode==='db'?LIBS.db.collection('chunks').doc(did+'_'+n).get().then(function(s){return s.exists?s.data().text:''}):Promise.resolve(LIBS.local.chunks[did+'_'+n]||''));
+  })(n);
+  return Promise.all(ps).then(function(a){LIBS.cache[did]=a;return a});
+}
+function splitText(t){var out=[],i=0;while(i<t.length){var end=Math.min(t.length,i+CH_SIZE);if(end<t.length){var br=t.lastIndexOf('\n',end);if(br>i+CH_SIZE*0.6)end=br+1}out.push(t.slice(i,end));i=end}return out.length?out:['']}
+async function libAddDoc(folderId,title,text,extra){
+  var parts=splitText(text),did=rid('d');
+  for(var n=0;n<parts.length;n++)await libPutChunk(did,n+1,parts[n]);
+  var meta={folder:folderId,title:title,chars:text.length,parts:parts.length,added:new Date().toISOString(),origin:(extra&&extra.origin)||'',kind:(extra&&extra.kind)||'file'};
+  await libPutDocMeta(did,meta);LIBS.cache[did]=parts;return did;
+}
+async function libEnsureFolder(name){
+  var f=Object.keys(LIBS.folders).filter(function(k){return LIBS.folders[k].name===name})[0];
+  if(f)return f;
+  var id=slugId(name);await libPutFolder(id,{name:name,note:'',created:new Date().toISOString()});return id;
+}
+async function libDelDoc(did){
+  var m=LIBS.docs[did];if(!m)return;
+  for(var n=1;n<=m.parts;n++)await libDelChunk(did,n);
+  delete LIBS.docs[did];delete LIBS.cache[did];
+  if(LIBS.mode==='db')await LIBS.db.collection('docs').doc(did).delete();else libPersist();
+}
+async function libDelFolder(fid){
+  var ids=Object.keys(LIBS.docs).filter(function(d){return LIBS.docs[d].folder===fid});
+  for(var i=0;i<ids.length;i++)await libDelDoc(ids[i]);
+  delete LIBS.folders[fid];
+  if(LIBS.mode==='db')await LIBS.db.collection('folders').doc(fid).delete();else libPersist();
+}
+function cleanCaptions(t){return t.replace(/^WEBVTT.*$/m,'').split('\n').filter(function(l){l=l.trim();return l&&!/^\d+$/.test(l)&&l.indexOf('-->')<0&&!/^(NOTE|STYLE)\b/.test(l)}).join('\n')}
+function stripHtml(t){try{return new DOMParser().parseFromString(t,'text/html').body.textContent}catch(e){return t}}
+function loadScript(src){return new Promise(function(res,rej){var s=document.createElement('script');s.src=src;s.onload=res;s.onerror=function(){rej(new Error('Could not load the PDF reader'))};document.head.appendChild(s)})}
+async function pdfToText(file){
+  var base='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/'+PDFJS_VER+'/';
+  if(!window.pdfjsLib){await loadScript(base+'pdf.min.js');await loadScript(base+'pdf.worker.min.js')}
+  window.pdfjsLib.GlobalWorkerOptions.workerSrc=base+'pdf.worker.min.js';
+  var data=new Uint8Array(await file.arrayBuffer());
+  var pdf=await window.pdfjsLib.getDocument({data:data,disableFontFace:true}).promise;
+  var out=[],max=Math.min(pdf.numPages,500);
+  for(var p=1;p<=max;p++){
+    var pg=await pdf.getPage(p),tc=await pg.getTextContent(),line='';
+    tc.items.forEach(function(it){line+=it.str+(it.hasEOL?'\n':' ')});
+    out.push(line);
+  }
+  return out.join('\n\n');
+}
+var TEXT_EXT=['txt','md','markdown','srt','vtt','csv','tsv','json','log','html','htm'];
+async function libIngestOne(file,folderId,rel){
+  var ext=(file.name.split('.').pop()||'').toLowerCase(),text='';
+  if(file.size>25*1024*1024)throw new Error('too large (25 MB limit)');
+  if(ext==='pdf')text=await pdfToText(file);
+  else if(TEXT_EXT.indexOf(ext)>=0){text=await file.text();if(ext==='srt'||ext==='vtt')text=cleanCaptions(text);if(ext==='html'||ext==='htm')text=stripHtml(text)}
+  else throw new Error('unsupported type .'+ext+' (use PDF, TXT, MD, SRT, VTT, CSV, JSON or paste the text)');
+  text=text.replace(/\r\n/g,'\n').replace(/[ \t]+\n/g,'\n').trim();
+  if(!text)throw new Error('no readable text found');
+  return libAddDoc(folderId,file.name.replace(/\.[^.]+$/,''),text,{origin:rel||file.name,kind:'file'});
+}
+async function libIngest(files){
+  if(!files.length)return;
+  var ok=0,bad=[];
+  var defFolder=LIBS.target&&LIBS.folders[LIBS.target]?LIBS.target:await libEnsureFolder('Inbox');
+  for(var i=0;i<files.length;i++){
+    var f=files[i],rel=f.webkitRelativePath||'',folder=defFolder;
+    if(rel&&rel.indexOf('/')>0){var segs=rel.split('/');segs.pop();folder=await libEnsureFolder(segs.slice(0,2).join(' / '))}
+    libSetStatus('Adding '+(i+1)+' of '+files.length+': '+f.name+'...');
+    try{await libIngestOne(f,folder,rel);ok++}catch(e){bad.push(f.name+': '+(e&&e.message?e.message:'failed'))}
+  }
+  libSetStatus('Added '+ok+' of '+files.length+(bad.length?'. Skipped: '+bad.slice(0,4).join('; ')+(bad.length>4?' and '+(bad.length-4)+' more':''):'.'));
+  renderAgent();
+}
+async function libPaste(){
+  var t=(LIBS.paste.text||'').trim(),ti=(LIBS.paste.title||'').trim()||('Pasted '+new Date().toLocaleDateString('en-US'));
+  if(!t){libSetStatus('Paste some text first.');return}
+  var folder=LIBS.target&&LIBS.folders[LIBS.target]?LIBS.target:await libEnsureFolder('Inbox');
+  libSetStatus('Adding...');
+  try{await libAddDoc(folder,ti,t,{kind:'paste'});LIBS.paste={title:'',text:''};libSetStatus('Added "'+ti+'".')}catch(e){libSetStatus('Could not add: '+(e&&e.message||'error'))}
+  renderAgent();
+}
+
+/* ---- text analysis (deterministic, runs in the page) ---- */
+var STOP={};'a an and are as at be been but by can could did do does for from had has have he her his i if in into is it its just me my not of on or our she so than that the their them then there these they this to was we were what when where which who will with would you your about also been being both each few more most other over same some such than too very here how all any because before between during off once only own through under until up while'.split(' ').forEach(function(w){STOP[w]=1});
+function words(t){return (t.toLowerCase().match(/[a-z][a-z'-]*/g)||[])}
+function syll(w){w=w.toLowerCase().replace(/[^a-z]/g,'');if(w.length<=3)return 1;w=w.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/,'').replace(/^y/,'');var m=w.match(/[aeiouy]{1,2}/g);return m?m.length:1}
+function fullText(did){return libGetChunks(did).then(function(a){return a.join('')})}
+function analyze(text,op,top){
+  top=Math.max(3,Math.min(40,+top||15));
+  var ws=words(text),sents=text.split(/(?<=[.!?])\s+/).filter(function(s){return s.trim()});
+  if(op==='keywords'){
+    var c={},bg={};ws.forEach(function(w,i){if(w.length>2&&!STOP[w])c[w]=(c[w]||0)+1;if(i>0&&!STOP[ws[i-1]]&&!STOP[w]&&w.length>2&&ws[i-1].length>2){var k=ws[i-1]+' '+w;bg[k]=(bg[k]||0)+1}});
+    var srt=function(o,n,min){return Object.keys(o).filter(function(k){return o[k]>=min}).sort(function(a,b){return o[b]-o[a]}).slice(0,n).map(function(k){return [k,o[k]]})};
+    return {words:srt(c,top,1),phrases:srt(bg,Math.min(top,12),2)};
+  }
+  if(op==='readability'){
+    var syl=ws.reduce(function(s,w){return s+syll(w)},0),nw=ws.length||1,ns=sents.length||1;
+    return {words:ws.length,sentences:sents.length,fleschReadingEase:Math.round((206.835-1.015*(nw/ns)-84.6*(syl/nw))*10)/10,fleschKincaidGrade:Math.round((0.39*(nw/ns)+11.8*(syl/nw)-15.59)*10)/10,note:'Rough estimate from a syllable heuristic.'};
+  }
+  if(op==='speaker_share'){
+    var sp={},cur='',lines=text.split('\n');
+    lines.forEach(function(l){var m=l.match(/^\s*([A-Za-z][A-Za-z0-9 ().'-]{0,40}):\s*(.*)$/);if(m){cur=m[1].trim();sp[cur]=(sp[cur]||0)+words(m[2]).length}else if(cur){sp[cur]=(sp[cur]||0)+words(l).length}});
+    var tot=Object.keys(sp).reduce(function(s,k){return s+sp[k]},0);
+    if(!tot||Object.keys(sp).length<2)return {note:'No speaker labels such as "Name:" were found, so speaker share cannot be computed.'};
+    return {speakers:Object.keys(sp).sort(function(a,b){return sp[b]-sp[a]}).slice(0,10).map(function(k){return {speaker:k,words:sp[k],share:Math.round(sp[k]/tot*1000)/10}})};
+  }
+  var uniq={};ws.forEach(function(w){uniq[w]=1});var nu=Object.keys(uniq).length,lens=sents.map(function(s){return words(s).length});
+  return {words:ws.length,uniqueWords:nu,lexicalDiversity:ws.length?Math.round(nu/ws.length*1000)/1000:0,sentences:sents.length,avgWordsPerSentence:sents.length?Math.round(ws.length/sents.length*10)/10:0,longestSentenceWords:Math.max.apply(null,lens.concat([0])),lines:text.split('\n').filter(function(l){return l.trim()}).length};
+}
+function searchHits(query,folderName,max){
+  var terms=words(query).filter(function(w){return !STOP[w]&&w.length>1}),phrase=String(query).toLowerCase().trim();
+  if(!terms.length&&phrase)terms=[phrase];
+  var docs=Object.keys(LIBS.docs).filter(function(d){if(!folderName)return true;var f=LIBS.folders[LIBS.docs[d].folder];return f&&f.name.toLowerCase()===String(folderName).toLowerCase()});
+  var hits=[];
+  return Promise.all(docs.map(function(did){return libGetChunks(did).then(function(parts){
+    parts.forEach(function(txt,pi){
+      var paras=txt.split(/\n+/);
+      for(var i=0;i<paras.length;i++){
+        var win=(paras[i]+' '+(paras[i+1]||'')).trim();if(!win)continue;
+        var low=win.toLowerCase(),sc=0;
+        terms.forEach(function(t){var idx=0,n=0;while((idx=low.indexOf(t,idx))>=0&&n<20){n++;idx+=t.length}sc+=n});
+        if(phrase.length>3&&low.indexOf(phrase)>=0)sc+=5;
+        if(sc>0)hits.push({doc:did,title:LIBS.docs[did].title,folder:(LIBS.folders[LIBS.docs[did].folder]||{}).name||'',part:pi+1,snippet:win.slice(0,420),score:sc});
+      }
+    });
+  }).catch(function(){})})).then(function(){
+    hits.sort(function(a,b){return b.score-a.score});
+    var seen={},out=[];
+    for(var i=0;i<hits.length&&out.length<max;i++){var k=hits[i].doc+'|'+hits[i].snippet.slice(0,60);if(seen[k])continue;seen[k]=1;out.push(hits[i])}
+    return out;
+  });
+}
+function findDoc(ref){
+  ref=String(ref||'');if(LIBS.docs[ref])return ref;
+  var low=ref.toLowerCase(),ids=Object.keys(LIBS.docs);
+  return ids.filter(function(d){return LIBS.docs[d].title.toLowerCase()===low})[0]||ids.filter(function(d){return LIBS.docs[d].title.toLowerCase().indexOf(low)>=0})[0]||'';
+}
+function findSchool(q){
+  q=String(q||'').toLowerCase();
+  return SCHOOLS.filter(function(s){return s.id===q||s.name.toLowerCase()===q})[0]||SCHOOLS.filter(function(s){return s.name.toLowerCase().indexOf(q)>=0||q.indexOf(s.id)===0})[0];
+}
+
+/* ---- tools the agent may call ---- */
+function agentTools(){
+  function say(m){AG.status=m;var e=$('#agstatus');if(e)e.textContent=m}
+  return [
+   {name:'list_sources',description:'Lists the source library: every folder with its note and its documents (id, title, characters, parts). Call first to see what material exists.',
+    execute:function(){say('Looking at the library...');return {folders:Object.keys(LIBS.folders).map(function(f){return {folder:LIBS.folders[f].name,note:LIBS.folders[f].note||'',docs:Object.keys(LIBS.docs).filter(function(d){return LIBS.docs[d].folder===f}).map(function(d){var m=LIBS.docs[d];return {id:d,title:m.title,chars:m.chars,parts:m.parts}})}}),totalDocs:Object.keys(LIBS.docs).length}}},
+   {name:'search_sources',description:'Keyword search across all documents in the library (or one folder). Returns the best matching snippets with document id, title, part number and score. Use it to find what a person said or what a draft says about a topic, then read_source for context.',
+    inputSchema:{type:'object',properties:{query:{type:'string'},folder:{type:'string',description:'Optional folder name'},max:{type:'number',description:'Max hits, default 8'}},required:['query']},
+    execute:function(i){say('Searching sources for "'+String(i.query).slice(0,40)+'"...');return searchHits(String(i.query||''),i.folder,Math.min(15,+i.max||8)).then(function(h){return {hits:h,searched:Object.keys(LIBS.docs).length+' documents'}})}},
+   {name:'read_source',description:'Reads text from one document: pass its id or title, optionally a part number (1-based) and offset/length in characters (max 12000 per call). Returns the text plus how many parts and where the next read should start.',
+    inputSchema:{type:'object',properties:{doc:{type:'string'},part:{type:'number'},offset:{type:'number'},length:{type:'number'}},required:['doc']},
+    execute:function(i){var did=findDoc(i.doc);if(!did)throw new Error('No document matches "'+i.doc+'". Call list_sources.');say('Reading "'+LIBS.docs[did].title+'"...');
+      return libGetChunks(did).then(function(parts){var p=Math.max(1,Math.min(parts.length,+i.part||1)),off=Math.max(0,+i.offset||0),len=Math.max(200,Math.min(12000,+i.length||8000)),t=parts[p-1]||'';
+        return {title:LIBS.docs[did].title,part:p,parts:parts.length,offset:off,text:t.slice(off,off+len),nextOffset:off+len<t.length?off+len:null,partChars:t.length}})}},
+   {name:'analyze_text',description:'Computes statistics on a whole document in the page: op "stats" (words, sentences, lexical diversity), "keywords" (top words and repeated phrases), "readability" (Flesch scores), or "speaker_share" (words per speaker in a transcript with "Name:" labels). Use it for counts and patterns instead of estimating.',
+    inputSchema:{type:'object',properties:{doc:{type:'string'},op:{type:'string',enum:['stats','keywords','readability','speaker_share']},top:{type:'number'}},required:['doc','op']},
+    execute:function(i){var did=findDoc(i.doc);if(!did)throw new Error('No document matches "'+i.doc+'". Call list_sources.');say('Analyzing "'+LIBS.docs[did].title+'"...');return fullText(did).then(function(t){return {title:LIBS.docs[did].title,op:i.op||'stats',result:analyze(t,i.op||'stats',i.top)}})}},
+   {name:'school_data',description:'Returns the site data for one school card: route, deadlines, application fee waiver, aid model, aid forms and dates, veterans benefits, study abroad rules, links, interest policy and, when available, the research brief (degree path, people, who to contact, question to ask). Pass the school name or id.',
+    inputSchema:{type:'object',properties:{school:{type:'string'}},required:['school']},
+    execute:function(i){var s=findSchool(i.school);if(!s)throw new Error('No school matches "'+i.school+'". Schools: '+SCHOOLS.map(function(x){return x.name}).join(', '));say('Looking up '+s.name+'...');
+      var L=LENS[s.id]||{};return {name:s.name,route:s.route,priority:s.pri,gate:s.gate||'',oneThing:s.one,facts:s.facts,nextMove:s.next,interestPolicy:s.di,deadlines:DEADLINES.filter(function(d){return d.school===s.id}).map(function(d){return {date:d.date,label:d.label,done:!!S.done[d.id]}}),money:s.fin,studyAbroad:s.abroad,links:s.links,brief:{path:L.path,people:L.know,gap:L.gap,who:L.who,ask:L.ask,show:L.show,avoid:L.dont,diText:L.diText}}}},
+   {name:'tracker_status',description:'Returns the applicant\'s current progress in this site: pipeline stage per school, the next open deadlines, checklist progress, Common App and school-question counts, and RECAP proof counts per school.',
+    execute:function(){say('Checking tracker status...');var g=gearAll(),a=appsStats();return {stages:SCHOOLS.map(function(s){return {school:s.name,stage:STAGES[stageOf(s.id)],recap:recapCount(s.id)+'/5'}}),nextDeadlines:DEADLINES.filter(function(d){return !S.done[d.id]&&daysTo(d.date)>=0}).slice(0,6).map(function(d){return {school:d.sname,date:d.date,label:d.label,daysLeft:daysTo(d.date)}}),checklist:g.filter(function(id){return S.check[id]}).length+' of '+g.length,commonApp:a,libraryDocs:Object.keys(LIBS.docs).length}}}
+  ];
+}
+if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname))window.__tnTools=function(){return {tools:agentTools(),LIBS:LIBS,analyze:analyze,AG:AG,agentSend:agentSend,chat:function(){return CHAT},render:renderAgent}};
+
+var AG_RULES='You are the research agent inside Kendren Cornish\'s Fall 2027 transfer-application site. Ground rules:\n1. Look things up with the tools. Never guess facts about the applicant, a school or a source. If the sources or site data do not say it, answer "not found" and say what to check.\n2. Cite the document title (and part) for anything taken from a source, and quote briefly. For school facts, say they come from the site data and should be verified on the official page.\n3. Kendren writes every essay and answer in his own voice. Never write his final personal prose. You may organize arguments, point out gaps and weak claims, ask questions, compare drafts to prompts, and compute statistics.\n4. Do not invent project outcomes, hours, grades or credentials. Flag claims that need proof.\n5. Be concise and plain. Prefer short paragraphs and short lists. Use tools before answering; use analyze_text for counts and patterns.\nThe conversation follows.';
+var AG_SUGGEST=['What did each school say about aid and credits in my call transcripts?','Find every mention of law school in my sources.','Which schools still lack a researched major, and what should I ask?','Analyze my essay draft: length, keywords, readability.','What is due in the next 30 days and what is the status?'];
+
+function fmtMsg(t){
+  var h=esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+  return h.split(/\n{2,}/).map(function(p){
+    var lines=p.split('\n');
+    if(lines.every(function(l){return /^\s*[-*] /.test(l)}))return '<ul>'+lines.map(function(l){return '<li>'+l.replace(/^\s*[-*] /,'')+'</li>'}).join('')+'</ul>';
+    return '<p>'+lines.join('<br>')+'</p>';
+  }).join('');
+}
+function agentMsgsHTML(){
+  return CHAT.map(function(m,i){
+    return '<div class="msg '+m.role+'"><div class="who">'+(m.role==='user'?'You':'Agent')+'</div><div class="body">'+(m.role==='user'?'<p>'+esc(m.content).replace(/\n/g,'<br>')+'</p>':fmtMsg(m.content))+'</div>'+(m.role==='assistant'&&!AG.busy?'<button type="button" class="x2" data-act="asave" data-i="'+i+'">Save to library</button>':'')+'</div>';
+  }).join('')||'<p class="empty">Ask about your schools, your sources or your progress. The agent reads your library with tools and cites what it finds.</p>';
+}
+async function agentSend(){
+  var ta=$('#agin'),q=(ta?ta.value:AG.draft||'').trim();
+  if(!q||AG.busy)return;
+  if(!AG.sample){AG.status='The agent runs on the claude.ai version of this page.';renderAgent();return}
+  AG.draft='';CHAT.push({role:'user',content:q});AG.busy=true;AG.status='Thinking...';
+  AG.ctl=new AbortController();renderAgent();
+  var live=CHAT.length;CHAT.push({role:'assistant',content:''});
+  var input=[{role:'user',content:AG_RULES}].concat(CHAT.slice(0,-1).slice(-13).map(function(m){return {role:m.role,content:m.content}}));
+  if(input.length&&input[input.length-1].role!=='user')input.push({role:'user',content:q});
+  try{
+    var r=await AG.sample(input,{tools:agentTools(),signal:AG.ctl.signal,modelTier:AG.think?'complex':'default',onText:function(o){CHAT[live].content=o.text;var b=document.querySelector('#agmsgs .msg:last-child .body');if(b)b.innerHTML=fmtMsg(o.text);var sc=$('#agmsgs');if(sc)sc.scrollTop=sc.scrollHeight;AG.status='Writing...';var e=$('#agstatus');if(e)e.textContent=AG.status}});
+    CHAT[live].content=r.text||CHAT[live].content;AG.status=r.truncated?'The answer was cut short. Ask for less at a time.':'';
+  }catch(e){
+    var code=e&&e.code;
+    if(code==='cancelled'){AG.status='Stopped.';if(!CHAT[live].content)CHAT.pop()}
+    else{
+      var map={not_granted:'Claude access was declined for this page. Reload and allow it to use the agent.',rate_limited:'Too many requests in a row. Wait a moment, then try again.',prompt_too_large:'That was too much to read at once. Ask about one document or a narrower question.',tools_unavailable:'This view cannot run the agent tools.'};
+      AG.status=map[code]||('The agent could not answer ('+(code||'error')+').');
+      if(e&&e.text&&!CHAT[live].content)CHAT[live].content=e.text;
+      if(!CHAT[live].content)CHAT.pop();
+    }
+  }
+  AG.busy=false;AG.ctl=null;S.chat=CHAT.slice(-30);save();renderAgent();
+}
+function renderAgent(){
+  var box=$('#agentbox');if(!box)return;
+  if(!UNLOCKED){$('#agentlede').textContent='The agent and source library are admin tools.';box.innerHTML=lockedPanel('Agent and library');return}
+  if(AG.busy){var st=$('#agstatus');if(st)st.textContent=AG.status;return}
+  $('#agentlede').innerHTML='Add folders of transcripts, writings and notes, then ask the agent about them. It searches, reads and computes with tools, and it never writes your final prose. Documents are private to editors of this page.';
+  var fids=Object.keys(LIBS.folders).sort(function(a,b){return LIBS.folders[a].name<LIBS.folders[b].name?-1:1});
+  var cur=S.ui.lfolder&&(S.ui.lfolder==='all'||LIBS.folders[S.ui.lfolder])?S.ui.lfolder:'all';
+  var tgt=LIBS.target&&LIBS.folders[LIBS.target]?LIBS.target:(cur!=='all'?cur:'');
+  var docs=Object.keys(LIBS.docs).filter(function(d){return cur==='all'||LIBS.docs[d].folder===cur}).sort(function(a,b){return LIBS.docs[a].added<LIBS.docs[b].added?1:-1});
+  var canAgent=!!AG.sample&&(AG.limit===0||AG.limit>=6);
+  var h='<div class="agentgrid"><div class="sheet panel" id="libpanel"><h3>Source library</h3>';
+  h+='<p class="stale" style="margin-bottom:10px">'+(LIBS.mode==='db'?'Saved to the page\'s private store. Only editors of this page can read it.':LIBS.mode==='local'?'Saved in this browser only'+(window.claude?' (the shared store did not answer)':'. The agent and a bigger shared library run on the claude.ai version')+'.':'Loading...')+'</p>';
+  h+='<div class="chips" role="group" aria-label="Folders" style="margin-bottom:10px"><button type="button" class="chip" data-act="lfolder" data-v="all" aria-pressed="'+(cur==='all')+'">All '+Object.keys(LIBS.docs).length+'</button>'+fids.map(function(f){return '<button type="button" class="chip" data-act="lfolder" data-v="'+f+'" aria-pressed="'+(cur===f)+'">'+esc(LIBS.folders[f].name)+' '+Object.keys(LIBS.docs).filter(function(d){return LIBS.docs[d].folder===f}).length+'</button>'}).join('')+'</div>';
+  h+='<form class="row" data-form="lnewfolder"><label class="sr" for="lfname">New folder name</label><input type="text" id="lfname" placeholder="New folder, for example Call transcripts" style="flex:1;min-width:0"><button class="btn alt" type="submit">Add folder</button></form>';
+  if(cur!=='all'){var fo=LIBS.folders[cur];h+='<label class="lbl" for="lfnote" style="display:block;margin-top:10px">What is in "'+esc(fo.name)+'" (the agent reads this)</label><textarea id="lfnote" data-lnote="'+cur+'" style="min-height:54px">'+esc(fo.note||'')+'</textarea><div class="row"><button type="button" class="btn danger" data-act="ldelfolder" data-id="'+cur+'">'+(LIBS.confirm==='f:'+cur?'Sure? Delete folder and its documents':'Delete folder')+'</button></div>'}
+  h+='<div class="sheet" style="padding:12px;margin:12px 0;box-shadow:none;background:var(--card-sub)"><b style="font:800 1.1rem var(--f-disp);text-transform:uppercase">Add material</b><div class="row"><label for="ltarget" class="lbl">To folder</label><select id="ltarget" data-chg="ltarget"><option value="">Inbox (auto)</option>'+fids.map(function(f){return '<option value="'+f+'"'+(tgt===f?' selected':'')+'>'+esc(LIBS.folders[f].name)+'</option>'}).join('')+'</select></div>';
+  h+='<div class="row"><label class="btn alt" for="lfiles" style="cursor:pointer">Add files</label><input type="file" id="lfiles" data-chg="lfiles" multiple accept=".pdf,.txt,.md,.markdown,.srt,.vtt,.csv,.tsv,.json,.log,.html,.htm" class="sr"><label class="btn alt" for="ldir" style="cursor:pointer">Add a folder</label><input type="file" id="ldir" data-chg="lfiles" webkitdirectory multiple class="sr"></div>';
+  h+='<form data-form="lpaste"><label class="lbl" for="lptitle">Or paste text</label><input type="text" id="lptitle" data-lpaste="title" placeholder="Title" value="'+esc(LIBS.paste.title)+'" style="width:100%;margin-bottom:6px"><label class="sr" for="lptext">Text</label><textarea id="lptext" data-lpaste="text" placeholder="Paste a transcript, essay or notes">'+esc(LIBS.paste.text)+'</textarea><div class="row"><button class="btn" type="submit">Add pasted text</button></div></form><p class="stale" id="lstatus" role="status" aria-live="polite">'+esc(LIBS.status)+'</p></div>';
+  h+='<div>'+(docs.length?docs.map(function(d){var m=LIBS.docs[d],fn=(LIBS.folders[m.folder]||{}).name||'?';return '<div class="docrow"><div class="dr1"><b>'+esc(m.title)+'</b><span class="stale">'+(cur==='all'?esc(fn)+' &middot; ':'')+m.chars.toLocaleString('en-US')+' characters'+(m.parts>1?', '+m.parts+' parts':'')+'</span></div><div class="dr2"><button type="button" class="x2" data-act="ldocview" data-id="'+d+'">'+(LIBS.view===d?'Hide':'View')+'</button><label class="sr" for="mv-'+d+'">Move to folder</label><select id="mv-'+d+'" data-chg="lmove" data-id="'+d+'">'+fids.map(function(f){return '<option value="'+f+'"'+(m.folder===f?' selected':'')+'>'+esc(LIBS.folders[f].name)+'</option>'}).join('')+'</select><button type="button" class="x2" data-act="lddoc" data-id="'+d+'">'+(LIBS.confirm==='d:'+d?'Sure? Delete':'Delete')+'</button></div>'+(LIBS.view===d?'<pre class="docview">'+esc(LIBS.viewText||'Loading...')+'</pre>':'')+'</div>'}).join(''):'<p class="empty">No documents here yet. Add files, a whole folder, or paste text above.</p>')+'</div></div>';
+  h+='<div class="sheet panel" id="chatpanel"><h3>Agent</h3>';
+  if(!AG.checked)h+='<p class="stale">Checking...</p>';
+  else if(!canAgent)h+='<p class="empty">'+(window.claude?'The agent is not available in this view.':'The agent runs on the claude.ai version of this page, where it can use your Claude account. Your library and tracker still work here.')+'</p>';
+  else{
+    h+='<div class="chips" style="margin-bottom:8px">'+AG_SUGGEST.map(function(q,i){return '<button type="button" class="chip" data-act="asug" data-i="'+i+'" style="font-size:.9rem;padding:6px 9px">'+esc(q)+'</button>'}).join('')+'</div>';
+    h+='<div id="agmsgs" class="agmsgs" aria-live="polite">'+agentMsgsHTML()+'</div><p class="stale" id="agstatus" role="status">'+esc(AG.status)+'</p>';
+    h+='<label class="sr" for="agin">Ask the agent</label><textarea id="agin" data-agdraft="1" placeholder="Ask about a school, a transcript or a draft" style="min-height:64px">'+esc(AG.draft)+'</textarea><div class="row"><button type="button" class="btn" data-act="asend">Send</button><button type="button" class="btn alt" data-act="astop">Stop</button><button type="button" class="btn alt" data-act="aclear">Clear chat</button><label style="display:flex;gap:6px;align-items:center;font-size:.85rem"><input type="checkbox" class="ck" id="agthink" data-chg="agthink"'+(AG.think?' checked':'')+'> Think harder</label></div>';
+  }
+  h+='</div></div>';
+  box.innerHTML=h;
+  var sc=$('#agmsgs');if(sc)sc.scrollTop=sc.scrollHeight;
+}
+function libViewLoad(did){
+  LIBS.view=LIBS.view===did?'':did;LIBS.viewText='';
+  if(LIBS.view)libGetChunks(did).then(function(a){LIBS.viewText=(a[0]||'').slice(0,4000)+((a.join('').length>4000)?'\n\n[...preview ends. The agent can read the full text.]':'');renderAgent()}).catch(function(){LIBS.viewText='Could not load this document.';renderAgent()});
+}
+var noteT=null;
+function libNoteInput(id,v){clearTimeout(noteT);noteT=setTimeout(function(){var f=LIBS.folders[id];if(f){f.note=v;libPutFolder(id,f)}},700)}
+async function libSaveAnswer(i){
+  var m=CHAT[i];if(!m)return;
+  var prev=CHAT.slice(0,i).reverse().filter(function(x){return x.role==='user'})[0];
+  var fid=await libEnsureFolder('Agent notes');
+  var title='Agent answer, '+new Date().toLocaleDateString('en-US',{month:'short',day:'numeric'})+(prev?': '+prev.content.slice(0,50):'');
+  await libAddDoc(fid,title,m.content,{kind:'agent'});libSetStatus('Saved to the Agent notes folder.');renderAgent();
+}
 /* ---------- renderers ---------- */
 function renderBoard(){
   var upcoming=DEADLINES.filter(function(d){return !S.done[d.id]&&daysTo(d.date)>=0});
@@ -1255,7 +1574,7 @@ function renderAll(){
     ['id','k','i','v'].forEach(function(n){if(a.dataset[n]!=null)key+='[data-'+n+'="'+String(a.dataset[n]).replace(/"/g,'\\"')+'"]'});
     try{idx=[].indexOf.call(document.querySelectorAll(key),a)}catch(e){key=null}
   }
-  renderBoard();renderTutor();renderLineup();renderVault();renderClock();renderGear();renderApps();renderDojo();renderBack();
+  renderBoard();renderTutor();renderLineup();renderVault();renderClock();renderGear();renderApps();renderAgent();renderDojo();renderBack();
   if(key&&idx>=0){try{var n=document.querySelectorAll(key)[idx];if(n)n.focus()}catch(e){}}
 }
 function say(t){$('#backmsg').textContent=t}
@@ -1273,6 +1592,9 @@ document.addEventListener('input',function(e){
   if(t.dataset&&t.dataset.note){S.notes[t.dataset.note]=t.value;save();renderBack()}
   else if(t.dataset&&t.dataset.recap){var r=S.recap[t.dataset.recap]=S.recap[t.dataset.recap]||{};r[t.dataset.f]=t.value;save();renderTutor();renderBack()}
   else if(t.dataset&&t.dataset.ent){entryInput(t)}
+  else if(t.dataset&&t.dataset.lpaste){LIBS.paste[t.dataset.lpaste]=t.value}
+  else if(t.dataset&&t.dataset.agdraft){AG.draft=t.value}
+  else if(t.dataset&&t.dataset.lnote){libNoteInput(t.dataset.lnote,t.value)}
   else if(t.id==='vsearch'){S.ui.vq=t.value;save();renderVaultList()}
 });
 document.addEventListener('change',function(e){
@@ -1286,6 +1608,10 @@ document.addEventListener('change',function(e){
   else if(c==='recstatus'){S.recs[+t.dataset.i].status=t.value}
   else if(c==='offer'){S.offer[t.dataset.id]=t.value}
   else if(c==='ent'){entryChange(t)}
+  else if(c==='ltarget'){LIBS.target=t.value}
+  else if(c==='lfiles'){var fl=Array.prototype.slice.call(t.files);t.value='';libIngest(fl)}
+  else if(c==='lmove'){var lm=LIBS.docs[t.dataset.id];if(lm){lm.folder=t.value;libPutDocMeta(t.dataset.id,lm)}}
+  else if(c==='agthink'){AG.think=t.checked}
   save();renderAll();
 });
 document.addEventListener('click',function(e){
@@ -1301,6 +1627,15 @@ document.addEventListener('click',function(e){
   else if(a==='aschool'){S.ui.aschool=b.dataset.v}
   else if(a==='qadd'){saveEntry('q-'+b.dataset.id+'-'+Date.now().toString(36),{kind:'question',school:b.dataset.id,prompt:'',text:'',limit:'',unit:'words',status:'none',created:new Date().toISOString()})}
   else if(a==='qdel'){deleteEntry(b.dataset.id)}
+  else if(a==='lfolder'){S.ui.lfolder=b.dataset.v;LIBS.confirm=''}
+  else if(a==='ldelfolder'){var fid=b.dataset.id;if(LIBS.confirm==='f:'+fid){libDelFolder(fid).then(function(){S.ui.lfolder='all';LIBS.confirm='';libSetStatus('Folder deleted.');renderAgent()})}else LIBS.confirm='f:'+fid}
+  else if(a==='lddoc'){var did=b.dataset.id;if(LIBS.confirm==='d:'+did){libDelDoc(did).then(function(){LIBS.confirm='';renderAgent()})}else LIBS.confirm='d:'+did}
+  else if(a==='ldocview'){LIBS.confirm='';libViewLoad(b.dataset.id);return}
+  else if(a==='asend'){agentSend();return}
+  else if(a==='astop'){if(AG.ctl)AG.ctl.abort();return}
+  else if(a==='aclear'){CHAT=[];S.chat=[];AG.status=''}
+  else if(a==='asug'){AG.draft=AG_SUGGEST[+b.dataset.i]||''}
+  else if(a==='asave'){libSaveAnswer(+b.dataset.i);return}
   else if(a==='delcourse'){S.courses.splice(+b.dataset.i,1)}
   else if(a==='delrec'){S.recs.splice(+b.dataset.i,1)}
   else if(a==='dellog'){S.log.splice(+b.dataset.i,1)}
@@ -1330,6 +1665,8 @@ document.addEventListener('submit',function(e){
   var f=e.target,kind=f.dataset&&f.dataset.form;if(!kind)return;
   e.preventDefault();
   if(kind==='gate'){doUnlock();return}
+  if(kind==='lnewfolder'){var nm=($('#lfname').value||'').trim();if(nm)libEnsureFolder(nm).then(function(id){S.ui.lfolder=id;save();renderAgent()});return}
+  if(kind==='lpaste'){libPaste();return}
   function val(id){return ($('#'+id).value||'').trim()}
   function uid(){return 'u'+Date.now().toString(36)+Math.random().toString(36).slice(2,5)}
   if(kind==='custom'){
@@ -1348,7 +1685,7 @@ document.addEventListener('submit',function(e){
   save();renderAll();
 });
 
-setGateUI();renderAll();entryStoreInit();
+setGateUI();renderAll();entryStoreInit();libInit();
 })();
 </script>
 </body></html>
