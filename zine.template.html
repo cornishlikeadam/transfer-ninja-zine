@@ -433,7 +433,7 @@ footer p{max-width:80ch;margin:0 0 8px}
     <div class="wrap">
       <div class="kick"><svg aria-hidden="true"><use href="#sh"/></svg>Tutor board</div>
       <h2>Fit, <em>interest</em>, proof</h2>
-      <p class="sec-lede">One row per core school: the real degree path, the research worth knowing, whether interest counts, who to ask and what to ask, and how far the <b>RECAP</b> proof test has come. Open a card in the lineup for the full brief and to fill in the proof.</p>
+      <p class="sec-lede">One row per school on the main list: the real degree path, the research worth knowing, whether interest counts, who to ask and what to ask, and how far the <b>RECAP</b> proof test has come. Open a card in the lineup for the full brief and to fill in the proof.</p>
       <div class="sheet tbl tutor" id="tutorbox"></div>
       <div class="legend" id="tutorlegend">
         <div class="sheet">
@@ -716,6 +716,7 @@ function gearAll(){
 }
 
 /* ---------- research lens (core schools) ---------- */
+var PRIL={core:'Core',conditional:'Conditional',bench:'Bench'};
 var DI={
   none:['Not scored','The school publishes no interest scoring for transfers.'],
   counts:['Counts','The school says interest is considered.'],
@@ -732,22 +733,16 @@ var LENS=DATA.lens||{};
 /* ---------- the vault: every school found on this computer ---------- */
 var VG={core:'Core 12',bench:'Bench',alt:'Other alternate',researched:'Researched',dossier:'Dossier only',routes:'Route plan'};
 var VAULT=[
-['duke','Duke','bench','Dossier on file. Revisit if recent grades get substantially stronger.'],
-['rice','Rice','bench','Research brief and dossier on file.'],
-['uchicago','University of Chicago','bench','Research brief and dossier. Binding Transfer Early Decision exists.'],
-['columbia','Columbia General Studies','bench','Research brief and dossier. Needs a verified financing plan first.'],
+['duke','Duke','alt','Dossier on file. Revisit if recent grades get substantially stronger.'],
+['columbia','Columbia General Studies','alt','Research brief and dossier. Needs a verified financing plan first.'],
 ['michigan','University of Michigan','alt','Older alternative. Research brief and dossier on file.'],
 ['uiuc','Univ. of Illinois Urbana-Champaign','alt','Older alternative. Information Sciences.'],
 ['emory','Emory University','researched','Research brief and dossier.'],
-['northeastern','Northeastern University','researched','Research brief and dossier.'],
 ['nyu','New York University','researched','Research brief and dossier.'],
 ['penn','University of Pennsylvania','researched','Research brief and dossier. Prior-credit limits flagged.'],
-['dartmouth','Dartmouth College','researched','Research brief and dossier. Prior-credit limits flagged.'],
 ['jhu','Johns Hopkins University','researched','Research brief and dossier.'],
-['unc','UNC Chapel Hill','researched','Research brief and dossier.'],
 ['tulane','Tulane University','researched','Research brief and dossier.'],
 ['uga','University of Georgia','researched','Research brief and dossier.'],
-['uva','University of Virginia','researched','Research brief and dossier.'],
 ['miami','University of Miami','researched','Research brief and dossier.'],
 ['case','Case Western Reserve','researched','Research brief only.'],
 ['morehouse','Morehouse College','researched','Research brief only.'],
@@ -891,7 +886,7 @@ function vaultBody(kind,id){
 }
 function vaultItemHTML(it){
   if(it.kind==='core'){
-    return '<div class="vitem"><div class="vrow"><span class="vname"><a href="#s-'+it.id+'">'+esc(it.name)+'</a></span><span class="vchips"><span class="pri '+(SCH[it.id].pri)+'">'+(SCH[it.id].pri==='core'?'Core':'Conditional')+'</span>'+diChip(SCH[it.id].di)+'<a class="src" href="#s-'+it.id+'">Open card</a></span><span class="vsub">'+esc(it.note)+'</span></div></div>';
+    return '<div class="vitem"><div class="vrow"><span class="vname"><a href="#s-'+it.id+'">'+esc(it.name)+'</a></span><span class="vchips"><span class="pri '+(SCH[it.id].pri)+'">'+PRIL[SCH[it.id].pri]+'</span>'+diChip(SCH[it.id].di)+'<a class="src" href="#s-'+it.id+'">Open card</a></span><span class="vsub">'+esc(it.note)+'</span></div></div>';
   }
   var lib=it.kind==='inst'?DATA.lib[it.id]:null,dos=it.kind==='inst'?DATA.dossier[it.id]:null,chips='<span class="pri '+(it.group==='bench'?'bench':it.group==='routes'?'bench':'conditional')+'">'+VG[it.group]+'</span>';
   if(it.kind==='inst'){var di=lib?lib.di:(dos?classDi(dos.di):'ask');chips+=diChip(di)}
@@ -915,7 +910,7 @@ function renderVault(){
   var all=vaultItems(),cnt=function(fn){return all.filter(fn).length};
   var inst=SCHOOLS.length+VAULT.length+ROUTE_ONLY.length;
   $('#vaultlede').innerHTML='<b>'+inst+' institutions</b> turn up across '+Object.keys(DATA.dossier).length+' vault dossiers, '+Object.keys(DATA.lib).length+' research briefs and '+(DATA.routes||[]).length+' planned routes in the SCAD execution plan. '+ROUTE_ONLY.join(', ')+' appear only as routes. Open any row for fit, interest policy, people and steps. Dossier dates are older, so use the Clock for live dates.';
-  var defs=[['all','All',all.length],['core','On the lineup',cnt(function(i){return i.group==='core'})],['bench','Bench and alternates',cnt(function(i){return i.group==='bench'||i.group==='alt'})],['researched','Researched',cnt(function(i){return i.group==='researched'})],['dossier','Dossier only',cnt(function(i){return i.group==='dossier'})],['routes','Route plans',cnt(function(i){return i.group==='routes'})]];
+  var defs=[['all','All',all.length],['core','On the lineup',cnt(function(i){return i.group==='core'})],['bench','Alternates',cnt(function(i){return i.group==='bench'||i.group==='alt'})],['researched','Researched',cnt(function(i){return i.group==='researched'})],['dossier','Dossier only',cnt(function(i){return i.group==='dossier'})],['routes','Route plans',cnt(function(i){return i.group==='routes'})]];
   $('#vfilters').innerHTML=defs.map(function(d){return '<button type="button" class="chip" data-act="vfilter" data-v="'+d[0]+'" aria-pressed="'+(S.ui.vf===d[0])+'">'+d[1]+' '+d[2]+'</button>'}).join('');
   $('#vsearch').value=S.ui.vq||'';
   renderVaultList();
@@ -1423,7 +1418,7 @@ function cardHTML(s){
   var opts=STAGES.map(function(n,i){return '<option value="'+i+'"'+(i===st?' selected':'')+'>'+esc(n)+'</option>'}).join('');
   var dls=DEADLINES.filter(function(d){return d.school===s.id}).map(dlRow).join('');
   return '<article class="sheet card" id="s-'+s.id+'">'+
-   '<div class="card-head"><span class="pri '+s.pri+'">'+(s.pri==='core'?'Core':'Conditional')+'</span>'+diChip(s.di)+'<span class="stagepill">'+esc(STAGES[st])+'</span></div>'+
+   '<div class="card-head"><span class="pri '+s.pri+'">'+PRIL[s.pri]+'</span>'+diChip(s.di)+'<span class="stagepill">'+esc(STAGES[st])+'</span></div>'+
    '<h3>'+esc(s.name)+'</h3><p class="route">'+esc(s.route)+'</p>'+(s.gate?'<div class="gate"><b>Gate.</b> '+esc(s.gate)+'</div>':'')+
    '<div class="one"><span class="tag">The one thing</span><p>'+esc(s.one)+'</p></div>'+
    '<ul class="facts">'+s.facts.map(function(f){return '<li>'+esc(f)+'</li>'}).join('')+'</ul>'+
@@ -1440,7 +1435,6 @@ function renderLineup(){
   $('#filters').innerHTML=defs.map(function(d){return '<button type="button" class="chip" data-act="filter" data-v="'+d[0]+'" aria-pressed="'+(f===d[0])+'">'+d[1]+'</button>'}).join('');
   $('#sortsel').value=S.ui.sort;
   var list=SCHOOLS.filter(function(s){return f==='all'||f===s.pri});
-  if(f==='bench')list=[];
   if(S.ui.sort==='deadline'){
     var firstOf=function(s){return s.d.map(function(x){return x[0]}).sort()[0]};
     list=list.slice().sort(function(a,b){return firstOf(a)<firstOf(b)?-1:firstOf(a)>firstOf(b)?1:0});
@@ -1448,8 +1442,7 @@ function renderLineup(){
     list=list.slice().sort(function(a,b){return stageOf(b.id)-stageOf(a.id)});
   }
   $('#grid').innerHTML=list.map(cardHTML).join('');
-  var showBench=(f==='all'||f==='bench');
-  $('#benchwrap').innerHTML=showBench?'<h3 class="bench-title">On the bench<span>Alternates to revisit if the record or the list changes</span></h3><div class="grid">'+BENCH.map(benchHTML).join('')+'</div>':'';
+  $('#benchwrap').innerHTML='';
 }
 function renderClock(){
   $('#hidedone').checked=!!S.ui.hideDone;

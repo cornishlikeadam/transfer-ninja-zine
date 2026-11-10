@@ -2477,6 +2477,121 @@
    "ask": "Can SCAD Applied AI, creative coding, UX and computing courses satisfy Creative Computing requirements, or do they enter as electives?",
    "show": "Two to four portfolio works with role, method, result and reflection, sent only if requested. Use the April 1 priority date for scholarship consideration.",
    "dont": "Do not send physical materials or cold-message faculty. Give SMU the same seriousness as a reach."
+  },
+  "unc": {
+   "di": "none",
+   "diText": "UNC lists applicant interest as not considered for first-year admission and has published no transfer interest score.",
+   "path": "Not computer science. Candidates on file in the College of Arts and Sciences: sociology, media and journalism, public policy, or information science. Your target is not recorded yet. Confirm it.",
+   "know": [
+    [
+     "Mohit Bansal",
+     "Computer science; directs the UNC NLP group. A technology-lane anchor only."
+    ]
+   ],
+   "gap": "Faculty for sociology, media or public policy paths are not yet researched.",
+   "res": "",
+   "evi": "",
+   "who": "UNC admissions military and veteran page, plus uncsubmit@admissions.unc.edu for the fee waiver form.",
+   "ask": "Will my SCAD quarter credits count toward the 24-credit testing exemption at application, which transcript documents JST and ACE credit, and does my major need a separate application or prerequisites?",
+   "show": "One recommendation, transcripts from every school attended, and a clear reason for transferring. UNC wants updates through MyCarolina.",
+   "dont": "Do not mail or email updates. UNC tells applicants to use MyCarolina."
+  },
+  "uva": {
+   "di": "none",
+   "diText": "UVA explicitly says it does not track demonstrated interest.",
+   "path": "College of Arts and Sciences: Media Studies, Sociology or Psychology, optionally with the five-course Data Science minor if prerequisites, credit and capacity allow. Your target is not recorded yet. Confirm it.",
+   "know": [],
+   "gap": "Faculty for Media Studies, Sociology or Psychology are not yet researched.",
+   "res": "UVA Data Science and Environmental Institute CoLab",
+   "evi": "The 2026 project Community Climate Knowledge and Multimodal Climate AI builds community-generated knowledge into multimodal climate models while examining equitable data governance, and runs through June 2028.",
+   "who": "UVA transfer admission and the Virginia Student Veterans group (dossier).",
+   "ask": "Which Arts and Sciences major fits a veteran transfer, and can the Data Science minor combine with my transfer credit and capacity?",
+   "show": "Fit inside the application itself. UVA tells transfers not to send extras.",
+   "dont": "Do not plan around the BS in Data Science. Do not send resumes or research papers."
+  },
+  "rice": {
+   "di": "firstyear",
+   "diText": "Rice's first-year data considers interest, but that is not a transfer rule. Rice does ask transfers to explain specific interest, so show it in precise writing, not email activity.",
+   "path": "Social Policy Analysis or Cognitive Sciences, both from your SCAD plan. Rice also offers a BS in Artificial Intelligence, which is not your target.",
+   "know": [
+    [
+     "Fred Oswald",
+     "Herbert S. Autrey Chair in Social Sciences; AI and machine learning in workforce systems, human-AI teaming and organizational judgment."
+    ],
+    [
+     "Kirsten Ostherr",
+     "Gladys Louise Fox Professor of English; medical humanities."
+    ]
+   ],
+   "gap": "No specific research asset is chosen yet. The Rice Responsible AI hub is the place to look.",
+   "res": "Rice Responsible AI hub",
+   "evi": "",
+   "who": "Rice transfer admission and the Rice Military Veterans association (dossier).",
+   "ask": "How would my courses transfer toward Social Policy Analysis or Cognitive Sciences, and does the four-semester residency change my entry year?",
+   "show": "A precise why-Rice answer, two college-instructor recommendations and the College Report.",
+   "dont": "No transfer interviews exist, so an alumnus cannot create a recommendation channel."
+  },
+  "dartmouth": {
+   "di": "none",
+   "diText": "Dartmouth states that visiting, calling, emailing or requesting information does not improve admission chances. A completed application is enough evidence of interest.",
+   "path": "A liberal-arts major in the arts and sciences. No major is on file. The research frames a move from making intelligent systems to studying their human meanings and consequences. Name your target.",
+   "know": [
+    [
+     "Lorie Loeb",
+     "Research professor of computer science; faculty director of the DALI Lab (technology, art, design and society)."
+    ],
+    [
+     "Mary Flanagan",
+     "Digital humanities; directs Tiltfactor (values in design, games and bias)."
+    ]
+   ],
+   "gap": "No specific research asset is chosen yet. Read one Tiltfactor project.",
+   "res": "Tiltfactor (Mary Flanagan)",
+   "evi": "",
+   "who": "Christina Moreland (veteran coordinator), after completing Service to School VetLink.",
+   "ask": "How can a veteran with quarter-system studio courses document recent strength in Dartmouth's core academic areas, and is a course map or syllabi index useful before applying?",
+   "show": "Two college-instructor evaluations, syllabi (strongly recommended) and a coherent transfer reason. Testing is required, though veterans may request a waiver.",
+   "dont": "Do not spend time on passive touchpoints: they earn nothing."
+  },
+  "northeastern": {
+   "di": "firstyear",
+   "diText": "Northeastern's first-year data considers interest, but it publishes no transfer interest rating. Use engagement to learn how credit, placement and co-op work.",
+   "path": "From your SCAD plan: BFA Design (Interaction Design or Experience Design) or Psychology and Design BS in the College of Arts, Media and Design. The Khoury combined majors in the research lean toward computing. Confirm your target.",
+   "know": [
+    [
+     "Dakuo Wang",
+     "Human-AI collaboration and human-centered AI, across Khoury and Arts, Media and Design."
+    ],
+    [
+     "Upol Ehsan",
+     "Human-centered explainable AI, responsible AI and participatory civic AI."
+    ]
+   ],
+   "gap": "No specific research asset is chosen yet. Faculty for the design and psychology paths are not yet researched.",
+   "res": "",
+   "evi": "",
+   "who": "Northeastern transfer admission and the Center for the Advancement of Veterans and Servicemembers (CAVS).",
+   "ask": "Can you give a preliminary credit map for my intended College of Arts, Media and Design major, and explain how co-op timing changes time to degree?",
+   "show": "A recent academic recommender, syllabi and project documentation.",
+   "dont": "Do not treat engagement as interest points: none are published."
+  },
+  "uchicago": {
+   "di": "ted",
+   "diText": "UChicago has a conventional binding Transfer Early Decision option, the one legitimate commitment signal. It publishes no TED applicant or admit count.",
+   "path": "Sociology, computational social science or the sociology of knowledge, or ethics. Your target is not recorded yet. Confirm it.",
+   "know": [
+    [
+     "James A. Evans",
+     "Max Palevsky Professor of Sociology; directs Knowledge Lab."
+    ]
+   ],
+   "gap": "Other faculty for ethics or sociology paths are not yet researched.",
+   "res": "Knowledge Lab",
+   "evi": "Studies how knowledge and innovation emerge, using machine learning, networks, crowdsourcing and computational social science.",
+   "who": "UChicago transfer admissions and the Stand Together veterans initiative (dossier).",
+   "ask": "How should a veteran balance two recommendations, and how many SCAD quarter credits stay usable given the six-quarter residency and Core rules?",
+   "show": "UChicago allows a supervisor, mentor or commanding officer to write when you have been out of school a long time.",
+   "dont": "Do not bind Transfer Early Decision until net price, benefits and likely credit loss are acceptable."
   }
  }
 }

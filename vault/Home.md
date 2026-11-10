@@ -18,6 +18,12 @@ Fall 2027 transfer cycle. One note per school, plus the Common App and school qu
 - [[Schools/Amherst|Amherst]] (core)
 - [[Schools/USC Iovine and Young|USC Iovine and Young]] (conditional)
 - [[Schools/SMU|SMU]] (conditional)
+- [[Schools/UNC Chapel Hill|UNC Chapel Hill]] (bench)
+- [[Schools/UVA|UVA]] (bench)
+- [[Schools/Rice|Rice]] (bench)
+- [[Schools/Dartmouth|Dartmouth]] (bench)
+- [[Schools/Northeastern|Northeastern]] (bench)
+- [[Schools/UChicago|UChicago]] (bench)
 
 ## Common App
 - [[Common App/Common App Entries]]
