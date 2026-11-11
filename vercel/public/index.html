@@ -1502,8 +1502,8 @@ function panelStrategy(){
  return h;
 }
 function planningStats(){
- var z=S.stats||{};function v(k,d){return z[k]==null?d:Number(z[k])}
- return {bg:v('bg',3.04),bc:v('bc',22),sg:v('sg',3.33),sq:v('sq',30),nq:v('nq',15),ng:v('ng',4),eligible:v('eligible',0)};
+ var z=S.stats||{},baseline=(DATA.strategy||{}).statsBaseline||{};function v(k,d){return z[k]==null?d:Number(z[k])}
+ return {bg:v('bg',baseline.bg),bc:v('bc',baseline.bc),sg:v('sg',baseline.sg),sq:v('sq',baseline.sq),nq:v('nq',baseline.nq),ng:v('ng',baseline.ng),eligible:v('eligible',baseline.eligible)};
 }
 function statsResult(z){
  var sem=z.sq*2/3,total=z.bc+sem,combined=total?(z.bg*z.bc+z.sg*sem)/total:null;

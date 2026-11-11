@@ -1967,5 +1967,14 @@
    "Show readiness through recent coursework and specific responsibilities.",
    "Follow the application’s prohibition on generative AI writing/editing."
   ]
+ },
+ "statsBaseline": {
+  "bg": 3.04,
+  "bc": 22,
+  "sg": 3.33,
+  "sq": 30,
+  "nq": 15,
+  "ng": 4,
+  "eligible": 0
  }
 }
