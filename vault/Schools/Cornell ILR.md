@@ -80,11 +80,24 @@ Cornell ILR gives your interest in work, organizations and technology a single d
 - Standout: You have seen labor from the ground: field canvassing with daily conversion tracking, and study of how AI may change the workforce.
 - Your reason: ILR joins labor, policy and law in one school, and Kyle told you it is among the best preparations for law school.
 
-**Stats-only order:** 9 of 21. ILR says most admitted transfers hold 3.4 or higher. SCAD 3.33 is 0.07 under and pooled 3.18 is 0.22 under, and three named prerequisites are missing.
+**Stats-only order:** 9 of 22. ILR says most admitted transfers hold 3.4 or higher. SCAD 3.33 is 0.07 under and pooled 3.18 is 0.22 under, and three named prerequisites are missing.
 
 **Numbers:** Line: 3.4 for most admits. You: SCAD 3.33 is 0.07 under; pooled 3.18 is 0.22 under; composition, statistics and microeconomics still needed.
 
 **Check first:** Most admitted ILR transfers report 3.4+; map composition, economics, statistics/calculus and science.
+
+## Military and ROTC
+- Army: On campus. Army ROTC on campus.
+- Air Force: On campus. Air Force ROTC on campus.
+- Navy: On campus. Naval ROTC on campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** One of the few Ivies with all three units on campus, and ILR studies the labor and organizational side of military life.
+
+**Veteran side:** Yellow Ribbon, a veteran admissions pathway that can waive some documents, and the Veterans Summer Bridge (your research).
+
+_Confidence: medium. Source: https://www.militaryspot.com/news/rotc-making-a-comeback-at-ivy-league-schools_
 
 ## Supplements and guidance (2)
 

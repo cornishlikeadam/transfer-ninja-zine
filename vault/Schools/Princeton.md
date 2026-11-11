@@ -88,13 +88,26 @@ Princeton recruits veterans into its transfer program and requires a graded pape
 - Standout: A veteran whose research questions about ownership, access and Black intellectual history already exist on paper.
 - Your reason: A transfer program built around veterans, independent research through the senior thesis, and aid that can replace benefits.
 
-**Stats-only order:** 21 of 21. No GPA line is published, but the academic bar is the highest on your list. Your contact questioned the transferable-credit count, and ORFE or engineering would need far more math and science than the record shows.
+**Stats-only order:** 22 of 22. No GPA line is published, but the academic bar is the highest on your list. Your contact questioned the transferable-credit count, and ORFE or engineering would need far more math and science than the record shows.
 
 **Numbers:** Line: none published. You: SCAD 3.33, pooled 3.18; credit threshold and graded paper are the gates.
 
 **Check first:** Settle conflicting major plans; ORFE/engineering require much more math and science than the known record shows.
 
 **In your portal now:** Your portal shows African American Studies and Sociology as majors, Entrepreneurship as the minor, and drafts in progress for several answers.
+
+## Military and ROTC
+- Army: On campus. Army Tiger Battalion, on campus since 1919, the longest continuously running ROTC program in the country.
+- Air Force: Cross-town. Air Force ROTC through Rutgers, including a Space Force option.
+- Navy: Cross-town. Naval ROTC through Rutgers, re-established for Princeton in 2014.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Army ROTC on campus at a school whose transfer program exists partly for veterans. ROTC here is a community, not a commute.
+
+**Veteran side:** Princeton's transfer program recruits veterans. Your notes: 66 students in ROTC in 2024-25 and the first two Space Force commissions in the Class of 2026.
+
+_Confidence: high. Source: https://admission.princeton.edu/community/rotc_
 
 ## Supplements and guidance (10)
 

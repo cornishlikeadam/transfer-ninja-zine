@@ -77,11 +77,24 @@ WashU would let you study the human side of the systems you already build, in th
 - Standout: St. Louis is part of your family story through your grandmother's conference, so your reason for the city is real and specific.
 - Your reason: Family roots in St. Louis, a strong social-science college, and a new AI minor open across schools.
 
-**Stats-only order:** 11 of 21. WashU says the strongest transfer candidates usually hold 3.5 or higher across a broad curriculum with composition. SCAD 3.33 is 0.17 under.
+**Stats-only order:** 11 of 22. WashU says the strongest transfer candidates usually hold 3.5 or higher across a broad curriculum with composition. SCAD 3.33 is 0.17 under.
 
 **Numbers:** Line: 3.5 for strongest candidates. You: SCAD 3.33 is 0.17 under; pooled 3.18 is 0.32 under; composition not yet shown.
 
 **Check first:** Strong candidates generally present 3.5+ across broad preparation; composition equivalency is unresolved.
+
+## Military and ROTC
+- Army: On campus. Gateway Battalion, hosted by WashU. It won the first DoD ROTC partnership excellence award in 2021.
+- Air Force: Cross-town. Detachment 207 at Saint Louis University, nearby.
+- Navy: None. No Navy unit found in St. Louis.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Gateway Battalion cadets train at Fort Leonard Wood, where you did basic training. St. Louis is also your family's ground.
+
+**Veteran side:** WashU's veterans site lists a Posse Veterans Program page: confirm whether WashU is a current partner.
+
+_Confidence: medium. Source: https://rotc.wustl.edu/about_
 
 ## Supplements and guidance (3)
 

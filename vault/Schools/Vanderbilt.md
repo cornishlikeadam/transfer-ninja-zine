@@ -79,11 +79,24 @@ Vanderbilt's Human and Organizational Development degree is your ILR equivalent:
 - Standout: You have led peers in three settings: a canvassing team, a residence floor and a student government campaign.
 - Your reason: It studies exactly what you care about, admitted transfers get full-need aid, and it is not a computer science application.
 
-**Stats-only order:** 8 of 21. No current official transfer GPA line was found. Older Vanderbilt guidance cited about 3.3 or above at a competitive four-year school, so treat this placement as low confidence.
+**Stats-only order:** 8 of 22. No current official transfer GPA line was found. Older Vanderbilt guidance cited about 3.3 or above at a competitive four-year school, so treat this placement as low confidence.
 
 **Numbers:** Line: none verified; a dated admissions answer cited about 3.3. You: SCAD 3.33, pooled 3.18.
 
 **Check first:** Keep the application aligned to Peabody HOD and verify credit sequencing.
+
+## Military and ROTC
+- Army: On campus. Army ROTC hosted at Vanderbilt.
+- Air Force: Cross-town. Detachment 790 at Tennessee State, about 10 minutes away.
+- Navy: On campus. Naval ROTC hosted at Vanderbilt, across from the Peabody campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** The Navy unit sits across the street from Peabody, where Human and Organizational Development lives, and commissions are joint with nearby schools.
+
+**Veteran side:** The VA certifying official works through the registrar. Yellow Ribbon amounts vary by school, so get a written estimate.
+
+_Confidence: medium. Source: https://news.vanderbilt.edu/2024/06/04/vanderbilts-joint-commissioning-ceremony-celebrates-class-of-2024-with-fanfare-and-inspiration/_
 
 ## Supplements and guidance (3)
 

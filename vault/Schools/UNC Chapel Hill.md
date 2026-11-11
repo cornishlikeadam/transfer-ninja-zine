@@ -76,11 +76,24 @@ UNC gives your service and technology interests a public-facing question about a
 - Standout: A veteran exemption from testing, in-state tuition by law, and a record of public-facing service work.
 - Your reason: A strong public university with real veteran benefits and a path into public policy.
 
-**Stats-only order:** 14 of 21. UNC reports an average college GPA of 3.7 for incoming transfers. You are about 0.4 to 0.5 under.
+**Stats-only order:** 14 of 22. UNC reports an average college GPA of 3.7 for incoming transfers. You are about 0.4 to 0.5 under.
 
 **Numbers:** Line: 3.7 average for incoming transfers. You: SCAD 3.33 is 0.37 under; pooled 3.18 is 0.52 under.
 
 **Check first:** Confirm major, transferable writing and quantitative breadth; do not infer North Carolina residency.
+
+## Military and ROTC
+- Army: On campus. Army ROTC on campus.
+- Air Force: On campus. Air Force ROTC on campus.
+- Navy: On campus. Naval ROTC on campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Close to Fort Bragg and a large military community, with all three units and in-state pricing for you as a veteran.
+
+**Veteran side:** In-state tuition by law for veterans using Post-9/11 or Chapter 30, plus Yellow Ribbon.
+
+_Confidence: low. Source: https://admissions.unc.edu/apply/military-and-veterans/_
 
 ## Supplements and guidance (1)
 

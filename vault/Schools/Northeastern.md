@@ -82,11 +82,24 @@ Northeastern suits the part of you that learns by building with other people, an
 - Standout: A shipped client product (GlowOS) plus residence-life design work shows you can deliver for real users, which is what co-op employers look for.
 - Your reason: Co-op puts design work in front of real organizations, and veterans at full Post-9/11 eligibility are in the unlimited Yellow Ribbon program.
 
-**Stats-only order:** 3 of 21. Northeastern says successful transfers generally hold about a 3.3 cumulative. Your SCAD 3.33 sits at that level and your pooled 3.18 is just under.
+**Stats-only order:** 3 of 22. Northeastern says successful transfers generally hold about a 3.3 cumulative. Your SCAD 3.33 sits at that level and your pooled 3.18 is just under.
 
 **Numbers:** Line: about 3.3 typical, not a minimum. You: SCAD 3.33 at the line; pooled 3.18 is 0.12 under.
 
 **Check first:** A typical successful cumulative GPA around 3.3 is descriptive, not an eligibility floor.
+
+## Military and ROTC
+- Army: On campus. Liberty Battalion, hosted at Northeastern.
+- Air Force: Cross-town. Boston University, Detachment 355.
+- Navy: Cross-town. Cross-town in Boston.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Co-op plus an on-campus Army battalion: you could hold a paid co-op and stay in ROTC in the same city.
+
+**Veteran side:** CAVS veteran center and automatic unlimited Yellow Ribbon for 100% Post-9/11 undergraduates (your research).
+
+_Confidence: medium. Source: https://rotc.northeastern.edu/prospective-and-current-college-students/_
 
 ## Supplements and guidance (2)
 

@@ -14,7 +14,7 @@ Vercel needs `TUTOR_CODE` set as a production environment variable. Redeploy wit
 | Path | What it is |
 |---|---|
 | `zine.template.html` | The page (HTML, CSS, JS). Data is injected at build time. |
-| `data/schools.json` | Source of truth for the 21 active cards: facts, majors, money, study abroad, links. Edit by hand. |
+| `data/schools.json` | Source of truth for the 22 active cards: facts, majors, money, study abroad, links. Edit by hand. |
 | `data/make_schools.py` | The one-off script that produced `schools.json`. |
 | `build_zine.py` | Reads the vault dossiers, research library, spreadsheet and `schools.json`, then writes every output below. |
 | `transfer-ninja-zine.html` | Build for the claude.ai artifact. Soft code lock, shared storage for the Common App log. |
@@ -44,7 +44,9 @@ The printable PDF and editable Markdown are in `documents/`. Regenerate with `py
 `data/strategy.json` holds the profile, a two-sentence summary and three bullets per school, the stats-only ranking, and
 every supplement with a paraphrased prompt and five guidance points. The reviewed text lives in `data/boost_core.py`,
 `data/boost_supps1.py` and `data/boost_supps2.py`; `python3 data/apply_boost.py` merges it into `strategy.json`.
-`python3 scripts/export_strategy.py` writes `documents/Kendren_21_School_Strategy.md` and `.pdf`.
+`python3 scripts/export_strategy.py` writes `documents/Kendren_22_School_Strategy.md` and `.pdf` (the number follows the school count).
+
+`data/record.py` holds every transcript course (Broward, SCAD with Fall 2026 midterms and Winter 2027 registration) and the JST service record. `data/military.py` holds ROTC units, veteran programs, uniqueness and confidence per school, plus the age and eligibility rules. `data/add_penn.py` adds Penn to `schools.json` and marks Yale, Dartmouth and Penn as not opened. All three feed the gated Record and Military and ROTC tabs, the card drawers, the vault notes `Academic Record.md` and `Military and ROTC.md`, and the strategy document.
 `node scripts/validate_zine.cjs` checks counts, rendering and that private text is absent from the public page.
 
 The claude.ai build seals the tutor and admin data with the code (`scripts/seal.cjs`), so it is not readable in the page
@@ -53,7 +55,7 @@ source. A 4-digit code can still be guessed by trying every value.
 ## Rebuild
 
 ```bash
-python3 data/apply_boost.py && python3 build_zine.py && python3 scripts/export_strategy.py && node scripts/validate_zine.cjs
+python3 data/add_penn.py && python3 data/apply_boost.py && python3 build_zine.py && python3 scripts/export_strategy.py && node scripts/validate_zine.cjs
 ```
 
 ## The code lock

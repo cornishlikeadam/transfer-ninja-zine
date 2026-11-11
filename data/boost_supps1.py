@@ -120,9 +120,9 @@ add("nd", "Additional information", "300 words", "Optional; answer yes or no fir
      "Keep the tone informational. The essays carry the reflection."], kind="context")
 
 # ------------------------------------------------------------------ Yale (Eli Whitney)
-add("yale", "Eli Whitney essays", "Not captured", "No screenshot yet",
+add("yale", "Eli Whitney essays", "Not captured", "Application not opened yet",
     "Yale's Eli Whitney application has its own essay questions. Open the application and capture them before drafting.",
-    ["Take screenshots of every Yale question so the prompts and limits here can be replaced with the real ones.",
+    ["Open the Eli Whitney application and screenshot every question. Yale lists personal statements, recommendations and transcripts, with a March 1 deadline for the application.",
      "Yale's contact asked for recent English and math coursework. Plan the essays around a record that includes them.",
      "Prepare a dated education timeline, because Eli Whitney asks you to account for time away from school.",
      "Choose one analytical paper to anchor your academic case, and keep the instructor's comments.",
@@ -264,14 +264,55 @@ add("nu", "Optional personal essay or extra information", "Optional upload; conf
      "If the two required answers already tell the story, skip it."], kind="optional")
 
 # ------------------------------------------------------------------ Georgetown
-add("gt", "Georgetown transfer essays", "Not captured", "No screenshot yet",
-    "Georgetown uses its own application with school-specific essays. Open it and capture the prompts before drafting.",
-    ["Take screenshots of the Georgetown application so these entries can be replaced with the real prompts.",
-     "Decide the school and major first. The essay for the School of Foreign Service differs from the College.",
-     "For the technology-policy degree, prepare to explain your plan for economics, statistics and a language.",
-     "The junior priority date for some programs is January 15. Check whether it applies to you.",
-     "Gather a policy example now, such as veteran resource access or AI pricing, with sources."],
-    prov=MISSING, kind="pending")
+SCREEN11 = "From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application."
+add("gt", "Short answer: a different viewpoint", "250 words", "Required for all applicants",
+    "Everyone deals with people who hold viewpoints different from their own. Describe one such experience and what you learned from it.",
+    ["Pick one real exchange with a named setting: a canvassing door, a floor conflict as mentor, or a debate in Ethics of Emerging Technology.",
+     "The learning is the point. Spend about half the words on what changed in how you think or act, not on who was right.",
+     "Show you can state the other person's view fairly in one sentence before you give yours.",
+     "Avoid a political hot-button unless the lesson is about listening. Georgetown reads this as a test of civil disagreement.",
+     "At 250 words there is room for one scene and one lesson. Cut background that does not serve either."],
+    prov=SCREEN11, kind="short")
+add("gt", "Essay One: who you are, and why you are transferring", "About one page, single-spaced, uploaded", "Required for all applicants",
+    "Georgetown is a diverse community and wants to know you in your own words. Write a brief personal or creative essay that best describes you and reflects your background, experiences, skills and talents. Because you are transferring from a four-year school, include your reasons for transferring.",
+    ["SCAD is a four-year school, so the transfer reasons are required here, not optional.",
+     "One page single-spaced is roughly 500 to 600 words. Draft to that length and check it in the upload format.",
+     "Give the move a reason Georgetown answers: the School of Foreign Service joins technology with policy and law, which a design degree does not.",
+     "Background, skills and talents can come from one thread: service, the shift to combat medic, canvassing, mentoring, then design and AI ethics.",
+     "Personal or creative form is allowed. A creative form still needs the transfer reasons stated plainly somewhere."],
+    prov=SCREEN11, kind="essay")
+add("gt", "Essay Two: why international affairs and global service", "About one page, single-spaced, uploaded", "Required for School of Foreign Service applicants",
+    "The Walsh School of Foreign Service was founded more than a century ago to prepare leaders with the skills to address global issues. Describe your main motivations for studying international affairs at Georgetown and for dedicating your undergraduate study to a future in global service.",
+    ["This essay exists only for the School of Foreign Service. Confirm SFS, and Science, Technology and International Affairs, is your choice before writing it.",
+     "Name a global problem you already work on in miniature: AI pricing and access, technology governance, or veteran resources.",
+     "Your Winter Military World Games studio is a live international example. Mention it only after it starts, and only what you actually did.",
+     "Say what global service means for you concretely, such as military legal work or technology policy, and keep it consistent with your law-school goal.",
+     "Show you know the degree asks for economics, statistics and a language, and state your plan for each."],
+    prov=SCREEN11, kind="essay")
+add("gt", "Attended more than one college", "Upload; no limit shown", "Applies to you: Broward and SCAD",
+    "If you attended more than one college before applying to Georgetown, explain.",
+    ["Keep it factual and short: dates, schools, why you moved, and what changed.",
+     "Broward: Spring 2024 to Fall 2024, 22 credits, 3.04. SCAD: from Spring 2026, 3.33 with Fall midterms of A, A and A.",
+     "Address the Fall 2024 withdrawals in one or two sentences, with the context you choose to share.",
+     "End on the upward trend, since the record already shows it.",
+     "Do not repeat Essay One here. This is an explanation, not a story."],
+    prov=SCREEN11, kind="context")
+add("gt", "Coursework, aid and disciplinary questions", "Form fields", "Required",
+    "List the courses you will take this year at your current school, with course numbers, titles and credits; say whether you will apply for financial aid and who is responsible for your costs; mark any aid you receive now; and answer the disciplinary questions.",
+    ["Fall 2026: AI 101 Survey of AI Applications, DIGI 230 Ethics of Emerging Technology, FOUN 112 Color in Context, 5 quarter hours each.",
+     "Winter 2027: PRO 560 SCADpro Research, PRO 580 SCADpro Deloitte LA28, PRO 580 SCADpro Military World Games. Confirm credit hours on your registration.",
+     "The form label says Spring 2027 entry. Ask Georgetown whether fall applicants list the same terms, and note the quarter system.",
+     "Mark current aid exactly as SCAD and the VA pay it now, such as government funded, grant or loan.",
+     "Answer the disciplinary questions truthfully and keep the wording identical across every application."],
+    prov=SCREEN11, kind="form")
+add("gt", "Not currently in school", "Upload", "Does not apply: you are enrolled",
+    "Applicants not attending college now describe their activities since their last academic work.",
+    ["You are enrolled at SCAD, so leave this blank.",
+     "If you take a term off before applying, this becomes required.",
+     "The gap between the Army and Broward is covered by your timeline elsewhere, not here.",
+     "Keep the 2022 to 2023 security job and 2025 canvassing on the activities and employment pages.",
+     "Recheck this before submitting in case your enrollment changes."],
+    prov=SCREEN11, kind="context")
 
 # ------------------------------------------------------------------ Vanderbilt
 add("vandy", "Dare to grow: identity and community", "About 250 words, 2,000 characters", "Required",

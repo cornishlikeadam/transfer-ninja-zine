@@ -13,13 +13,15 @@ METHOD = ("This order ignores acceptance rates, as if every school admitted the 
           "It is an advising order, not a probability. Neighbors can swap, and one strong graded quarter changes it.")
 
 INVENTORY = ("Supplement prompts were read from your 37 screenshots dated November 10, which cover 16 active schools plus "
-             "Columbia General Studies. Prompts are paraphrased with every required part kept. Yale, Georgetown, Dartmouth, "
-             "Northeastern and SMU have no screenshots, so their entries are marked not captured or official page only. "
+             "Columbia General Studies, and from three Georgetown screenshots dated November 11. Prompts are paraphrased with every required part kept. "
+             "You have not opened the Yale, Dartmouth or Penn applications yet, and Northeastern and SMU have no screenshots, "
+             "so those entries are marked not captured or official page only. "
              "Always confirm wording and limits in the live application before drafting.")
 
 WHAT_MOVES = [
-    "One 15-hour quarter of straight A work moves your SCAD GPA from 3.33 to about 3.56 and your pooled GPA to about 3.34.",
-    "At 3.56 recent GPA you clear the Cornell ILR 3.4 line and reach the 3.5 line that WashU, UVA and Williams use.",
+    "Your Fall 2026 midterms are A, A and A. If they hold as final grades, SCAD rises from 3.33 to 3.55 and pooled from 3.18 to 3.33, cut to two decimals the way registrars report.",
+    "Three more A grades in the Winter SCADpro courses would put SCAD at 3.66 and pooled at 3.44. Winter grades post in March, so they reach only the later deadlines.",
+    "At 3.55 recent GPA you clear the Cornell ILR 3.4 line and reach the 3.5 line that WashU, UVA and Williams use.",
     "Graded composition, statistics and economics courses matter more than any new project, because five schools name them.",
     "An official credit evaluation from SMU, UVA, Amherst and Notre Dame replaces estimates with real counts.",
     "Choosing the major at Northwestern, Wesleyan, Dartmouth, Williams and UChicago removes the largest unknown at each.",
@@ -27,11 +29,12 @@ WHAT_MOVES = [
 
 PROFILE = [
     {"title": "Life story in order",
-     "text": "Army combat engineer training at Fort Leonard Wood in 2020 to 2021, about eight months, beginning as the pandemic began. "
+     "text": "High school diploma from Byron Nelson High School in 2019. Army service from December 2020: Reception Battalion at Fort Leonard Wood, Basic Combat Training finished in April 2021, an Engineer-branch Diver specialty and then Health Care Specialist (combat medic) from June 2021. "
+             "Security officer at St. Louis Lambert airport in 2022 and 2023. "
              "Broward College followed during a period of severe housing instability, then treatment and transitional housing. "
              "From January to November 2025 you canvassed for CARE, AARP Foundation and World Vision campaigns and moved into mentoring newer recruiters. "
              "You started at SCAD in spring 2026, made the Dean's List in summer 2026, became a residence mentor, ran for student government president, and joined Service to School in October 2026.",
-     "source": "Fact sheet, profile memory, resume and your Princeton portal draft. Treatment and housing details are yours to disclose or not."},
+     "source": "Joint Services Transcript (October 2025), Broward transcript, fact sheet, profile memory and resume. Treatment and housing details are yours to disclose or not."},
     {"title": "What drives you",
      "text": "You told Brown that the military part of you is coming back: you want to protect people from the harmful effects of technology. "
              "Your Rice draft says you want to serve underserved people and preserve cultures left out of global and intellectual history. "
@@ -67,19 +70,27 @@ PROFILE = [
              "the Great Books Semantic Engine and the NYC systems case study. Label each feature as built, tested or proposed. "
              "The New Digital Toll was graded in a business class, which matters for Princeton's graded paper.",
      "source": "Resume, portfolio audit and proof inventory."},
+    {"title": "Military record and what it opens",
+     "text": "The JST lists Private 2, the Diver specialty from December 2020, Basic Combat Training in March and April 2021 (6 recommended lower-division credits), and Health Care Specialist from June 2021. "
+             "At 28 or 29 at graduation, Army and Air Force ROTC are realistic on age, while Navy and Marine Corps ROTC almost certainly are not. "
+             "Whether any branch can contract you depends on your DD-214: characterization, reentry code and separation reason. Your Winter SCADpro studio for the Military World Games keeps service in your current work.",
+     "source": "Joint Services Transcript (October 2025), ROTC eligibility pages researched November 11, 2026, and your SCAD registration."},
     {"title": "Academic record and gaps",
-     "text": "Broward 3.04 over 22 semester credits with six withdrawals, one D and two Cs. SCAD 3.33 over 30 quarter credits, rising from 3.00 to 3.66. Pooled about 3.18. "
+     "text": "Broward 3.04 over 22 GPA hours: term GPAs 3.57, 3.25 and 1.00, with six withdrawals (20 attempted hours), one C and one D. Its A in ENC0017C is a developmental course many schools drop, which would make Broward about 2.83. "
+             "SCAD 3.33 over 30 quarter hours, rising from 3.00 to 3.66, and Fall 2026 midterms of A, A and A in Survey of AI Applications, Ethics of Emerging Technology and Color in Context. Pooled 3.18 today, 3.33 if the midterms hold. "
+             "Winter 2027 is three SCADpro studios: SCAD Entrepreneurial Ecosystem research, a Deloitte control interface for the LA28 Olympics, and the Military World Games. "
              "No graded college composition, statistics, economics or lab science appears yet, and several schools name exactly those courses. "
              "Yale's contact said the withdrawals and thin recent liberal-arts and quantitative coursework are the obstacle.",
-     "source": "Transcript review of January 2025 and October 2026 copies, and the Yale call debrief. Update when new grades post."},
+     "source": "Broward transcript (January 2025), SCAD transcript (October 2026), SCAD portal (November 11, 2026) and the Yale call debrief. Update when final grades post."},
     {"title": "How you sound at your best",
      "text": "Direct, reflective and plain. The pattern that works is a concrete fact, an honest complication, what you now understand, and what you did next. "
              "Your portal drafts have real voice and real feeling. They need order, proof and proofreading more than they need bigger language.",
      "source": "Profile memory and the November portal drafts."},
     {"title": "Facts to settle before you submit",
      "text": "Your Princeton draft says you descend from the eighth president through a daughter named Irene: standard histories list only sons for Martin Van Buren, so prove it or cut it. "
-             "The song Tek It is usually credited to Cafune, and Sweater Weather to The Neighbourhood. Older notes mention military diving while the service record shows combat engineer training. "
-             "The 900-plus nonprofit hours, the four-floor responsibility, the Lacoste offer, the 1540 SAT and your current course list all need a record behind them.",
+             "The song Tek It is usually credited to Cafune, and Sweater Weather to The Neighbourhood. Your resume says Combat Engineer, while the JST lists the Engineer-branch Diver specialty and then Health Care Specialist: match the DD-214 wording everywhere. "
+             "SCAD's transcript lists your major as Robotics, Interactive Design and Game Development with an Applied AI minor, while your resume says Applied Artificial Intelligence: confirm which is official. "
+             "The 900-plus nonprofit hours, the four-floor responsibility, the Lacoste offer and the 1540 SAT all need a record behind them.",
      "source": "Your own integrity rule: every date, record and outcome stays true and backed by proof."},
     {"title": "Boundaries",
      "text": "You write every essay yourself. Columbia General Studies requires a signed statement that no generative AI wrote or edited the autobiography. "
@@ -279,12 +290,22 @@ school("usc", "Iovine and Young Academy: Arts, Technology and the Business of In
   "Line: 3.70 to 3.97 for admitted transfers. You: SCAD 3.33 is 0.37 under the bottom of the range.",
   "Your portal lists Arts, Technology and the Business of Innovation first and Human Technology Interaction second, and requires a portfolio.")
 
+school("penn", "College of Arts and Sciences: Africana Studies or Philosophy, Politics and Economics; Science, Technology and Society third",
+  "Penn makes you apply to one of its four undergraduate schools, and the College of Arts and Sciences is the one that fits Africana Studies, PPE or Science, Technology and Society. "
+  "You have not opened the application yet, and its transfer essay asks why you are leaving SCAD and what you would gain at Penn.",
+  "Pick the College and one major first, then build all three Penn essays on one question: who owns the value people create, studied through history and economics.",
+  "A veteran with a fintech certificate and a written thesis on who owns AI, which gives PPE or Africana Studies a concrete research question.",
+  "Unlimited Yellow Ribbon with Penn covering leftover tuition, a push to admit more veterans, and Philadelphia's civic and startup life.",
+  21, "No GPA line is published, testing was required last cycle with no score on file for you, and Penn expects one to two years of transferable work with half the degree at Penn. On numbers alone it sits just above Princeton.",
+  "Line: none published; testing required in 2025-26 with a hardship waiver. You: SCAD 3.33, pooled 3.18, no test score on file.",
+  "Not opened yet.")
+
 school("princeton", "African American Studies first and Sociology second in your portal, Entrepreneurship as the minor; ORFE and Computer Science also on your list",
   "Princeton recruits veterans into its transfer program and requires a graded paper, so the application rests on academic writing. "
   "Your portal now lists African American Studies and Sociology, which fits your record better than engineering or ORFE would.",
   "Settle the major order, secure a graded paper with its prompt and comments, and confirm your transferable credit count in writing.",
   "A veteran whose research questions about ownership, access and Black intellectual history already exist on paper.",
   "A transfer program built around veterans, independent research through the senior thesis, and aid that can replace benefits.",
-  21, "No GPA line is published, but the academic bar is the highest on your list. Your contact questioned the transferable-credit count, and ORFE or engineering would need far more math and science than the record shows.",
+  22, "No GPA line is published, but the academic bar is the highest on your list. Your contact questioned the transferable-credit count, and ORFE or engineering would need far more math and science than the record shows.",
   "Line: none published. You: SCAD 3.33, pooled 3.18; credit threshold and graded paper are the gates.",
   "Your portal shows African American Studies and Sociology as majors, Entrepreneurship as the minor, and drafts in progress for several answers.")

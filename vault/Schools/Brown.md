@@ -80,13 +80,26 @@ Brown's Veterans Application reads your record in the context of service, and th
 - Standout: A veteran who builds working AI tools and also writes about who should own them, through KEEPER-0 and the Ownership of Intelligence thesis.
 - Your reason: It is your stated first choice: the Open Curriculum pairs technology with policy and Africana study, and the veteran route is need-blind.
 
-**Stats-only order:** 5 of 21. The veteran route reads context, tests are not expected and no GPA line is published. Recent grades still carry the file.
+**Stats-only order:** 5 of 22. The veteran route reads context, tests are not expected and no GPA line is published. Recent grades still carry the file.
 
 **Numbers:** Line: none published for the Veterans Application. You: SCAD 3.33, pooled 3.18; a clear concentration plan and recent grades matter most.
 
 **Check first:** Confirm veteran-route eligibility and concentration requirements; service does not replace academic readiness.
 
 **In your portal now:** Your portal lists Science, Technology, and Society as the primary interest and Social Analysis and Research as the secondary.
+
+## Military and ROTC
+- Army: Cross-town. Providence College (Patriot Battalion), a short drive. Brown lists the classes as non-credit.
+- Air Force: Cross-town. Worcester Polytechnic Institute, about an hour away.
+- Navy: Cross-town. College of the Holy Cross, Worcester, about an hour away.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Brown has the strongest veteran admission pathway on your list, but the weakest ROTC logistics: every unit is off campus and Worcester is a long commute.
+
+**Veteran side:** Separate Veterans Application with no fee, need-blind admission for veterans, unlimited Yellow Ribbon, and a VetLink partnership.
+
+_Confidence: medium. Source: https://www.browndailyherald.com/article/2021/10/rotc-students-reflect-10-years-after-programs-return-to-brown_
 
 ## Supplements and guidance (6)
 

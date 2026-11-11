@@ -1,4 +1,4 @@
-# Kendren Cornish: 21-school transfer strategy
+# Kendren Cornish: 22-school transfer strategy
 
 Best approaches, standouts, reasons and a stats-only ranking.
 Updated 2026-11-11
@@ -6,7 +6,7 @@ Updated 2026-11-11
 ## How to read the ranking
 This order ignores acceptance rates, as if every school admitted the same share of applicants. It ranks how your current numbers and preparation compare with what each school publishes: a stated GPA line, required credits or courses, testing, and whether the route is built to read a veteran or adult record in context. Your numbers are SCAD 3.33 (most recent college) and about 3.18 pooled with Broward. It is an advising order, not a probability. Neighbors can swap, and one strong graded quarter changes it.
 
-Supplement prompts were read from your 37 screenshots dated November 10, which cover 16 active schools plus Columbia General Studies. Prompts are paraphrased with every required part kept. Yale, Georgetown, Dartmouth, Northeastern and SMU have no screenshots, so their entries are marked not captured or official page only. Always confirm wording and limits in the live application before drafting.
+Supplement prompts were read from your 37 screenshots dated November 10, which cover 16 active schools plus Columbia General Studies, and from three Georgetown screenshots dated November 11. Prompts are paraphrased with every required part kept. You have not opened the Yale, Dartmouth or Penn applications yet, and Northeastern and SMU have no screenshots, so those entries are marked not captured or official page only. Always confirm wording and limits in the live application before drafting.
 
 ## Stats-only ranking, acceptance rates set aside
 
@@ -32,11 +32,13 @@ Supplement prompts were read from your 37 screenshots dated November 10, which c
 | 18 | UChicago | Line: none official; about 3.75 in advisory sources. You: SCAD 3.33, pooled 3.18. |
 | 19 | Notre Dame | Line: 3.75 average for recent admits, 24 transferable credits. You: SCAD 3.33 is 0.42 under; pooled 3.18 is 0.57 under. |
 | 20 | USC Iovine and Young | Line: 3.70 to 3.97 for admitted transfers. You: SCAD 3.33 is 0.37 under the bottom of the range. |
-| 21 | Princeton | Line: none published. You: SCAD 3.33, pooled 3.18; credit threshold and graded paper are the gates. |
+| 21 | Penn | Line: none published; testing required in 2025-26 with a hardship waiver. You: SCAD 3.33, pooled 3.18, no test score on file. |
+| 22 | Princeton | Line: none published. You: SCAD 3.33, pooled 3.18; credit threshold and graded paper are the gates. |
 
 ### What would move this order
-- One 15-hour quarter of straight A work moves your SCAD GPA from 3.33 to about 3.56 and your pooled GPA to about 3.34.
-- At 3.56 recent GPA you clear the Cornell ILR 3.4 line and reach the 3.5 line that WashU, UVA and Williams use.
+- Your Fall 2026 midterms are A, A and A. If they hold as final grades, SCAD rises from 3.33 to 3.55 and pooled from 3.18 to 3.33, cut to two decimals the way registrars report.
+- Three more A grades in the Winter SCADpro courses would put SCAD at 3.66 and pooled at 3.44. Winter grades post in March, so they reach only the later deadlines.
+- At 3.55 recent GPA you clear the Cornell ILR 3.4 line and reach the 3.5 line that WashU, UVA and Williams use.
 - Graded composition, statistics and economics courses matter more than any new project, because five schools name them.
 - An official credit evaluation from SMU, UVA, Amherst and Notre Dame replaces estimates with real counts.
 - Choosing the major at Northwestern, Wesleyan, Dartmouth, Williams and UChicago removes the largest unknown at each.
@@ -44,9 +46,9 @@ Supplement prompts were read from your 37 screenshots dated November 10, which c
 ## About you
 
 ### Life story in order
-Army combat engineer training at Fort Leonard Wood in 2020 to 2021, about eight months, beginning as the pandemic began. Broward College followed during a period of severe housing instability, then treatment and transitional housing. From January to November 2025 you canvassed for CARE, AARP Foundation and World Vision campaigns and moved into mentoring newer recruiters. You started at SCAD in spring 2026, made the Dean's List in summer 2026, became a residence mentor, ran for student government president, and joined Service to School in October 2026.
+High school diploma from Byron Nelson High School in 2019. Army service from December 2020: Reception Battalion at Fort Leonard Wood, Basic Combat Training finished in April 2021, an Engineer-branch Diver specialty and then Health Care Specialist (combat medic) from June 2021. Security officer at St. Louis Lambert airport in 2022 and 2023. Broward College followed during a period of severe housing instability, then treatment and transitional housing. From January to November 2025 you canvassed for CARE, AARP Foundation and World Vision campaigns and moved into mentoring newer recruiters. You started at SCAD in spring 2026, made the Dean's List in summer 2026, became a residence mentor, ran for student government president, and joined Service to School in October 2026.
 
-Source: Fact sheet, profile memory, resume and your Princeton portal draft. Treatment and housing details are yours to disclose or not.
+Source: Joint Services Transcript (October 2025), Broward transcript, fact sheet, profile memory and resume. Treatment and housing details are yours to disclose or not.
 
 ### What drives you
 You told Brown that the military part of you is coming back: you want to protect people from the harmful effects of technology. Your Rice draft says you want to serve underserved people and preserve cultures left out of global and intellectual history. The common thread is accountability: who a system serves, who owns it, and who is responsible when it fails a person.
@@ -83,10 +85,15 @@ KEEPER-0 (an AI agent that records where its output came from), COMMONS (making 
 
 Source: Resume, portfolio audit and proof inventory.
 
-### Academic record and gaps
-Broward 3.04 over 22 semester credits with six withdrawals, one D and two Cs. SCAD 3.33 over 30 quarter credits, rising from 3.00 to 3.66. Pooled about 3.18. No graded college composition, statistics, economics or lab science appears yet, and several schools name exactly those courses. Yale's contact said the withdrawals and thin recent liberal-arts and quantitative coursework are the obstacle.
+### Military record and what it opens
+The JST lists Private 2, the Diver specialty from December 2020, Basic Combat Training in March and April 2021 (6 recommended lower-division credits), and Health Care Specialist from June 2021. At 28 or 29 at graduation, Army and Air Force ROTC are realistic on age, while Navy and Marine Corps ROTC almost certainly are not. Whether any branch can contract you depends on your DD-214: characterization, reentry code and separation reason. Your Winter SCADpro studio for the Military World Games keeps service in your current work.
 
-Source: Transcript review of January 2025 and October 2026 copies, and the Yale call debrief. Update when new grades post.
+Source: Joint Services Transcript (October 2025), ROTC eligibility pages researched November 11, 2026, and your SCAD registration.
+
+### Academic record and gaps
+Broward 3.04 over 22 GPA hours: term GPAs 3.57, 3.25 and 1.00, with six withdrawals (20 attempted hours), one C and one D. Its A in ENC0017C is a developmental course many schools drop, which would make Broward about 2.83. SCAD 3.33 over 30 quarter hours, rising from 3.00 to 3.66, and Fall 2026 midterms of A, A and A in Survey of AI Applications, Ethics of Emerging Technology and Color in Context. Pooled 3.18 today, 3.33 if the midterms hold. Winter 2027 is three SCADpro studios: SCAD Entrepreneurial Ecosystem research, a Deloitte control interface for the LA28 Olympics, and the Military World Games. No graded college composition, statistics, economics or lab science appears yet, and several schools name exactly those courses. Yale's contact said the withdrawals and thin recent liberal-arts and quantitative coursework are the obstacle.
+
+Source: Broward transcript (January 2025), SCAD transcript (October 2026), SCAD portal (November 11, 2026) and the Yale call debrief. Update when final grades post.
 
 ### How you sound at your best
 Direct, reflective and plain. The pattern that works is a concrete fact, an honest complication, what you now understand, and what you did next. Your portal drafts have real voice and real feeling. They need order, proof and proofreading more than they need bigger language.
@@ -94,7 +101,7 @@ Direct, reflective and plain. The pattern that works is a concrete fact, an hone
 Source: Profile memory and the November portal drafts.
 
 ### Facts to settle before you submit
-Your Princeton draft says you descend from the eighth president through a daughter named Irene: standard histories list only sons for Martin Van Buren, so prove it or cut it. The song Tek It is usually credited to Cafune, and Sweater Weather to The Neighbourhood. Older notes mention military diving while the service record shows combat engineer training. The 900-plus nonprofit hours, the four-floor responsibility, the Lacoste offer, the 1540 SAT and your current course list all need a record behind them.
+Your Princeton draft says you descend from the eighth president through a daughter named Irene: standard histories list only sons for Martin Van Buren, so prove it or cut it. The song Tek It is usually credited to Cafune, and Sweater Weather to The Neighbourhood. Your resume says Combat Engineer, while the JST lists the Engineer-branch Diver specialty and then Health Care Specialist: match the DD-214 wording everywhere. SCAD's transcript lists your major as Robotics, Interactive Design and Game Development with an Applied AI minor, while your resume says Applied Artificial Intelligence: confirm which is official. The 900-plus nonprofit hours, the four-floor responsibility, the Lacoste offer and the 1540 SAT all need a record behind them.
 
 Source: Your own integrity rule: every date, record and outcome stays true and backed by proof.
 
@@ -102,6 +109,109 @@ Source: Your own integrity rule: every date, record and outcome stays true and b
 You write every essay yourself. Columbia General Studies requires a signed statement that no generative AI wrote or edited the autobiography. Guidance here organizes material, asks questions and checks facts. It does not supply sentences to paste.
 
 Source: Your intent statement and the Columbia screenshot.
+
+## Academic record
+_Broward unofficial transcript 2025-01-14; SCAD unofficial transcript 2026-10-03; SCAD portal 2026-11-11; JST 2025-10-27._
+
+- Broward, as the transcript shows: 3.04
+- SCAD, as the transcript shows: 3.33
+- All colleges pooled: 3.18
+- Pooled, developmental course dropped: 3.09
+- SCAD with Fall 2026 midterms: 3.55
+- Pooled with Fall 2026 midterms: 3.33
+
+| Term | Course | Credit | Grade |
+|---|---|---|---|
+| Broward Spring 2024 | ENC0017C Accelerated Literacy: Reading and Writing | 4 SH | A |
+| Broward Spring 2024 | MAC1105C Corequisite College Algebra | 5 SH | W (withdrawn) |
+| Broward Spring 2024 | SPC1608 Public Speaking | 3 SH | B |
+| Broward Summer 2024 | COP1000C Introduction to Computer Programming | 3 SH | W (withdrawn) |
+| Broward Summer 2024 | REL2300 World Religions | 3 SH | C |
+| Broward Summer 2024 | POS2041 National Government | 3 SH | A |
+| Broward Summer 2024 | PSY2012 General Psychology | 3 SH | B |
+| Broward Summer 2024 | CJL1100 Criminal Law | 3 SH | A |
+| Broward Fall 2024 | BSC1005 General Biology for Non-Majors | 3 SH | W (withdrawn) |
+| Broward Fall 2024 | CGS1060C Computer Literacy | 3 SH | D |
+| Broward Fall 2024 | GEB2112 Entrepreneurship | 3 SH | W (withdrawn) |
+| Broward Fall 2024 | MUL2010 Music Appreciation | 3 SH | W (withdrawn) |
+| Broward Fall 2024 | SLS1001 Strategies for Success | 3 SH | W (withdrawn) |
+| SCAD Spring 2026 | DIGI 130 Digital Communication | 5 QH | B |
+| SCAD Spring 2026 | FOUN 111 Sketching and Drawing | 5 QH | C |
+| SCAD Spring 2026 | MATH 140 The Geometry of Physical Space | 5 QH | A |
+| SCAD Summer 2026 | BUSI 110 Business I: Fundamentals | 5 QH | A |
+| SCAD Summer 2026 | ENGL 142 Foundations of Story | 5 QH | A |
+| SCAD Summer 2026 | FOUN 110 Design: Thinking and Process | 5 QH | B |
+| SCAD Fall 2026 | AI 101 Survey of AI Applications | 5 QH | A (midterm) |
+| SCAD Fall 2026 | DIGI 230 Ethics of Emerging Technology | 5 QH | A (midterm) |
+| SCAD Fall 2026 | FOUN 112 Color in Context | 5 QH | A (midterm) |
+| SCAD Winter 2027 | PRO 560 SCADpro Research: SCAD Entrepreneurial Ecosystem | 5 QH | registered (registered) |
+| SCAD Winter 2027 | PRO 580 SCADpro Collaboration: Deloitte, Control Interface for LA28 Olympics | 5 QH | registered (registered) |
+| SCAD Winter 2027 | PRO 580 SCADpro Collaboration: Military World Games | 5 QH | registered (registered) |
+
+### Military record
+- MOS 12D10, Diver (Engineer branch), listed as primary from 1 Dec 2020.
+- Reception Battalion record dated 15 Jan 2021 at the U.S. Army Training Center, Fort Leonard Wood, Missouri.
+- Basic Combat Training completed 1 Mar to 16 Apr 2021.
+- MOS 68W10, Health Care Specialist (combat medic), listed as primary from 9 Jun 2021.
+
+### Check before you write about service
+- Your resume says Combat Engineer training. The JST shows the Engineer-branch Diver specialty, then a change to Health Care Specialist. Use the wording your DD-214 supports, and keep it identical across every application.
+- The JST shows status Active as of October 2025. Admissions offices will read your DD-214, not the JST, for separation date and characterization. Have the DD-214 in hand before you describe your service dates.
+- ROTC eligibility depends on facts that are not on the JST: characterization of service, reentry (RE) code, separation reason and medical history. They are on the DD-214 and in your medical record.
+
+### Timeline
+- **2019-06** Byron Nelson High School diploma. (record)
+- **2020-12** Army: Diver (12D) specialty assigned. (record)
+- **2021-01** Reception Battalion, Fort Leonard Wood. (record)
+- **2021-04** Basic Combat Training complete. (record)
+- **2021-06** Specialty changes to Health Care Specialist (68W). (record)
+- **2022** Security Officer II, GardaWorld, St. Louis Lambert airport (through 2023). (resume)
+- **2023-11** Broward placement testing. (record)
+- **2024-01** Broward College starts. Spring GPA 3.57. (record)
+- **2024-08** Summer term GPA 3.25, Honor Roll. Cumulative 3.36. (record)
+- **2024-12** Fall term: four withdrawals and a D. Broward closes at 3.04. (record)
+- **2025-01** Nonprofit canvassing for CARE, AARP Foundation and World Vision (through November). (resume)
+- **2026-03** SCAD starts. Spring GPA 3.00. Dining job begins. (record)
+- **2026-08** SCAD Summer GPA 3.66, Dean's List. Cumulative 3.33. (record)
+- **2026-09** SCADhome mentor, student government run, Service to School. (resume)
+- **2026-11** Fall midterms A, A, A. Applications open. (portal)
+- **2027-01** Winter: three SCADpro studios, including Deloitte and the Military World Games. (registered)
+- **2027-03** Most transfer deadlines (Feb 15 to Apr 15). (projection)
+- **2027-06** Spring grades post. Final transcripts go to the school you choose. (projection)
+- **2027-08** Transfer entry, age 26. (projection)
+- **2029-05** Earliest graduation if you enter as a junior, age 28. (projection)
+- **2030-05** Graduation if you enter as a sophomore, age 29. (projection)
+
+## Military and ROTC: the rules for you
+Army ROTC and Air Force ROTC are realistic on age. Navy and Marine Corps ROTC almost certainly are not. The real gate for any branch is your DD-214: characterization of service, reentry code and separation reason.
+
+- Age: 26 at entry in Fall 2027, 28 at a May 2029 commission (entering as a junior) or 29 at May 2030 (entering as a sophomore).
+- Prior service: Basic Combat Training is complete (JST), which is what usually earns placement credit for the first two years of Army ROTC. You would likely start in the two-year advanced course as a junior.
+- Record: JST shows Private 2 with two specialty codes. ROTC staff will ask for the DD-214 and your medical history before they can contract you.
+
+### Army ROTC: Realistic
+- Age: Scholarship cadets generally must commission before age 31. You would be 28 or 29. Age waivers exist beyond that.
+- Prior service: Veterans usually receive placement credit for the basic course and contract straight into the advanced course.
+- Gate: University ROTC pages commonly require reentry code RE-1. Forum reports say RE-3 can be waived only at the Cadet Command level and RE-4 is generally disqualifying. Confirm with a battalion recruiter.
+- The Simultaneous Membership Program lets a cadet drill in the Army Reserve or Guard while in ROTC, which adds pay and a unit.
+
+### Air Force ROTC (and Space Force): Realistic, check the scholarship line
+- Age: Scholarship cadets must be under 31 on December 31 of the commissioning year. Non-scholarship, non-flying cadets have a higher ceiling (sources say 39). Pilot and other flying slots have lower, non-waivable limits.
+- Prior service: Other-service veterans can apply. The detachment decides how much of the first two years you can skip.
+- Gate: Same DD-214 questions: characterization, reentry code, separation reason, plus a DoDMERB medical review.
+- Yale, Princeton (through Rutgers) and UChicago all point students to Space Force commissions through AFROTC.
+
+### Navy and Marine Corps ROTC: Likely closed by age
+- Age: Generally under 27 at commissioning. Prior active duty earns a month-for-month waiver capped at 36 months, and several units cap the waived age near 29 or 30.
+- Prior service: Your active time on the JST is under a year, so the waiver would not cover a 28 or 29 commission.
+- Gate: Ask only if a unit tells you in writing that a waiver fits your dates.
+- Navy units still matter as community: Northwestern, Rice, Penn, Vanderbilt and Yale host one.
+
+### Money and obligations
+- A tuition scholarship from ROTC and the Post-9/11 GI Bill do not simply add together. When one pays tuition, the other usually pays less. Ask the school's VA certifying official to run both before you contract.
+- Yellow Ribbon requires 100% Post-9/11 eligibility at most schools. Your eligibility tier depends on qualifying active days, which the VA Certificate of Eligibility states. Get the certificate early.
+- Your notes say VR&E (Chapter 31) pays like the Post-9/11 GI Bill on your calls. VR&E and Yellow Ribbon do not combine the same way, so ask each aid office how they treat Chapter 31.
+- A contracted cadet owes service after commissioning, typically several years on active duty or longer in the Reserve or Guard. Weigh that against law school timing.
 
 ## School by school, in ranking order
 
@@ -114,9 +224,20 @@ SMU is the school where your numbers already clear the published line, and you h
 - Standout: You have already completed SMU coursework through the financial technology certificate, which no other applicant file on your list can say about its school.
 - Your reason: Texas is home ground, Yellow Ribbon covers tuition for eligible veterans, and it balances a list full of reaches.
 
-**Why it sits at 1 of 21:** Published minimum is 2.7 with 24 transferable hours, and automatic merit starts at 3.3. Your pooled 3.18 clears the minimum.
+**Why it sits at 1 of 22:** Published minimum is 2.7 with 24 transferable hours, and automatic merit starts at 3.3. Your pooled 3.18 clears the minimum.
 
 **Numbers:** Line: 2.7 minimum, 3.3 for merit. You: pooled 3.18 clears the minimum by about 0.5; merit depends on SMU's own recalculation.
+
+### Military and ROTC
+- Army: Cross-town. University of Texas at Arlington, or its extension at UNT.
+- Air Force: Cross-town. University of North Texas, Denton, about 45 minutes away.
+- Navy: None. No Navy arrangement found.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Your SMU fintech certificate gives you a history here, and the ROTC housing award could matter for the full-scholarship gate.
+
+**Veteran side:** Yellow Ribbon guarantees 100% tuition for eligible Post-9/11 veterans. SMU gives housing and dining to full-tuition ROTC scholarship holders.
 
 **Check first:** Confirm 24 transferable hours and the published 2.7 minimum; neither guarantees admission.
 
@@ -153,9 +274,20 @@ Northwestern's stated academic expectation is the most reachable on your list af
 - Standout: You ran a floor, noticed unrecognized contribution, and designed COMMONS in response: a people-and-organizations problem you found yourself.
 - Your reason: Design, learning and social policy sit close together there, and the regular route keeps Brown available as first choice.
 
-**Why it sits at 2 of 21:** Northwestern says successful transfers usually have a full year of credit, breadth across liberal arts and sciences, and a B average. Both of your numbers clear a B average.
+**Why it sits at 2 of 22:** Northwestern says successful transfers usually have a full year of credit, breadth across liberal arts and sciences, and a B average. Both of your numbers clear a B average.
 
 **Numbers:** Line: B average and about 36 quarter hours. You: SCAD 3.33 and pooled 3.18 both clear it; breadth in writing, science and social science is the gap.
+
+### Military and ROTC
+- Army: Cross-town. Loyola University Chicago battalion.
+- Air Force: Cross-town. University of Chicago, Detachment 195.
+- Navy: On campus. Naval ROTC on campus (Northwestern's own unit).
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** The on-campus unit is Navy, which your age likely rules out. Army and Air Force mean commuting into Chicago.
+
+**Veteran side:** Veteran and ROTC admissions page and Yellow Ribbon (amount not confirmed in this search). GAO data show about 6 ROTC students a year.
 
 **Check first:** Do not default to CS; settle SESP versus Weinberg and verify breadth/credits.
 
@@ -217,9 +349,20 @@ Northeastern suits the part of you that learns by building with other people, an
 - Standout: A shipped client product (GlowOS) plus residence-life design work shows you can deliver for real users, which is what co-op employers look for.
 - Your reason: Co-op puts design work in front of real organizations, and veterans at full Post-9/11 eligibility are in the unlimited Yellow Ribbon program.
 
-**Why it sits at 3 of 21:** Northeastern says successful transfers generally hold about a 3.3 cumulative. Your SCAD 3.33 sits at that level and your pooled 3.18 is just under.
+**Why it sits at 3 of 22:** Northeastern says successful transfers generally hold about a 3.3 cumulative. Your SCAD 3.33 sits at that level and your pooled 3.18 is just under.
 
 **Numbers:** Line: about 3.3 typical, not a minimum. You: SCAD 3.33 at the line; pooled 3.18 is 0.12 under.
+
+### Military and ROTC
+- Army: On campus. Liberty Battalion, hosted at Northeastern.
+- Air Force: Cross-town. Boston University, Detachment 355.
+- Navy: Cross-town. Cross-town in Boston.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Co-op plus an on-campus Army battalion: you could hold a paid co-op and stay in ROTC in the same city.
+
+**Veteran side:** CAVS veteran center and automatic unlimited Yellow Ribbon for 100% Post-9/11 undergraduates (your research).
 
 **Check first:** A typical successful cumulative GPA around 3.3 is descriptive, not an eligibility floor.
 
@@ -272,9 +415,20 @@ Rice sets a hard floor of 3.2 in your most recent college work, and your SCAD re
 - Standout: You were trusted with a multi-floor residence hall and then joined the design team to document floor plans in 3D for incoming students.
 - Your reason: Texas is close to home and friends, and the residential college system rewards the kind of floor-level community work you already do.
 
-**Why it sits at 4 of 21:** Rice requires at least 3.2 in the most recent college work, which SCAD 3.33 clears. Admitted transfers typically hold 3.5 or higher.
+**Why it sits at 4 of 22:** Rice requires at least 3.2 in the most recent college work, which SCAD 3.33 clears. Admitted transfers typically hold 3.5 or higher.
 
 **Numbers:** Line: 3.2 minimum on recent work, 3.5 typical. You: SCAD 3.33 clears the floor by 0.13 and is 0.17 under the typical profile.
+
+### Military and ROTC
+- Army: Cross-town. University of Houston. Rice gives credit for the classes.
+- Air Force: Cross-town. University of Houston.
+- Navy: On campus. Naval ROTC hosted at Rice.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Rice gives academic credit for military science taken at Houston, and aid can follow the ROTC courses.
+
+**Veteran side:** Rice Military Veterans association, VetLink and Yellow Ribbon per your dossier.
 
 **Check first:** Rice specifies at least 3.2 in the most recent college work; dated SCAD 3.33 exceeds that floor, while broader preparation still matters.
 
@@ -381,9 +535,20 @@ Brown's Veterans Application reads your record in the context of service, and th
 - Standout: A veteran who builds working AI tools and also writes about who should own them, through KEEPER-0 and the Ownership of Intelligence thesis.
 - Your reason: It is your stated first choice: the Open Curriculum pairs technology with policy and Africana study, and the veteran route is need-blind.
 
-**Why it sits at 5 of 21:** The veteran route reads context, tests are not expected and no GPA line is published. Recent grades still carry the file.
+**Why it sits at 5 of 22:** The veteran route reads context, tests are not expected and no GPA line is published. Recent grades still carry the file.
 
 **Numbers:** Line: none published for the Veterans Application. You: SCAD 3.33, pooled 3.18; a clear concentration plan and recent grades matter most.
+
+### Military and ROTC
+- Army: Cross-town. Providence College (Patriot Battalion), a short drive. Brown lists the classes as non-credit.
+- Air Force: Cross-town. Worcester Polytechnic Institute, about an hour away.
+- Navy: Cross-town. College of the Holy Cross, Worcester, about an hour away.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Brown has the strongest veteran admission pathway on your list, but the weakest ROTC logistics: every unit is off campus and Worcester is a long commute.
+
+**Veteran side:** Separate Veterans Application with no fee, need-blind admission for veterans, unlimited Yellow Ribbon, and a VetLink partnership.
 
 **Check first:** Confirm veteran-route eligibility and concentration requirements; service does not replace academic readiness.
 
@@ -487,9 +652,20 @@ Tufts REAL is built for adults and veterans returning to college, so your path r
 - Standout: You returned to college after service and hardship and reached the Dean's List within two terms, which is the story REAL exists to read.
 - Your reason: An adult pathway with advising from admission to graduation, need-based aid that meets full need, and civic technology study.
 
-**Why it sits at 6 of 21:** REAL reads an adult or veteran record in context and publishes no GPA line. Two academic recommendations and recent coursework carry the weight.
+**Why it sits at 6 of 22:** REAL reads an adult or veteran record in context and publishes no GPA line. Two academic recommendations and recent coursework carry the weight.
 
 **Numbers:** Line: none published for REAL. You: SCAD 3.33, pooled 3.18; eligibility, recent coursework and two instructor letters decide it.
+
+### Military and ROTC
+- Army: Cross-town. MIT (Paul Revere Battalion).
+- Air Force: Cross-town. MIT.
+- Navy: Cross-town. MIT.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** All three units are a subway ride away at MIT, but older reporting says Tufts gives no academic credit for ROTC classes.
+
+**Veteran side:** REAL program for adult and veteran students, Yellow Ribbon $5,000 a year matched by the VA, and a Tufts ROTC Support Program.
 
 **Check first:** Verify REAL eligibility and Arts & Sciences degree choice; do not assume access to a BFA route.
 
@@ -538,9 +714,20 @@ Georgetown recommends a B+ average, which your SCAD record meets, and its techno
 - Standout: As in National Government and Criminal Law, plus a research paper on how AI pricing shapes educational opportunity.
 - Your reason: It joins technology with law and public service, which fits a path toward law school and military legal work.
 
-**Why it sits at 7 of 21:** Georgetown recommends B+ or better. SCAD 3.33 meets that and pooled 3.18 is slightly under. The technology-policy degree also expects economics, quantitative work and a language.
+**Why it sits at 7 of 22:** Georgetown recommends B+ or better. SCAD 3.33 meets that and pooled 3.18 is slightly under. The technology-policy degree also expects economics, quantitative work and a language.
 
 **Numbers:** Line: B+ recommended, about 3.3. You: SCAD 3.33 meets it; pooled 3.18 is 0.12 under; economics, statistics and language are missing.
+
+### Military and ROTC
+- Army: On campus. Hoya Battalion, on campus since 1918. Cadet Command ranked it first of 272 in 2012.
+- Air Force: Unclear. Cross-town; the host detachment was not confirmed in this search.
+- Navy: Cross-town. George Washington University.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** A top Army battalion plus the School of Foreign Service in Washington: the closest link on your list between ROTC and policy careers.
+
+**Veteran side:** Yellow Ribbon with a full match in the College per your dossier, and a military and veteran resource office.
 
 **Check first:** SFS economics, quantitative and language preparation need explicit mapping.
 
@@ -552,20 +739,85 @@ Limits of this research: Dates and requirements are current webpage findings, no
 
 Source: https://uadmissions.georgetown.edu/apply/transfer-applicants/preparing-for-georgetown-transfer/
 
-### Supplements: 1
+### Supplements: 6
 
-#### Georgetown transfer essays
-Not captured. No screenshot yet
+#### Short answer: a different viewpoint
+250 words. Required for all applicants
 
-Prompt, paraphrased: Georgetown uses its own application with school-specific essays. Open it and capture the prompts before drafting.
+Prompt, paraphrased: Everyone deals with people who hold viewpoints different from their own. Describe one such experience and what you learned from it.
 
-- Take screenshots of the Georgetown application so these entries can be replaced with the real prompts.
-- Decide the school and major first. The essay for the School of Foreign Service differs from the College.
-- For the technology-policy degree, prepare to explain your plan for economics, statistics and a language.
-- The junior priority date for some programs is January 15. Check whether it applies to you.
-- Gather a policy example now, such as veteran resource access or AI pricing, with sources.
+- Pick one real exchange with a named setting: a canvassing door, a floor conflict as mentor, or a debate in Ethics of Emerging Technology.
+- The learning is the point. Spend about half the words on what changed in how you think or act, not on who was right.
+- Show you can state the other person's view fairly in one sentence before you give yours.
+- Avoid a political hot-button unless the lesson is about listening. Georgetown reads this as a test of civil disagreement.
+- At 250 words there is room for one scene and one lesson. Cut background that does not serve either.
 
-_Not captured: no screenshot was supplied and no wording is verified._
+_From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application._
+
+#### Essay One: who you are, and why you are transferring
+About one page, single-spaced, uploaded. Required for all applicants
+
+Prompt, paraphrased: Georgetown is a diverse community and wants to know you in your own words. Write a brief personal or creative essay that best describes you and reflects your background, experiences, skills and talents. Because you are transferring from a four-year school, include your reasons for transferring.
+
+- SCAD is a four-year school, so the transfer reasons are required here, not optional.
+- One page single-spaced is roughly 500 to 600 words. Draft to that length and check it in the upload format.
+- Give the move a reason Georgetown answers: the School of Foreign Service joins technology with policy and law, which a design degree does not.
+- Background, skills and talents can come from one thread: service, the shift to combat medic, canvassing, mentoring, then design and AI ethics.
+- Personal or creative form is allowed. A creative form still needs the transfer reasons stated plainly somewhere.
+
+_From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application._
+
+#### Essay Two: why international affairs and global service
+About one page, single-spaced, uploaded. Required for School of Foreign Service applicants
+
+Prompt, paraphrased: The Walsh School of Foreign Service was founded more than a century ago to prepare leaders with the skills to address global issues. Describe your main motivations for studying international affairs at Georgetown and for dedicating your undergraduate study to a future in global service.
+
+- This essay exists only for the School of Foreign Service. Confirm SFS, and Science, Technology and International Affairs, is your choice before writing it.
+- Name a global problem you already work on in miniature: AI pricing and access, technology governance, or veteran resources.
+- Your Winter Military World Games studio is a live international example. Mention it only after it starts, and only what you actually did.
+- Say what global service means for you concretely, such as military legal work or technology policy, and keep it consistent with your law-school goal.
+- Show you know the degree asks for economics, statistics and a language, and state your plan for each.
+
+_From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application._
+
+#### Attended more than one college
+Upload; no limit shown. Applies to you: Broward and SCAD
+
+Prompt, paraphrased: If you attended more than one college before applying to Georgetown, explain.
+
+- Keep it factual and short: dates, schools, why you moved, and what changed.
+- Broward: Spring 2024 to Fall 2024, 22 credits, 3.04. SCAD: from Spring 2026, 3.33 with Fall midterms of A, A and A.
+- Address the Fall 2024 withdrawals in one or two sentences, with the context you choose to share.
+- End on the upward trend, since the record already shows it.
+- Do not repeat Essay One here. This is an explanation, not a story.
+
+_From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application._
+
+#### Coursework, aid and disciplinary questions
+Form fields. Required
+
+Prompt, paraphrased: List the courses you will take this year at your current school, with course numbers, titles and credits; say whether you will apply for financial aid and who is responsible for your costs; mark any aid you receive now; and answer the disciplinary questions.
+
+- Fall 2026: AI 101 Survey of AI Applications, DIGI 230 Ethics of Emerging Technology, FOUN 112 Color in Context, 5 quarter hours each.
+- Winter 2027: PRO 560 SCADpro Research, PRO 580 SCADpro Deloitte LA28, PRO 580 SCADpro Military World Games. Confirm credit hours on your registration.
+- The form label says Spring 2027 entry. Ask Georgetown whether fall applicants list the same terms, and note the quarter system.
+- Mark current aid exactly as SCAD and the VA pay it now, such as government funded, grant or loan.
+- Answer the disciplinary questions truthfully and keep the wording identical across every application.
+
+_From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application._
+
+#### Not currently in school
+Upload. Does not apply: you are enrolled
+
+Prompt, paraphrased: Applicants not attending college now describe their activities since their last academic work.
+
+- You are enrolled at SCAD, so leave this blank.
+- If you take a term off before applying, this becomes required.
+- The gap between the Army and Broward is covered by your timeline elsewhere, not here.
+- Keep the 2022 to 2023 security job and 2025 canvassing on the activities and employment pages.
+- Recheck this before submitting in case your enrollment changes.
+
+_From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application._
 
 ## 8. Vanderbilt
 *Peabody College: Human and Organizational Development*
@@ -576,9 +828,20 @@ Vanderbilt's Human and Organizational Development degree is your ILR equivalent:
 - Standout: You have led peers in three settings: a canvassing team, a residence floor and a student government campaign.
 - Your reason: It studies exactly what you care about, admitted transfers get full-need aid, and it is not a computer science application.
 
-**Why it sits at 8 of 21:** No current official transfer GPA line was found. Older Vanderbilt guidance cited about 3.3 or above at a competitive four-year school, so treat this placement as low confidence.
+**Why it sits at 8 of 22:** No current official transfer GPA line was found. Older Vanderbilt guidance cited about 3.3 or above at a competitive four-year school, so treat this placement as low confidence.
 
 **Numbers:** Line: none verified; a dated admissions answer cited about 3.3. You: SCAD 3.33, pooled 3.18.
+
+### Military and ROTC
+- Army: On campus. Army ROTC hosted at Vanderbilt.
+- Air Force: Cross-town. Detachment 790 at Tennessee State, about 10 minutes away.
+- Navy: On campus. Naval ROTC hosted at Vanderbilt, across from the Peabody campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** The Navy unit sits across the street from Peabody, where Human and Organizational Development lives, and commissions are joint with nearby schools.
+
+**Veteran side:** The VA certifying official works through the registrar. Yellow Ribbon amounts vary by school, so get a written estimate.
 
 **Check first:** Keep the application aligned to Peabody HOD and verify credit sequencing.
 
@@ -640,9 +903,20 @@ Cornell ILR gives your interest in work, organizations and technology a single d
 - Standout: You have seen labor from the ground: field canvassing with daily conversion tracking, and study of how AI may change the workforce.
 - Your reason: ILR joins labor, policy and law in one school, and Kyle told you it is among the best preparations for law school.
 
-**Why it sits at 9 of 21:** ILR says most admitted transfers hold 3.4 or higher. SCAD 3.33 is 0.07 under and pooled 3.18 is 0.22 under, and three named prerequisites are missing.
+**Why it sits at 9 of 22:** ILR says most admitted transfers hold 3.4 or higher. SCAD 3.33 is 0.07 under and pooled 3.18 is 0.22 under, and three named prerequisites are missing.
 
 **Numbers:** Line: 3.4 for most admits. You: SCAD 3.33 is 0.07 under; pooled 3.18 is 0.22 under; composition, statistics and microeconomics still needed.
+
+### Military and ROTC
+- Army: On campus. Army ROTC on campus.
+- Air Force: On campus. Air Force ROTC on campus.
+- Navy: On campus. Naval ROTC on campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** One of the few Ivies with all three units on campus, and ILR studies the labor and organizational side of military life.
+
+**Veteran side:** Yellow Ribbon, a veteran admissions pathway that can waive some documents, and the Veterans Summer Bridge (your research).
 
 **Check first:** Most admitted ILR transfers report 3.4+; map composition, economics, statistics/calculus and science.
 
@@ -693,9 +967,20 @@ Yale's Eli Whitney program is designed for students whose education was interrup
 - Standout: An adult veteran with a rising recent record and community leadership, which is the profile Eli Whitney was created for.
 - Your reason: Full-need aid, an adult and veteran community, and room to study race, migration and technology together.
 
-**Why it sits at 10 of 21:** Eli Whitney has no GPA floor and weighs recent work, but Yale's contact said the withdrawals and thin recent coursework are the obstacle and raised 2028 as an option.
+**Why it sits at 10 of 22:** Eli Whitney has no GPA floor and weighs recent work, but Yale's contact said the withdrawals and thin recent coursework are the obstacle and raised 2028 as an option.
 
 **Numbers:** Line: none; recent broad coursework is the test. You: one strong SCAD term so far; English and math are the stated gaps.
+
+### Military and ROTC
+- Army: Unclear. Yale cadets have commissioned into the Army recently, but the host battalion was not confirmed in this search.
+- Air Force: On campus. Air Force ROTC Detachment 009 on campus, with a Space Force path.
+- Navy: On campus. Naval ROTC on campus since 2012.
+
+**Projection:** Best path: Air Force ROTC on campus, if the detachment accepts your prior service. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** The Warrior-Scholar Project began at Yale, and you are already a Warrior-Scholar. Eli Whitney plus AFROTC on campus is a rare pairing for an adult veteran.
+
+**Veteran side:** Eli Whitney program for nontraditional students. Your notes: about 60 Yale College veterans and more than 100 undergraduates in ROTC as of late 2025.
 
 **Check first:** confirm at least five years out of high school and no prior bachelor’s degree; broad recent academic strength is still needed.
 
@@ -710,11 +995,11 @@ Source: https://admissions.yale.edu/eli-whitney
 ### Supplements: 1
 
 #### Eli Whitney essays
-Not captured. No screenshot yet
+Not captured. Application not opened yet
 
 Prompt, paraphrased: Yale's Eli Whitney application has its own essay questions. Open the application and capture them before drafting.
 
-- Take screenshots of every Yale question so the prompts and limits here can be replaced with the real ones.
+- Open the Eli Whitney application and screenshot every question. Yale lists personal statements, recommendations and transcripts, with a March 1 deadline for the application.
 - Yale's contact asked for recent English and math coursework. Plan the essays around a record that includes them.
 - Prepare a dated education timeline, because Eli Whitney asks you to account for time away from school.
 - Choose one analytical paper to anchor your academic case, and keep the instructor's comments.
@@ -731,9 +1016,20 @@ WashU would let you study the human side of the systems you already build, in th
 - Standout: St. Louis is part of your family story through your grandmother's conference, so your reason for the city is real and specific.
 - Your reason: Family roots in St. Louis, a strong social-science college, and a new AI minor open across schools.
 
-**Why it sits at 11 of 21:** WashU says the strongest transfer candidates usually hold 3.5 or higher across a broad curriculum with composition. SCAD 3.33 is 0.17 under.
+**Why it sits at 11 of 22:** WashU says the strongest transfer candidates usually hold 3.5 or higher across a broad curriculum with composition. SCAD 3.33 is 0.17 under.
 
 **Numbers:** Line: 3.5 for strongest candidates. You: SCAD 3.33 is 0.17 under; pooled 3.18 is 0.32 under; composition not yet shown.
+
+### Military and ROTC
+- Army: On campus. Gateway Battalion, hosted by WashU. It won the first DoD ROTC partnership excellence award in 2021.
+- Air Force: Cross-town. Detachment 207 at Saint Louis University, nearby.
+- Navy: None. No Navy unit found in St. Louis.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Gateway Battalion cadets train at Fort Leonard Wood, where you did basic training. St. Louis is also your family's ground.
+
+**Veteran side:** WashU's veterans site lists a Posse Veterans Program page: confirm whether WashU is a current partner.
 
 **Check first:** Strong candidates generally present 3.5+ across broad preparation; composition equivalency is unresolved.
 
@@ -796,9 +1092,20 @@ UVA fits your wish to study how communities use and govern systems, through a li
 - Standout: Top grades in government and law courses, and a record of listening before deciding as a residence mentor.
 - Your reason: A public university with a strong honor culture and veteran community, and a route into policy and law.
 
-**Why it sits at 12 of 21:** Guides attribute an admitted transfer average near 3.5 to UVA, and UVA requires 24 transferable semester hours plus one full year. You are about 0.2 to 0.3 under on GPA.
+**Why it sits at 12 of 22:** Guides attribute an admitted transfer average near 3.5 to UVA, and UVA requires 24 transferable semester hours plus one full year. You are about 0.2 to 0.3 under on GPA.
 
 **Numbers:** Line: about 3.5 average (third-party), 24 transferable hours. You: SCAD 3.33, pooled 3.18; transferable count needs UVA's evaluation.
+
+### Military and ROTC
+- Army: On campus. Army ROTC on campus.
+- Air Force: On campus. Air Force ROTC on campus.
+- Navy: On campus. Naval ROTC on campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** The only school on your list with a current Posse Veterans listing, which brings a funded veteran cohort.
+
+**Veteran side:** UVA appears on the current Posse Veterans partner list. Yellow Ribbon is first come, first served.
 
 **Check first:** Arts & Sciences preparation and composition equivalency require review; geometry is not statistics.
 
@@ -848,9 +1155,20 @@ Williams would turn your wide curiosity into close, sustained reading and writin
 - Standout: Williams says it especially encourages transfers who started in the military or the workforce, which is your path.
 - Your reason: Small seminars, need-based aid without merit games, and a college that actively recruits veterans.
 
-**Why it sits at 13 of 21:** A 3.5 average in a strong program is the commonly cited expectation for successful transfers (third-party profile). You are about 0.2 to 0.3 under.
+**Why it sits at 13 of 22:** A 3.5 average in a strong program is the commonly cited expectation for successful transfers (third-party profile). You are about 0.2 to 0.3 under.
 
 **Numbers:** Line: about 3.5 (third-party). You: SCAD 3.33, pooled 3.18; two-year residence rule shapes entry level.
+
+### Military and ROTC
+- Army: Unclear. No confirmed arrangement. Siena College hosts Army ROTC in the region but no Williams link was found.
+- Air Force: Cross-town. GAO lists an Air Force cross-town unit; the host was not named.
+- Navy: None. No Navy arrangement found.
+
+**Projection:** Best path: Air Force ROTC cross-town. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** A small residential college where ROTC would be mostly self-directed. Choose Williams for the classroom, not the corps.
+
+**Veteran side:** Williams encourages veterans to apply and has a page in the Service to School VetLink guidebook.
 
 **Check first:** Confirm major and two-year residence requirement, including effects on study away.
 
@@ -914,9 +1232,20 @@ UNC gives your service and technology interests a public-facing question about a
 - Standout: A veteran exemption from testing, in-state tuition by law, and a record of public-facing service work.
 - Your reason: A strong public university with real veteran benefits and a path into public policy.
 
-**Why it sits at 14 of 21:** UNC reports an average college GPA of 3.7 for incoming transfers. You are about 0.4 to 0.5 under.
+**Why it sits at 14 of 22:** UNC reports an average college GPA of 3.7 for incoming transfers. You are about 0.4 to 0.5 under.
 
 **Numbers:** Line: 3.7 average for incoming transfers. You: SCAD 3.33 is 0.37 under; pooled 3.18 is 0.52 under.
+
+### Military and ROTC
+- Army: On campus. Army ROTC on campus.
+- Air Force: On campus. Air Force ROTC on campus.
+- Navy: On campus. Naval ROTC on campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Close to Fort Bragg and a large military community, with all three units and in-state pricing for you as a veteran.
+
+**Veteran side:** In-state tuition by law for veterans using Post-9/11 or Chapter 30, plus Yellow Ribbon.
 
 **Check first:** Confirm major, transferable writing and quantitative breadth; do not infer North Carolina residency.
 
@@ -954,9 +1283,20 @@ Wesleyan could hold both your creative practice and your questions about society
 - Standout: Creative work paired with a written argument about ownership and access, which suits a college that mixes art and critique.
 - Your reason: Open, interdisciplinary study and loan-free aid. Apply for aid with the application, because skipping it limits aid for a year.
 
-**Why it sits at 15 of 21:** No official GPA line was found. A dated third-party estimate puts competitive transfers near 3.7, so this placement is low confidence.
+**Why it sits at 15 of 22:** No official GPA line was found. A dated third-party estimate puts competitive transfers near 3.7, so this placement is low confidence.
 
 **Numbers:** Line: none official; about 3.7 in a 2019 third-party estimate. You: SCAD 3.33, pooled 3.18.
+
+### Military and ROTC
+- Army: Cross-town. University of Connecticut (older accounts).
+- Air Force: Cross-town. Yale's Detachment 009 in New Haven, with no extra tuition.
+- Navy: None. No Navy arrangement found.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** A history of bringing veterans in as a cohort, which matters more here than ROTC, since GAO counts almost no Wesleyan cadets.
+
+**Veteran side:** Wesleyan was the second Posse Veterans Program partner (2014). Confirm it still enrolls a veterans posse.
 
 **Check first:** Intended major and transfer-credit map are unresolved; choose before final drafting.
 
@@ -994,9 +1334,20 @@ Dartmouth could connect your hands-on design habits to sustained liberal-arts st
 - Standout: A veteran builder with a faculty-endorsed campaign and design work that other students actually use.
 - Your reason: A tight residential community, unlimited Yellow Ribbon, and a veteran coordinator who works with applicants directly.
 
-**Why it sits at 16 of 21:** Dartmouth says most admitted transfers hold above 3.7, and testing is required unless a veteran waiver is approved. You are about 0.4 to 0.5 under.
+**Why it sits at 16 of 22:** Dartmouth says most admitted transfers hold above 3.7, and testing is required unless a veteran waiver is approved. You are about 0.4 to 0.5 under.
 
 **Numbers:** Line: above 3.7 for most admits; testing required or waived. You: SCAD 3.33, pooled 3.18.
+
+### Military and ROTC
+- Army: On campus. Delta Company, part of the Wildcat Battalion at UNH, staffed on campus.
+- Air Force: None. Not available.
+- Navy: None. Not available. Navy and Marine Corps are not expanding to Dartmouth.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** President Beilock announced an ROTC and veteran-support expansion on Veterans Day 2025, so you would arrive during a build-out.
+
+**Veteran side:** Unlimited Yellow Ribbon, a veteran coordinator, VetLink, and Posse Veterans partner since 2016 (confirm current status).
 
 **Check first:** Confirm major, required testing or approved waiver, credit limits and time in residence.
 
@@ -1013,7 +1364,7 @@ Source: https://admissions.dartmouth.edu/apply-dartmouth
 ### Supplements: 3
 
 #### Why transfer, and why Dartmouth
-About 500 words on the official essay page. Provisional; application opens in January
+About 500 words on the official essay page. Provisional; application not opened yet
 
 Prompt, paraphrased: Explain your reasons for transferring and why Dartmouth. Wording comes from the official page, last updated for an earlier cycle.
 
@@ -1026,7 +1377,7 @@ Prompt, paraphrased: Explain your reasons for transferring and why Dartmouth. Wo
 _From the school's official page, not from a screenshot. Confirm in the live application._
 
 #### Your upbringing and who you are
-About 250 words on the older official page. Provisional; choose one of two
+About 250 words on the older official page. Provisional; application not opened; choose one of two
 
 Prompt, paraphrased: Describe the environment in which you were raised and how it shaped the person you are.
 
@@ -1039,7 +1390,7 @@ Prompt, paraphrased: Describe the environment in which you were raised and how i
 _From the school's official page, not from a screenshot. Confirm in the live application._
 
 #### Introduce yourself
-About 250 words on the older official page. Provisional; choose one of two
+About 250 words on the older official page. Provisional; application not opened; choose one of two
 
 Prompt, paraphrased: Introduce yourself in your own way.
 
@@ -1060,9 +1411,20 @@ Amherst's second essay asks directly for the life experiences that shaped you, w
 - Standout: You have already spoken with Amherst admissions, and your story of service, setback and return fits its stated interest in personal context.
 - Your reason: An open curriculum with Black Studies, need-based aid, and a history of enrolling veterans.
 
-**Why it sits at 17 of 21:** Amherst asks for 32 transferable liberal-arts credits and describes competitive transfers at about an A-minus average. Design studio credits may not count as liberal arts.
+**Why it sits at 17 of 22:** Amherst asks for 32 transferable liberal-arts credits and describes competitive transfers at about an A-minus average. Design studio credits may not count as liberal arts.
 
 **Numbers:** Line: about A-minus, with 3.5 listed as a minimum in one profile, and 32 liberal-arts credits. You: SCAD 3.33, pooled 3.18.
+
+### Military and ROTC
+- Army: Cross-town. UMass Amherst, through the Five College area.
+- Air Force: Cross-town. UMass Amherst, Detachment 370.
+- Navy: None. No Navy arrangement found.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** UMass is next door and hosts both Army and Air Force, so ROTC is practical even at a tiny college.
+
+**Veteran side:** Your dossier lists Posse Veterans and VetLink, unverified. GAO counts about half a cadet a year from Amherst.
 
 **Check first:** Confirm Black Studies interest and recent graded academic writing; open curriculum is not absence of rigor.
 
@@ -1125,9 +1487,20 @@ UChicago fits your appetite for big questions about how people decide what count
 - Standout: You would teach a class on the Many Worlds Interpretation and built a tool to compare ideas across traditions: real curiosity on record.
 - Your reason: Rigorous debate, a strong sociology tradition, unlimited Yellow Ribbon and loan-free aid for admitted transfers.
 
-**Why it sits at 18 of 21:** UChicago publishes no transfer GPA. Advisory sources point to about 3.75 and transfers must complete the Core. You are roughly 0.4 to 0.6 under that estimate.
+**Why it sits at 18 of 22:** UChicago publishes no transfer GPA. Advisory sources point to about 3.75 and transfers must complete the Core. You are roughly 0.4 to 0.6 under that estimate.
 
 **Numbers:** Line: none official; about 3.75 in advisory sources. You: SCAD 3.33, pooled 3.18.
+
+### Military and ROTC
+- Army: Unclear. UChicago has Army cadets; the host battalion was not confirmed in this search.
+- Air Force: On campus. Detachment 195, hosted at UChicago since its recent activation, with a Space Force path.
+- Navy: Unclear. Not confirmed.
+
+**Projection:** Best path: Air Force ROTC on campus, if the detachment accepts your prior service. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** A new Air Force detachment on campus means a small, young unit where a prior-service cadet would stand out.
+
+**Veteran side:** Unlimited Yellow Ribbon and a fifth-partner listing with the Posse Veterans Program (confirm current status).
 
 **Check first:** Connect to a real undergraduate major and Core preparation; do not present a lab as a degree.
 
@@ -1255,9 +1628,20 @@ Notre Dame matches your faith, service and veteran commitments more closely than
 - Standout: Faith, service and veteran identity together, plus a stated aim of law school and veteran legal work.
 - Your reason: A mission built on service and the common good, a veterans law clinic, and aid that can cover full cost at your income level.
 
-**Why it sits at 19 of 21:** Notre Dame says recent admitted transfers averaged 3.75 or higher. You are 0.42 under on SCAD and 0.57 under pooled.
+**Why it sits at 19 of 22:** Notre Dame says recent admitted transfers averaged 3.75 or higher. You are 0.42 under on SCAD and 0.57 under pooled.
 
 **Numbers:** Line: 3.75 average for recent admits, 24 transferable credits. You: SCAD 3.33 is 0.42 under; pooled 3.18 is 0.57 under.
+
+### Military and ROTC
+- Army: On campus. Army ROTC on campus.
+- Air Force: On campus. Air Force ROTC on campus.
+- Navy: On campus. Naval ROTC on campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** The most ROTC-dense campus on your list, with a Catholic service culture. Your faith and service story fit here without translation.
+
+**Veteran side:** Yellow Ribbon (about $30,000 a year with a 100% GI Bill, from your call), VetLink and Warrior-Scholar Project ties.
 
 **Check first:** Recent admitted transfers average 3.75+; verify intended-major capacity and transferable prerequisites.
 
@@ -1358,9 +1742,20 @@ The Iovine and Young Academy is the closest match to how you actually work: desi
 - Standout: A shipped client platform, 34 public repositories and an SMU financial technology certificate: evidence that you build and finish.
 - Your reason: It is the degree that looks most like your practice, with unlimited Yellow Ribbon for eligible veterans.
 
-**Why it sits at 20 of 21:** USC's admitted transfer GPA range was 3.70 to 3.97 school-wide, not Academy-specific. You are below the bottom of that range and the degree is sequential.
+**Why it sits at 20 of 22:** USC's admitted transfer GPA range was 3.70 to 3.97 school-wide, not Academy-specific. You are below the bottom of that range and the degree is sequential.
 
 **Numbers:** Line: 3.70 to 3.97 for admitted transfers. You: SCAD 3.33 is 0.37 under the bottom of the range.
+
+### Military and ROTC
+- Army: On campus. Army ROTC on campus.
+- Air Force: On campus. Air Force ROTC on campus.
+- Navy: On campus. Naval ROTC on campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** One of about 60 universities hosting all three units. Iovine and Young plus on-campus ROTC is a rare mix of studio work and service.
+
+**Veteran side:** Unlimited undergraduate Yellow Ribbon, a Veterans Resource Center, and a certification office that handles Chapter 33, VR&E and Yellow Ribbon.
 
 **Check first:** Confirm IYA transfer materials and three-to-four-year sequential degree implications.
 
@@ -1637,7 +2032,76 @@ Prompt, paraphrased: If you could teach a class on any topic, what would it be?
 
 _From your November 10 screenshot, paraphrased. Confirm wording in the live application._
 
-## 21. Princeton
+## 21. Penn
+*College of Arts and Sciences: Africana Studies or Philosophy, Politics and Economics; Science, Technology and Society third*
+
+Penn makes you apply to one of its four undergraduate schools, and the College of Arts and Sciences is the one that fits Africana Studies, PPE or Science, Technology and Society. You have not opened the application yet, and its transfer essay asks why you are leaving SCAD and what you would gain at Penn.
+
+- Best approach: Pick the College and one major first, then build all three Penn essays on one question: who owns the value people create, studied through history and economics.
+- Standout: A veteran with a fintech certificate and a written thesis on who owns AI, which gives PPE or Africana Studies a concrete research question.
+- Your reason: Unlimited Yellow Ribbon with Penn covering leftover tuition, a push to admit more veterans, and Philadelphia's civic and startup life.
+
+**Why it sits at 21 of 22:** No GPA line is published, testing was required last cycle with no score on file for you, and Penn expects one to two years of transferable work with half the degree at Penn. On numbers alone it sits just above Princeton.
+
+**Numbers:** Line: none published; testing required in 2025-26 with a hardship waiver. You: SCAD 3.33, pooled 3.18, no test score on file.
+
+### Military and ROTC
+- Army: Cross-town. Drexel, which absorbed Penn's Army program in the 1990s.
+- Air Force: Cross-town. Cross-town; the host detachment was not confirmed in this search.
+- Navy: On campus. Naval ROTC hosted at Penn with Temple and Drexel.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Penn is actively trying to grow its veteran undergraduate count, so a strong veteran file arrives at a useful moment.
+
+**Veteran side:** Unlimited undergraduate Yellow Ribbon, and Penn pays tuition left after the GI Bill for 100% eligible veterans. A March 2026 report counted only five veterans in the traditional undergraduate college, alongside a new push to admit more.
+
+**Check first:** Your reason: Unlimited Yellow Ribbon with Penn covering leftover tuition, a push to admit more veterans, and Philadelphia's civic and startup life.
+
+**In your portal now:** Not opened yet.
+
+### Supplements: 3
+
+#### Transfer essay: why leave, why Penn
+450 to 600 words. Provisional; application not opened yet
+
+Prompt, paraphrased: Explain why you are leaving your current school and what you hope to gain by transferring to Penn.
+
+- Choose the College of Arts and Sciences and one major before drafting. Penn reads the essay against that school.
+- The leaving reason should be about direction, not escape: you want Africana Studies, PPE or Science and Society, which SCAD does not offer.
+- Name two or three Penn courses or programs you would actually take, from the current catalog.
+- Use one piece of your record as proof of readiness, such as the Fall 2026 grades or the ownership-of-AI thesis.
+- Keep it distinct from the Georgetown and Vanderbilt transfer essays. Penn wants the Penn-specific version.
+
+_From the school's official page, not from a screenshot. Confirm in the live application._
+
+#### Penn short answers
+About 150 to 200 words each (last cycle). Provisional; application not opened yet
+
+Prompt, paraphrased: Penn's general short-answer prompts, which change each cycle. Capture them when you open the application.
+
+- Screenshot the prompts when the application opens and replace this entry.
+- Last cycle's prompts asked about community and gratitude. Prepare one community story and one thank-you story now.
+- Your residence mentor role and your grandmother's ministry are both ready material.
+- Keep each answer to one example. These are short.
+- Confirm whether transfers answer the same prompts as first-year applicants.
+
+_From the school's official page, not from a screenshot. Confirm in the live application._
+
+#### College of Arts and Sciences essay
+About 150 to 200 words (last cycle). Provisional; application not opened yet
+
+Prompt, paraphrased: The school-specific prompt for the College: how you will explore your intellectual interests within the College.
+
+- Name the major and one cross-school resource, such as SAFElab or a Wharton course, accurately.
+- Explain why the College and not Wharton or Engineering, since you cannot switch after admission.
+- Connect one question you already wrote about to one course you would take.
+- Avoid faculty name-dropping. Penn prefers concrete undergraduate resources.
+- Confirm the 2027 wording when the application opens.
+
+_From the school's official page, not from a screenshot. Confirm in the live application._
+
+## 22. Princeton
 *African American Studies first and Sociology second in your portal, Entrepreneurship as the minor; ORFE and Computer Science also on your list*
 
 Princeton recruits veterans into its transfer program and requires a graded paper, so the application rests on academic writing. Your portal now lists African American Studies and Sociology, which fits your record better than engineering or ORFE would.
@@ -1646,9 +2110,20 @@ Princeton recruits veterans into its transfer program and requires a graded pape
 - Standout: A veteran whose research questions about ownership, access and Black intellectual history already exist on paper.
 - Your reason: A transfer program built around veterans, independent research through the senior thesis, and aid that can replace benefits.
 
-**Why it sits at 21 of 21:** No GPA line is published, but the academic bar is the highest on your list. Your contact questioned the transferable-credit count, and ORFE or engineering would need far more math and science than the record shows.
+**Why it sits at 22 of 22:** No GPA line is published, but the academic bar is the highest on your list. Your contact questioned the transferable-credit count, and ORFE or engineering would need far more math and science than the record shows.
 
 **Numbers:** Line: none published. You: SCAD 3.33, pooled 3.18; credit threshold and graded paper are the gates.
+
+### Military and ROTC
+- Army: On campus. Army Tiger Battalion, on campus since 1919, the longest continuously running ROTC program in the country.
+- Air Force: Cross-town. Air Force ROTC through Rutgers, including a Space Force option.
+- Navy: Cross-town. Naval ROTC through Rutgers, re-established for Princeton in 2014.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Army ROTC on campus at a school whose transfer program exists partly for veterans. ROTC here is a community, not a commute.
+
+**Veteran side:** Princeton's transfer program recruits veterans. Your notes: 66 students in ROTC in 2024-25 and the first two Space Force commissions in the Class of 2026.
 
 **Check first:** Settle conflicting major plans; ORFE/engineering require much more math and science than the known record shows.
 

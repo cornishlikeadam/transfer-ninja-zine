@@ -67,13 +67,26 @@ Wesleyan could hold both your creative practice and your questions about society
 - Standout: Creative work paired with a written argument about ownership and access, which suits a college that mixes art and critique.
 - Your reason: Open, interdisciplinary study and loan-free aid. Apply for aid with the application, because skipping it limits aid for a year.
 
-**Stats-only order:** 15 of 21. No official GPA line was found. A dated third-party estimate puts competitive transfers near 3.7, so this placement is low confidence.
+**Stats-only order:** 15 of 22. No official GPA line was found. A dated third-party estimate puts competitive transfers near 3.7, so this placement is low confidence.
 
 **Numbers:** Line: none official; about 3.7 in a 2019 third-party estimate. You: SCAD 3.33, pooled 3.18.
 
 **Check first:** Intended major and transfer-credit map are unresolved; choose before final drafting.
 
 **In your portal now:** The portal asks for an area of academic interest and an additional one, and whether you intend to pursue financial aid.
+
+## Military and ROTC
+- Army: Cross-town. University of Connecticut (older accounts).
+- Air Force: Cross-town. Yale's Detachment 009 in New Haven, with no extra tuition.
+- Navy: None. No Navy arrangement found.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** A history of bringing veterans in as a cohort, which matters more here than ROTC, since GAO counts almost no Wesleyan cadets.
+
+**Veteran side:** Wesleyan was the second Posse Veterans Program partner (2014). Confirm it still enrolls a veterans posse.
+
+_Confidence: medium. Source: https://www.wesleyan.edu/registrar/ROTC/Index.html_
 
 ## Supplements and guidance (1)
 

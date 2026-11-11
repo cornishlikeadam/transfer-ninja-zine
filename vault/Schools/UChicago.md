@@ -75,11 +75,24 @@ UChicago fits your appetite for big questions about how people decide what count
 - Standout: You would teach a class on the Many Worlds Interpretation and built a tool to compare ideas across traditions: real curiosity on record.
 - Your reason: Rigorous debate, a strong sociology tradition, unlimited Yellow Ribbon and loan-free aid for admitted transfers.
 
-**Stats-only order:** 18 of 21. UChicago publishes no transfer GPA. Advisory sources point to about 3.75 and transfers must complete the Core. You are roughly 0.4 to 0.6 under that estimate.
+**Stats-only order:** 18 of 22. UChicago publishes no transfer GPA. Advisory sources point to about 3.75 and transfers must complete the Core. You are roughly 0.4 to 0.6 under that estimate.
 
 **Numbers:** Line: none official; about 3.75 in advisory sources. You: SCAD 3.33, pooled 3.18.
 
 **Check first:** Connect to a real undergraduate major and Core preparation; do not present a lab as a degree.
+
+## Military and ROTC
+- Army: Unclear. UChicago has Army cadets; the host battalion was not confirmed in this search.
+- Air Force: On campus. Detachment 195, hosted at UChicago since its recent activation, with a Space Force path.
+- Navy: Unclear. Not confirmed.
+
+**Projection:** Best path: Air Force ROTC on campus, if the detachment accepts your prior service. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** A new Air Force detachment on campus means a small, young unit where a prior-service cadet would stand out.
+
+**Veteran side:** Unlimited Yellow Ribbon and a fifth-partner listing with the Posse Veterans Program (confirm current status).
+
+_Confidence: medium. Source: https://college.uchicago.edu/student-life/rotc-programs-offer-college-students-pathways-and-training-future-military-leadership_
 
 ## Supplements and guidance (8)
 

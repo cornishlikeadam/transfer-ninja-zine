@@ -76,11 +76,24 @@ Northwestern's stated academic expectation is the most reachable on your list af
 - Standout: You ran a floor, noticed unrecognized contribution, and designed COMMONS in response: a people-and-organizations problem you found yourself.
 - Your reason: Design, learning and social policy sit close together there, and the regular route keeps Brown available as first choice.
 
-**Stats-only order:** 2 of 21. Northwestern says successful transfers usually have a full year of credit, breadth across liberal arts and sciences, and a B average. Both of your numbers clear a B average.
+**Stats-only order:** 2 of 22. Northwestern says successful transfers usually have a full year of credit, breadth across liberal arts and sciences, and a B average. Both of your numbers clear a B average.
 
 **Numbers:** Line: B average and about 36 quarter hours. You: SCAD 3.33 and pooled 3.18 both clear it; breadth in writing, science and social science is the gap.
 
 **Check first:** Do not default to CS; settle SESP versus Weinberg and verify breadth/credits.
+
+## Military and ROTC
+- Army: Cross-town. Loyola University Chicago battalion.
+- Air Force: Cross-town. University of Chicago, Detachment 195.
+- Navy: On campus. Naval ROTC on campus (Northwestern's own unit).
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** The on-campus unit is Navy, which your age likely rules out. Army and Air Force mean commuting into Chicago.
+
+**Veteran side:** Veteran and ROTC admissions page and Yellow Ribbon (amount not confirmed in this search). GAO data show about 6 ROTC students a year.
+
+_Confidence: high. Source: https://catalogs.northwestern.edu/undergraduate/special-programs-courses/military-programs/_
 
 ## Supplements and guidance (3)
 

@@ -2592,6 +2592,28 @@
    "ask": "How should a veteran balance two recommendations, and how many SCAD quarter credits stay usable given the six-quarter residency and Core rules?",
    "show": "UChicago allows a supervisor, mentor or commanding officer to write when you have been out of school a long time.",
    "dont": "Do not bind Transfer Early Decision until net price, benefits and likely credit loss are acceptable."
+  },
+  "penn": {
+   "di": "none",
+   "diText": "Penn's Common Data Set lists applicant interest as not considered, and no transfer interest factor is published.",
+   "path": "College of Arts and Sciences: Africana Studies or Philosophy, Politics and Economics, with Science, Technology and Society as a third option. Not Wharton, not Engineering, not computer science. Confirm your pick.",
+   "know": [
+    [
+     "Desmond Upton Patton",
+     "Penn Integrates Knowledge professor (Social Policy and Annenberg); directs SAFElab on AI, social media and violence prevention."
+    ],
+    [
+     "Shiyan Jiang",
+     "Penn GSE; AI, learning, identity and design-based research."
+    ]
+   ],
+   "gap": "No Africana Studies or PPE faculty are researched yet.",
+   "res": "SAFElab",
+   "evi": "SAFElab found that systems trained on dominant English misread grief in African American English as aggression, and now builds community context into model labels.",
+   "who": "Penn transfer admissions and Service to School VetLink.",
+   "ask": "For a SCAD transfer applying to the College, which completed courses can be evaluated toward requirements before enrollment, and how should quarter-system studio credits be documented?",
+   "show": "Three essays on one through-line, two recent academic recommendations, and a one-page project abstract at most.",
+   "dont": "Do not send a portfolio unless you apply to a program that asks for one, and do not ask faculty for favors."
   }
  },
  "strategy": {
@@ -2600,8 +2622,8 @@
   "profile": [
    {
     "title": "Life story in order",
-    "text": "Army combat engineer training at Fort Leonard Wood in 2020 to 2021, about eight months, beginning as the pandemic began. Broward College followed during a period of severe housing instability, then treatment and transitional housing. From January to November 2025 you canvassed for CARE, AARP Foundation and World Vision campaigns and moved into mentoring newer recruiters. You started at SCAD in spring 2026, made the Dean's List in summer 2026, became a residence mentor, ran for student government president, and joined Service to School in October 2026.",
-    "source": "Fact sheet, profile memory, resume and your Princeton portal draft. Treatment and housing details are yours to disclose or not."
+    "text": "High school diploma from Byron Nelson High School in 2019. Army service from December 2020: Reception Battalion at Fort Leonard Wood, Basic Combat Training finished in April 2021, an Engineer-branch Diver specialty and then Health Care Specialist (combat medic) from June 2021. Security officer at St. Louis Lambert airport in 2022 and 2023. Broward College followed during a period of severe housing instability, then treatment and transitional housing. From January to November 2025 you canvassed for CARE, AARP Foundation and World Vision campaigns and moved into mentoring newer recruiters. You started at SCAD in spring 2026, made the Dean's List in summer 2026, became a residence mentor, ran for student government president, and joined Service to School in October 2026.",
+    "source": "Joint Services Transcript (October 2025), Broward transcript, fact sheet, profile memory and resume. Treatment and housing details are yours to disclose or not."
    },
    {
     "title": "What drives you",
@@ -2639,9 +2661,14 @@
     "source": "Resume, portfolio audit and proof inventory."
    },
    {
+    "title": "Military record and what it opens",
+    "text": "The JST lists Private 2, the Diver specialty from December 2020, Basic Combat Training in March and April 2021 (6 recommended lower-division credits), and Health Care Specialist from June 2021. At 28 or 29 at graduation, Army and Air Force ROTC are realistic on age, while Navy and Marine Corps ROTC almost certainly are not. Whether any branch can contract you depends on your DD-214: characterization, reentry code and separation reason. Your Winter SCADpro studio for the Military World Games keeps service in your current work.",
+    "source": "Joint Services Transcript (October 2025), ROTC eligibility pages researched November 11, 2026, and your SCAD registration."
+   },
+   {
     "title": "Academic record and gaps",
-    "text": "Broward 3.04 over 22 semester credits with six withdrawals, one D and two Cs. SCAD 3.33 over 30 quarter credits, rising from 3.00 to 3.66. Pooled about 3.18. No graded college composition, statistics, economics or lab science appears yet, and several schools name exactly those courses. Yale's contact said the withdrawals and thin recent liberal-arts and quantitative coursework are the obstacle.",
-    "source": "Transcript review of January 2025 and October 2026 copies, and the Yale call debrief. Update when new grades post."
+    "text": "Broward 3.04 over 22 GPA hours: term GPAs 3.57, 3.25 and 1.00, with six withdrawals (20 attempted hours), one C and one D. Its A in ENC0017C is a developmental course many schools drop, which would make Broward about 2.83. SCAD 3.33 over 30 quarter hours, rising from 3.00 to 3.66, and Fall 2026 midterms of A, A and A in Survey of AI Applications, Ethics of Emerging Technology and Color in Context. Pooled 3.18 today, 3.33 if the midterms hold. Winter 2027 is three SCADpro studios: SCAD Entrepreneurial Ecosystem research, a Deloitte control interface for the LA28 Olympics, and the Military World Games. No graded college composition, statistics, economics or lab science appears yet, and several schools name exactly those courses. Yale's contact said the withdrawals and thin recent liberal-arts and quantitative coursework are the obstacle.",
+    "source": "Broward transcript (January 2025), SCAD transcript (October 2026), SCAD portal (November 11, 2026) and the Yale call debrief. Update when final grades post."
    },
    {
     "title": "How you sound at your best",
@@ -2650,7 +2677,7 @@
    },
    {
     "title": "Facts to settle before you submit",
-    "text": "Your Princeton draft says you descend from the eighth president through a daughter named Irene: standard histories list only sons for Martin Van Buren, so prove it or cut it. The song Tek It is usually credited to Cafune, and Sweater Weather to The Neighbourhood. Older notes mention military diving while the service record shows combat engineer training. The 900-plus nonprofit hours, the four-floor responsibility, the Lacoste offer, the 1540 SAT and your current course list all need a record behind them.",
+    "text": "Your Princeton draft says you descend from the eighth president through a daughter named Irene: standard histories list only sons for Martin Van Buren, so prove it or cut it. The song Tek It is usually credited to Cafune, and Sweater Weather to The Neighbourhood. Your resume says Combat Engineer, while the JST lists the Engineer-branch Diver specialty and then Health Care Specialist: match the DD-214 wording everywhere. SCAD's transcript lists your major as Robotics, Interactive Design and Game Development with an Applied AI minor, while your resume says Applied Artificial Intelligence: confirm which is official. The 900-plus nonprofit hours, the four-floor responsibility, the Lacoste offer and the 1540 SAT all need a record behind them.",
     "source": "Your own integrity rule: every date, record and outcome stays true and backed by proof."
    },
    {
@@ -2953,11 +2980,11 @@
      {
       "title": "Eli Whitney essays",
       "limit": "Not captured",
-      "status": "No screenshot yet",
+      "status": "Application not opened yet",
       "kind": "pending",
       "prompt": "Yale's Eli Whitney application has its own essay questions. Open the application and capture them before drafting.",
       "guidance": [
-       "Take screenshots of every Yale question so the prompts and limits here can be replaced with the real ones.",
+       "Open the Eli Whitney application and screenshot every question. Yale lists personal statements, recommendations and transcripts, with a March 1 deadline for the application.",
        "Yale's contact asked for recent English and math coursework. Plan the essays around a record that includes them.",
        "Prepare a dated education timeline, because Eli Whitney asks you to account for time away from school.",
        "Choose one analytical paper to anchor your academic case, and keep the instructor's comments.",
@@ -2977,7 +3004,7 @@
      "Your reason: A transfer program built around veterans, independent research through the senior thesis, and aid that can replace benefits."
     ],
     "gate": "Settle conflicting major plans; ORFE/engineering require much more math and science than the known record shows.",
-    "rank": 21,
+    "rank": 22,
     "rankReason": "No GPA line is published, but the academic bar is the highest on your list. Your contact questioned the transferable-credit count, and ORFE or engineering would need far more math and science than the record shows.",
     "stat": "Line: none published. You: SCAD 3.33, pooled 3.18; credit threshold and graded paper are the gates.",
     "portal": "Your portal shows African American Studies and Sociology as majors, Entrepreneurship as the minor, and drafts in progress for several answers.",
@@ -3340,20 +3367,100 @@
     "source": "https://uadmissions.georgetown.edu/apply/transfer-applicants/",
     "supplements": [
      {
-      "title": "Georgetown transfer essays",
-      "limit": "Not captured",
-      "status": "No screenshot yet",
-      "kind": "pending",
-      "prompt": "Georgetown uses its own application with school-specific essays. Open it and capture the prompts before drafting.",
+      "title": "Short answer: a different viewpoint",
+      "limit": "250 words",
+      "status": "Required for all applicants",
+      "kind": "short",
+      "prompt": "Everyone deals with people who hold viewpoints different from their own. Describe one such experience and what you learned from it.",
       "guidance": [
-       "Take screenshots of the Georgetown application so these entries can be replaced with the real prompts.",
-       "Decide the school and major first. The essay for the School of Foreign Service differs from the College.",
-       "For the technology-policy degree, prepare to explain your plan for economics, statistics and a language.",
-       "The junior priority date for some programs is January 15. Check whether it applies to you.",
-       "Gather a policy example now, such as veteran resource access or AI pricing, with sources."
+       "Pick one real exchange with a named setting: a canvassing door, a floor conflict as mentor, or a debate in Ethics of Emerging Technology.",
+       "The learning is the point. Spend about half the words on what changed in how you think or act, not on who was right.",
+       "Show you can state the other person's view fairly in one sentence before you give yours.",
+       "Avoid a political hot-button unless the lesson is about listening. Georgetown reads this as a test of civil disagreement.",
+       "At 250 words there is room for one scene and one lesson. Cut background that does not serve either."
       ],
-      "provenance": "Not captured: no screenshot was supplied and no wording is verified.",
+      "provenance": "From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application.",
       "id": "gt-1"
+     },
+     {
+      "title": "Essay One: who you are, and why you are transferring",
+      "limit": "About one page, single-spaced, uploaded",
+      "status": "Required for all applicants",
+      "kind": "essay",
+      "prompt": "Georgetown is a diverse community and wants to know you in your own words. Write a brief personal or creative essay that best describes you and reflects your background, experiences, skills and talents. Because you are transferring from a four-year school, include your reasons for transferring.",
+      "guidance": [
+       "SCAD is a four-year school, so the transfer reasons are required here, not optional.",
+       "One page single-spaced is roughly 500 to 600 words. Draft to that length and check it in the upload format.",
+       "Give the move a reason Georgetown answers: the School of Foreign Service joins technology with policy and law, which a design degree does not.",
+       "Background, skills and talents can come from one thread: service, the shift to combat medic, canvassing, mentoring, then design and AI ethics.",
+       "Personal or creative form is allowed. A creative form still needs the transfer reasons stated plainly somewhere."
+      ],
+      "provenance": "From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application.",
+      "id": "gt-2"
+     },
+     {
+      "title": "Essay Two: why international affairs and global service",
+      "limit": "About one page, single-spaced, uploaded",
+      "status": "Required for School of Foreign Service applicants",
+      "kind": "essay",
+      "prompt": "The Walsh School of Foreign Service was founded more than a century ago to prepare leaders with the skills to address global issues. Describe your main motivations for studying international affairs at Georgetown and for dedicating your undergraduate study to a future in global service.",
+      "guidance": [
+       "This essay exists only for the School of Foreign Service. Confirm SFS, and Science, Technology and International Affairs, is your choice before writing it.",
+       "Name a global problem you already work on in miniature: AI pricing and access, technology governance, or veteran resources.",
+       "Your Winter Military World Games studio is a live international example. Mention it only after it starts, and only what you actually did.",
+       "Say what global service means for you concretely, such as military legal work or technology policy, and keep it consistent with your law-school goal.",
+       "Show you know the degree asks for economics, statistics and a language, and state your plan for each."
+      ],
+      "provenance": "From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application.",
+      "id": "gt-3"
+     },
+     {
+      "title": "Attended more than one college",
+      "limit": "Upload; no limit shown",
+      "status": "Applies to you: Broward and SCAD",
+      "kind": "context",
+      "prompt": "If you attended more than one college before applying to Georgetown, explain.",
+      "guidance": [
+       "Keep it factual and short: dates, schools, why you moved, and what changed.",
+       "Broward: Spring 2024 to Fall 2024, 22 credits, 3.04. SCAD: from Spring 2026, 3.33 with Fall midterms of A, A and A.",
+       "Address the Fall 2024 withdrawals in one or two sentences, with the context you choose to share.",
+       "End on the upward trend, since the record already shows it.",
+       "Do not repeat Essay One here. This is an explanation, not a story."
+      ],
+      "provenance": "From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application.",
+      "id": "gt-4"
+     },
+     {
+      "title": "Coursework, aid and disciplinary questions",
+      "limit": "Form fields",
+      "status": "Required",
+      "kind": "form",
+      "prompt": "List the courses you will take this year at your current school, with course numbers, titles and credits; say whether you will apply for financial aid and who is responsible for your costs; mark any aid you receive now; and answer the disciplinary questions.",
+      "guidance": [
+       "Fall 2026: AI 101 Survey of AI Applications, DIGI 230 Ethics of Emerging Technology, FOUN 112 Color in Context, 5 quarter hours each.",
+       "Winter 2027: PRO 560 SCADpro Research, PRO 580 SCADpro Deloitte LA28, PRO 580 SCADpro Military World Games. Confirm credit hours on your registration.",
+       "The form label says Spring 2027 entry. Ask Georgetown whether fall applicants list the same terms, and note the quarter system.",
+       "Mark current aid exactly as SCAD and the VA pay it now, such as government funded, grant or loan.",
+       "Answer the disciplinary questions truthfully and keep the wording identical across every application."
+      ],
+      "provenance": "From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application.",
+      "id": "gt-5"
+     },
+     {
+      "title": "Not currently in school",
+      "limit": "Upload",
+      "status": "Does not apply: you are enrolled",
+      "kind": "context",
+      "prompt": "Applicants not attending college now describe their activities since their last academic work.",
+      "guidance": [
+       "You are enrolled at SCAD, so leave this blank.",
+       "If you take a term off before applying, this becomes required.",
+       "The gap between the Army and Broward is covered by your timeline elsewhere, not here.",
+       "Keep the 2022 to 2023 security job and 2025 canvassing on the activities and employment pages.",
+       "Recheck this before submitting in case your enrollment changes."
+      ],
+      "provenance": "From your November 11 Georgetown screenshots, paraphrased. Confirm wording in the live application.",
+      "id": "gt-6"
      }
     ]
    },
@@ -4168,7 +4275,7 @@
      {
       "title": "Why transfer, and why Dartmouth",
       "limit": "About 500 words on the official essay page",
-      "status": "Provisional; application opens in January",
+      "status": "Provisional; application not opened yet",
       "kind": "pending",
       "prompt": "Explain your reasons for transferring and why Dartmouth. Wording comes from the official page, last updated for an earlier cycle.",
       "guidance": [
@@ -4184,7 +4291,7 @@
      {
       "title": "Your upbringing and who you are",
       "limit": "About 250 words on the older official page",
-      "status": "Provisional; choose one of two",
+      "status": "Provisional; application not opened; choose one of two",
       "kind": "pending",
       "prompt": "Describe the environment in which you were raised and how it shaped the person you are.",
       "guidance": [
@@ -4200,7 +4307,7 @@
      {
       "title": "Introduce yourself",
       "limit": "About 250 words on the older official page",
-      "status": "Provisional; choose one of two",
+      "status": "Provisional; application not opened; choose one of two",
       "kind": "pending",
       "prompt": "Introduce yourself in your own way.",
       "guidance": [
@@ -4406,6 +4513,71 @@
       ],
       "provenance": "From your November 10 screenshot, paraphrased. Confirm wording in the live application.",
       "id": "uchicago-8"
+     }
+    ]
+   },
+   "penn": {
+    "path": "College of Arts and Sciences: Africana Studies or Philosophy, Politics and Economics; Science, Technology and Society third",
+    "summary": "Penn makes you apply to one of its four undergraduate schools, and the College of Arts and Sciences is the one that fits Africana Studies, PPE or Science, Technology and Society. You have not opened the application yet, and its transfer essay asks why you are leaving SCAD and what you would gain at Penn.",
+    "bullets": [
+     "Best approach: Pick the College and one major first, then build all three Penn essays on one question: who owns the value people create, studied through history and economics.",
+     "Standout: A veteran with a fintech certificate and a written thesis on who owns AI, which gives PPE or Africana Studies a concrete research question.",
+     "Your reason: Unlimited Yellow Ribbon with Penn covering leftover tuition, a push to admit more veterans, and Philadelphia's civic and startup life."
+    ],
+    "gate": "Your reason: Unlimited Yellow Ribbon with Penn covering leftover tuition, a push to admit more veterans, and Philadelphia's civic and startup life.",
+    "rank": 21,
+    "rankReason": "No GPA line is published, testing was required last cycle with no score on file for you, and Penn expects one to two years of transferable work with half the degree at Penn. On numbers alone it sits just above Princeton.",
+    "stat": "Line: none published; testing required in 2025-26 with a hardship waiver. You: SCAD 3.33, pooled 3.18, no test score on file.",
+    "portal": "Not opened yet.",
+    "source": "",
+    "supplements": [
+     {
+      "title": "Transfer essay: why leave, why Penn",
+      "limit": "450 to 600 words",
+      "status": "Provisional; application not opened yet",
+      "kind": "pending",
+      "prompt": "Explain why you are leaving your current school and what you hope to gain by transferring to Penn.",
+      "guidance": [
+       "Choose the College of Arts and Sciences and one major before drafting. Penn reads the essay against that school.",
+       "The leaving reason should be about direction, not escape: you want Africana Studies, PPE or Science and Society, which SCAD does not offer.",
+       "Name two or three Penn courses or programs you would actually take, from the current catalog.",
+       "Use one piece of your record as proof of readiness, such as the Fall 2026 grades or the ownership-of-AI thesis.",
+       "Keep it distinct from the Georgetown and Vanderbilt transfer essays. Penn wants the Penn-specific version."
+      ],
+      "provenance": "From the school's official page, not from a screenshot. Confirm in the live application.",
+      "id": "penn-1"
+     },
+     {
+      "title": "Penn short answers",
+      "limit": "About 150 to 200 words each (last cycle)",
+      "status": "Provisional; application not opened yet",
+      "kind": "pending",
+      "prompt": "Penn's general short-answer prompts, which change each cycle. Capture them when you open the application.",
+      "guidance": [
+       "Screenshot the prompts when the application opens and replace this entry.",
+       "Last cycle's prompts asked about community and gratitude. Prepare one community story and one thank-you story now.",
+       "Your residence mentor role and your grandmother's ministry are both ready material.",
+       "Keep each answer to one example. These are short.",
+       "Confirm whether transfers answer the same prompts as first-year applicants."
+      ],
+      "provenance": "From the school's official page, not from a screenshot. Confirm in the live application.",
+      "id": "penn-2"
+     },
+     {
+      "title": "College of Arts and Sciences essay",
+      "limit": "About 150 to 200 words (last cycle)",
+      "status": "Provisional; application not opened yet",
+      "kind": "pending",
+      "prompt": "The school-specific prompt for the College: how you will explore your intellectual interests within the College.",
+      "guidance": [
+       "Name the major and one cross-school resource, such as SAFElab or a Wharton course, accurately.",
+       "Explain why the College and not Wharton or Engineering, since you cannot switch after admission.",
+       "Connect one question you already wrote about to one course you would take.",
+       "Avoid faculty name-dropping. Penn prefers concrete undergraduate resources.",
+       "Confirm the 2027 wording when the application opens."
+      ],
+      "provenance": "From the school's official page, not from a screenshot. Confirm in the live application.",
+      "id": "penn-3"
      }
     ]
    }
@@ -4710,7 +4882,7 @@
     }
    ]
   },
-  "inventoryNote": "Supplement prompts were read from your 37 screenshots dated November 10, which cover 16 active schools plus Columbia General Studies. Prompts are paraphrased with every required part kept. Yale, Georgetown, Dartmouth, Northeastern and SMU have no screenshots, so their entries are marked not captured or official page only. Always confirm wording and limits in the live application before drafting.",
+  "inventoryNote": "Supplement prompts were read from your 37 screenshots dated November 10, which cover 16 active schools plus Columbia General Studies, and from three Georgetown screenshots dated November 11. Prompts are paraphrased with every required part kept. You have not opened the Yale, Dartmouth or Penn applications yet, and Northeastern and SMU have no screenshots, so those entries are marked not captured or official page only. Always confirm wording and limits in the live application before drafting.",
   "benchSupplement": {
    "school": "Columbia General Studies",
    "title": "Autobiography",
@@ -4735,11 +4907,965 @@
    "eligible": 0
   },
   "whatMoves": [
-   "One 15-hour quarter of straight A work moves your SCAD GPA from 3.33 to about 3.56 and your pooled GPA to about 3.34.",
-   "At 3.56 recent GPA you clear the Cornell ILR 3.4 line and reach the 3.5 line that WashU, UVA and Williams use.",
+   "Your Fall 2026 midterms are A, A and A. If they hold as final grades, SCAD rises from 3.33 to 3.55 and pooled from 3.18 to 3.33, cut to two decimals the way registrars report.",
+   "Three more A grades in the Winter SCADpro courses would put SCAD at 3.66 and pooled at 3.44. Winter grades post in March, so they reach only the later deadlines.",
+   "At 3.55 recent GPA you clear the Cornell ILR 3.4 line and reach the 3.5 line that WashU, UVA and Williams use.",
    "Graded composition, statistics and economics courses matter more than any new project, because five schools name them.",
    "An official credit evaluation from SMU, UVA, Amherst and Notre Dame replaces estimates with real counts.",
    "Choosing the major at Northwestern, Wesleyan, Dartmouth, Williams and UChicago removes the largest unknown at each."
-  ]
+  ],
+  "record": {
+   "courses": [
+    {
+     "inst": "Broward",
+     "term": "Spring 2024",
+     "code": "ENC0017C",
+     "title": "Accelerated Literacy: Reading and Writing",
+     "cr": 4,
+     "unit": "SH",
+     "grade": "A",
+     "status": "final",
+     "note": "Developmental course (0-level number). Counted in Broward's GPA; most four-year schools do not transfer it."
+    },
+    {
+     "inst": "Broward",
+     "term": "Spring 2024",
+     "code": "MAC1105C",
+     "title": "Corequisite College Algebra",
+     "cr": 5,
+     "unit": "SH",
+     "grade": "W",
+     "status": "withdrawn",
+     "note": ""
+    },
+    {
+     "inst": "Broward",
+     "term": "Spring 2024",
+     "code": "SPC1608",
+     "title": "Public Speaking",
+     "cr": 3,
+     "unit": "SH",
+     "grade": "B",
+     "status": "final",
+     "note": ""
+    },
+    {
+     "inst": "Broward",
+     "term": "Summer 2024",
+     "code": "COP1000C",
+     "title": "Introduction to Computer Programming",
+     "cr": 3,
+     "unit": "SH",
+     "grade": "W",
+     "status": "withdrawn",
+     "note": ""
+    },
+    {
+     "inst": "Broward",
+     "term": "Summer 2024",
+     "code": "REL2300",
+     "title": "World Religions",
+     "cr": 3,
+     "unit": "SH",
+     "grade": "C",
+     "status": "final",
+     "note": "Writing credit."
+    },
+    {
+     "inst": "Broward",
+     "term": "Summer 2024",
+     "code": "POS2041",
+     "title": "National Government",
+     "cr": 3,
+     "unit": "SH",
+     "grade": "A",
+     "status": "final",
+     "note": "Writing credit."
+    },
+    {
+     "inst": "Broward",
+     "term": "Summer 2024",
+     "code": "PSY2012",
+     "title": "General Psychology",
+     "cr": 3,
+     "unit": "SH",
+     "grade": "B",
+     "status": "final",
+     "note": "Writing credit."
+    },
+    {
+     "inst": "Broward",
+     "term": "Summer 2024",
+     "code": "CJL1100",
+     "title": "Criminal Law",
+     "cr": 3,
+     "unit": "SH",
+     "grade": "A",
+     "status": "final",
+     "note": ""
+    },
+    {
+     "inst": "Broward",
+     "term": "Fall 2024",
+     "code": "BSC1005",
+     "title": "General Biology for Non-Majors",
+     "cr": 3,
+     "unit": "SH",
+     "grade": "W",
+     "status": "withdrawn",
+     "note": ""
+    },
+    {
+     "inst": "Broward",
+     "term": "Fall 2024",
+     "code": "CGS1060C",
+     "title": "Computer Literacy",
+     "cr": 3,
+     "unit": "SH",
+     "grade": "D",
+     "status": "final",
+     "note": ""
+    },
+    {
+     "inst": "Broward",
+     "term": "Fall 2024",
+     "code": "GEB2112",
+     "title": "Entrepreneurship",
+     "cr": 3,
+     "unit": "SH",
+     "grade": "W",
+     "status": "withdrawn",
+     "note": ""
+    },
+    {
+     "inst": "Broward",
+     "term": "Fall 2024",
+     "code": "MUL2010",
+     "title": "Music Appreciation",
+     "cr": 3,
+     "unit": "SH",
+     "grade": "W",
+     "status": "withdrawn",
+     "note": ""
+    },
+    {
+     "inst": "Broward",
+     "term": "Fall 2024",
+     "code": "SLS1001",
+     "title": "Strategies for Success",
+     "cr": 3,
+     "unit": "SH",
+     "grade": "W",
+     "status": "withdrawn",
+     "note": ""
+    },
+    {
+     "inst": "SCAD",
+     "term": "Spring 2026",
+     "code": "DIGI 130",
+     "title": "Digital Communication",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "B",
+     "status": "final",
+     "note": ""
+    },
+    {
+     "inst": "SCAD",
+     "term": "Spring 2026",
+     "code": "FOUN 111",
+     "title": "Sketching and Drawing",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "C",
+     "status": "final",
+     "note": "Studio course. Liberal-arts colleges may not transfer it."
+    },
+    {
+     "inst": "SCAD",
+     "term": "Spring 2026",
+     "code": "MATH 140",
+     "title": "The Geometry of Physical Space",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "A",
+     "status": "final",
+     "note": ""
+    },
+    {
+     "inst": "SCAD",
+     "term": "Summer 2026",
+     "code": "BUSI 110",
+     "title": "Business I: Fundamentals",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "A",
+     "status": "final",
+     "note": ""
+    },
+    {
+     "inst": "SCAD",
+     "term": "Summer 2026",
+     "code": "ENGL 142",
+     "title": "Foundations of Story",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "A",
+     "status": "final",
+     "note": ""
+    },
+    {
+     "inst": "SCAD",
+     "term": "Summer 2026",
+     "code": "FOUN 110",
+     "title": "Design: Thinking and Process",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "B",
+     "status": "final",
+     "note": "Studio course."
+    },
+    {
+     "inst": "SCAD",
+     "term": "Fall 2026",
+     "code": "AI 101",
+     "title": "Survey of AI Applications",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "A",
+     "status": "midterm",
+     "note": "Midterm grade from the portal, Nov 11. Not final."
+    },
+    {
+     "inst": "SCAD",
+     "term": "Fall 2026",
+     "code": "DIGI 230",
+     "title": "Ethics of Emerging Technology",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "A",
+     "status": "midterm",
+     "note": "Midterm grade from the portal, Nov 11. Not final."
+    },
+    {
+     "inst": "SCAD",
+     "term": "Fall 2026",
+     "code": "FOUN 112",
+     "title": "Color in Context",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "A",
+     "status": "midterm",
+     "note": "Midterm grade from the portal, Nov 11. Studio course."
+    },
+    {
+     "inst": "SCAD",
+     "term": "Winter 2027",
+     "code": "PRO 560",
+     "title": "SCADpro Research: SCAD Entrepreneurial Ecosystem",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "",
+     "status": "registered",
+     "note": "Registered. Credit hours not shown in the screenshot; 5 assumed, the SCAD standard. 500-level number: ask SCAD how it posts for an undergraduate."
+    },
+    {
+     "inst": "SCAD",
+     "term": "Winter 2027",
+     "code": "PRO 580",
+     "title": "SCADpro Collaboration: Deloitte, Control Interface for LA28 Olympics",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "",
+     "status": "registered",
+     "note": "Registered. 5 credit hours assumed. A real client brief with Deloitte."
+    },
+    {
+     "inst": "SCAD",
+     "term": "Winter 2027",
+     "code": "PRO 580",
+     "title": "SCADpro Collaboration: Military World Games",
+     "cr": 5,
+     "unit": "QH",
+     "grade": "",
+     "status": "registered",
+     "note": "Registered. 5 credit hours assumed. Directly connects to your service."
+    }
+   ],
+   "gp": {
+    "A": 4.0,
+    "A-": 3.7,
+    "B+": 3.3,
+    "B": 3.0,
+    "B-": 2.7,
+    "C+": 2.3,
+    "C": 2.0,
+    "C-": 1.7,
+    "D+": 1.3,
+    "D": 1.0,
+    "F": 0.0
+   },
+   "ace": [
+    {
+     "what": "Basic Combat Training (ACE AR-2201-0399), 1 Mar to 16 Apr 2021",
+     "credit": "6 semester hours recommended, lower division: First Aid and CPR 2, Land Navigation 1, Marksmanship 1, Physical Fitness 1, Self-Defense 1.",
+     "note": "Recommendations, not grades. Most selective schools grant none of it, or count it only as physical education elective credit."
+    }
+   ],
+   "service": {
+    "branch": "U.S. Army",
+    "rank": "Private 2 (E-2), per the JST",
+    "lines": [
+     "MOS 12D10, Diver (Engineer branch), listed as primary from 1 Dec 2020.",
+     "Reception Battalion record dated 15 Jan 2021 at the U.S. Army Training Center, Fort Leonard Wood, Missouri.",
+     "Basic Combat Training completed 1 Mar to 16 Apr 2021.",
+     "MOS 68W10, Health Care Specialist (combat medic), listed as primary from 9 Jun 2021."
+    ],
+    "flags": [
+     "Your resume says Combat Engineer training. The JST shows the Engineer-branch Diver specialty, then a change to Health Care Specialist. Use the wording your DD-214 supports, and keep it identical across every application.",
+     "The JST shows status Active as of October 2025. Admissions offices will read your DD-214, not the JST, for separation date and characterization. Have the DD-214 in hand before you describe your service dates.",
+     "ROTC eligibility depends on facts that are not on the JST: characterization of service, reentry (RE) code, separation reason and medical history. They are on the DD-214 and in your medical record."
+    ],
+    "source": "Joint Services Transcript, unofficial, 2025-10-27."
+   },
+   "other": {
+    "highSchool": "Byron Nelson High School, graduated June 2019 (from the Broward record).",
+    "placement": "Broward placement scores from 26 Nov 2023: English 251, Math 263, Reading 286.",
+    "civics": "Florida Civic Literacy competency met.",
+    "honors": [
+     "Broward Honor Roll, Summer 2024",
+     "Phi Theta Kappa (resume)",
+     "SCAD Dean's List, Summer 2026"
+    ],
+    "programs": "Broward lists the Associate in Arts program in Spring and Fall 2024 and the AS in Aviation Maintenance in Summer 2024. SCAD lists the Bachelor of Design with the major as Robotics, Interactive Design and Game Development and the minor as Applied AI, while the term rows show Applied AI and then Robotics. Ask SCAD's registrar which is official before you write it on an application."
+   },
+   "timeline": [
+    [
+     "2019-06",
+     "Byron Nelson High School diploma.",
+     "record"
+    ],
+    [
+     "2020-12",
+     "Army: Diver (12D) specialty assigned.",
+     "record"
+    ],
+    [
+     "2021-01",
+     "Reception Battalion, Fort Leonard Wood.",
+     "record"
+    ],
+    [
+     "2021-04",
+     "Basic Combat Training complete.",
+     "record"
+    ],
+    [
+     "2021-06",
+     "Specialty changes to Health Care Specialist (68W).",
+     "record"
+    ],
+    [
+     "2022",
+     "Security Officer II, GardaWorld, St. Louis Lambert airport (through 2023).",
+     "resume"
+    ],
+    [
+     "2023-11",
+     "Broward placement testing.",
+     "record"
+    ],
+    [
+     "2024-01",
+     "Broward College starts. Spring GPA 3.57.",
+     "record"
+    ],
+    [
+     "2024-08",
+     "Summer term GPA 3.25, Honor Roll. Cumulative 3.36.",
+     "record"
+    ],
+    [
+     "2024-12",
+     "Fall term: four withdrawals and a D. Broward closes at 3.04.",
+     "record"
+    ],
+    [
+     "2025-01",
+     "Nonprofit canvassing for CARE, AARP Foundation and World Vision (through November).",
+     "resume"
+    ],
+    [
+     "2026-03",
+     "SCAD starts. Spring GPA 3.00. Dining job begins.",
+     "record"
+    ],
+    [
+     "2026-08",
+     "SCAD Summer GPA 3.66, Dean's List. Cumulative 3.33.",
+     "record"
+    ],
+    [
+     "2026-09",
+     "SCADhome mentor, student government run, Service to School.",
+     "resume"
+    ],
+    [
+     "2026-11",
+     "Fall midterms A, A, A. Applications open.",
+     "portal"
+    ],
+    [
+     "2027-01",
+     "Winter: three SCADpro studios, including Deloitte and the Military World Games.",
+     "registered"
+    ],
+    [
+     "2027-03",
+     "Most transfer deadlines (Feb 15 to Apr 15).",
+     "projection"
+    ],
+    [
+     "2027-06",
+     "Spring grades post. Final transcripts go to the school you choose.",
+     "projection"
+    ],
+    [
+     "2027-08",
+     "Transfer entry, age 26.",
+     "projection"
+    ],
+    [
+     "2029-05",
+     "Earliest graduation if you enter as a junior, age 28.",
+     "projection"
+    ],
+    [
+     "2030-05",
+     "Graduation if you enter as a sophomore, age 29.",
+     "projection"
+    ]
+   ],
+   "notes": [
+    "SCAD uses quarter hours. One quarter hour is two thirds of a semester hour, so 30 quarter hours equal 20 semester hours.",
+    "Withdrawals carry no grade points in Broward's GPA. Some schools still count them when they judge your record, and Yale's contact named them directly.",
+    "Schools recompute GPA their own way. The scenarios here show the most common methods, not any school's official number.",
+    "A school that drops developmental courses removes your A in ENC0017C, which lowers the Broward side."
+   ],
+   "birthYear": 2001,
+   "birthMonth": 3,
+   "source": "Broward unofficial transcript 2025-01-14; SCAD unofficial transcript 2026-10-03; SCAD portal 2026-11-11; JST 2025-10-27."
+  },
+  "military": {
+   "rules": {
+    "summary": "Army ROTC and Air Force ROTC are realistic on age. Navy and Marine Corps ROTC almost certainly are not. The real gate for any branch is your DD-214: characterization of service, reentry code and separation reason.",
+    "you": [
+     "Age: 26 at entry in Fall 2027, 28 at a May 2029 commission (entering as a junior) or 29 at May 2030 (entering as a sophomore).",
+     "Prior service: Basic Combat Training is complete (JST), which is what usually earns placement credit for the first two years of Army ROTC. You would likely start in the two-year advanced course as a junior.",
+     "Record: JST shows Private 2 with two specialty codes. ROTC staff will ask for the DD-214 and your medical history before they can contract you."
+    ],
+    "branches": [
+     {
+      "branch": "Army ROTC",
+      "verdict": "Realistic",
+      "age": "Scholarship cadets generally must commission before age 31. You would be 28 or 29. Age waivers exist beyond that.",
+      "prior": "Veterans usually receive placement credit for the basic course and contract straight into the advanced course.",
+      "gate": "University ROTC pages commonly require reentry code RE-1. Forum reports say RE-3 can be waived only at the Cadet Command level and RE-4 is generally disqualifying. Confirm with a battalion recruiter.",
+      "extra": "The Simultaneous Membership Program lets a cadet drill in the Army Reserve or Guard while in ROTC, which adds pay and a unit."
+     },
+     {
+      "branch": "Air Force ROTC (and Space Force)",
+      "verdict": "Realistic, check the scholarship line",
+      "age": "Scholarship cadets must be under 31 on December 31 of the commissioning year. Non-scholarship, non-flying cadets have a higher ceiling (sources say 39). Pilot and other flying slots have lower, non-waivable limits.",
+      "prior": "Other-service veterans can apply. The detachment decides how much of the first two years you can skip.",
+      "gate": "Same DD-214 questions: characterization, reentry code, separation reason, plus a DoDMERB medical review.",
+      "extra": "Yale, Princeton (through Rutgers) and UChicago all point students to Space Force commissions through AFROTC."
+     },
+     {
+      "branch": "Navy and Marine Corps ROTC",
+      "verdict": "Likely closed by age",
+      "age": "Generally under 27 at commissioning. Prior active duty earns a month-for-month waiver capped at 36 months, and several units cap the waived age near 29 or 30.",
+      "prior": "Your active time on the JST is under a year, so the waiver would not cover a 28 or 29 commission.",
+      "gate": "Ask only if a unit tells you in writing that a waiver fits your dates.",
+      "extra": "Navy units still matter as community: Northwestern, Rice, Penn, Vanderbilt and Yale host one."
+     }
+    ],
+    "money": [
+     "A tuition scholarship from ROTC and the Post-9/11 GI Bill do not simply add together. When one pays tuition, the other usually pays less. Ask the school's VA certifying official to run both before you contract.",
+     "Yellow Ribbon requires 100% Post-9/11 eligibility at most schools. Your eligibility tier depends on qualifying active days, which the VA Certificate of Eligibility states. Get the certificate early.",
+     "Your notes say VR&E (Chapter 31) pays like the Post-9/11 GI Bill on your calls. VR&E and Yellow Ribbon do not combine the same way, so ask each aid office how they treat Chapter 31.",
+     "A contracted cadet owes service after commissioning, typically several years on active duty or longer in the Reserve or Guard. Weigh that against law school timing."
+    ],
+    "sources": [
+     [
+      "University of Portland Army ROTC, veterans",
+      "https://www.up.edu/armyrotc/veterans/index.html"
+     ],
+     [
+      "Pacific Lutheran ROTC, prior service",
+      "https://plu.edu/rotc/veterans"
+     ],
+     [
+      "NETC NROTC requirements",
+      "https://www.netc.navy.mil/Commands/Naval-Service-Training-Command/NROTC/Requirements/Marine"
+     ],
+     [
+      "Marquette NROTC FAQ",
+      "https://marquette.edu/navy-rotc/frequently-asked-questions.php"
+     ],
+     [
+      "Ole Miss AFROTC eligibility",
+      "https://olemiss.edu/afrotc/eligibility/"
+     ],
+     [
+      "Posse Veterans Program",
+      "https://www.possefoundation.org/veterans-program"
+     ]
+    ]
+   },
+   "schools": {
+    "brown": {
+     "army": [
+      "cross",
+      "Providence College (Patriot Battalion), a short drive. Brown lists the classes as non-credit."
+     ],
+     "navy": [
+      "cross",
+      "College of the Holy Cross, Worcester, about an hour away."
+     ],
+     "af": [
+      "cross",
+      "Worcester Polytechnic Institute, about an hour away."
+     ],
+     "vets": "Separate Veterans Application with no fee, need-blind admission for veterans, unlimited Yellow Ribbon, and a VetLink partnership.",
+     "unique": "Brown has the strongest veteran admission pathway on your list, but the weakest ROTC logistics: every unit is off campus and Worcester is a long commute.",
+     "conf": "medium",
+     "src": "https://www.browndailyherald.com/article/2021/10/rotc-students-reflect-10-years-after-programs-return-to-brown",
+     "projection": "Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 4
+    },
+    "cornell": {
+     "army": [
+      "campus",
+      "Army ROTC on campus."
+     ],
+     "navy": [
+      "campus",
+      "Naval ROTC on campus."
+     ],
+     "af": [
+      "campus",
+      "Air Force ROTC on campus."
+     ],
+     "vets": "Yellow Ribbon, a veteran admissions pathway that can waive some documents, and the Veterans Summer Bridge (your research).",
+     "unique": "One of the few Ivies with all three units on campus, and ILR studies the labor and organizational side of military life.",
+     "conf": "medium",
+     "src": "https://www.militaryspot.com/news/rotc-making-a-comeback-at-ivy-league-schools",
+     "projection": "Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 6
+    },
+    "nd": {
+     "army": [
+      "campus",
+      "Army ROTC on campus."
+     ],
+     "navy": [
+      "campus",
+      "Naval ROTC on campus."
+     ],
+     "af": [
+      "campus",
+      "Air Force ROTC on campus."
+     ],
+     "vets": "Yellow Ribbon (about $30,000 a year with a 100% GI Bill, from your call), VetLink and Warrior-Scholar Project ties.",
+     "unique": "The most ROTC-dense campus on your list, with a Catholic service culture. Your faith and service story fit here without translation.",
+     "conf": "medium",
+     "src": "https://www.collegevine.com/faq/23370/universities-with-rotc-programs",
+     "projection": "Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 6
+    },
+    "yale": {
+     "army": [
+      "unclear",
+      "Yale cadets have commissioned into the Army recently, but the host battalion was not confirmed in this search."
+     ],
+     "navy": [
+      "campus",
+      "Naval ROTC on campus since 2012."
+     ],
+     "af": [
+      "campus",
+      "Air Force ROTC Detachment 009 on campus, with a Space Force path."
+     ],
+     "vets": "Eli Whitney program for nontraditional students. Your notes: about 60 Yale College veterans and more than 100 undergraduates in ROTC as of late 2025.",
+     "unique": "The Warrior-Scholar Project began at Yale, and you are already a Warrior-Scholar. Eli Whitney plus AFROTC on campus is a rare pairing for an adult veteran.",
+     "conf": "medium",
+     "src": "https://yalecollege.yale.edu/academics/special-academic-programs/reserve-officers-training-corps-rotc",
+     "projection": "Best path: Air Force ROTC on campus, if the detachment accepts your prior service. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 4
+    },
+    "princeton": {
+     "army": [
+      "campus",
+      "Army Tiger Battalion, on campus since 1919, the longest continuously running ROTC program in the country."
+     ],
+     "navy": [
+      "cross",
+      "Naval ROTC through Rutgers, re-established for Princeton in 2014."
+     ],
+     "af": [
+      "cross",
+      "Air Force ROTC through Rutgers, including a Space Force option."
+     ],
+     "vets": "Princeton's transfer program recruits veterans. Your notes: 66 students in ROTC in 2024-25 and the first two Space Force commissions in the Class of 2026.",
+     "unique": "Army ROTC on campus at a school whose transfer program exists partly for veterans. ROTC here is a community, not a commute.",
+     "conf": "high",
+     "src": "https://admission.princeton.edu/community/rotc",
+     "projection": "Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 5
+    },
+    "tufts": {
+     "army": [
+      "cross",
+      "MIT (Paul Revere Battalion)."
+     ],
+     "navy": [
+      "cross",
+      "MIT."
+     ],
+     "af": [
+      "cross",
+      "MIT."
+     ],
+     "vets": "REAL program for adult and veteran students, Yellow Ribbon $5,000 a year matched by the VA, and a Tufts ROTC Support Program.",
+     "unique": "All three units are a subway ride away at MIT, but older reporting says Tufts gives no academic credit for ROTC classes.",
+     "conf": "medium",
+     "src": "https://students.tufts.edu/specialized-academic-programs/tufts-rotc-support-program",
+     "projection": "Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 4
+    },
+    "washu": {
+     "army": [
+      "campus",
+      "Gateway Battalion, hosted by WashU. It won the first DoD ROTC partnership excellence award in 2021."
+     ],
+     "navy": [
+      "none",
+      "No Navy unit found in St. Louis."
+     ],
+     "af": [
+      "cross",
+      "Detachment 207 at Saint Louis University, nearby."
+     ],
+     "vets": "WashU's veterans site lists a Posse Veterans Program page: confirm whether WashU is a current partner.",
+     "unique": "Gateway Battalion cadets train at Fort Leonard Wood, where you did basic training. St. Louis is also your family's ground.",
+     "conf": "medium",
+     "src": "https://rotc.wustl.edu/about",
+     "projection": "Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 5
+    },
+    "nu": {
+     "army": [
+      "cross",
+      "Loyola University Chicago battalion."
+     ],
+     "navy": [
+      "campus",
+      "Naval ROTC on campus (Northwestern's own unit)."
+     ],
+     "af": [
+      "cross",
+      "University of Chicago, Detachment 195."
+     ],
+     "vets": "Veteran and ROTC admissions page and Yellow Ribbon (amount not confirmed in this search). GAO data show about 6 ROTC students a year.",
+     "unique": "The on-campus unit is Navy, which your age likely rules out. Army and Air Force mean commuting into Chicago.",
+     "conf": "high",
+     "src": "https://catalogs.northwestern.edu/undergraduate/special-programs-courses/military-programs/",
+     "projection": "Best path: Army ROTC cross-town, so plan the weekly travel before you contract. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 4
+    },
+    "gt": {
+     "army": [
+      "campus",
+      "Hoya Battalion, on campus since 1918. Cadet Command ranked it first of 272 in 2012."
+     ],
+     "navy": [
+      "cross",
+      "George Washington University."
+     ],
+     "af": [
+      "unclear",
+      "Cross-town; the host detachment was not confirmed in this search."
+     ],
+     "vets": "Yellow Ribbon with a full match in the College per your dossier, and a military and veteran resource office.",
+     "unique": "A top Army battalion plus the School of Foreign Service in Washington: the closest link on your list between ROTC and policy careers.",
+     "conf": "medium",
+     "src": "https://rotc.georgetown.edu/",
+     "projection": "Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 4
+    },
+    "vandy": {
+     "army": [
+      "campus",
+      "Army ROTC hosted at Vanderbilt."
+     ],
+     "navy": [
+      "campus",
+      "Naval ROTC hosted at Vanderbilt, across from the Peabody campus."
+     ],
+     "af": [
+      "cross",
+      "Detachment 790 at Tennessee State, about 10 minutes away."
+     ],
+     "vets": "The VA certifying official works through the registrar. Yellow Ribbon amounts vary by school, so get a written estimate.",
+     "unique": "The Navy unit sits across the street from Peabody, where Human and Organizational Development lives, and commissions are joint with nearby schools.",
+     "conf": "medium",
+     "src": "https://news.vanderbilt.edu/2024/06/04/vanderbilts-joint-commissioning-ceremony-celebrates-class-of-2024-with-fanfare-and-inspiration/",
+     "projection": "Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 5
+    },
+    "williams": {
+     "army": [
+      "unclear",
+      "No confirmed arrangement. Siena College hosts Army ROTC in the region but no Williams link was found."
+     ],
+     "navy": [
+      "none",
+      "No Navy arrangement found."
+     ],
+     "af": [
+      "cross",
+      "GAO lists an Air Force cross-town unit; the host was not named."
+     ],
+     "vets": "Williams encourages veterans to apply and has a page in the Service to School VetLink guidebook.",
+     "unique": "A small residential college where ROTC would be mostly self-directed. Choose Williams for the classroom, not the corps.",
+     "conf": "low",
+     "src": "https://files.gao.gov/interactive/data/105857/Williams_College.html",
+     "projection": "Best path: Air Force ROTC cross-town. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 3
+    },
+    "wesleyan": {
+     "army": [
+      "cross",
+      "University of Connecticut (older accounts)."
+     ],
+     "navy": [
+      "none",
+      "No Navy arrangement found."
+     ],
+     "af": [
+      "cross",
+      "Yale's Detachment 009 in New Haven, with no extra tuition."
+     ],
+     "vets": "Wesleyan was the second Posse Veterans Program partner (2014). Confirm it still enrolls a veterans posse.",
+     "unique": "A history of bringing veterans in as a cohort, which matters more here than ROTC, since GAO counts almost no Wesleyan cadets.",
+     "conf": "medium",
+     "src": "https://www.wesleyan.edu/registrar/ROTC/Index.html",
+     "projection": "Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 4
+    },
+    "amherst": {
+     "army": [
+      "cross",
+      "UMass Amherst, through the Five College area."
+     ],
+     "navy": [
+      "none",
+      "No Navy arrangement found."
+     ],
+     "af": [
+      "cross",
+      "UMass Amherst, Detachment 370."
+     ],
+     "vets": "Your dossier lists Posse Veterans and VetLink, unverified. GAO counts about half a cadet a year from Amherst.",
+     "unique": "UMass is next door and hosts both Army and Air Force, so ROTC is practical even at a tiny college.",
+     "conf": "medium",
+     "src": "https://files.gao.gov/interactive/data/105857/Amherst_College.html",
+     "projection": "Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 4
+    },
+    "usc": {
+     "army": [
+      "campus",
+      "Army ROTC on campus."
+     ],
+     "navy": [
+      "campus",
+      "Naval ROTC on campus."
+     ],
+     "af": [
+      "campus",
+      "Air Force ROTC on campus."
+     ],
+     "vets": "Unlimited undergraduate Yellow Ribbon, a Veterans Resource Center, and a certification office that handles Chapter 33, VR&E and Yellow Ribbon.",
+     "unique": "One of about 60 universities hosting all three units. Iovine and Young plus on-campus ROTC is a rare mix of studio work and service.",
+     "conf": "high",
+     "src": "https://military.usc.edu/students/rotc/",
+     "projection": "Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 6
+    },
+    "smu": {
+     "army": [
+      "cross",
+      "University of Texas at Arlington, or its extension at UNT."
+     ],
+     "navy": [
+      "none",
+      "No Navy arrangement found."
+     ],
+     "af": [
+      "cross",
+      "University of North Texas, Denton, about 45 minutes away."
+     ],
+     "vets": "Yellow Ribbon guarantees 100% tuition for eligible Post-9/11 veterans. SMU gives housing and dining to full-tuition ROTC scholarship holders.",
+     "unique": "Your SMU fintech certificate gives you a history here, and the ROTC housing award could matter for the full-scholarship gate.",
+     "conf": "high",
+     "src": "https://www.smu.edu/news/archives/2021/featured-news/smu-offers-full-room-and-board-scholarships-to-rotc-students",
+     "projection": "Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 4
+    },
+    "unc": {
+     "army": [
+      "campus",
+      "Army ROTC on campus."
+     ],
+     "navy": [
+      "campus",
+      "Naval ROTC on campus."
+     ],
+     "af": [
+      "campus",
+      "Air Force ROTC on campus."
+     ],
+     "vets": "In-state tuition by law for veterans using Post-9/11 or Chapter 30, plus Yellow Ribbon.",
+     "unique": "Close to Fort Bragg and a large military community, with all three units and in-state pricing for you as a veteran.",
+     "conf": "low",
+     "src": "https://admissions.unc.edu/apply/military-and-veterans/",
+     "projection": "Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 6
+    },
+    "uva": {
+     "army": [
+      "campus",
+      "Army ROTC on campus."
+     ],
+     "navy": [
+      "campus",
+      "Naval ROTC on campus."
+     ],
+     "af": [
+      "campus",
+      "Air Force ROTC on campus."
+     ],
+     "vets": "UVA appears on the current Posse Veterans partner list. Yellow Ribbon is first come, first served.",
+     "unique": "The only school on your list with a current Posse Veterans listing, which brings a funded veteran cohort.",
+     "conf": "medium",
+     "src": "https://www.possefoundation.org/veterans-program",
+     "projection": "Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 6
+    },
+    "rice": {
+     "army": [
+      "cross",
+      "University of Houston. Rice gives credit for the classes."
+     ],
+     "navy": [
+      "campus",
+      "Naval ROTC hosted at Rice."
+     ],
+     "af": [
+      "cross",
+      "University of Houston."
+     ],
+     "vets": "Rice Military Veterans association, VetLink and Yellow Ribbon per your dossier.",
+     "unique": "Rice gives academic credit for military science taken at Houston, and aid can follow the ROTC courses.",
+     "conf": "medium",
+     "src": "https://ga.rice.edu/programs-study/departments-programs/interdisciplinary/military-science/",
+     "projection": "Best path: Army ROTC cross-town, so plan the weekly travel before you contract. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 4
+    },
+    "dartmouth": {
+     "army": [
+      "campus",
+      "Delta Company, part of the Wildcat Battalion at UNH, staffed on campus."
+     ],
+     "navy": [
+      "none",
+      "Not available. Navy and Marine Corps are not expanding to Dartmouth."
+     ],
+     "af": [
+      "none",
+      "Not available."
+     ],
+     "vets": "Unlimited Yellow Ribbon, a veteran coordinator, VetLink, and Posse Veterans partner since 2016 (confirm current status).",
+     "unique": "President Beilock announced an ROTC and veteran-support expansion on Veterans Day 2025, so you would arrive during a build-out.",
+     "conf": "high",
+     "src": "https://student-affairs.dartmouth.edu/departments-programs/programs/rotc-dartmouth",
+     "projection": "Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 3
+    },
+    "northeastern": {
+     "army": [
+      "campus",
+      "Liberty Battalion, hosted at Northeastern."
+     ],
+     "navy": [
+      "cross",
+      "Cross-town in Boston."
+     ],
+     "af": [
+      "cross",
+      "Boston University, Detachment 355."
+     ],
+     "vets": "CAVS veteran center and automatic unlimited Yellow Ribbon for 100% Post-9/11 undergraduates (your research).",
+     "unique": "Co-op plus an on-campus Army battalion: you could hold a paid co-op and stay in ROTC in the same city.",
+     "conf": "medium",
+     "src": "https://rotc.northeastern.edu/prospective-and-current-college-students/",
+     "projection": "Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 5
+    },
+    "uchicago": {
+     "army": [
+      "unclear",
+      "UChicago has Army cadets; the host battalion was not confirmed in this search."
+     ],
+     "navy": [
+      "unclear",
+      "Not confirmed."
+     ],
+     "af": [
+      "campus",
+      "Detachment 195, hosted at UChicago since its recent activation, with a Space Force path."
+     ],
+     "vets": "Unlimited Yellow Ribbon and a fifth-partner listing with the Posse Veterans Program (confirm current status).",
+     "unique": "A new Air Force detachment on campus means a small, young unit where a prior-service cadet would stand out.",
+     "conf": "medium",
+     "src": "https://college.uchicago.edu/student-life/rotc-programs-offer-college-students-pathways-and-training-future-military-leadership",
+     "projection": "Best path: Air Force ROTC on campus, if the detachment accepts your prior service. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 4
+    },
+    "penn": {
+     "army": [
+      "cross",
+      "Drexel, which absorbed Penn's Army program in the 1990s."
+     ],
+     "navy": [
+      "campus",
+      "Naval ROTC hosted at Penn with Temple and Drexel."
+     ],
+     "af": [
+      "cross",
+      "Cross-town; the host detachment was not confirmed in this search."
+     ],
+     "vets": "Unlimited undergraduate Yellow Ribbon, and Penn pays tuition left after the GI Bill for 100% eligible veterans. A March 2026 report counted only five veterans in the traditional undergraduate college, alongside a new push to admit more.",
+     "unique": "Penn is actively trying to grow its veteran undergraduate count, so a strong veteran file arrives at a useful moment.",
+     "conf": "medium",
+     "src": "https://penntoday.upenn.edu/news/penn-expands-yellow-ribbon-program-veterans",
+     "projection": "Best path: Army ROTC cross-town, so plan the weekly travel before you contract. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.",
+     "access": 4
+    }
+   },
+   "updated": "2026-11-11"
+  }
  }
 }

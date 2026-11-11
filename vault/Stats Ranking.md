@@ -27,11 +27,13 @@ This order ignores acceptance rates, as if every school admitted the same share 
 | 18 | [[Schools/UChicago|UChicago]] | Line: none official; about 3.75 in advisory sources. You: SCAD 3.33, pooled 3.18. |
 | 19 | [[Schools/Notre Dame|Notre Dame]] | Line: 3.75 average for recent admits, 24 transferable credits. You: SCAD 3.33 is 0.42 under; pooled 3.18 is 0.57 under. |
 | 20 | [[Schools/USC Iovine and Young|USC Iovine and Young]] | Line: 3.70 to 3.97 for admitted transfers. You: SCAD 3.33 is 0.37 under the bottom of the range. |
-| 21 | [[Schools/Princeton|Princeton]] | Line: none published. You: SCAD 3.33, pooled 3.18; credit threshold and graded paper are the gates. |
+| 21 | [[Schools/Penn|Penn]] | Line: none published; testing required in 2025-26 with a hardship waiver. You: SCAD 3.33, pooled 3.18, no test score on file. |
+| 22 | [[Schools/Princeton|Princeton]] | Line: none published. You: SCAD 3.33, pooled 3.18; credit threshold and graded paper are the gates. |
 
 ## What would move this order
-- One 15-hour quarter of straight A work moves your SCAD GPA from 3.33 to about 3.56 and your pooled GPA to about 3.34.
-- At 3.56 recent GPA you clear the Cornell ILR 3.4 line and reach the 3.5 line that WashU, UVA and Williams use.
+- Your Fall 2026 midterms are A, A and A. If they hold as final grades, SCAD rises from 3.33 to 3.55 and pooled from 3.18 to 3.33, cut to two decimals the way registrars report.
+- Three more A grades in the Winter SCADpro courses would put SCAD at 3.66 and pooled at 3.44. Winter grades post in March, so they reach only the later deadlines.
+- At 3.55 recent GPA you clear the Cornell ILR 3.4 line and reach the 3.5 line that WashU, UVA and Williams use.
 - Graded composition, statistics and economics courses matter more than any new project, because five schools name them.
 - An official credit evaluation from SMU, UVA, Amherst and Notre Dame replaces estimates with real counts.
 - Choosing the major at Northwestern, Wesleyan, Dartmouth, Williams and UChicago removes the largest unknown at each.

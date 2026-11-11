@@ -82,11 +82,24 @@ Notre Dame matches your faith, service and veteran commitments more closely than
 - Standout: Faith, service and veteran identity together, plus a stated aim of law school and veteran legal work.
 - Your reason: A mission built on service and the common good, a veterans law clinic, and aid that can cover full cost at your income level.
 
-**Stats-only order:** 19 of 21. Notre Dame says recent admitted transfers averaged 3.75 or higher. You are 0.42 under on SCAD and 0.57 under pooled.
+**Stats-only order:** 19 of 22. Notre Dame says recent admitted transfers averaged 3.75 or higher. You are 0.42 under on SCAD and 0.57 under pooled.
 
 **Numbers:** Line: 3.75 average for recent admits, 24 transferable credits. You: SCAD 3.33 is 0.42 under; pooled 3.18 is 0.57 under.
 
 **Check first:** Recent admitted transfers average 3.75+; verify intended-major capacity and transferable prerequisites.
+
+## Military and ROTC
+- Army: On campus. Army ROTC on campus.
+- Air Force: On campus. Air Force ROTC on campus.
+- Navy: On campus. Naval ROTC on campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** The most ROTC-dense campus on your list, with a Catholic service culture. Your faith and service story fit here without translation.
+
+**Veteran side:** Yellow Ribbon (about $30,000 a year with a 100% GI Bill, from your call), VetLink and Warrior-Scholar Project ties.
+
+_Confidence: medium. Source: https://www.collegevine.com/faq/23370/universities-with-rotc-programs_
 
 ## Supplements and guidance (6)
 

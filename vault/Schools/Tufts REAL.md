@@ -78,11 +78,24 @@ Tufts REAL is built for adults and veterans returning to college, so your path r
 - Standout: You returned to college after service and hardship and reached the Dean's List within two terms, which is the story REAL exists to read.
 - Your reason: An adult pathway with advising from admission to graduation, need-based aid that meets full need, and civic technology study.
 
-**Stats-only order:** 6 of 21. REAL reads an adult or veteran record in context and publishes no GPA line. Two academic recommendations and recent coursework carry the weight.
+**Stats-only order:** 6 of 22. REAL reads an adult or veteran record in context and publishes no GPA line. Two academic recommendations and recent coursework carry the weight.
 
 **Numbers:** Line: none published for REAL. You: SCAD 3.33, pooled 3.18; eligibility, recent coursework and two instructor letters decide it.
 
 **Check first:** Verify REAL eligibility and Arts & Sciences degree choice; do not assume access to a BFA route.
+
+## Military and ROTC
+- Army: Cross-town. MIT (Paul Revere Battalion).
+- Air Force: Cross-town. MIT.
+- Navy: Cross-town. MIT.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** All three units are a subway ride away at MIT, but older reporting says Tufts gives no academic credit for ROTC classes.
+
+**Veteran side:** REAL program for adult and veteran students, Yellow Ribbon $5,000 a year matched by the VA, and a Tufts ROTC Support Program.
+
+_Confidence: medium. Source: https://students.tufts.edu/specialized-academic-programs/tufts-rotc-support-program_
 
 ## Supplements and guidance (2)
 

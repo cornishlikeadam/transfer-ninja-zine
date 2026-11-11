@@ -78,13 +78,26 @@ The Iovine and Young Academy is the closest match to how you actually work: desi
 - Standout: A shipped client platform, 34 public repositories and an SMU financial technology certificate: evidence that you build and finish.
 - Your reason: It is the degree that looks most like your practice, with unlimited Yellow Ribbon for eligible veterans.
 
-**Stats-only order:** 20 of 21. USC's admitted transfer GPA range was 3.70 to 3.97 school-wide, not Academy-specific. You are below the bottom of that range and the degree is sequential.
+**Stats-only order:** 20 of 22. USC's admitted transfer GPA range was 3.70 to 3.97 school-wide, not Academy-specific. You are below the bottom of that range and the degree is sequential.
 
 **Numbers:** Line: 3.70 to 3.97 for admitted transfers. You: SCAD 3.33 is 0.37 under the bottom of the range.
 
 **Check first:** Confirm IYA transfer materials and three-to-four-year sequential degree implications.
 
 **In your portal now:** Your portal lists Arts, Technology and the Business of Innovation first and Human Technology Interaction second, and requires a portfolio.
+
+## Military and ROTC
+- Army: On campus. Army ROTC on campus.
+- Air Force: On campus. Air Force ROTC on campus.
+- Navy: On campus. Naval ROTC on campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** One of about 60 universities hosting all three units. Iovine and Young plus on-campus ROTC is a rare mix of studio work and service.
+
+**Veteran side:** Unlimited undergraduate Yellow Ribbon, a Veterans Resource Center, and a certification office that handles Chapter 33, VR&E and Yellow Ribbon.
+
+_Confidence: high. Source: https://military.usc.edu/students/rotc/_
 
 ## Supplements and guidance (20)
 

@@ -78,11 +78,24 @@ UVA fits your wish to study how communities use and govern systems, through a li
 - Standout: Top grades in government and law courses, and a record of listening before deciding as a residence mentor.
 - Your reason: A public university with a strong honor culture and veteran community, and a route into policy and law.
 
-**Stats-only order:** 12 of 21. Guides attribute an admitted transfer average near 3.5 to UVA, and UVA requires 24 transferable semester hours plus one full year. You are about 0.2 to 0.3 under on GPA.
+**Stats-only order:** 12 of 22. Guides attribute an admitted transfer average near 3.5 to UVA, and UVA requires 24 transferable semester hours plus one full year. You are about 0.2 to 0.3 under on GPA.
 
 **Numbers:** Line: about 3.5 average (third-party), 24 transferable hours. You: SCAD 3.33, pooled 3.18; transferable count needs UVA's evaluation.
 
 **Check first:** Arts & Sciences preparation and composition equivalency require review; geometry is not statistics.
+
+## Military and ROTC
+- Army: On campus. Army ROTC on campus.
+- Air Force: On campus. Air Force ROTC on campus.
+- Navy: On campus. Naval ROTC on campus.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** The only school on your list with a current Posse Veterans listing, which brings a funded veteran cohort.
+
+**Veteran side:** UVA appears on the current Posse Veterans partner list. Yellow Ribbon is first come, first served.
+
+_Confidence: medium. Source: https://www.possefoundation.org/veterans-program_
 
 ## Supplements and guidance (2)
 

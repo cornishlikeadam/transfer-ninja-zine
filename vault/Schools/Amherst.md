@@ -66,11 +66,24 @@ Amherst's second essay asks directly for the life experiences that shaped you, w
 - Standout: You have already spoken with Amherst admissions, and your story of service, setback and return fits its stated interest in personal context.
 - Your reason: An open curriculum with Black Studies, need-based aid, and a history of enrolling veterans.
 
-**Stats-only order:** 17 of 21. Amherst asks for 32 transferable liberal-arts credits and describes competitive transfers at about an A-minus average. Design studio credits may not count as liberal arts.
+**Stats-only order:** 17 of 22. Amherst asks for 32 transferable liberal-arts credits and describes competitive transfers at about an A-minus average. Design studio credits may not count as liberal arts.
 
 **Numbers:** Line: about A-minus, with 3.5 listed as a minimum in one profile, and 32 liberal-arts credits. You: SCAD 3.33, pooled 3.18.
 
 **Check first:** Confirm Black Studies interest and recent graded academic writing; open curriculum is not absence of rigor.
+
+## Military and ROTC
+- Army: Cross-town. UMass Amherst, through the Five College area.
+- Air Force: Cross-town. UMass Amherst, Detachment 370.
+- Navy: None. No Navy arrangement found.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** UMass is next door and hosts both Army and Air Force, so ROTC is practical even at a tiny college.
+
+**Veteran side:** Your dossier lists Posse Veterans and VetLink, unverified. GAO counts about half a cadet a year from Amherst.
+
+_Confidence: medium. Source: https://files.gao.gov/interactive/data/105857/Amherst_College.html_
 
 ## Supplements and guidance (3)
 

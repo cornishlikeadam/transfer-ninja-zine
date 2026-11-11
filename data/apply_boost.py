@@ -4,7 +4,7 @@
 Keeps ChatGPT's official-research ledger and GPA baseline. Replaces the profile, per-school text,
 the ranking and every supplement entry. Safe to run again.
 
-Run:  python3 data/apply_boost.py && python3 build_zine.py
+Run:  python3 data/add_penn.py && python3 data/apply_boost.py && python3 build_zine.py
 """
 import json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -12,6 +12,8 @@ sys.path.insert(0, HERE)
 import boost_core as C
 import boost_supps1  # noqa: F401  (registers the first half)
 import boost_supps2 as S2
+import record as R
+import military as MIL
 
 P = os.path.join(HERE, "strategy.json")
 st = json.load(open(P, encoding="utf-8"))
@@ -24,6 +26,8 @@ st["inventoryNote"] = C.INVENTORY
 st["whatMoves"] = C.WHAT_MOVES
 st["profile"] = C.PROFILE
 st["benchSupplement"] = S2.BENCH_SUPP
+st["record"] = R.record()
+st["military"] = MIL.military()
 
 problems = []
 for sid in ids:
@@ -51,6 +55,9 @@ for sid in ids:
 ranks = sorted(st["schools"][s]["rank"] for s in ids)
 if ranks != list(range(1, len(ids) + 1)):
     problems.append("ranks are not 1..%d: %s" % (len(ids), ranks))
+for sid in ids:
+    if sid not in st["military"]["schools"]:
+        problems.append("no military entry for " + sid)
 for sid in ids:
     x = st["schools"][sid]
     if len(x["bullets"]) != 3:

@@ -83,11 +83,24 @@ SMU is the school where your numbers already clear the published line, and you h
 - Standout: You have already completed SMU coursework through the financial technology certificate, which no other applicant file on your list can say about its school.
 - Your reason: Texas is home ground, Yellow Ribbon covers tuition for eligible veterans, and it balances a list full of reaches.
 
-**Stats-only order:** 1 of 21. Published minimum is 2.7 with 24 transferable hours, and automatic merit starts at 3.3. Your pooled 3.18 clears the minimum.
+**Stats-only order:** 1 of 22. Published minimum is 2.7 with 24 transferable hours, and automatic merit starts at 3.3. Your pooled 3.18 clears the minimum.
 
 **Numbers:** Line: 2.7 minimum, 3.3 for merit. You: pooled 3.18 clears the minimum by about 0.5; merit depends on SMU's own recalculation.
 
 **Check first:** Confirm 24 transferable hours and the published 2.7 minimum; neither guarantees admission.
+
+## Military and ROTC
+- Army: Cross-town. University of Texas at Arlington, or its extension at UNT.
+- Air Force: Cross-town. University of North Texas, Denton, about 45 minutes away.
+- Navy: None. No Navy arrangement found.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Your SMU fintech certificate gives you a history here, and the ROTC housing award could matter for the full-scholarship gate.
+
+**Veteran side:** Yellow Ribbon guarantees 100% tuition for eligible Post-9/11 veterans. SMU gives housing and dining to full-tuition ROTC scholarship holders.
+
+_Confidence: high. Source: https://www.smu.edu/news/archives/2021/featured-news/smu-offers-full-room-and-board-scholarships-to-rotc-students_
 
 ## Supplements and guidance (1)
 

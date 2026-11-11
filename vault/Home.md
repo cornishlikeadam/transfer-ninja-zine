@@ -24,10 +24,13 @@ Fall 2027 transfer cycle. One note per school, plus the Common App and school qu
 - [[Schools/Dartmouth|Dartmouth]] (core)
 - [[Schools/Northeastern|Northeastern]] (core)
 - [[Schools/UChicago|UChicago]] (core)
+- [[Schools/Penn|Penn]] (core)
 
 ## About me and ranking
 - [[About Me]]
 - [[Stats Ranking]]
+- [[Academic Record]]
+- [[Military and ROTC]]
 
 ## Common App
 - [[Common App/Common App Entries]]

@@ -274,7 +274,7 @@ add("rice", "The Rice Box", "One image", "Required",
      "Check the file type and size the portal accepts."], kind="image")
 
 # ------------------------------------------------------------------ Dartmouth
-add("dartmouth", "Why transfer, and why Dartmouth", "About 500 words on the official essay page", "Provisional; application opens in January",
+add("dartmouth", "Why transfer, and why Dartmouth", "About 500 words on the official essay page", "Provisional; application not opened yet",
     "Explain your reasons for transferring and why Dartmouth. Wording comes from the official page, last updated for an earlier cycle.",
     ["Wait for the January application and capture the real prompts before drafting.",
      "Choose a major first. No major is on file for Dartmouth.",
@@ -282,7 +282,7 @@ add("dartmouth", "Why transfer, and why Dartmouth", "About 500 words on the offi
      "Use what you learn from the veteran coordinator as knowledge, not as an endorsement.",
      "Plan for testing: request the veteran waiver or schedule a test."],
     prov=OFFICIAL, kind="pending")
-add("dartmouth", "Your upbringing and who you are", "About 250 words on the older official page", "Provisional; choose one of two",
+add("dartmouth", "Your upbringing and who you are", "About 250 words on the older official page", "Provisional; application not opened; choose one of two",
     "Describe the environment in which you were raised and how it shaped the person you are.",
     ["Your grandmother's ministry and community are a natural subject.",
      "Show one scene from that environment.",
@@ -290,7 +290,7 @@ add("dartmouth", "Your upbringing and who you are", "About 250 words on the olde
      "You would answer this or the introduce-yourself prompt, not both.",
      "Confirm the wording when the application opens."],
     prov=OFFICIAL, kind="pending")
-add("dartmouth", "Introduce yourself", "About 250 words on the older official page", "Provisional; choose one of two",
+add("dartmouth", "Introduce yourself", "About 250 words on the older official page", "Provisional; application not opened; choose one of two",
     "Introduce yourself in your own way.",
     ["This is open. Lead with what a roommate would learn about you in the first week.",
      "Your quick answers elsewhere show humor and curiosity. Let that voice in.",
@@ -377,6 +377,32 @@ add("uchicago", "Personal statement", "1,250 to 3,250 characters", "Optional",
      "UChicago also accepts self-uploaded transcripts from every college you attended."], kind="optional")
 
 # ------------------------------------------------------------------ reserve bench
+# ------------------------------------------------------------------ Penn (application not opened)
+add("penn", "Transfer essay: why leave, why Penn", "450 to 600 words", "Provisional; application not opened yet",
+    "Explain why you are leaving your current school and what you hope to gain by transferring to Penn.",
+    ["Choose the College of Arts and Sciences and one major before drafting. Penn reads the essay against that school.",
+     "The leaving reason should be about direction, not escape: you want Africana Studies, PPE or Science and Society, which SCAD does not offer.",
+     "Name two or three Penn courses or programs you would actually take, from the current catalog.",
+     "Use one piece of your record as proof of readiness, such as the Fall 2026 grades or the ownership-of-AI thesis.",
+     "Keep it distinct from the Georgetown and Vanderbilt transfer essays. Penn wants the Penn-specific version."],
+    prov=OFFICIAL, kind="pending")
+add("penn", "Penn short answers", "About 150 to 200 words each (last cycle)", "Provisional; application not opened yet",
+    "Penn's general short-answer prompts, which change each cycle. Capture them when you open the application.",
+    ["Screenshot the prompts when the application opens and replace this entry.",
+     "Last cycle's prompts asked about community and gratitude. Prepare one community story and one thank-you story now.",
+     "Your residence mentor role and your grandmother's ministry are both ready material.",
+     "Keep each answer to one example. These are short.",
+     "Confirm whether transfers answer the same prompts as first-year applicants."],
+    prov=OFFICIAL, kind="pending")
+add("penn", "College of Arts and Sciences essay", "About 150 to 200 words (last cycle)", "Provisional; application not opened yet",
+    "The school-specific prompt for the College: how you will explore your intellectual interests within the College.",
+    ["Name the major and one cross-school resource, such as SAFElab or a Wharton course, accurately.",
+     "Explain why the College and not Wharton or Engineering, since you cannot switch after admission.",
+     "Connect one question you already wrote about to one course you would take.",
+     "Avoid faculty name-dropping. Penn prefers concrete undergraduate resources.",
+     "Confirm the 2027 wording when the application opens."],
+    prov=OFFICIAL, kind="pending")
+
 BENCH_SUPP = {
     "school": "Columbia General Studies", "title": "Autobiography", "limit": "1,500 to 2,000 words",
     "status": "Reserve school. Submitted through a form that appears after you submit the application.",

@@ -76,16 +76,29 @@ Dartmouth could connect your hands-on design habits to sustained liberal-arts st
 - Standout: A veteran builder with a faculty-endorsed campaign and design work that other students actually use.
 - Your reason: A tight residential community, unlimited Yellow Ribbon, and a veteran coordinator who works with applicants directly.
 
-**Stats-only order:** 16 of 21. Dartmouth says most admitted transfers hold above 3.7, and testing is required unless a veteran waiver is approved. You are about 0.4 to 0.5 under.
+**Stats-only order:** 16 of 22. Dartmouth says most admitted transfers hold above 3.7, and testing is required unless a veteran waiver is approved. You are about 0.4 to 0.5 under.
 
 **Numbers:** Line: above 3.7 for most admits; testing required or waived. You: SCAD 3.33, pooled 3.18.
 
 **Check first:** Confirm major, required testing or approved waiver, credit limits and time in residence.
 
+## Military and ROTC
+- Army: On campus. Delta Company, part of the Wildcat Battalion at UNH, staffed on campus.
+- Air Force: None. Not available.
+- Navy: None. Not available. Navy and Marine Corps are not expanding to Dartmouth.
+
+**Projection:** Best path: Army ROTC on campus, entering the advanced course as a prior-service junior. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** President Beilock announced an ROTC and veteran-support expansion on Veterans Day 2025, so you would arrive during a build-out.
+
+**Veteran side:** Unlimited Yellow Ribbon, a veteran coordinator, VetLink, and Posse Veterans partner since 2016 (confirm current status).
+
+_Confidence: high. Source: https://student-affairs.dartmouth.edu/departments-programs/programs/rotc-dartmouth_
+
 ## Supplements and guidance (3)
 
 ### Why transfer, and why Dartmouth
-About 500 words on the official essay page. Provisional; application opens in January
+About 500 words on the official essay page. Provisional; application not opened yet
 
 > Explain your reasons for transferring and why Dartmouth. Wording comes from the official page, last updated for an earlier cycle.
 
@@ -98,7 +111,7 @@ About 500 words on the official essay page. Provisional; application opens in Ja
 _From the school's official page, not from a screenshot. Confirm in the live application._
 
 ### Your upbringing and who you are
-About 250 words on the older official page. Provisional; choose one of two
+About 250 words on the older official page. Provisional; application not opened; choose one of two
 
 > Describe the environment in which you were raised and how it shaped the person you are.
 
@@ -111,7 +124,7 @@ About 250 words on the older official page. Provisional; choose one of two
 _From the school's official page, not from a screenshot. Confirm in the live application._
 
 ### Introduce yourself
-About 250 words on the older official page. Provisional; choose one of two
+About 250 words on the older official page. Provisional; application not opened; choose one of two
 
 > Introduce yourself in your own way.
 

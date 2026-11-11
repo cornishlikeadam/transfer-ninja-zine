@@ -83,20 +83,33 @@ Yale's Eli Whitney program is designed for students whose education was interrup
 - Standout: An adult veteran with a rising recent record and community leadership, which is the profile Eli Whitney was created for.
 - Your reason: Full-need aid, an adult and veteran community, and room to study race, migration and technology together.
 
-**Stats-only order:** 10 of 21. Eli Whitney has no GPA floor and weighs recent work, but Yale's contact said the withdrawals and thin recent coursework are the obstacle and raised 2028 as an option.
+**Stats-only order:** 10 of 22. Eli Whitney has no GPA floor and weighs recent work, but Yale's contact said the withdrawals and thin recent coursework are the obstacle and raised 2028 as an option.
 
 **Numbers:** Line: none; recent broad coursework is the test. You: one strong SCAD term so far; English and math are the stated gaps.
 
 **Check first:** confirm at least five years out of high school and no prior bachelor’s degree; broad recent academic strength is still needed.
 
+## Military and ROTC
+- Army: Unclear. Yale cadets have commissioned into the Army recently, but the host battalion was not confirmed in this search.
+- Air Force: On campus. Air Force ROTC Detachment 009 on campus, with a Space Force path.
+- Navy: On campus. Naval ROTC on campus since 2012.
+
+**Projection:** Best path: Air Force ROTC on campus, if the detachment accepts your prior service. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** The Warrior-Scholar Project began at Yale, and you are already a Warrior-Scholar. Eli Whitney plus AFROTC on campus is a rare pairing for an adult veteran.
+
+**Veteran side:** Eli Whitney program for nontraditional students. Your notes: about 60 Yale College veterans and more than 100 undergraduates in ROTC as of late 2025.
+
+_Confidence: medium. Source: https://yalecollege.yale.edu/academics/special-academic-programs/reserve-officers-training-corps-rotc_
+
 ## Supplements and guidance (1)
 
 ### Eli Whitney essays
-Not captured. No screenshot yet
+Not captured. Application not opened yet
 
 > Yale's Eli Whitney application has its own essay questions. Open the application and capture them before drafting.
 
-- Take screenshots of every Yale question so the prompts and limits here can be replaced with the real ones.
+- Open the Eli Whitney application and screenshot every question. Yale lists personal statements, recommendations and transcripts, with a March 1 deadline for the application.
 - Yale's contact asked for recent English and math coursework. Plan the essays around a record that includes them.
 - Prepare a dated education timeline, because Eli Whitney asks you to account for time away from school.
 - Choose one analytical paper to anchor your academic case, and keep the instructor's comments.

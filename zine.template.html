@@ -106,7 +106,8 @@ textarea{width:100%;min-height:72px;resize:vertical}
 .card:nth-child(3n+2){transform:rotate(.4deg)}
 .card:nth-child(3n){transform:rotate(-.2deg)}
 .card:hover{transform:rotate(0) translateY(-3px)}
-.card-head{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.card-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center}
+.card-head .stagepill{margin-left:auto}
 .pri{font:400 .78rem/1 var(--f-type);text-transform:uppercase;letter-spacing:.1em;padding:4px 8px;border:2px solid var(--ink);background:var(--orange);color:var(--ink)}
 .pri.conditional{background:var(--lime)}
 .pri.bench{background:var(--card-sub)}
@@ -322,6 +323,18 @@ footer p{max-width:80ch;margin:0 0 8px}
 .strategy-school details{border-top:1px dashed var(--card-dim);padding-top:6px;margin-top:6px}
 .strategy-school summary{font-size:.95rem}
 .card .strategy-school{border:0;box-shadow:none;padding:0;background:transparent}
+.di-open{background:var(--blush)}
+.ut{display:inline-block;font:400 .75rem/1 var(--f-type);text-transform:uppercase;letter-spacing:.06em;padding:4px 8px;border:2px solid var(--ink);color:var(--ink);background:var(--card-sub);white-space:nowrap}
+.ut-campus{background:var(--lime)}
+.ut-cross{background:var(--yellow)}
+.ut-unclear{background:var(--card)}
+.ut-none{background:var(--card-sub);text-decoration:line-through}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:8px 0}
+.mcard{border:2px solid var(--ink);padding:10px 12px;background:var(--card)}
+.mcard p{margin:6px 0}
+.tl{padding-left:1.2em}
+.tl li{margin:4px 0}
+.tl-projection,.tl-registered{opacity:.8;font-style:italic}
 .card .strategy-school h3{font-size:1.2rem}
 /* agent and library */
 .sheet .chip{color:var(--card-ink);border-color:var(--card-ink)}
@@ -736,7 +749,7 @@ var LENS=DATA.lens||{};
 
 
 /* ---------- the vault: every school found on this computer ---------- */
-var VG={core:'Active 21',bench:'Bench',alt:'Other alternate',researched:'Researched',dossier:'Dossier only',routes:'Route plan'};
+var VG={core:'Active list',bench:'Bench',alt:'Other alternate',researched:'Researched',dossier:'Dossier only',routes:'Route plan'};
 var VAULT=[
 ['duke','Duke','alt','Dossier on file. Revisit if recent grades get substantially stronger.'],
 ['columbia','Columbia General Studies','alt','Research brief and dossier. Needs a verified financing plan first.'],
@@ -1311,12 +1324,12 @@ function agentTools(){
    {name:'analyze_text',description:'Computes statistics on a whole document in the page: op "stats" (words, sentences, lexical diversity), "keywords" (top words and repeated phrases), "readability" (Flesch scores), or "speaker_share" (words per speaker in a transcript with "Name:" labels). Use it for counts and patterns instead of estimating.',
     inputSchema:{type:'object',properties:{doc:{type:'string'},op:{type:'string',enum:['stats','keywords','readability','speaker_share']},top:{type:'number'}},required:['doc','op']},
     execute:function(i){var did=findDoc(i.doc);if(!did)throw new Error('No document matches "'+i.doc+'". Call list_sources.');say('Analyzing "'+LIBS.docs[did].title+'"...');return fullText(did).then(function(t){return {title:LIBS.docs[did].title,op:i.op||'stats',result:analyze(t,i.op||'stats',i.top)}})}},
-   {name:'school_data',description:'Returns the site data for one school card: route, deadlines, application fee waiver, aid model, aid forms and dates, veterans benefits, study abroad rules, links, interest policy and, when available, the research brief (degree path, people, who to contact, question to ask) and the strategy entry: two-sentence summary, standouts, stats-only rank, and every supplement prompt with its limit and guidance. Pass the school name or id.',
+   {name:'school_data',description:'Returns the site data for one school card: route, deadlines, application fee waiver, aid model, aid forms and dates, veterans benefits, study abroad rules, links, interest policy, ROTC units with a projection and what is unique for a veteran, whether the application is opened, and, when available, the research brief (degree path, people, who to contact, question to ask) and the strategy entry: two-sentence summary, standouts, stats-only rank, and every supplement prompt with its limit and guidance. Pass the school name or id.',
     inputSchema:{type:'object',properties:{school:{type:'string'}},required:['school']},
     execute:function(i){var s=findSchool(i.school);if(!s)throw new Error('No school matches "'+i.school+'". Schools: '+SCHOOLS.map(function(x){return x.name}).join(', '));say('Looking up '+s.name+'...');
-      var L=LENS[s.id]||{};return {name:s.name,route:s.route,priority:s.pri,gate:s.gate||'',oneThing:s.one,facts:s.facts,nextMove:s.next,interestPolicy:s.di,deadlines:DEADLINES.filter(function(d){return d.school===s.id}).map(function(d){return {date:d.date,label:d.label,done:!!S.done[d.id]}}),money:s.fin,studyAbroad:s.abroad,links:s.links,brief:{path:L.path,people:L.know,gap:L.gap,who:L.who,ask:L.ask,show:L.show,avoid:L.dont,diText:L.diText},strategy:(function(){var x=((DATA.strategy||{}).schools||{})[s.id];return x?{summary:x.summary,bullets:x.bullets,statsRank:x.rank+' of 21',numbers:x.stat,checkFirst:x.gate,portal:x.portal,supplements:x.supplements.map(function(q){return {title:q.title,limit:q.limit,status:q.status,prompt:q.prompt,guidance:q.guidance}})}:null})()}}},
-   {name:'about_applicant',description:'Returns the applicant profile kept in this site: life story in order, motivations, academic interests, goals, personality signals, standouts, projects, academic record and gaps, facts still to verify, and the stats-only school ranking. Use it before giving advice about essays or school fit.',
-    execute:function(){say('Reading the profile...');var a=DATA.strategy||{};return {profile:(a.profile||[]).map(function(p){return {topic:p.title,text:p.text}}),ranking:SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).map(function(s){return a.schools[s.id].rank+'. '+s.name+': '+a.schools[s.id].stat}),whatMoves:a.whatMoves||[]}}},
+      var L=LENS[s.id]||{};return {name:s.name,route:s.route,priority:s.pri,gate:s.gate||'',oneThing:s.one,facts:s.facts,nextMove:s.next,interestPolicy:s.di,deadlines:DEADLINES.filter(function(d){return d.school===s.id}).map(function(d){return {date:d.date,label:d.label,done:!!S.done[d.id]}}),money:s.fin,studyAbroad:s.abroad,links:s.links,brief:{path:L.path,people:L.know,gap:L.gap,who:L.who,ask:L.ask,show:L.show,avoid:L.dont,diText:L.diText},strategy:(function(){var x=((DATA.strategy||{}).schools||{})[s.id];return x?{summary:x.summary,bullets:x.bullets,statsRank:x.rank+' of '+SCHOOLS.length,numbers:x.stat,checkFirst:x.gate,portal:x.portal,supplements:x.supplements.map(function(q){return {title:q.title,limit:q.limit,status:q.status,prompt:q.prompt,guidance:q.guidance}})}:null})(),military:(((DATA.strategy||{}).military||{}).schools||{})[s.id]||null,applicationOpened:s.opened!==false}}},
+   {name:'about_applicant',description:'Returns the applicant profile kept in this site: life story in order, motivations, academic interests, goals, personality signals, standouts, projects, academic record and gaps, facts still to verify, the stats-only school ranking, every transcript course with GPA scenarios, the military record from the JST, and the ROTC eligibility rules. Use it before giving advice about essays or school fit.',
+    execute:function(){say('Reading the profile...');var a=DATA.strategy||{};return {profile:(a.profile||[]).map(function(p){return {topic:p.title,text:p.text}}),ranking:SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).map(function(s){return a.schools[s.id].rank+'. '+s.name+': '+a.schools[s.id].stat}),whatMoves:a.whatMoves||[],record:(function(){var R=a.record;if(!R)return null;var m=recModel();return {gpa:m.sc.map(function(x){return x[0]+': '+f3(x[1].gpa)}),courses:R.courses.map(function(c){return c.term+' '+c.code+' '+c.title+' '+c.cr+c.unit+' '+(c.grade||'registered')+(c.status!=='final'?' ('+c.status+')':'')}),service:R.service,timeline:R.timeline}})(),militaryRules:(a.military||{}).rules||null}}},
    {name:'tracker_status',description:'Returns the applicant\'s current progress in this site: pipeline stage per school, the next open deadlines, checklist progress, Common App and school-question counts, and RECAP proof counts per school.',
     execute:function(){say('Checking tracker status...');var g=gearAll(),a=appsStats();return {stages:SCHOOLS.map(function(s){return {school:s.name,stage:STAGES[stageOf(s.id)],recap:recapCount(s.id)+'/5'}}),nextDeadlines:DEADLINES.filter(function(d){return !S.done[d.id]&&daysTo(d.date)>=0}).slice(0,6).map(function(d){return {school:d.sname,date:d.date,label:d.label,daysLeft:daysTo(d.date)}}),checklist:g.filter(function(id){return S.check[id]}).length+' of '+g.length,commonApp:a,libraryDocs:Object.keys(LIBS.docs).length}}}
   ];
@@ -1433,13 +1446,13 @@ function cardHTML(s){
   var opts=STAGES.map(function(n,i){return '<option value="'+i+'"'+(i===st?' selected':'')+'>'+esc(n)+'</option>'}).join('');
   var dls=DEADLINES.filter(function(d){return d.school===s.id}).map(dlRow).join('');
   return '<article class="sheet card" id="s-'+s.id+'">'+
-   '<div class="card-head"><span class="pri '+s.pri+'">'+PRIL[s.pri]+'</span>'+diChip(s.di)+'<span class="stagepill">'+esc(STAGES[st])+'</span></div>'+
+   '<div class="card-head"><span class="pri '+s.pri+'">'+PRIL[s.pri]+'</span>'+diChip(s.di)+(s.opened===false?'<span class="di di-open">App not opened</span>':'')+'<span class="stagepill">'+esc(STAGES[st])+'</span></div>'+
    '<h3>'+esc(s.name)+'</h3><p class="route">'+esc(s.route)+'</p>'+(s.gate?'<div class="gate"><b>Gate.</b> '+esc(s.gate)+'</div>':'')+
    '<div class="one"><span class="tag">The one thing</span><p>'+esc(s.one)+'</p></div>'+
    '<ul class="facts">'+s.facts.map(function(f){return '<li>'+esc(f)+'</li>'}).join('')+'</ul>'+
    '<div class="dl">'+dls+'</div>'+
    '<div class="pipe"><label for="st-'+s.id+'">Pipeline</label><select id="st-'+s.id+'" data-chg="stage" data-id="'+s.id+'">'+opts+'</select><div class="pips" aria-hidden="true">'+pips+'</div></div>'+
-   moneyDetails(s)+strategyDetails(s)+briefDetails(s)+'<details data-key="'+s.id+'"'+(openSet[s.id]?' open':'')+'><summary>Next move and my notes</summary><p class="next">'+esc(s.next)+'</p><label class="sr" for="nt-'+s.id+'">Private notes for '+esc(s.name)+'</label><textarea id="nt-'+s.id+'" data-note="'+s.id+'" placeholder="Private notes. They stay in this browser.">'+esc(S.notes[s.id]||'')+'</textarea><a class="src" href="'+esc(s.src)+'" target="_blank" rel="noopener">Official page &#8599;</a></details>'+
+   moneyDetails(s)+strategyDetails(s)+militaryDetails(s)+briefDetails(s)+'<details data-key="'+s.id+'"'+(openSet[s.id]?' open':'')+'><summary>Next move and my notes</summary><p class="next">'+esc(s.next)+'</p><label class="sr" for="nt-'+s.id+'">Private notes for '+esc(s.name)+'</label><textarea id="nt-'+s.id+'" data-note="'+s.id+'" placeholder="Private notes. They stay in this browser.">'+esc(S.notes[s.id]||'')+'</textarea><a class="src" href="'+esc(s.src)+'" target="_blank" rel="noopener">Official page &#8599;</a></details>'+
   '</article>';
 }
 function benchHTML(b){
@@ -1457,7 +1470,7 @@ function renderLineup(){
     list=list.slice().sort(function(a,b){return stageOf(b.id)-stageOf(a.id)});
   }
   $('#grid').innerHTML=list.map(cardHTML).join('');
-  $('#benchwrap').innerHTML=BENCH.length?'<h3 class="bench-title">Reserve bench <span>separate from the active 21</span></h3><div class="grid">'+BENCH.map(benchHTML).join('')+'</div>':'';
+  $('#benchwrap').innerHTML=BENCH.length?'<h3 class="bench-title">Reserve bench <span>separate from the active '+SCHOOLS.length+'</span></h3><div class="grid">'+BENCH.map(benchHTML).join('')+'</div>':'';
 }
 function renderClock(){
   $('#hidedone').checked=!!S.ui.hideDone;
@@ -1500,7 +1513,7 @@ function schoolStrategyHTML(id){
  var a=DATA.strategy||{},x=(a.schools||{})[id];if(!x)return '';
  var r=((a.research||{}).schools||[]).filter(function(z){return z.id===id})[0];
  var h='<div class="sheet panel strategy-school"><h3>'+esc(nameOf(id))+' · strategy</h3><p class="stale">'+esc(x.path||'')+'</p><p>'+esc(x.summary)+'</p>'+bulletHTML(x.bullets);
- h+='<p><b>Stats-only order #'+x.rank+' of 21.</b> '+esc(x.rankReason)+'</p>';
+ h+='<p><b>Stats-only order #'+x.rank+' of '+SCHOOLS.length+'.</b> '+esc(x.rankReason)+'</p>';
  if(x.stat)h+='<p class="seed"><b>Numbers</b>'+esc(x.stat)+'</p>';
  if(x.gate)h+='<p><b>Check first:</b> '+esc(x.gate)+'</p>';
  if(x.portal)h+='<p><b>In your portal now:</b> '+esc(x.portal)+'</p>';
@@ -1516,7 +1529,7 @@ function strategyDetails(s){
 }
 function panelStrategy(){
  var a=DATA.strategy||{},id=S.ui.strategySchool||SCHOOLS[0].id;
- var h='<h3>21-school strategy and personal evidence</h3><p>'+esc(a.method||'')+'</p><p class="stale">'+esc(a.inventoryNote||'')+'</p><button class="btn" type="button" data-act="exportStrategy">Download full strategy document (.md)</button> <button class="btn alt" type="button" data-act="copyStrategy">Copy it as text</button><p class="stale" id="stratmsg" role="status"></p><textarea id="strattext" hidden readonly style="min-height:160px"></textarea>';
+ var h='<h3>'+SCHOOLS.length+'-school strategy and personal evidence</h3><p>'+esc(a.method||'')+'</p><p class="stale">'+esc(a.inventoryNote||'')+'</p><button class="btn" type="button" data-act="exportStrategy">Download full strategy document (.md)</button> <button class="btn alt" type="button" data-act="copyStrategy">Copy it as text</button><p class="stale" id="stratmsg" role="status"></p><textarea id="strattext" hidden readonly style="min-height:160px"></textarea>';
  h+='<details><summary>Your background, interests and evidence boundaries</summary>'+(a.profile||[]).map(function(p){return '<h4>'+esc(p.title)+'</h4><p>'+esc(p.text)+'</p><p class="stale">'+esc(p.source)+'</p>'}).join('')+'</details>';
  h+='<h4>Stats-only ranking, acceptance rates set aside</h4><ol>';
  SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).forEach(function(s){h+='<li><button type="button" class="chip" data-act="strategySchool" data-v="'+s.id+'">'+esc(s.name)+'</button> '+esc(a.schools[s.id].stat||a.schools[s.id].rankReason)+'</li>'});
@@ -1538,7 +1551,7 @@ function panelStats(){
  var z=planningStats(),r=statsResult(z),a=DATA.strategy||{};
  function fmt(n){return n==null?'Unknown':n.toFixed(3)}
  var fields=[['bg','Broward GPA',z.bg,4],['bc','Broward GPA-bearing semester hours (planning estimate)',z.bc,300],['sg','SCAD GPA',z.sg,4],['sq','SCAD GPA-bearing quarter hours (planning estimate)',z.sq,450],['nq','Next graded SCAD quarter hours',z.nq,100],['ng','Next-term target GPA',z.ng,4],['eligible','School-confirmed transferable semester credits (0 = unknown)',z.eligible,300]];
- var h='<h3>Stats checker and GPA scenarios · all 21</h3><p>Defaults come from dated transcript summaries: Broward January 2025 and SCAD October 2026. GPA calculations require GPA-bearing hours, which may differ from earned credits. Replace estimated hours with the transcript’s actual GPA hours. Withdrawals are not assigned zero grades here. Developmental courses and JST recommendations are not automatically transferable.</p><div class="form">';
+ var h='<h3>Stats checker and GPA scenarios · all '+SCHOOLS.length+'</h3><p><b>Every course and more calculators are on the Record tab.</b></p><p>Defaults come from dated transcript summaries: Broward January 2025 and SCAD October 2026. GPA calculations require GPA-bearing hours, which may differ from earned credits. Replace estimated hours with the transcript’s actual GPA hours. Withdrawals are not assigned zero grades here. Developmental courses and JST recommendations are not automatically transferable.</p><div class="form">';
  fields.forEach(function(f){h+='<label>'+esc(f[1])+'<input type="number" min="0" max="'+f[3]+'" step="0.01" data-chg="stats" data-k="'+f[0]+'" value="'+f[2]+'"></label>'});
  h+='</div><div class="cov"><span>Pooled planning GPA <b>'+fmt(r.combined)+'</b></span><span>Projected SCAD GPA <b>'+fmt(r.projected)+'</b></span><span>Projected pooled GPA <b>'+fmt(r.projectedCombined)+'</b></span><span>GPA-hour semester equivalents <b>'+r.total.toFixed(2)+'</b></span></div><p class="stale">Quarter hours × 2/3. Pooled GPA is an estimate, not any school’s official calculation. Planned grades and credits are scenarios, not completed work. The readiness order is a fixed, dated advising judgment and does not change automatically when a scenario changes. Acceptance rates are excluded from this checker.</p><div class="tbl"><table><thead><tr><th>School</th><th>GPA / credit comparison</th><th>Preparation and route check</th><th>Official source</th></tr></thead><tbody>';
  SCHOOLS.forEach(function(s){var x=a.schools[s.id],msg='No verified numeric threshold used; review the official requirements.',needs='';
@@ -1553,17 +1566,112 @@ function panelStats(){
   h+='<tr><td><b>'+esc(s.name)+'</b></td><td>'+esc(msg)+'</td><td>'+esc(x.gate||x.bullets[2])+'</td><td><a href="'+esc((((a.research||{}).schools||[]).filter(function(t){return t.id===s.id})[0]||{}).source||x.source)+'" target="_blank" rel="noopener">Requirements</a></td></tr>';
  });return h+'</tbody></table></div>';
 }
+var GPV={'A':4,'A-':3.7,'B+':3.3,'B':3,'B-':2.7,'C+':2.3,'C':2,'C-':1.7,'D+':1.3,'D':1,'F':0};
+function recSt(){S.rec=S.rec||{};S.rec.g=S.rec.g||{};return S.rec}
+function recRows(){
+ var R=(DATA.strategy||{}).record||{},o=recSt().g;
+ return (R.courses||[]).map(function(c,i){return {c:c,i:i,g:o[i]!=null?o[i]:(c.status==='registered'?'':c.grade)}});
+}
+function semH(c){return c.cr*(c.unit==='QH'?2/3:1)}
+function isDev(c){return /^[A-Z]{3}0/.test(c.code)}
+function isStudio(c){return /^(FOUN|PRO) /.test(c.code)}
+function recGPA(rows,pred){var p=0,h=0;rows.forEach(function(r){if(!(r.g in GPV)||!pred(r))return;var hh=semH(r.c);p+=GPV[r.g]*hh;h+=hh});return {gpa:h?p/h:null,h:h,p:p}}
+function f3(n){return n==null?'n/a':(Math.floor(n*100+1e-9)/100).toFixed(2)}
+function recNum(k,d){var v=recSt()[k];return v==null||v===''?d:Number(v)}
+function recModel(){
+ var rows=recRows(),fin=function(r){return r.c.status==='final'},thruFall=function(r){return r.c.status!=='registered'},all=function(){return true};
+ var nq=recNum('nq',15),ng=recNum('ng',3.5),tg=recNum('target',3.5),tx=recNum('tx',30);
+ function add(base,extraQ,g){var hh=extraQ*2/3;return {gpa:(base.h+hh)?(base.p+g*hh)/(base.h+hh):null,h:base.h+hh,p:base.p+g*hh}}
+ var m={rows:rows,nq:nq,ng:ng,tg:tg,tx:tx};
+ m.sc=[
+  ['Broward, as the transcript shows',recGPA(rows,function(r){return fin(r)&&r.c.inst==='Broward'}),'The GPA printed on that transcript.'],
+  ['SCAD, as the transcript shows',recGPA(rows,function(r){return fin(r)&&r.c.inst==='SCAD'}),'The GPA printed on that transcript.'],
+  ['All colleges pooled',recGPA(rows,fin),'The number most schools see first when they recompute.'],
+  ['Pooled, developmental course dropped',recGPA(rows,function(r){return fin(r)&&!isDev(r.c)}),'Many four-year schools drop developmental (0-level) courses.'],
+  ['SCAD with Fall 2026 as set below',recGPA(rows,function(r){return thruFall(r)&&r.c.inst==='SCAD'}),'Midterm grades are not final.'],
+  ['Pooled with Fall 2026',recGPA(rows,thruFall),'What a March reader may see if Fall grades post first.'],
+  ['Pooled through Winter 2027',recGPA(rows,all),'Counts Winter only for grades you choose below.'],
+ ];
+ var thruW=recGPA(rows,all),scadW=recGPA(rows,function(r){return r.c.inst==='SCAD'});
+ m.sc.push(['SCAD through Spring 2027 scenario',add(scadW,nq,ng),nq+' more quarter hours at '+ng.toFixed(2)+'.']);
+ m.sc.push(['Pooled through Spring 2027 scenario',add(thruW,nq,ng),'The record your final transcript would carry into a Fall 2027 entry.']);
+ var txh=tx*2/3;m.need=txh?(tg*(thruW.h+txh)-thruW.p)/txh:null;m.thruW=thruW;
+ var earnedBroad=0,earnedStrict=0;
+ rows.forEach(function(r){var c=r.c,g=r.g;if(c.status==='registered'&&!g)g='B';if(!(g in GPV)||GPV[g]<=0)return;if(isDev(c))return;earnedBroad+=semH(c);if(GPV[g]>=2&&!isStudio(c))earnedStrict+=semH(c)});
+ var spring=nq*2/3;m.broad=earnedBroad+spring;m.strict=earnedStrict+(ng>=2?spring:0);
+ m.terms=[];var seen={};rows.forEach(function(r){var k=r.c.inst+'|'+r.c.term;if(!seen[k]){seen[k]={inst:r.c.inst,term:r.c.term,rows:[]};m.terms.push(seen[k])}seen[k].rows.push(r)});
+ return m;
+}
+function standing(sh){return sh>=60?'junior':sh>=24?'sophomore':'first-year'}
+function gradOf(sh){var by=((DATA.strategy||{}).record||{}).birthYear||0,left=Math.max(120-Math.min(sh,60),60),yrs=Math.ceil(left/30);return {yrs:yrs,year:2027+yrs,age:by?2027+yrs-by:'?',gi:yrs*9}}
+function panelRecord(){
+ var R=(DATA.strategy||{}).record;if(!R)return '<p class="empty">No record loaded.</p>';
+ var m=recModel(),h='<h3>Academic and service record</h3><p>Every course from your college and military transcripts, from high school forward to graduation. Change a Fall or Winter grade and every number on this tab updates. These are planning numbers, not any school\'s official calculation.</p><p class="stale">'+esc(R.source)+' GPAs are cut to two decimals, the way registrars report them. Registered Winter courses count as passed in the credit estimate.</p>';
+ h+='<h4>GPA under different rules</h4><div class="cov">'+m.sc.map(function(x){return '<span title="'+esc(x[2])+'">'+esc(x[0])+' <b>'+f3(x[1].gpa)+'</b></span>'}).join('')+'</div>';
+ h+='<details><summary>What each number means</summary>'+bulletHTML(m.sc.map(function(x){return x[0]+': '+f3(x[1].gpa)+' over '+x[1].h.toFixed(1)+' semester-equivalent hours. '+x[2]}).concat(R.notes||[]))+'</details>';
+ h+='<h4>Calculators</h4><div class="form">'+
+  '<label>Spring 2027 quarter hours<input type="number" min="0" max="30" step="1" data-chg="recn" data-k="nq" value="'+m.nq+'"></label>'+
+  '<label>Spring 2027 average GPA<input type="number" min="0" max="4" step="0.01" data-chg="recn" data-k="ng" value="'+m.ng+'"></label>'+
+  '<label>Target pooled GPA<input type="number" min="0" max="4" step="0.01" data-chg="recn" data-k="target" value="'+m.tg+'"></label>'+
+  '<label>Quarter hours to reach it in<input type="number" min="1" max="120" step="1" data-chg="recn" data-k="tx" value="'+m.tx+'"></label></div>';
+ var need=m.need,needTxt=need==null?'n/a':need>4?'Not reachable in that many hours: you would need '+need.toFixed(2)+'.':need<=0?'Already there.':'You need a '+need.toFixed(2)+' average.';
+ h+='<p class="seed"><b>Target solver</b>To reach a pooled '+m.tg.toFixed(2)+' from '+f3(m.thruW.gpa)+' over the next '+m.tx+' quarter hours: '+esc(needTxt)+'</p>';
+ var gb=gradOf(m.broad),gs=gradOf(m.strict);
+ h+='<p class="seed"><b>Credit and graduation guesstimate</b>By June 2027 you may hold about '+Math.round(m.broad)+' semester-equivalent hours if a school takes everything passed except the developmental course ('+standing(m.broad)+' standing, graduating about May '+gb.year+' at '+gb.age+', about '+gb.gi+' months of GI Bill entitlement). A strict liberal-arts school that drops studio courses and D grades might count about '+Math.round(m.strict)+' ('+standing(m.strict)+', about May '+gs.year+' at '+gs.age+', about '+gs.gi+' months). Most selective schools also require two years in residence, and Penn requires half the degree. Only an official evaluation settles it.</p>';
+ h+='<h4>Every course</h4><div class="tbl"><table><thead><tr><th>Term</th><th>Course</th><th>Credit</th><th>Grade</th><th>Term GPA</th></tr></thead><tbody>';
+ m.terms.forEach(function(t){
+  var tg=recGPA(t.rows,function(){return true});
+  t.rows.forEach(function(r,j){var c=r.c,sel='';
+   if(c.status==='midterm'||c.status==='registered'){sel='<label class="sr" for="rg-'+r.i+'">Grade for '+esc(c.code)+'</label><select id="rg-'+r.i+'" data-chg="recg" data-i="'+r.i+'"><option value="">Not counted</option>'+Object.keys(GPV).map(function(g){return '<option'+(r.g===g?' selected':'')+'>'+g+'</option>'}).join('')+'</select><span class="stale"> '+(c.status==='midterm'?'midterm '+esc(c.grade):'registered')+'</span>'}
+   else sel='<b>'+esc(c.grade)+'</b>';
+   h+='<tr><td>'+(j?'':'<b>'+esc(t.inst)+'</b><br>'+esc(t.term))+'</td><td>'+esc(c.code)+' · '+esc(c.title)+(c.note?'<br><span class="stale">'+esc(c.note)+'</span>':'')+'</td><td>'+c.cr+' '+c.unit+'</td><td>'+sel+'</td><td>'+(j?'':f3(tg.gpa))+'</td></tr>'});
+ });
+ h+='</tbody></table></div>';
+ var sv=R.service||{};
+ h+='<h4>Military record</h4>'+bulletHTML(sv.lines||[])+'<p class="stale">'+esc(sv.rank||'')+'. '+esc(sv.source||'')+'</p>'+(R.ace||[]).map(function(a){return '<p><b>'+esc(a.what)+'.</b> '+esc(a.credit)+' <span class="stale">'+esc(a.note)+'</span></p>'}).join('')+'<details><summary>Check before you write about service</summary>'+bulletHTML(sv.flags||[])+'</details>';
+ var o=R.other||{};
+ h+='<h4>Other record facts</h4>'+bulletHTML([o.highSchool,o.placement,o.civics,'Honors: '+(o.honors||[]).join('; '),o.programs].filter(Boolean));
+ h+='<h4>Timeline, back and forward</h4><ol class="tl">'+(R.timeline||[]).map(function(t){return '<li class="tl-'+esc(t[2])+'"><b>'+esc(t[0])+'</b> '+esc(t[1])+' <span class="stale">'+esc(t[2])+'</span></li>'}).join('')+'</ol>';
+ return h;
+}
+var UNIT={campus:'On campus',cross:'Cross-town',unclear:'Unclear',none:'None'};
+function unitChip(u){return '<span class="ut ut-'+u[0]+'">'+UNIT[u[0]]+'</span>'}
+function milBlock(id,full){
+ var x=(((DATA.strategy||{}).military||{}).schools||{})[id];if(!x)return '';
+ var h='<p>'+unitChip(x.army)+' <b>Army.</b> '+esc(x.army[1])+'</p><p>'+unitChip(x.af)+' <b>Air Force.</b> '+esc(x.af[1])+'</p><p>'+unitChip(x.navy)+' <b>Navy.</b> '+esc(x.navy[1])+'</p>';
+ h+='<p class="seed"><b>Projection for you</b>'+esc(x.projection)+'</p><p><b>What is unique here.</b> '+esc(x.unique)+'</p><p><b>Veteran side.</b> '+esc(x.vets)+'</p>';
+ return h+'<p class="stale">Confidence: '+esc(x.conf)+'. ROTC hosting changes, so confirm with the unit. <a href="'+esc(x.src)+'" target="_blank" rel="noopener">Source</a></p>';
+}
+function militaryDetails(s){
+ if(!UNLOCKED||!(((DATA.strategy||{}).military||{}).schools||{})[s.id])return '';
+ var key='ml-'+s.id;
+ return '<details data-key="'+key+'"'+(openSet[key]?' open':'')+'><summary>Military, ROTC and what is unique</summary><div class="brief">'+milBlock(s.id)+'</div></details>';
+}
+function panelMilitary(){
+ var M=(DATA.strategy||{}).military;if(!M)return '<p class="empty">No military data loaded.</p>';
+ var r=M.rules,h='<h3>Military and ROTC projections · all '+SCHOOLS.length+'</h3><p>'+esc(r.summary)+'</p><h4>Where you stand</h4>'+bulletHTML(r.you);
+ h+='<div class="mgrid">'+r.branches.map(function(b){return '<div class="mcard"><h4>'+esc(b.branch)+'</h4><p class="ut ut-'+(b.verdict.indexOf('closed')>-1?'none':'campus')+'">'+esc(b.verdict)+'</p><p><b>Age.</b> '+esc(b.age)+'</p><p><b>Prior service.</b> '+esc(b.prior)+'</p><p><b>Gate.</b> '+esc(b.gate)+'</p><p>'+esc(b.extra)+'</p></div>'}).join('')+'</div>';
+ h+='<h4>Money and obligations</h4>'+bulletHTML(r.money);
+ var ids=SCHOOLS.map(function(s){return s.id}).filter(function(i){return M.schools[i]}).sort(function(a,b){return M.schools[b].access-M.schools[a].access});
+ h+='<h4>Every school, best ROTC access first</h4><div class="tbl"><table><thead><tr><th>School</th><th>Army</th><th>Air Force</th><th>Navy</th><th>What is unique</th></tr></thead><tbody>'+ids.map(function(i){var x=M.schools[i];return '<tr><td><b>'+esc(nameOf(i))+'</b></td><td>'+unitChip(x.army)+'</td><td>'+unitChip(x.af)+'</td><td>'+unitChip(x.navy)+'</td><td>'+esc(x.unique)+'</td></tr>'}).join('')+'</tbody></table></div>';
+ h+=ids.map(function(i){return '<details><summary>'+esc(nameOf(i))+' · projection and veteran side</summary>'+milBlock(i)+'</details>'}).join('');
+ h+='<details><summary>Rule sources</summary><ul>'+r.sources.map(function(s){return '<li><a href="'+esc(s[1])+'" target="_blank" rel="noopener">'+esc(s[0])+'</a></li>'}).join('')+'</ul><p class="stale">Researched '+esc(M.updated)+'. Several rules come from university ROTC pages rather than Cadet Command, so confirm with a recruiter.</p></details>';
+ return h;
+}
 function strategyMarkdown(){
- var a=DATA.strategy||{},lines=['# Kendren Cornish: 21-school transfer strategy','','Updated '+a.updated,'',a.method,'',a.inventoryNote,'','## About you'];
+ var a=DATA.strategy||{},lines=['# Kendren Cornish: '+SCHOOLS.length+'-school transfer strategy','','Updated '+a.updated,'',a.method,'',a.inventoryNote,'','## About you'];
  (a.profile||[]).forEach(function(p){lines.push('','### '+p.title,p.text,'Source: '+p.source)});
  lines.push('','## Stats-only ranking, acceptance rates set aside');
  SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).forEach(function(s){var x=a.schools[s.id];lines.push(x.rank+'. '+s.name+': '+(x.stat||x.rankReason))});
  if((a.whatMoves||[]).length){lines.push('','### What would move this order');a.whatMoves.forEach(function(b){lines.push('- '+b)})}
  SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).forEach(function(s){var x=a.schools[s.id],r=((a.research||{}).schools||[]).filter(function(t){return t.id===s.id})[0];
   lines.push('','## '+x.rank+'. '+s.name,x.path||'','',x.summary,'');x.bullets.forEach(function(b){lines.push('- '+b)});
-  lines.push('','Stats-only order: '+x.rank+' of 21. '+x.rankReason);if(x.stat)lines.push('Numbers: '+x.stat);if(x.gate)lines.push('Check first: '+x.gate);if(x.portal)lines.push('In your portal now: '+x.portal);
+  lines.push('','Stats-only order: '+x.rank+' of '+SCHOOLS.length+'. '+x.rankReason);if(x.stat)lines.push('Numbers: '+x.stat);if(x.gate)lines.push('Check first: '+x.gate);if(x.portal)lines.push('In your portal now: '+x.portal);
+  var ml=((a.military||{}).schools||{})[s.id];if(ml)lines.push('','### Military and ROTC','Army: '+UNIT[ml.army[0]]+'. '+ml.army[1],'Air Force: '+UNIT[ml.af[0]]+'. '+ml.af[1],'Navy: '+UNIT[ml.navy[0]]+'. '+ml.navy[1],'Projection: '+ml.projection,'Unique: '+ml.unique,'Veteran side: '+ml.vets);
   if(r){lines.push('','### Official research ('+r.verifiedDate+')');r.findings.forEach(function(b){lines.push('- '+b)});lines.push('Limitations: '+r.limitations,'Source: '+r.source)}
   x.supplements.forEach(function(q){lines.push('','### '+q.title,q.limit+' · '+q.status);if(q.prompt)lines.push('Prompt (paraphrased): '+q.prompt);q.guidance.forEach(function(b){lines.push('- '+b)});lines.push(q.provenance)})});
+ if(a.record){var m=recModel();lines.push('','## Academic record');m.sc.forEach(function(x){lines.push('- '+x[0]+': '+f3(x[1].gpa))});a.record.courses.forEach(function(c){lines.push('- '+c.term+' · '+c.code+' '+c.title+' · '+c.cr+' '+c.unit+' · '+(c.grade||'registered')+(c.status!=='final'?' ('+c.status+')':''))});lines.push('','### Military record');a.record.service.lines.forEach(function(x){lines.push('- '+x)})}
+ if(a.military){lines.push('','## ROTC rules for you',a.military.rules.summary);a.military.rules.branches.forEach(function(b){lines.push('- '+b.branch+': '+b.verdict+'. '+b.age)})}
  lines.push('','## Reserve bench');BENCH.forEach(function(b){lines.push('- '+b.name+': '+b.one+' '+b.facts.join(' '))});
  var b=a.benchSupplement;if(b){lines.push('','### '+b.school+': '+b.title,b.limit+' · '+b.status);if(b.prompt)lines.push('Prompt (paraphrased): '+b.prompt);b.guidance.forEach(function(x){lines.push('- '+x)})}
  return lines.join('\n');
@@ -1573,7 +1681,7 @@ function copyStrategy(){
  function fb(){ta.focus();ta.select();if(msg)msg.textContent='Select the text and copy it with your keyboard.'}
  try{navigator.clipboard.writeText(ta.value).then(function(){if(msg)msg.textContent='Strategy copied. Paste it into a document.'},fb)}catch(e){fb()}
 }
-function exportStrategy(){var blob=new Blob([strategyMarkdown()],{type:'text/markdown;charset=utf-8'}),url=URL.createObjectURL(blob),el=document.createElement('a');el.href=url;el.download='Kendren_21_School_Strategy.md';el.click();setTimeout(function(){URL.revokeObjectURL(url)},1000)}
+function exportStrategy(){var blob=new Blob([strategyMarkdown()],{type:'text/markdown;charset=utf-8'}),url=URL.createObjectURL(blob),el=document.createElement('a');el.href=url;el.download='Kendren_'+SCHOOLS.length+'_School_Strategy.md';el.click();setTimeout(function(){URL.revokeObjectURL(url)},1000)}
 
 function panelScore(){
   var totals={};SCHOOLS.forEach(function(s){totals[s.id]=totalFor(s.id)});
@@ -1642,9 +1750,9 @@ function panelLog(){
 }
 function renderDojo(){
   if(!UNLOCKED){$('#tabs').innerHTML='';$('#tabpanel').innerHTML=lockedPanel('Trackers');return}
-  var tabs=[['score','Scorecard'],['courses','Courses'],['recs','Recommenders'],['log','Conversations'],['proof','Proof inventory'],['strategy','School strategy'],['stats','Stats and GPA']];
+  var tabs=[['score','Scorecard'],['courses','Courses'],['recs','Recommenders'],['log','Conversations'],['proof','Proof inventory'],['strategy','School strategy'],['stats','Stats and GPA'],['record','Record'],['military','Military and ROTC']];
   $('#tabs').innerHTML=tabs.map(function(t){return '<button type="button" role="tab" class="chip" data-act="tab" data-v="'+t[0]+'" aria-selected="'+(S.ui.tab===t[0])+'">'+t[1]+'</button>'}).join('');
-  var fn={score:panelScore,courses:panelCourses,recs:panelRecs,log:panelLog,proof:panelProof,strategy:panelStrategy,stats:panelStats}[S.ui.tab]||panelScore;
+  var fn={score:panelScore,courses:panelCourses,recs:panelRecs,log:panelLog,proof:panelProof,strategy:panelStrategy,stats:panelStats,record:panelRecord,military:panelMilitary}[S.ui.tab]||panelScore;
   $('#tabpanel').innerHTML='<div class="sheet panel" role="tabpanel">'+fn()+'</div>';
 }
 function enc(){try{return btoa(unescape(encodeURIComponent(JSON.stringify(S))))}catch(e){return ''}}
@@ -1694,6 +1802,8 @@ document.addEventListener('change',function(e){
   else if(c==='hidedone'){S.ui.hideDone=t.checked}
   else if(c==='sort'){S.ui.sort=t.value}
   else if(c==='stats'){S.stats=S.stats||{};S.stats[t.dataset.k]=t.value}
+  else if(c==='recg'){recSt().g[t.dataset.i]=t.value}
+  else if(c==='recn'){recSt()[t.dataset.k]=t.value}
   else if(c==='score'){var id=t.dataset.id;S.score[id]=S.score[id]||{};if(t.value)S.score[id][t.dataset.k]=+t.value;else delete S.score[id][t.dataset.k]}
   else if(c==='recstatus'){S.recs[+t.dataset.i].status=t.value}
   else if(c==='offer'){S.offer[t.dataset.id]=t.value}

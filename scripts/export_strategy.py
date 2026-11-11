@@ -2,7 +2,7 @@
 """Write the strategy document: best approaches, standouts, reasons and the stats-only ranking.
 
 Reads data/strategy.json and data/schools.json.
-Writes documents/Kendren_21_School_Strategy.md and .pdf.
+Writes documents/Kendren_<N>_School_Strategy.md and .pdf (N = number of schools).
 
 Run:  python3 scripts/export_strategy.py
 """
@@ -20,9 +20,33 @@ out = R / "documents"
 out.mkdir(exist_ok=True)
 ranked = sorted(D["schools"], key=lambda s: A["schools"][s["id"]]["rank"])
 research = {r["id"]: r for r in A["research"]["schools"]}
+N = len(D["schools"])
+NAME = "Kendren_%d_School_Strategy" % N
+MIL = A.get("military", {})
+REC = A.get("record", {})
+U = {"campus": "On campus", "cross": "Cross-town", "unclear": "Unclear", "none": "None"}
+
+
+def gpa(pred):
+    p = h = 0.0
+    for c in REC.get("courses", []):
+        if c["grade"] in REC["gp"] and pred(c):
+            hh = c["cr"] * (2 / 3 if c["unit"] == "QH" else 1)
+            p += REC["gp"][c["grade"]] * hh
+            h += hh
+    return "%.2f" % (int(p / h * 100 + 1e-9) / 100) if h else "n/a"
+
+
+fin = lambda c: c["status"] == "final"
+GPA_ROWS = [["Broward, as the transcript shows", gpa(lambda c: fin(c) and c["inst"] == "Broward")],
+            ["SCAD, as the transcript shows", gpa(lambda c: fin(c) and c["inst"] == "SCAD")],
+            ["All colleges pooled", gpa(fin)],
+            ["Pooled, developmental course dropped", gpa(lambda c: fin(c) and not c["code"].startswith("ENC0"))],
+            ["SCAD with Fall 2026 midterms", gpa(lambda c: c["status"] != "registered" and c["inst"] == "SCAD")],
+            ["Pooled with Fall 2026 midterms", gpa(lambda c: c["status"] != "registered")]]
 
 # ------------------------------------------------------------------ markdown
-L = ["# Kendren Cornish: 21-school transfer strategy", "", "Best approaches, standouts, reasons and a stats-only ranking.",
+L = ["# Kendren Cornish: %d-school transfer strategy" % N, "", "Best approaches, standouts, reasons and a stats-only ranking.",
      "Updated " + A["updated"], "", "## How to read the ranking", A["method"], "", A["inventoryNote"], "",
      "## Stats-only ranking, acceptance rates set aside", "", "| # | School | Published line and your numbers |", "|---|---|---|"]
 for s in ranked:
@@ -32,13 +56,29 @@ L += ["", "### What would move this order"] + ["- " + b for b in A.get("whatMove
 L += ["", "## About you"]
 for p in A["profile"]:
     L += ["", "### " + p["title"], p["text"], "", "Source: " + p["source"]]
+if REC:
+    L += ["", "## Academic record", "_" + REC["source"] + "_", ""] + ["- %s: %s" % tuple(r) for r in GPA_ROWS]
+    L += ["", "| Term | Course | Credit | Grade |", "|---|---|---|---|"]
+    L += ["| %s %s | %s %s | %s %s | %s |" % (c["inst"], c["term"], c["code"], c["title"], c["cr"], c["unit"], (c["grade"] or "registered") + ("" if fin(c) else " (" + c["status"] + ")")) for c in REC["courses"]]
+    L += ["", "### Military record"] + ["- " + x for x in REC["service"]["lines"]] + ["", "### Check before you write about service"] + ["- " + x for x in REC["service"]["flags"]]
+    L += ["", "### Timeline"] + ["- **%s** %s (%s)" % tuple(t) for t in REC["timeline"]]
+if MIL:
+    r_ = MIL["rules"]
+    L += ["", "## Military and ROTC: the rules for you", r_["summary"], ""] + ["- " + x for x in r_["you"]]
+    for br in r_["branches"]:
+        L += ["", "### %s: %s" % (br["branch"], br["verdict"]), "- Age: " + br["age"], "- Prior service: " + br["prior"], "- Gate: " + br["gate"], "- " + br["extra"]]
+    L += ["", "### Money and obligations"] + ["- " + x for x in r_["money"]]
 L += ["", "## School by school, in ranking order"]
 for s in ranked:
     x = A["schools"][s["id"]]
     r = research.get(s["id"])
     L += ["", "## %d. %s" % (x["rank"], s["name"]), "*" + x["path"] + "*", "", x["summary"], ""]
     L += ["- " + b for b in x["bullets"]]
-    L += ["", "**Why it sits at %d of 21:** %s" % (x["rank"], x["rankReason"]), "", "**Numbers:** " + x["stat"]]
+    L += ["", "**Why it sits at %d of %d:** %s" % (x["rank"], N, x["rankReason"]), "", "**Numbers:** " + x["stat"]]
+    ml = MIL.get("schools", {}).get(s["id"])
+    if ml:
+        L += ["", "### Military and ROTC", "- Army: %s. %s" % (U[ml["army"][0]], ml["army"][1]), "- Air Force: %s. %s" % (U[ml["af"][0]], ml["af"][1]),
+              "- Navy: %s. %s" % (U[ml["navy"][0]], ml["navy"][1]), "", "**Projection:** " + ml["projection"], "", "**Unique:** " + ml["unique"], "", "**Veteran side:** " + ml["vets"]]
     if x.get("gate"):
         L += ["", "**Check first:** " + x["gate"]]
     if x.get("portal"):
@@ -57,7 +97,7 @@ for b in D["bench"]:
 b = A["benchSupplement"]
 L += ["", "### %s: %s" % (b["school"], b["title"]), "%s. %s" % (b["limit"], b["status"]), "", "Prompt, paraphrased: " + b.get("prompt", ""), ""]
 L += ["- " + g for g in b["guidance"]]
-(out / "Kendren_21_School_Strategy.md").write_text("\n".join(L) + "\n", encoding="utf-8")
+(out / (NAME + ".md")).write_text("\n".join(L) + "\n", encoding="utf-8")
 
 # ------------------------------------------------------------------ pdf
 ss = getSampleStyleSheet()
@@ -84,7 +124,7 @@ def B(t):
     return Paragraph(e(t), bul, bulletText="•")
 
 
-story = [Paragraph("Kendren Cornish: 21-school transfer strategy", h1),
+story = [Paragraph("Kendren Cornish: %d-school transfer strategy" % N, h1),
          P("Best approaches, standouts, reasons and a stats-only ranking. Updated " + A["updated"] + ".", small),
          Paragraph("How to read the ranking", h2), P(A["method"]), P(A["inventoryNote"], small),
          Paragraph("Stats-only ranking, acceptance rates set aside", h2)]
@@ -100,13 +140,35 @@ story += [t, Paragraph("What would move this order", h3)] + [B(b_) for b_ in A.g
 story += [PageBreak(), Paragraph("About you", h2)]
 for p in A["profile"]:
     story += [Paragraph(e(p["title"]), h3), P(p["text"]), P("Source: " + p["source"], small)]
+if REC:
+    story += [PageBreak(), Paragraph("Academic record", h2), P(REC["source"], small)] + [B("%s: %s" % tuple(r)) for r in GPA_ROWS]
+    rows2 = [[Paragraph("<b>Term</b>", cell), Paragraph("<b>Course</b>", cell), Paragraph("<b>Credit</b>", cell), Paragraph("<b>Grade</b>", cell)]]
+    for c in REC["courses"]:
+        rows2.append([Paragraph(e(c["inst"] + " " + c["term"]), cell), Paragraph(e(c["code"] + " " + c["title"]), cell), Paragraph("%s %s" % (c["cr"], c["unit"]), cell),
+                      Paragraph(e((c["grade"] or "registered") + ("" if fin(c) else " (" + c["status"] + ")")), cell)])
+    t2 = Table(rows2, colWidths=[1.35 * inch, 3.85 * inch, 0.7 * inch, 1.1 * inch], repeatRows=1)
+    t2.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#ffd400")), ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                            ("LINEBELOW", (0, 0), (-1, -1), 0.4, colors.HexColor("#b8b09c")), ("BOX", (0, 0), (-1, -1), 1, INK)]))
+    story += [t2, Paragraph("Military record", h3)] + [B(x) for x in REC["service"]["lines"]] + [Paragraph("Check before you write about service", h4)] + [B(x) for x in REC["service"]["flags"]]
+    story += [Paragraph("Timeline, back and forward", h3)] + [B("%s: %s (%s)" % tuple(t)) for t in REC["timeline"]]
+if MIL:
+    r_ = MIL["rules"]
+    story += [PageBreak(), Paragraph("Military and ROTC: the rules for you", h2), P(r_["summary"])] + [B(x) for x in r_["you"]]
+    for br in r_["branches"]:
+        story += [Paragraph(e("%s: %s" % (br["branch"], br["verdict"])), h3), B("Age: " + br["age"]), B("Prior service: " + br["prior"]), B("Gate: " + br["gate"]), B(br["extra"])]
+    story += [Paragraph("Money and obligations", h3)] + [B(x) for x in r_["money"]]
 for s in ranked:
     x = A["schools"][s["id"]]
     r = research.get(s["id"])
     story += [PageBreak(), Paragraph("%d. %s" % (x["rank"], e(s["name"])), h2), P(x["path"], small), P(x["summary"])]
     story += [B(b_) for b_ in x["bullets"]]
-    story += [Paragraph("<b>Why it sits at %d of 21:</b> %s" % (x["rank"], e(x["rankReason"])), body),
+    story += [Paragraph("<b>Why it sits at %d of %d:</b> %s" % (x["rank"], N, e(x["rankReason"])), body),
               Paragraph("<b>Numbers:</b> " + e(x["stat"]), body)]
+    ml = MIL.get("schools", {}).get(s["id"])
+    if ml:
+        story += [Paragraph("Military and ROTC", h3), B("Army: %s. %s" % (U[ml["army"][0]], ml["army"][1])), B("Air Force: %s. %s" % (U[ml["af"][0]], ml["af"][1])),
+                  B("Navy: %s. %s" % (U[ml["navy"][0]], ml["navy"][1])), Paragraph("<b>Projection:</b> " + e(ml["projection"]), body),
+                  Paragraph("<b>Unique:</b> " + e(ml["unique"]), body), Paragraph("<b>Veteran side:</b> " + e(ml["vets"]), body)]
     if x.get("gate"):
         story.append(Paragraph("<b>Check first:</b> " + e(x["gate"]), body))
     if x.get("portal"):
@@ -135,7 +197,7 @@ def footer(canvas, doc):
     canvas.restoreState()
 
 
-SimpleDocTemplate(str(out / "Kendren_21_School_Strategy.pdf"), pagesize=letter, leftMargin=0.75 * inch, rightMargin=0.75 * inch,
-                  topMargin=0.7 * inch, bottomMargin=0.8 * inch, title="Kendren Cornish: 21-school transfer strategy",
+SimpleDocTemplate(str(out / (NAME + ".pdf")), pagesize=letter, leftMargin=0.75 * inch, rightMargin=0.75 * inch,
+                  topMargin=0.7 * inch, bottomMargin=0.8 * inch, title="Kendren Cornish: %d-school transfer strategy" % N,
                   author="Kendren Cornish").build(story, onFirstPage=footer, onLaterPages=footer)
-print("wrote", out / "Kendren_21_School_Strategy.md", "and .pdf")
+print("wrote", out / (NAME + ".md"), "and .pdf")

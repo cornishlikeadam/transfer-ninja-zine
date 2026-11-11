@@ -317,6 +317,12 @@ def write_vault(schools, lens, lib, dossier, strategy=None):
                 md += ["", "**Check first:** " + x["gate"]]
             if x.get("portal"):
                 md += ["", "**In your portal now:** " + x["portal"]]
+            ml = strategy.get("military", {}).get("schools", {}).get(s["id"])
+            if ml:
+                U = {"campus": "On campus", "cross": "Cross-town", "unclear": "Unclear", "none": "None"}
+                md += ["", "## Military and ROTC", "- Army: %s. %s" % (U[ml["army"][0]], ml["army"][1]), "- Air Force: %s. %s" % (U[ml["af"][0]], ml["af"][1]),
+                       "- Navy: %s. %s" % (U[ml["navy"][0]], ml["navy"][1]), "", "**Projection:** " + ml["projection"], "", "**Unique:** " + ml["unique"], "",
+                       "**Veteran side:** " + ml["vets"], "", "_Confidence: %s. Source: %s_" % (ml["conf"], ml["src"])]
             md += ["", "## Supplements and guidance (%d)" % len(x["supplements"])]
             for q in x["supplements"]:
                 md += ["", "### " + q["title"], "%s. %s" % (q["limit"], q["status"]), "", "> " + q.get("prompt", ""), ""]
@@ -350,8 +356,43 @@ def write_vault(schools, lens, lib, dossier, strategy=None):
             rk.append("| %d | [[Schools/%s|%s]] | %s |" % (sx[s["id"]]["rank"], slug(s["name"]), s["name"], sx[s["id"]].get("stat", "")))
         rk += ["", "## What would move this order"] + ["- " + t for t in strategy.get("whatMoves", [])]
         open(os.path.join(root, "Stats Ranking.md"), "w", encoding="utf-8").write("\n".join(rk))
+        rec = strategy.get("record")
+        if rec:
+            GPV = rec["gp"]
+            def g(pred):
+                p = h = 0.0
+                for c in rec["courses"]:
+                    if c["grade"] in GPV and pred(c):
+                        hh = c["cr"] * (2 / 3 if c["unit"] == "QH" else 1); p += GPV[c["grade"]] * hh; h += hh
+                return "%.2f" % (int(p / h * 100 + 1e-9) / 100) if h else "n/a"
+            fin = lambda c: c["status"] == "final"
+            ar = ["---", "tags: [record, private]", "---", "# Academic and service record", "", "_" + rec["source"] + "_", "",
+                  "## GPA", "- Broward: " + g(lambda c: fin(c) and c["inst"] == "Broward"), "- SCAD: " + g(lambda c: fin(c) and c["inst"] == "SCAD"),
+                  "- Pooled: " + g(fin), "- Pooled without the developmental course: " + g(lambda c: fin(c) and not c["code"].startswith("ENC0")),
+                  "- SCAD with Fall 2026 midterms: " + g(lambda c: c["status"] != "registered" and c["inst"] == "SCAD"),
+                  "- Pooled with Fall 2026 midterms: " + g(lambda c: c["status"] != "registered"), "",
+                  "## Courses", "| Term | Course | Credit | Grade |", "|---|---|---|---|"]
+            ar += ["| %s %s | %s %s | %s %s | %s |" % (c["inst"], c["term"], c["code"], c["title"], c["cr"], c["unit"], (c["grade"] or "registered") + ("" if c["status"] == "final" else " (" + c["status"] + ")")) for c in rec["courses"]]
+            ar += ["", "## Military record"] + ["- " + x for x in rec["service"]["lines"]] + ["", "### Check before you write about service"] + ["- " + x for x in rec["service"]["flags"]]
+            ar += ["", "## ACE credit"] + ["- %s: %s %s" % (a["what"], a["credit"], a["note"]) for a in rec["ace"]]
+            ar += ["", "## Timeline"] + ["- **%s** %s _(%s)_" % tuple(t) for t in rec["timeline"]] + ["", "## Notes"] + ["- " + x for x in rec["notes"]]
+            open(os.path.join(root, "Academic Record.md"), "w", encoding="utf-8").write("\n".join(ar))
+        mil = strategy.get("military")
+        if mil:
+            r_ = mil["rules"]
+            mr = ["---", "tags: [military, rotc, private]", "---", "# Military and ROTC", "", r_["summary"], "", "## Where you stand"] + ["- " + x for x in r_["you"]]
+            for b in r_["branches"]:
+                mr += ["", "## " + b["branch"] + ": " + b["verdict"], "- Age: " + b["age"], "- Prior service: " + b["prior"], "- Gate: " + b["gate"], "- " + b["extra"]]
+            mr += ["", "## Money and obligations"] + ["- " + x for x in r_["money"]]
+            mr += ["", "## Schools, best ROTC access first", "| School | Army | Air Force | Navy |", "|---|---|---|---|"]
+            nm = {z["id"]: z["name"] for z in schools}
+            for sid, x in sorted(mil["schools"].items(), key=lambda kv: -kv[1]["access"]):
+                if sid in nm:
+                    mr.append("| [[Schools/%s|%s]] | %s | %s | %s |" % (slug(nm[sid]), nm[sid], x["army"][0], x["af"][0], x["navy"][0]))
+            mr += ["", "## Sources"] + ["- [%s](%s)" % (a, b) for a, b in r_["sources"]]
+            open(os.path.join(root, "Military and ROTC.md"), "w", encoding="utf-8").write("\n".join(mr))
     home = ["# Transfer Ninja Zine vault", "", "Fall 2027 transfer cycle. One note per school, plus the Common App and school questions.",
-            "", "## Schools"] + links + ["", "## About me and ranking", "- [[About Me]]", "- [[Stats Ranking]]", "", "## Common App", "- [[Common App/Common App Entries]]", "",
+            "", "## Schools"] + links + ["", "## About me and ranking", "- [[About Me]]", "- [[Stats Ranking]]", "- [[Academic Record]]", "- [[Military and ROTC]]", "", "## Common App", "- [[Common App/Common App Entries]]", "",
             "Generated by `build_zine.py`. Notes you edit in Obsidian are not overwritten when only the Application Questions and Common App files already exist; school notes are regenerated, so keep your own writing in the My notes section of a copy or in the question files."]
     open(os.path.join(root, "Home.md"), "w", encoding="utf-8").write("\n".join(home))
 

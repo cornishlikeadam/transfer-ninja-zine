@@ -70,11 +70,24 @@ Williams would turn your wide curiosity into close, sustained reading and writin
 - Standout: Williams says it especially encourages transfers who started in the military or the workforce, which is your path.
 - Your reason: Small seminars, need-based aid without merit games, and a college that actively recruits veterans.
 
-**Stats-only order:** 13 of 21. A 3.5 average in a strong program is the commonly cited expectation for successful transfers (third-party profile). You are about 0.2 to 0.3 under.
+**Stats-only order:** 13 of 22. A 3.5 average in a strong program is the commonly cited expectation for successful transfers (third-party profile). You are about 0.2 to 0.3 under.
 
 **Numbers:** Line: about 3.5 (third-party). You: SCAD 3.33, pooled 3.18; two-year residence rule shapes entry level.
 
 **Check first:** Confirm major and two-year residence requirement, including effects on study away.
+
+## Military and ROTC
+- Army: Unclear. No confirmed arrangement. Siena College hosts Army ROTC in the region but no Williams link was found.
+- Air Force: Cross-town. GAO lists an Air Force cross-town unit; the host was not named.
+- Navy: None. No Navy arrangement found.
+
+**Projection:** Best path: Air Force ROTC cross-town. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** A small residential college where ROTC would be mostly self-directed. Choose Williams for the classroom, not the corps.
+
+**Veteran side:** Williams encourages veterans to apply and has a page in the Service to School VetLink guidebook.
+
+_Confidence: low. Source: https://files.gao.gov/interactive/data/105857/Williams_College.html_
 
 ## Supplements and guidance (3)
 

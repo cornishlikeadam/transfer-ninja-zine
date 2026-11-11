@@ -85,13 +85,26 @@ Rice sets a hard floor of 3.2 in your most recent college work, and your SCAD re
 - Standout: You were trusted with a multi-floor residence hall and then joined the design team to document floor plans in 3D for incoming students.
 - Your reason: Texas is close to home and friends, and the residential college system rewards the kind of floor-level community work you already do.
 
-**Stats-only order:** 4 of 21. Rice requires at least 3.2 in the most recent college work, which SCAD 3.33 clears. Admitted transfers typically hold 3.5 or higher.
+**Stats-only order:** 4 of 22. Rice requires at least 3.2 in the most recent college work, which SCAD 3.33 clears. Admitted transfers typically hold 3.5 or higher.
 
 **Numbers:** Line: 3.2 minimum on recent work, 3.5 typical. You: SCAD 3.33 clears the floor by 0.13 and is 0.17 under the typical profile.
 
 **Check first:** Rice specifies at least 3.2 in the most recent college work; dated SCAD 3.33 exceeds that floor, while broader preparation still matters.
 
 **In your portal now:** Your portal already holds short draft answers for academic interests, why Rice and the community essay.
+
+## Military and ROTC
+- Army: Cross-town. University of Houston. Rice gives credit for the classes.
+- Air Force: Cross-town. University of Houston.
+- Navy: On campus. Naval ROTC hosted at Rice.
+
+**Projection:** Best path: Army ROTC cross-town, so plan the weekly travel before you contract. The Navy unit here is community, not a commissioning route at your age. Commission at 28 (junior entry) or 29 (sophomore entry), subject to your DD-214.
+
+**Unique:** Rice gives academic credit for military science taken at Houston, and aid can follow the ROTC courses.
+
+**Veteran side:** Rice Military Veterans association, VetLink and Yellow Ribbon per your dossier.
+
+_Confidence: medium. Source: https://ga.rice.edu/programs-study/departments-programs/interdisciplinary/military-science/_
 
 ## Supplements and guidance (6)
 
