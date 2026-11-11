@@ -75,6 +75,99 @@ Students in approved programs count as enrolled at Notre Dame for federal aid. A
 5. Request the optional recommendation from a recent academic instructor; use Glimpse only if it adds character and clear spoken reflection.
 6. Build the transfer statement around technology ethics and the common good, then submit by October 1, 2026 for Spring 2027 or March 15, 2027 for Fall 2027.
 
+## Strategy
+Notre Dame matches your faith, service and veteran commitments more closely than any school on the list. Its recent admitted transfers averaged 3.75 or higher, which is the largest stated gap from your current record.
+
+- Best approach: Ground every short answer in one ordinary, checkable scene, and gather a syllabus for every college course now.
+- Standout: Faith, service and veteran identity together, plus a stated aim of law school and veteran legal work.
+- Your reason: A mission built on service and the common good, a veterans law clinic, and aid that can cover full cost at your income level.
+
+**Stats-only order:** 19 of 21. Notre Dame says recent admitted transfers averaged 3.75 or higher. You are 0.42 under on SCAD and 0.57 under pooled.
+
+**Numbers:** Line: 3.75 average for recent admits, 24 transferable credits. You: SCAD 3.33 is 0.42 under; pooled 3.18 is 0.57 under.
+
+**Check first:** Recent admitted transfers average 3.75+; verify intended-major capacity and transferable prerequisites.
+
+## Supplements and guidance (6)
+
+### Postgraduate goals and your Notre Dame journey
+500 words. Required
+
+> Knowing you are early in your college career, what are your current postgraduate goals, and what do you envision your academic journey at Notre Dame will look like as you pursue them?
+
+- Lead with the goal you told Notre Dame's veteran liaison: law school and work on veteran or technology policy.
+- Name the college and major. Africana Studies in Arts and Letters is on file, with the Tech Ethics minor.
+- Lay out a believable sequence: core courses, the major, the minor, then one experience such as the veterans law clinic.
+- The IDEA Center is a resource, not a degree. Do not present it as your academic home.
+- Notre Dame requires a syllabus for every college course, so keep the plan consistent with the courses you can document.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Why are you seeking to transfer?
+50 to 100 words. Required
+
+> Why are you seeking to transfer?
+
+- Give one academic reason: you want liberal-arts study of ethics, society and law that a design school does not offer.
+- Speak well of SCAD. Say what it gave you and what you now need next.
+- One reason, stated once. There is no room for a list.
+- Avoid prestige language. Name the kind of learning you want.
+- Count the words. The field stops at 100.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Notre Dame's mission
+50 to 100 words. Required
+
+> What aspect of Notre Dame's mission most resonates with you?
+
+- Read the mission statement first and pick one phrase you can connect to something you did.
+- Service to the common good fits your canvassing for child welfare, senior services and relief campaigns.
+- Faith is part of your story through your grandmother's ministry. Mention it only if it is true to you now.
+- Give one concrete example in a sentence, not a general statement about values.
+- Do not restate the mission back to them. Show where it already appears in your life.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Challenge: initiative, humility and resilience
+50 to 100 words. Required
+
+> A transfer student needs initiative, humility and resilience. Share a time you faced a challenge and how you overcame it.
+
+- Choose one challenge. Losing the student government election and continuing to organize is specific and checkable.
+- Returning to college after the Broward period is the larger story. Use it here only if it is not your main essay.
+- Show humility with a fact: what you got wrong or had to learn.
+- End on what you did next, not on how you felt.
+- At 100 words, one situation, one action and one result is the whole answer.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Community
+50 to 100 words. Required
+
+> Community is the cornerstone of Notre Dame. Tell us about a time you created or contributed to a community.
+
+- The Murph challenge with Club SCAD that grew into a residence-hall event is a clear case of creating community.
+- Give a number or a visible result: how many took part, or what happened the following term.
+- Name your exact role. Say organized or helped organize, whichever is true.
+- Use a different example from the challenge answer so the four short answers cover four sides of you.
+- Confirm the hall name and dates against your records before you submit.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Additional information
+300 words. Optional; answer yes or no first
+
+> Describe circumstances or qualifications not reflected elsewhere, including disruptions or hardships that affected your education, health, safety or family.
+
+- This prompt names hardship directly, so it is the right place for the Broward withdrawals and the housing instability behind them.
+- Write it as facts with dates: what happened, which terms were affected, what you did about it.
+- Share only what you are comfortable having in your file. Treatment details are optional.
+- Close with evidence of stability: full-time enrollment, Dean's List and a residence mentor role.
+- Keep the tone informational. The essays carry the reflection.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
 ## Application questions
 See [[Application Questions/Notre Dame Questions]].
 

@@ -1,45 +1,141 @@
-import json,pathlib,html
-from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,PageBreak,KeepTogether
-from reportlab.lib.styles import getSampleStyleSheet,ParagraphStyle
+#!/usr/bin/env python3
+"""Write the strategy document: best approaches, standouts, reasons and the stats-only ranking.
+
+Reads data/strategy.json and data/schools.json.
+Writes documents/Kendren_21_School_Strategy.md and .pdf.
+
+Run:  python3 scripts/export_strategy.py
+"""
+import html, json, pathlib
 from reportlab.lib import colors
-R=pathlib.Path(__file__).resolve().parents[1];A=json.loads((R/'data/strategy.json').read_text());D=json.loads((R/'data/schools.json').read_text());out=R/'documents';out.mkdir(exist_ok=True)
-L=['# Kendren Cornish — 21-school transfer strategy','','Updated November 10, 2026','',A['method'],'',A['inventoryNote'],'','## Personal background and evidence']
-for p in A['profile']:L+=['','### '+p['title'],p['text'],'Source: '+p['source']]
-L+=['','## Equal-base-rate academic and route compatibility ranking']
-for s in sorted(D['schools'],key=lambda s:A['schools'][s['id']]['rank']):
- x=A['schools'][s['id']];L+=[f"{x['rank']}. {s['name']} — {x['rankReason']}"]
-for s in D['schools']:
- x=A['schools'][s['id']];r=next(r for r in A['research']['schools'] if r['id']==s['id'])
- L+=['','## '+s['name'],x['summary'],'']+['- '+b for b in x['bullets']]+['',f"Provisional academic/route rank: {x['rank']}/21. {x['rankReason']}",'','### Official research · '+r['verifiedDate']]+['- '+f for f in r['findings']]+['Limitations: '+r['limitations'],'Official source: '+r['source']]
- for q in x['supplements']:L+=['','### '+q['title'],q['limit']+' · '+q['status'],q['provenance']]+['- '+b for b in q['guidance']]
-L+=['','## New reserve bench']
-for b in D['bench']:
- r=next(r for r in A['research']['bench'] if r['id']==b['id']);L+=['','### '+b['name'],b['one']]+['- '+f for f in r['findings']]+['Official source: '+r['source'],'Limitations: '+r['limitations']]
-b=A['benchSupplement'];L+=['','### '+b['school']+' — '+b['title'],b['limit'],b['status']]+['- '+t for t in b['guidance']]
-L+=['','## What can change this ranking','Current official GPA and GPA-bearing hours, completed composition/statistics/economics/science, a settled degree choice, verified route eligibility, credit classification and two recent academic recommendations could materially change the order. No admissions probability has been calculated.','', '## Source ledger','Local: August application workbook; July profile/artifact audit and evidence inventory; October 22 transcript-based school review; October master evidence fact sheet; current school lenses; 37 November supplement screenshots. Conflicts and stale figures are marked above. Official school URLs are listed with each school.']
-text='\n'.join(L)+'\n';(out/'Kendren_21_School_Strategy.md').write_text(text)
-styles=getSampleStyleSheet();styles.add(ParagraphStyle(name='BodyCompact',fontName='Helvetica',fontSize=9.5,leading=13,spaceAfter=7));styles['Title'].textColor=colors.HexColor('#172b37');styles['Heading1'].fontSize=20;styles['Heading1'].leading=24;styles['Heading2'].fontSize=12;styles['Heading2'].leading=16
-story=[]
-for ln in L:
- if not ln:continue
- if ln.startswith('# '):story+=[Paragraph(html.escape(ln[2:]),styles['Title']),Spacer(1,12)]
- elif ln.startswith('## '):
-  if story:story.append(PageBreak())
-  story.append(Paragraph(html.escape(ln[3:]),styles['Heading1']))
- elif ln.startswith('### '):story.append(Paragraph(html.escape(ln[4:]),styles['Heading2']))
- elif ln.startswith('- '):story.append(Paragraph('&#8226; '+html.escape(ln[2:]),styles['BodyCompact']))
- else:story.append(Paragraph(html.escape(ln),styles['BodyCompact']))
-grouped=[]; pending=[]
-for flow in story:
- if isinstance(flow,PageBreak) or (isinstance(flow,Paragraph) and flow.style.name in ["Heading1","Heading2"]):
-  if pending:grouped.append(KeepTogether(pending));pending=[]
-  if isinstance(flow,Paragraph) and flow.style.name=="Heading2":pending=[flow]
-  else:grouped.append(flow)
- elif pending:pending.append(flow)
- else:grouped.append(flow)
-if pending:grouped.append(KeepTogether(pending))
-story=grouped
-def footer(c,d):
- c.setFont('Helvetica',8);c.setFillColor(colors.HexColor('#586875'));c.drawString(42,25,'Kendren Cornish | Private transfer strategy | November 10, 2026');c.drawRightString(570,25,str(d.page))
-SimpleDocTemplate(str(out/'Kendren_21_School_Strategy.pdf'),rightMargin=42,leftMargin=42,topMargin=42,bottomMargin=42,title='Kendren Cornish — 21-school transfer strategy').build(story,onFirstPage=footer,onLaterPages=footer)
-print('Document paragraphs:',len(L))
+from reportlab.lib.pagesizes import letter
+from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+from reportlab.lib.units import inch
+from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Table, TableStyle
+
+R = pathlib.Path(__file__).resolve().parents[1]
+A = json.loads((R / "data/strategy.json").read_text(encoding="utf-8"))
+D = json.loads((R / "data/schools.json").read_text(encoding="utf-8"))
+out = R / "documents"
+out.mkdir(exist_ok=True)
+ranked = sorted(D["schools"], key=lambda s: A["schools"][s["id"]]["rank"])
+research = {r["id"]: r for r in A["research"]["schools"]}
+
+# ------------------------------------------------------------------ markdown
+L = ["# Kendren Cornish: 21-school transfer strategy", "", "Best approaches, standouts, reasons and a stats-only ranking.",
+     "Updated " + A["updated"], "", "## How to read the ranking", A["method"], "", A["inventoryNote"], "",
+     "## Stats-only ranking, acceptance rates set aside", "", "| # | School | Published line and your numbers |", "|---|---|---|"]
+for s in ranked:
+    x = A["schools"][s["id"]]
+    L.append("| %d | %s | %s |" % (x["rank"], s["name"], x["stat"]))
+L += ["", "### What would move this order"] + ["- " + b for b in A.get("whatMoves", [])]
+L += ["", "## About you"]
+for p in A["profile"]:
+    L += ["", "### " + p["title"], p["text"], "", "Source: " + p["source"]]
+L += ["", "## School by school, in ranking order"]
+for s in ranked:
+    x = A["schools"][s["id"]]
+    r = research.get(s["id"])
+    L += ["", "## %d. %s" % (x["rank"], s["name"]), "*" + x["path"] + "*", "", x["summary"], ""]
+    L += ["- " + b for b in x["bullets"]]
+    L += ["", "**Why it sits at %d of 21:** %s" % (x["rank"], x["rankReason"]), "", "**Numbers:** " + x["stat"]]
+    if x.get("gate"):
+        L += ["", "**Check first:** " + x["gate"]]
+    if x.get("portal"):
+        L += ["", "**In your portal now:** " + x["portal"]]
+    if r:
+        L += ["", "### Official research, checked " + r["verifiedDate"]] + ["- " + f for f in r["findings"]]
+        L += ["", "Limits of this research: " + r["limitations"], "", "Source: " + r["source"]]
+    L += ["", "### Supplements: %d" % len(x["supplements"])]
+    for q in x["supplements"]:
+        L += ["", "#### " + q["title"], "%s. %s" % (q["limit"], q["status"]), "", "Prompt, paraphrased: " + q["prompt"], ""]
+        L += ["- " + g for g in q["guidance"]]
+        L += ["", "_" + q["provenance"] + "_"]
+L += ["", "## Reserve bench"]
+for b in D["bench"]:
+    L += ["- **%s:** %s" % (b["name"], b["one"])]
+b = A["benchSupplement"]
+L += ["", "### %s: %s" % (b["school"], b["title"]), "%s. %s" % (b["limit"], b["status"]), "", "Prompt, paraphrased: " + b.get("prompt", ""), ""]
+L += ["- " + g for g in b["guidance"]]
+(out / "Kendren_21_School_Strategy.md").write_text("\n".join(L) + "\n", encoding="utf-8")
+
+# ------------------------------------------------------------------ pdf
+ss = getSampleStyleSheet()
+INK = colors.HexColor("#141413")
+body = ParagraphStyle("body", parent=ss["BodyText"], fontName="Helvetica", fontSize=9.5, leading=13.5, textColor=INK, spaceAfter=5)
+small = ParagraphStyle("small", parent=body, fontSize=8, leading=11, textColor=colors.HexColor("#5b564c"))
+h1 = ParagraphStyle("h1", parent=ss["Title"], fontName="Helvetica-Bold", fontSize=22, leading=26, textColor=INK, alignment=0, spaceAfter=4)
+h2 = ParagraphStyle("h2", parent=ss["Heading2"], fontName="Helvetica-Bold", fontSize=15, leading=19, textColor=INK, spaceBefore=10, spaceAfter=4)
+h3 = ParagraphStyle("h3", parent=ss["Heading3"], fontName="Helvetica-Bold", fontSize=11, leading=14, textColor=colors.HexColor("#b83300"), spaceBefore=8, spaceAfter=3)
+h4 = ParagraphStyle("h4", parent=ss["Heading4"], fontName="Helvetica-Bold", fontSize=10, leading=13, textColor=INK, spaceBefore=6, spaceAfter=2)
+bul = ParagraphStyle("bul", parent=body, leftIndent=12, bulletIndent=2, spaceAfter=2)
+cell = ParagraphStyle("cell", parent=body, fontSize=8.5, leading=11.5, spaceAfter=0)
+
+
+def e(t):
+    return html.escape(str(t))
+
+
+def P(t, st=body):
+    return Paragraph(e(t), st)
+
+
+def B(t):
+    return Paragraph(e(t), bul, bulletText="•")
+
+
+story = [Paragraph("Kendren Cornish: 21-school transfer strategy", h1),
+         P("Best approaches, standouts, reasons and a stats-only ranking. Updated " + A["updated"] + ".", small),
+         Paragraph("How to read the ranking", h2), P(A["method"]), P(A["inventoryNote"], small),
+         Paragraph("Stats-only ranking, acceptance rates set aside", h2)]
+rows = [[Paragraph("<b>#</b>", cell), Paragraph("<b>School</b>", cell), Paragraph("<b>Published line and your numbers</b>", cell)]]
+for s in ranked:
+    x = A["schools"][s["id"]]
+    rows.append([Paragraph(str(x["rank"]), cell), Paragraph("<b>%s</b>" % e(s["name"]), cell), Paragraph(e(x["stat"]), cell)])
+t = Table(rows, colWidths=[0.35 * inch, 1.45 * inch, 5.2 * inch], repeatRows=1)
+t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#ffd400")), ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                       ("LINEBELOW", (0, 0), (-1, -1), 0.4, colors.HexColor("#b8b09c")), ("BOX", (0, 0), (-1, -1), 1, INK),
+                       ("TOPPADDING", (0, 0), (-1, -1), 4), ("BOTTOMPADDING", (0, 0), (-1, -1), 4)]))
+story += [t, Paragraph("What would move this order", h3)] + [B(b_) for b_ in A.get("whatMoves", [])]
+story += [PageBreak(), Paragraph("About you", h2)]
+for p in A["profile"]:
+    story += [Paragraph(e(p["title"]), h3), P(p["text"]), P("Source: " + p["source"], small)]
+for s in ranked:
+    x = A["schools"][s["id"]]
+    r = research.get(s["id"])
+    story += [PageBreak(), Paragraph("%d. %s" % (x["rank"], e(s["name"])), h2), P(x["path"], small), P(x["summary"])]
+    story += [B(b_) for b_ in x["bullets"]]
+    story += [Paragraph("<b>Why it sits at %d of 21:</b> %s" % (x["rank"], e(x["rankReason"])), body),
+              Paragraph("<b>Numbers:</b> " + e(x["stat"]), body)]
+    if x.get("gate"):
+        story.append(Paragraph("<b>Check first:</b> " + e(x["gate"]), body))
+    if x.get("portal"):
+        story.append(Paragraph("<b>In your portal now:</b> " + e(x["portal"]), body))
+    if r:
+        story += [Paragraph("Official research, checked " + e(r["verifiedDate"]), h3)] + [B(f) for f in r["findings"]]
+        story += [P("Limits of this research: " + r["limitations"], small), P("Source: " + r["source"], small)]
+    story.append(Paragraph("Supplements: %d" % len(x["supplements"]), h3))
+    for q in x["supplements"]:
+        story += [Paragraph(e(q["title"]), h4), P("%s. %s" % (q["limit"], q["status"]), small),
+                  Paragraph("<i>Prompt, paraphrased:</i> " + e(q["prompt"]), body)]
+        story += [B(g) for g in q["guidance"]]
+        story.append(P(q["provenance"], small))
+story += [PageBreak(), Paragraph("Reserve bench", h2)]
+story += [Paragraph("<b>%s:</b> %s" % (e(b_["name"]), e(b_["one"])), bul, bulletText="•") for b_ in D["bench"]]
+story += [Paragraph(e(b["school"] + ": " + b["title"]), h3), P("%s. %s" % (b["limit"], b["status"]), small),
+          Paragraph("<i>Prompt, paraphrased:</i> " + e(b.get("prompt", "")), body)] + [B(g) for g in b["guidance"]]
+
+
+def footer(canvas, doc):
+    canvas.saveState()
+    canvas.setFont("Helvetica", 7.5)
+    canvas.setFillColor(colors.HexColor("#5b564c"))
+    canvas.drawString(0.75 * inch, 0.5 * inch, "Private planning document. Guidance supports your own writing. Verify every date and prompt in the live application.")
+    canvas.drawRightString(7.75 * inch, 0.5 * inch, "Page %d" % doc.page)
+    canvas.restoreState()
+
+
+SimpleDocTemplate(str(out / "Kendren_21_School_Strategy.pdf"), pagesize=letter, leftMargin=0.75 * inch, rightMargin=0.75 * inch,
+                  topMargin=0.7 * inch, bottomMargin=0.8 * inch, title="Kendren Cornish: 21-school transfer strategy",
+                  author="Kendren Cornish").build(story, onFirstPage=footer, onLaterPages=footer)
+print("wrote", out / "Kendren_21_School_Strategy.md", "and .pdf")

@@ -73,6 +73,101 @@ Brown students in good standing can study abroad for a semester or year in sopho
 5. Map SCAD syllabi to Brown’s course-credit system and use the credit question above if the public guidance cannot resolve the ambiguity.
 6. Complete the optional video if it adds character and reflection; do not turn it into an advertisement or repeat the written application.
 
+## Strategy
+Brown's Veterans Application reads your record in the context of service, and the Open Curriculum lets you build a plan around technology, institutions and the people they affect. Your case is strongest when the instinct to protect people, which you described on your Brown call, becomes a focused plan of study.
+
+- Best approach: Lead with one mentoring or residence-life decision, then show the question it raised about who is responsible when a system fails someone.
+- Standout: A veteran who builds working AI tools and also writes about who should own them, through KEEPER-0 and the Ownership of Intelligence thesis.
+- Your reason: It is your stated first choice: the Open Curriculum pairs technology with policy and Africana study, and the veteran route is need-blind.
+
+**Stats-only order:** 5 of 21. The veteran route reads context, tests are not expected and no GPA line is published. Recent grades still carry the file.
+
+**Numbers:** Line: none published for the Veterans Application. You: SCAD 3.33, pooled 3.18; a clear concentration plan and recent grades matter most.
+
+**Check first:** Confirm veteran-route eligibility and concentration requirements; service does not replace academic readiness.
+
+**In your portal now:** Your portal lists Science, Technology, and Society as the primary interest and Social Analysis and Research as the secondary.
+
+## Supplements and guidance (6)
+
+### Academic interests
+50 to 150 words. Required
+
+> Why are you drawn to the areas of study you listed, and how do your personal or professional experiences relate to them?
+
+- Your portal lists Science, Technology, and Society first and Social Analysis and Research second, so write to those two, not to computer science.
+- Pick one experience that created the interest, such as a floor conflict or a canvassing conversation, and name it in one line.
+- State the question you want to study in plain words: who is responsible when a system fails a person.
+- At 150 words there is room for one experience and one question. Leave projects for the other answers.
+- Check that the two interests you name here match the concentration plan in your Why Brown answer.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Why Brown, and activities
+100 to 250 words. Required
+
+> Why are you considering Brown for the next step in your education? Beyond academics, which activities would you continue, expand or start at Brown?
+
+- Give one academic reason that only the Open Curriculum makes possible, such as pairing technology study with Africana or policy courses.
+- Name the Center for Technological Responsibility only if you have read one piece of its work and can say what it found.
+- The prompt asks about activities, so name what you would continue: residence mentoring, lacrosse, veteran community or a campus event like the Murph.
+- Mention your conversation with Brown's veteran admissions contact only as how you learned something, not as an endorsement.
+- Keep the binding option out of this answer. It is a decision for after you compare aid.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Growing up and what you bring
+200 to 250 words; the field shows a 100-word minimum. Required; limit conflict to resolve
+
+> Share how one aspect of your growing up inspired or challenged you, and what unique contributions it might let you make to the Brown community.
+
+- Choose one aspect only. Your grandmother's conference for Black Christian women in St. Louis is a strong, specific candidate.
+- Show a scene from it: what you saw adults organize, and what it taught you about institutions without walls.
+- Link that to one thing you do now, such as running a floor or organizing an event, so the contribution is visible.
+- The label says 200 to 250 words but the field shows 100 required. Write to 200 to 250 and ask Brown which is correct.
+- Leave out the family-history claim about a president unless you hold proof.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Military experience
+300 to 500 words. Required
+
+> How has your military experience contributed to your personal growth and future plans? You may reuse your Service to School VetLink Addendum response in whole or part.
+
+- State the facts exactly as your record shows: Army combat engineer training at Fort Leonard Wood, 2020 to 2021, about eight months.
+- Your portal drafts mention entering as the pandemic began. Use that timing as the scene, and be exact about dates.
+- Name two or three habits the training built, such as procedure, safety and accountability to teammates, with one example each.
+- Connect service to your plan: protecting people from harmful technology, law school and possibly military legal work.
+- Brown allows reuse of the VetLink Addendum, so write that addendum first with your Service to School mentor and adapt it here.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Additional information
+150 words. Optional
+
+> Use this space for anything else you would like Brown to know.
+
+- Use it for the academic record: the Broward withdrawals and what was happening, in two or three factual sentences.
+- State what changed: stable housing, a full course load at SCAD and the Dean's List.
+- Decide in advance how much personal history you want to disclose. You can explain the record without every detail.
+- Do not repeat anything already said in the other four answers.
+- If the record is fully explained elsewhere, leaving this blank is acceptable.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Video introduction
+90 seconds. Optional and strongly encouraged
+
+> A short video introduction submitted through the applicant portal.
+
+- It is an introduction, not a film project. One clean take in good light is enough.
+- Say one thing the written answers cannot carry: how you sound, what you find funny, what you are curious about.
+- Do not read your resume aloud or repeat an essay.
+- Plan three beats and speak from notes instead of a script, so it sounds like you.
+- Check the upload format and deadline in the portal before recording.
+
+_From the school's official page, not from a screenshot. Confirm in the live application._
+
 ## Application questions
 See [[Application Questions/Brown Questions]].
 

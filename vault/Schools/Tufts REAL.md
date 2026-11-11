@@ -71,6 +71,47 @@ Aid transfers automatically for Tufts-run programs. For external programs only f
 5. Submit the Common App by March 15, 2027, any required art portfolio by March 22, the conventional Mid-Term Report by April 5 if applicable, and REAL aid materials by mid-April.
 6. Obtain a written credit, time-to-degree, need-aid, GI Bill, and Yellow Ribbon estimate before enrollment.
 
+## Strategy
+Tufts REAL is built for adults and veterans returning to college, so your path reads as a choice instead of a gap. Tufts is also the one school on your list that says it records real engagement, and its supplement asks you to describe it.
+
+- Best approach: Complete two true engagement steps first: a REAL information session and one direct question to the REAL office.
+- Standout: You returned to college after service and hardship and reached the Dean's List within two terms, which is the story REAL exists to read.
+- Your reason: An adult pathway with advising from admission to graduation, need-based aid that meets full need, and civic technology study.
+
+**Stats-only order:** 6 of 21. REAL reads an adult or veteran record in context and publishes no GPA line. Two academic recommendations and recent coursework carry the weight.
+
+**Numbers:** Line: none published for REAL. You: SCAD 3.33, pooled 3.18; eligibility, recent coursework and two instructor letters decide it.
+
+**Check first:** Verify REAL eligibility and Arts & Sciences degree choice; do not assume access to a BFA route.
+
+## Supplements and guidance (2)
+
+### How you learned about and engaged with Tufts
+450 to 650 characters. Required
+
+> Describe how you have learned about and engaged with Tufts during your college search.
+
+- List only engagement that happened. Do not claim a visit, event or conversation that did not.
+- Before writing, attend one REAL information session and send one real question to the REAL office.
+- Say what you learned from each step that changed your plan.
+- This is characters, not words. 650 characters is about 100 words.
+- Tufts records legitimate contact, so what you write should match what their records show.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Academic path, REAL and goals
+2,500 to 3,500 characters. Required
+
+> Address three things: your academic path from high school to today, your interest in Tufts and the REAL program, and your academic interests and goals.
+
+- Use the three parts as three sections so nothing is missed.
+- Path: give the sequence with dates, including the Broward period, and what changed by the time you reached SCAD.
+- REAL: say why an adult pathway with its own advising fits you, using what you learned from the information session.
+- Goals: name an Arts and Sciences major such as sociology or Science, Technology and Society. REAL does not cover the BFA.
+- The application also asks about disciplinary and criminal history. Answer those questions accurately and separately.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
 ## Application questions
 See [[Application Questions/Tufts REAL Questions]].
 

@@ -64,6 +64,34 @@ All aid except Federal Work-Study applies to Georgetown-approved and independent
 - [Study abroad costs and aid](https://studyabroad.georgetown.edu/?p=238)
 - [Aid for study abroad](https://finaid.georgetown.edu/?p=219)
 
+## Strategy
+Georgetown recommends a B+ average, which your SCAD record meets, and its technology-policy degree matches your interest in who governs systems. The gap is preparation: that degree expects economics, statistics or calculus, and a language.
+
+- Best approach: Frame veteran resource access or AI pricing as a policy problem, and show the coursework plan that closes the economics gap.
+- Standout: As in National Government and Criminal Law, plus a research paper on how AI pricing shapes educational opportunity.
+- Your reason: It joins technology with law and public service, which fits a path toward law school and military legal work.
+
+**Stats-only order:** 7 of 21. Georgetown recommends B+ or better. SCAD 3.33 meets that and pooled 3.18 is slightly under. The technology-policy degree also expects economics, quantitative work and a language.
+
+**Numbers:** Line: B+ recommended, about 3.3. You: SCAD 3.33 meets it; pooled 3.18 is 0.12 under; economics, statistics and language are missing.
+
+**Check first:** SFS economics, quantitative and language preparation need explicit mapping.
+
+## Supplements and guidance (1)
+
+### Georgetown transfer essays
+Not captured. No screenshot yet
+
+> Georgetown uses its own application with school-specific essays. Open it and capture the prompts before drafting.
+
+- Take screenshots of the Georgetown application so these entries can be replaced with the real prompts.
+- Decide the school and major first. The essay for the School of Foreign Service differs from the College.
+- For the technology-policy degree, prepare to explain your plan for economics, statistics and a language.
+- The junior priority date for some programs is January 15. Check whether it applies to you.
+- Gather a policy example now, such as veteran resource access or AI pricing, with sources.
+
+_Not captured: no screenshot was supplied and no wording is verified._
+
 ## Application questions
 See [[Application Questions/Georgetown Questions]].
 

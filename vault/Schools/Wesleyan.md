@@ -60,6 +60,36 @@ Semester and year study abroad for credit counts as Wesleyan enrollment, so Wesl
 - [Study abroad rules](https://catalog.wesleyan.edu/academic-regulations/study-abroad)
 - [Study abroad and aid](https://wesleyan.edu/finaid/current-students/non-resident-study.html)
 
+## Strategy
+Wesleyan could hold both your creative practice and your questions about society, and it meets full need with loan-free aid. You have not named a major, and its entry rules limit some majors for junior transfers.
+
+- Best approach: Choose the academic interest first, then write about what sustained study would add to work you already make.
+- Standout: Creative work paired with a written argument about ownership and access, which suits a college that mixes art and critique.
+- Your reason: Open, interdisciplinary study and loan-free aid. Apply for aid with the application, because skipping it limits aid for a year.
+
+**Stats-only order:** 15 of 21. No official GPA line was found. A dated third-party estimate puts competitive transfers near 3.7, so this placement is low confidence.
+
+**Numbers:** Line: none official; about 3.7 in a 2019 third-party estimate. You: SCAD 3.33, pooled 3.18.
+
+**Check first:** Intended major and transfer-credit map are unresolved; choose before final drafting.
+
+**In your portal now:** The portal asks for an area of academic interest and an additional one, and whether you intend to pursue financial aid.
+
+## Supplements and guidance (1)
+
+### Reasons for transferring and objectives
+250 to 650 words. Required
+
+> Provide a statement that addresses your reasons for transferring and the objectives you hope to achieve.
+
+- Choose your area of academic interest first. The portal asks for it and the essay should match.
+- Junior transfers can be shut out of Economics, Psychology, Film, the College of Letters and the College of Social Studies. Check before you name one.
+- Give the academic reason for leaving a design school: you want critical and social study alongside making.
+- List two or three objectives a reader could check later, such as a major, a thesis topic and a campus role.
+- Answer yes to the financial aid question if you need aid. Skipping it blocks Wesleyan aid for your first year.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
 ## Application questions
 See [[Application Questions/Wesleyan Questions]].
 

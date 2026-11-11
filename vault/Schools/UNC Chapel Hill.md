@@ -69,6 +69,34 @@ Transfer students may study abroad after their first semester at UNC. Regular ai
 - [Study abroad funding](https://studyabroad.unc.edu/funding)
 - [Aid for study abroad](https://studentaid.unc.edu/?p=220)
 
+## Strategy
+UNC gives your service and technology interests a public-facing question about access and institutions. Its incoming transfers average a 3.7, and veterans using Post-9/11 benefits are charged in-state tuition.
+
+- Best approach: Use a resource-navigation or community-information example to show how designing for people led you to policy questions.
+- Standout: A veteran exemption from testing, in-state tuition by law, and a record of public-facing service work.
+- Your reason: A strong public university with real veteran benefits and a path into public policy.
+
+**Stats-only order:** 14 of 21. UNC reports an average college GPA of 3.7 for incoming transfers. You are about 0.4 to 0.5 under.
+
+**Numbers:** Line: 3.7 average for incoming transfers. You: SCAD 3.33 is 0.37 under; pooled 3.18 is 0.52 under.
+
+**Check first:** Confirm major, transferable writing and quantitative breadth; do not infer North Carolina residency.
+
+## Supplements and guidance (1)
+
+### Personal statement
+1,250 to 3,250 characters, about 250 to 650 words. Required; choose one Common App prompt
+
+> Choose one of the seven standard prompts (background or identity, a challenge, a belief you questioned, gratitude, a period of growth, an engaging idea, or your own topic) and write on it.
+
+- Your screenshot shows only the personal statement. UNC's official page also lists no extra short answers this cycle.
+- Write one statement for UNC, Rice, WashU and UChicago, since all four use this prompt list.
+- The limit is in characters. 3,250 characters is roughly 500 to 650 words.
+- Choose a story that shows something the transcript cannot.
+- UNC wants later updates through its applicant portal, not by email.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
 ## Application questions
 See [[Application Questions/UNC Chapel Hill Questions]].
 

@@ -72,6 +72,60 @@ Transfer students can apply to study abroad after completing their first semeste
 5. Treat February 15, 2027 as the working deadline, submit well before it, and recheck the published Fall 2027 calendar when it appears.
 6. Obtain a written Yellow Ribbon, GI Bill, housing, and time-to-degree estimate before choosing Vanderbilt over a public in-state option.
 
+## Strategy
+Vanderbilt's Human and Organizational Development degree is your ILR equivalent: it studies how people, teams and institutions work or fail. Your own experience of rebuilding structure and then mentoring others is the subject matter of the major.
+
+- Best approach: Describe one process you improved for newer people, in the nonprofit or on your floor, and what it taught you about organizations.
+- Standout: You have led peers in three settings: a canvassing team, a residence floor and a student government campaign.
+- Your reason: It studies exactly what you care about, admitted transfers get full-need aid, and it is not a computer science application.
+
+**Stats-only order:** 8 of 21. No current official transfer GPA line was found. Older Vanderbilt guidance cited about 3.3 or above at a competitive four-year school, so treat this placement as low confidence.
+
+**Numbers:** Line: none verified; a dated admissions answer cited about 3.3. You: SCAD 3.33, pooled 3.18.
+
+**Check first:** Keep the application aligned to Peabody HOD and verify credit sequencing.
+
+## Supplements and guidance (3)
+
+### Dare to grow: identity and community
+About 250 words, 2,000 characters. Required
+
+> Reflect on how one or more aspects of your identity, culture or background has shaped your personal growth, and how it will contribute to the campus community as you dare to grow at Vanderbilt.
+
+- Choose one aspect and one period of growth. Veteran identity or your family's community work both fit.
+- Show growth with a before and an after: what you believed, what happened, what you do differently.
+- The prompt asks what you will contribute. Name something specific, such as peer mentoring or organizing.
+- Tie the growth to people and organizations, since that is what your intended major studies.
+- Keep this distinct from the transfer essay. This one is about you. That one is about the move.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Transfer personal essay
+250 to 650 words, uploaded as a document. Required
+
+> Provide a personal essay addressing your reasons for transferring and the objectives you hope to achieve.
+
+- Write to Peabody and Human and Organizational Development by name. This is not a computer science application.
+- Give the reason for moving: you want to study how organizations work, which a design degree does not teach.
+- List two or three objectives, such as specific coursework, a research question and preparation for law school.
+- Use one experience of leading peers as evidence that the interest is real.
+- The same core essay serves UVA and Wesleyan, which ask nearly the same question. Adjust the school details for each.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Additional information
+6,500 characters. Optional
+
+> Provide details of circumstances or qualifications not reflected elsewhere in the application.
+
+- Use it for a short, dated explanation of the Broward withdrawals.
+- Add anything a reader needs to understand quarter credits or the military transcript.
+- The limit is large. A few clear sentences are better than filling it.
+- Do not paste a second essay here.
+- The College Report must come from a college official. Request it early.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
 ## Application questions
 See [[Application Questions/Vanderbilt Questions]].
 

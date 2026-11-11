@@ -78,6 +78,101 @@ Arrange study abroad through the Rice Study Abroad Office to secure credit trans
 7. Contact Alicia Bradley and Financial Aid early for a written VA/Yellow Ribbon and net-cost plan.
 8. After applying, ensure the College Report and official transcripts are matched in the portal; do not seek an alumni interview, because Rice explicitly does not offer transfer interviews.
 
+## Strategy
+Rice sets a hard floor of 3.2 in your most recent college work, and your SCAD record clears it. Your portal draft already points at the right material: residence-hall leadership and a wish to serve people left out.
+
+- Best approach: Build the community essay on one listening moment from the residence hall, then name what you would study about it.
+- Standout: You were trusted with a multi-floor residence hall and then joined the design team to document floor plans in 3D for incoming students.
+- Your reason: Texas is close to home and friends, and the residential college system rewards the kind of floor-level community work you already do.
+
+**Stats-only order:** 4 of 21. Rice requires at least 3.2 in the most recent college work, which SCAD 3.33 clears. Admitted transfers typically hold 3.5 or higher.
+
+**Numbers:** Line: 3.2 minimum on recent work, 3.5 typical. You: SCAD 3.33 clears the floor by 0.13 and is 0.17 under the typical profile.
+
+**Check first:** Rice specifies at least 3.2 in the most recent college work; dated SCAD 3.33 exceeds that floor, while broader preparation still matters.
+
+**In your portal now:** Your portal already holds short draft answers for academic interests, why Rice and the community essay.
+
+## Supplements and guidance (6)
+
+### Personal statement
+1,250 to 3,250 characters, about 250 to 650 words. Required; your draft has 23 words
+
+> Choose one of the seven standard prompts (background or identity, a challenge, a belief you questioned, gratitude, a period of growth, an engaging idea, or your own topic) and write on it.
+
+- Your portal shows the problem-you-would-like-to-solve option selected and a one-line start.
+- If you keep that prompt, name one problem, say why it matters to you and list the steps you took or would take.
+- The underserved-communities theme in your other Rice answers could be that problem. Make it one concrete case.
+- The same statement can go to UNC, WashU and UChicago.
+- Replace the opening line about the universe with a specific scene.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Academic interests and long-term goals
+150 words; field allows about 1,000 characters. Required; your draft is 42 words
+
+> How do you hope to explore your selected academic interests, and in what ways will this academic journey shape and support your long-term goals?
+
+- Name the major you selected. Social Policy Analysis or Cognitive Sciences are your candidates.
+- Your draft speaks of serving underserved people and preserving cultures. Add how: which courses or methods.
+- State the long-term goal in one sentence, such as law and technology policy.
+- You have room to grow this from 42 words toward 150.
+- Fix spelling before you save. The current draft has several errors.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Beyond academics, why Rice
+150 words; field allows about 1,000 characters. Required; your draft is 52 words
+
+> In addition to academics, why are you interested in transferring to Rice?
+
+- Being closer to home and friends in Texas is a real reason. Keep it and say it plainly.
+- Add one reason about Rice itself, such as the residential colleges or the veteran association.
+- Your draft mentions alumni and customs. Replace general praise with one tradition you have read about.
+- This answer is about life outside class, so leave majors out.
+- Proofread. Words like opportunity and sought are misspelled in the draft.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Community option A: residential colleges
+500 words. Choose this or option B
+
+> The residential college system is shaped by the traditions and life experiences each student brings. What life experiences or perspectives are you looking forward to sharing with fellow students there?
+
+- This option fits you best: you already run residence-hall community as a mentor.
+- Your draft mentions a four-floor hall, an offer connected to Lacoste, and 3D floor plans. Confirm each fact and title.
+- Tell one story of a resident you helped, then say what you learned about living in community.
+- Name what you would bring to a college: events, listening or design help.
+- Check the website address in your draft. It reads as habitot and should be correct or removed.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Community option B: change agents
+500 words. Choose this or option A
+
+> Rice produces leaders and change agents. What perspectives shaped by your background, experiences, upbringing or cultural identity inspire you to join that community?
+
+- Choose this only if your strongest story is about identity or upbringing more than residence life.
+- Your grandmother's community work and your veteran service both shape a view of change.
+- Give one example where you changed something small and real.
+- Avoid describing yourself as a change agent. Show the change and let the reader conclude.
+- You answer one option only. Do not split the essay across both.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### The Rice Box
+One image. Required
+
+> Share an image of something that appeals to you. Rice says the image speaks for itself.
+
+- Choose an image you made or took, if you have one you like.
+- It should be something that appeals to you, not an advertisement for yourself.
+- A photo from a place that matters, or a piece of your own design work, both fit.
+- No caption is needed, so pick an image that makes sense alone.
+- Check the file type and size the portal accepts.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
 ## Application questions
 See [[Application Questions/Rice Questions]].
 

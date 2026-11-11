@@ -71,6 +71,47 @@ The College of Arts and Sciences requires a 2.5 cumulative GPA for study abroad,
 5. If submitting the optional recommendation, choose a person with sustained direct knowledge and give that person the UVA academic argument and deadlines.
 6. Submit by March 1, 2027 for fall, then use only the portal for permitted updates; confirm veteran benefits and residency before enrollment.
 
+## Strategy
+UVA fits your wish to study how communities use and govern systems, through a liberal-arts major and an optional data science minor. It needs 24 transferable semester hours plus a full year of college, and its admitted transfers average about 3.5.
+
+- Best approach: Pair one residence-life decision that changed after listening to a student with a precise Arts and Sciences plan and a credit map.
+- Standout: Top grades in government and law courses, and a record of listening before deciding as a residence mentor.
+- Your reason: A public university with a strong honor culture and veteran community, and a route into policy and law.
+
+**Stats-only order:** 12 of 21. Guides attribute an admitted transfer average near 3.5 to UVA, and UVA requires 24 transferable semester hours plus one full year. You are about 0.2 to 0.3 under on GPA.
+
+**Numbers:** Line: about 3.5 average (third-party), 24 transferable hours. You: SCAD 3.33, pooled 3.18; transferable count needs UVA's evaluation.
+
+**Check first:** Arts & Sciences preparation and composition equivalency require review; geometry is not statistics.
+
+## Supplements and guidance (2)
+
+### Time not enrolled since high school
+800 characters. Required if applicable
+
+> Provide details about any period when you were not enrolled in college courses since you graduated from high school.
+
+- 800 characters is about 130 words, so use a dated list.
+- Cover Army training, the time after Broward and 2025.
+- Give a reason of a few words for each period.
+- Keep the dates identical to your USC and Princeton answers.
+- Save explanation and reflection for the transfer statement.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Reasons for transferring and objectives
+4,000 characters, about 600 to 700 words. Required
+
+> Provide a statement that addresses your reasons for transferring and the objectives you hope to achieve.
+
+- Name the College of Arts and Sciences and a major: Media Studies, Sociology or Psychology.
+- The BS in Data Science does not take outside transfers. Mention only the minor, and only if you qualify.
+- Give the reason for leaving a design school in academic terms.
+- State two or three objectives, including preparation for law school.
+- UVA says it does not want extra materials. Put everything that matters in this statement.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
 ## Application questions
 See [[Application Questions/UVA Questions]].
 

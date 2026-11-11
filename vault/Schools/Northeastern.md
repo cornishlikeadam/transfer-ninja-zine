@@ -75,6 +75,47 @@ Traditional transfer students can join summer, semester or Dialogue of Civilizat
 5. Submit early enough for a complete rolling review, but do not confuse early completion with a binding or separately advantaged transfer round.
 6. Before enrollment, obtain a written cost and VA-benefit estimate from CAVS and financial aid.
 
+## Strategy
+Northeastern suits the part of you that learns by building with other people, and its usual transfer GPA sits right at your SCAD number. The decision turns on credit transfer and co-op timing, because both change the cost and the finish date.
+
+- Best approach: Use the interactive floor-plan work as a case study with your role, the feedback you got and what you changed.
+- Standout: A shipped client product (GlowOS) plus residence-life design work shows you can deliver for real users, which is what co-op employers look for.
+- Your reason: Co-op puts design work in front of real organizations, and veterans at full Post-9/11 eligibility are in the unlimited Yellow Ribbon program.
+
+**Stats-only order:** 3 of 21. Northeastern says successful transfers generally hold about a 3.3 cumulative. Your SCAD 3.33 sits at that level and your pooled 3.18 is just under.
+
+**Numbers:** Line: about 3.3 typical, not a minimum. You: SCAD 3.33 at the line; pooled 3.18 is 0.12 under.
+
+**Check first:** A typical successful cumulative GPA around 3.3 is descriptive, not an eligibility floor.
+
+## Supplements and guidance (2)
+
+### Transfer personal statement
+Not captured. No screenshot yet
+
+> Northeastern's transfer application includes a personal statement through the Common or Coalition application. Capture the prompt before drafting.
+
+- Take a screenshot of the Northeastern questions so this entry can be replaced.
+- Your transfer essay for Vanderbilt or UVA can be adapted once you know the limit.
+- Name the college and degree: Interaction Design, Experience Design or Psychology and Design.
+- Explain how co-op fits your plan and your timeline to graduate.
+- Ask for a preliminary credit map first, because it shapes what you can promise.
+
+_Not captured: no screenshot was supplied and no wording is verified._
+
+### Design portfolio statement
+About 500 words on the official page. Only if you submit a portfolio
+
+> Applicants to design programs may submit a portfolio with a short statement about the work.
+
+- A portfolio is optional but recommended for design majors. Decide based on your strongest two or three pieces.
+- Describe process: the problem, what you tried, what you changed and why.
+- The floor-plan project and the client learning platform are your clearest cases.
+- State your individual role on any team project.
+- Confirm the current portfolio rules for your exact degree.
+
+_From the school's official page, not from a screenshot. Confirm in the live application._
+
 ## Application questions
 See [[Application Questions/Northeastern Questions]].
 

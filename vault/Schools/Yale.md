@@ -76,6 +76,34 @@ Eli Whitney students can study abroad for a year or term with approval from the 
 5. Prepare the application for the late-November opening and March 1 deadline, with materials by March 15 and aid by April 1.
 6. Treat an interview invitation as selective, prepare specific Yale questions, and do not read the absence of an invitation as an instruction to lobby.
 
+## Strategy
+Yale's Eli Whitney program is designed for students whose education was interrupted, and it has no GPA floor. Yale's own contact told you what stands in the way: the withdrawals and too little recent liberal-arts and quantitative work.
+
+- Best approach: Follow the advice you were given: add graded English and math, then return with an updated record and one strong analytical paper.
+- Standout: An adult veteran with a rising recent record and community leadership, which is the profile Eli Whitney was created for.
+- Your reason: Full-need aid, an adult and veteran community, and room to study race, migration and technology together.
+
+**Stats-only order:** 10 of 21. Eli Whitney has no GPA floor and weighs recent work, but Yale's contact said the withdrawals and thin recent coursework are the obstacle and raised 2028 as an option.
+
+**Numbers:** Line: none; recent broad coursework is the test. You: one strong SCAD term so far; English and math are the stated gaps.
+
+**Check first:** confirm at least five years out of high school and no prior bachelor’s degree; broad recent academic strength is still needed.
+
+## Supplements and guidance (1)
+
+### Eli Whitney essays
+Not captured. No screenshot yet
+
+> Yale's Eli Whitney application has its own essay questions. Open the application and capture them before drafting.
+
+- Take screenshots of every Yale question so the prompts and limits here can be replaced with the real ones.
+- Yale's contact asked for recent English and math coursework. Plan the essays around a record that includes them.
+- Prepare a dated education timeline, because Eli Whitney asks you to account for time away from school.
+- Choose one analytical paper to anchor your academic case, and keep the instructor's comments.
+- Decide whether 2027 or 2028 is the right cycle before you invest in these essays.
+
+_Not captured: no screenshot was supplied and no wording is verified._
+
 ## Application questions
 See [[Application Questions/Yale Questions]].
 

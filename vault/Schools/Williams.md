@@ -63,6 +63,60 @@ Williams requires two years in residence and caps transfer credit at two years. 
 - [Williams-Exeter Programme](https://exeter.williams.edu/the-program/)
 - [VetLink guidebook: Williams](https://service2school.gitbook.io/vetlink-guidebook/williams-college)
 
+## Strategy
+Williams would turn your wide curiosity into close, sustained reading and writing in very small classes. Its usual expectation is about a 3.5 in a strong program, and its two-year residence rule affects when you could study away.
+
+- Best approach: Send a strong graded essay with its prompt, and write the personal essay about one experience that changed the question you ask.
+- Standout: Williams says it especially encourages transfers who started in the military or the workforce, which is your path.
+- Your reason: Small seminars, need-based aid without merit games, and a college that actively recruits veterans.
+
+**Stats-only order:** 13 of 21. A 3.5 average in a strong program is the commonly cited expectation for successful transfers (third-party profile). You are about 0.2 to 0.3 under.
+
+**Numbers:** Line: about 3.5 (third-party). You: SCAD 3.33, pooled 3.18; two-year residence rule shapes entry level.
+
+**Check first:** Confirm major and two-year residence requirement, including effects on study away.
+
+## Supplements and guidance (3)
+
+### Personal essay
+4,000 characters, about 600 to 700 words. Required
+
+> Williams students thrive when engaged in academic and cocurricular life. Share how your prior experiences have informed your interests and how you hope to pursue them in and out of the classroom.
+
+- The prompt asks for both sides: in the classroom and outside it. Give each a clear section.
+- Choose two or three experiences that led to an interest, such as mentoring leading to questions about institutions.
+- Name the academic direction. Africana Studies and Cognitive Science are on file. Confirm which you want.
+- For outside the classroom, name what you would join or start, such as the veteran community or lacrosse.
+- Williams reads recent coursework most heavily, so mention the courses that show where you are now.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Optional academic writing sample
+Up to 8,000 characters; include the assignment. Optional
+
+> If you write best in an academic essay, submit a paper on any topic. It need not be graded and may be handwritten in class. No lab reports. Include the assignment or prompt.
+
+- This is worth sending. Williams values analytical writing and your narrative essays lean personal.
+- A humanities-style paper fits best. Check whether your business-course paper reads as analysis.
+- Attach the assignment description, as the instructions require.
+- Send it as written. Fix nothing after grading except obvious typing errors if the school allows.
+- Upload it under Documents in the Williams application, not in the essay box.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### Additional information
+4,000 characters, about 600 to 700 words. Optional
+
+> Provide details about circumstances or qualifications not reflected elsewhere in the application.
+
+- Williams says high school performance may not show your ability and that recent work counts most. Use that framing.
+- Explain the Broward terms in dated, factual sentences.
+- Note that SCAD uses quarter credits and that the military transcript carries ACE credit recommendations.
+- Ask how the two-year residence rule affects you before deciding sophomore or junior entry.
+- The College Report is sent by email from a college official. Arrange it early.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
 ## Application questions
 See [[Application Questions/Williams Questions]].
 

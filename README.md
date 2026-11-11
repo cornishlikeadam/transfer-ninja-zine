@@ -39,10 +39,21 @@ The six former bench-tier schools are active. A separate five-school reserve ben
 
 The printable PDF and editable Markdown are in `documents/`. Regenerate with `python3 scripts/export_strategy.py` (requires reportlab). `data/route-plans.json` preserves the prior route snapshot when openpyxl or the original workbook is unavailable.
 
+## Strategy, supplements and ranking
+
+`data/strategy.json` holds the profile, a two-sentence summary and three bullets per school, the stats-only ranking, and
+every supplement with a paraphrased prompt and five guidance points. The reviewed text lives in `data/boost_core.py`,
+`data/boost_supps1.py` and `data/boost_supps2.py`; `python3 data/apply_boost.py` merges it into `strategy.json`.
+`python3 scripts/export_strategy.py` writes `documents/Kendren_21_School_Strategy.md` and `.pdf`.
+`node scripts/validate_zine.cjs` checks counts, rendering and that private text is absent from the public page.
+
+The claude.ai build seals the tutor and admin data with the code (`scripts/seal.cjs`), so it is not readable in the page
+source. A 4-digit code can still be guessed by trying every value.
+
 ## Rebuild
 
 ```bash
-python3 build_zine.py
+python3 data/apply_boost.py && python3 build_zine.py && python3 scripts/export_strategy.py && node scripts/validate_zine.cjs
 ```
 
 ## The code lock

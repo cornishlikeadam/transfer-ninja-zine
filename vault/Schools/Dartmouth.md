@@ -69,6 +69,60 @@ Aid applies to Dartmouth-sponsored off-campus programs and official exchanges, a
 - [D-Plan for transfer students](https://students.dartmouth.edu/undergraduate-deans/students/resources-class/transfer-students/d-plan-transfer-students)
 - [VetLink guidebook: Dartmouth](https://service2school.gitbook.io/vetlink-guidebook/dartmouth-college)
 
+## Strategy
+Dartmouth could connect your hands-on design habits to sustained liberal-arts study in a small, close community. Most admitted transfers hold above a 3.7 and testing is required unless your veteran waiver is approved.
+
+- Best approach: Complete Service to School first, choose a major, and ask the veteran coordinator one question the website does not answer.
+- Standout: A veteran builder with a faculty-endorsed campaign and design work that other students actually use.
+- Your reason: A tight residential community, unlimited Yellow Ribbon, and a veteran coordinator who works with applicants directly.
+
+**Stats-only order:** 16 of 21. Dartmouth says most admitted transfers hold above 3.7, and testing is required unless a veteran waiver is approved. You are about 0.4 to 0.5 under.
+
+**Numbers:** Line: above 3.7 for most admits; testing required or waived. You: SCAD 3.33, pooled 3.18.
+
+**Check first:** Confirm major, required testing or approved waiver, credit limits and time in residence.
+
+## Supplements and guidance (3)
+
+### Why transfer, and why Dartmouth
+About 500 words on the official essay page. Provisional; application opens in January
+
+> Explain your reasons for transferring and why Dartmouth. Wording comes from the official page, last updated for an earlier cycle.
+
+- Wait for the January application and capture the real prompts before drafting.
+- Choose a major first. No major is on file for Dartmouth.
+- Explain how the quarter-style calendar and small classes suit how you learn.
+- Use what you learn from the veteran coordinator as knowledge, not as an endorsement.
+- Plan for testing: request the veteran waiver or schedule a test.
+
+_From the school's official page, not from a screenshot. Confirm in the live application._
+
+### Your upbringing and who you are
+About 250 words on the older official page. Provisional; choose one of two
+
+> Describe the environment in which you were raised and how it shaped the person you are.
+
+- Your grandmother's ministry and community are a natural subject.
+- Show one scene from that environment.
+- Link it to one present habit or value.
+- You would answer this or the introduce-yourself prompt, not both.
+- Confirm the wording when the application opens.
+
+_From the school's official page, not from a screenshot. Confirm in the live application._
+
+### Introduce yourself
+About 250 words on the older official page. Provisional; choose one of two
+
+> Introduce yourself in your own way.
+
+- This is open. Lead with what a roommate would learn about you in the first week.
+- Your quick answers elsewhere show humor and curiosity. Let that voice in.
+- One or two details are better than a summary of your resume.
+- Choose this option if your upbringing is already covered in another essay.
+- Confirm the wording when the application opens.
+
+_From the school's official page, not from a screenshot. Confirm in the live application._
+
 ## Application questions
 See [[Application Questions/Dartmouth Questions]].
 

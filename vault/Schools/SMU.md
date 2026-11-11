@@ -76,6 +76,34 @@ No transfer-specific study abroad award was found. Study abroad appears as an ad
 5. Confirm Yellow Ribbon, remaining cost, and VA-certification timing with SMU before making a binding financial decision.
 6. Keep a strong academic and financial alternative even though the recent university-wide transfer admit rate is high.
 
+## Strategy
+SMU is the school where your numbers already clear the published line, and you hold an SMU financial technology certificate. It stays on your list only if scholarship and veterans benefits together make it close to free.
+
+- Best approach: Show one small project with its revision history and ask for a written net-cost estimate before you apply.
+- Standout: You have already completed SMU coursework through the financial technology certificate, which no other applicant file on your list can say about its school.
+- Your reason: Texas is home ground, Yellow Ribbon covers tuition for eligible veterans, and it balances a list full of reaches.
+
+**Stats-only order:** 1 of 21. Published minimum is 2.7 with 24 transferable hours, and automatic merit starts at 3.3. Your pooled 3.18 clears the minimum.
+
+**Numbers:** Line: 2.7 minimum, 3.3 for merit. You: pooled 3.18 clears the minimum by about 0.5; merit depends on SMU's own recalculation.
+
+**Check first:** Confirm 24 transferable hours and the published 2.7 minimum; neither guarantees admission.
+
+## Supplements and guidance (1)
+
+### Optional transfer essay
+Not captured. Optional; no screenshot yet
+
+> SMU says a personal essay, resume and recommendations are optional and encouraged for scholarship review. Capture the current wording before drafting.
+
+- Submit it. SMU says optional materials are considered for scholarships, and a scholarship is your condition for attending.
+- Mention the SMU financial technology certificate you already completed.
+- Name the degree, Creative Computing or an alternate, and why it fits.
+- Ask your transfer counselor which materials affect merit awards.
+- Take a screenshot of the essay prompt so this entry can be replaced with the real one.
+
+_Not captured: no screenshot was supplied and no wording is verified._
+
 ## Application questions
 See [[Application Questions/SMU Questions]].
 

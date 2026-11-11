@@ -73,6 +73,47 @@ ILR says transfer students are eligible to apply for semester study abroad and I
 5. Prepare the Common App, Cornell supplement, College Report, Mid-Term Report, transcripts, aid forms, and any permitted portfolio well before the standing March 15 deadline.
 6. Do not automate email opens/clicks, mass-contact faculty, mail promotional packages, or seek a recommendation from someone who knows the applicant only through a recent cold email.
 
+## Strategy
+Cornell ILR gives your interest in work, organizations and technology a single degree home, and a third of its graduates go on to law school. You are just under its stated GPA level and still need the composition, statistics and economics courses its advisers named.
+
+- Best approach: Send ILR your exact course titles, descriptions and grades, then build the essay on one work or mentoring decision and its consequence.
+- Standout: You have seen labor from the ground: field canvassing with daily conversion tracking, and study of how AI may change the workforce.
+- Your reason: ILR joins labor, policy and law in one school, and Kyle told you it is among the best preparations for law school.
+
+**Stats-only order:** 9 of 21. ILR says most admitted transfers hold 3.4 or higher. SCAD 3.33 is 0.07 under and pooled 3.18 is 0.22 under, and three named prerequisites are missing.
+
+**Numbers:** Line: 3.4 for most admits. You: SCAD 3.33 is 0.07 under; pooled 3.18 is 0.22 under; composition, statistics and microeconomics still needed.
+
+**Check first:** Most admitted ILR transfers report 3.4+; map composition, economics, statistics/calculus and science.
+
+## Supplements and guidance (2)
+
+### Educational path statement
+1,250 to 3,250 characters, about 250 to 650 words. Required
+
+> Discuss your educational path. How does continuing your education at a new institution help you achieve your future goals?
+
+- Lay out the path in order: Army, Broward, the interruption, nonprofit work, SCAD. One or two sentences each.
+- Address the Broward withdrawals directly and briefly, then show the rising SCAD record as evidence of change.
+- Name the future goal plainly: labor and technology policy, then law school.
+- Say what a design school cannot give you: economics, labor law, statistics and policy study in one degree.
+- Kyle told you a third of ILR graduates go to law school. Use what you learned on the call as knowledge, without quoting him as support.
+
+_From your November 10 screenshot, paraphrased. Confirm wording in the live application._
+
+### ILR writing supplement
+650 words on the current ILR guidelines. Required for ILR; confirm in portal
+
+> Using your own experiences, explain the issues about work, employment or labor that you care about and how ILR's curriculum fits your interests.
+
+- Choose one work issue you have lived: canvassing pay and quotas, unrecognized residence-hall labor, or AI changing hiring.
+- Describe one decision you made about people's work, such as how you trained newer recruiters, and its result.
+- Connect it to a field ILR teaches: labor relations, organizational behavior, labor economics or law.
+- Your resume describes resume.ai and COMMONS. Mention a tool only at the stage it has actually reached.
+- ILR advisers asked for composition, statistics and microeconomics. Say which you are taking and when.
+
+_From the school's official page, not from a screenshot. Confirm in the live application._
+
 ## Application questions
 See [[Application Questions/Cornell ILR Questions]].
 
