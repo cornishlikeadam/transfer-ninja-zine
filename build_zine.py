@@ -357,10 +357,20 @@ def main():
         return json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
     empty = {"lib": {}, "dossier": {}, "routes": [], "connections": [], "lens": {}}
-    soft = tpl.replace("/*__DATA__*/", "var GATE_MODE='soft';var CODEHASH=%s;var PUB=%s;var DATA=%s;" % (code_hash(code), dump(pub), dump(gated)))
+    import secrets, subprocess, tempfile
+    salt = secrets.token_hex(8)
+    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as tf:
+        tf.write(json.dumps(gated, ensure_ascii=False, separators=(",", ":")))
+    sealed = subprocess.run(["node", os.path.join(HERE, "scripts", "seal.cjs"), code, salt, tf.name],
+                            capture_output=True, text=True)
+    os.unlink(tf.name)
+    if sealed.returncode != 0 or not sealed.stdout:
+        raise SystemExit("sealing failed: " + sealed.stderr)
+    soft = tpl.replace("/*__DATA__*/", "var GATE_MODE='soft';var CODEHASH=0;var SALT='%s';var SEALED='%s';var PUB=%s;var DATA=%s;"
+                       % (salt, sealed.stdout, dump(pub), dump(empty)))
     open(os.path.join(HERE, "transfer-ninja-zine.html"), "w", encoding="utf-8").write(soft)
 
-    server = tpl.replace("/*__DATA__*/", "var GATE_MODE='server';var CODEHASH=0;var PUB=%s;var DATA=%s;" % (dump(pub), dump(empty)))
+    server = tpl.replace("/*__DATA__*/", "var GATE_MODE='server';var CODEHASH=0;var SALT='';var SEALED='';var PUB=%s;var DATA=%s;" % (dump(pub), dump(empty)))
     vdir = os.path.join(HERE, "vercel")
     os.makedirs(os.path.join(vdir, "public"), exist_ok=True)
     os.makedirs(os.path.join(vdir, "api"), exist_ok=True)

@@ -318,6 +318,11 @@ footer p{max-width:80ch;margin:0 0 8px}
 .entry textarea{min-height:92px}
 .entry .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:8px}
 .entry .upd{font:400 .75rem var(--f-type);color:var(--card-dim);margin-left:auto}
+.strategy-school .quote,.vbody .quote{border-left:4px solid var(--orange);padding-left:10px;margin:6px 0}
+.strategy-school details{border-top:1px dashed var(--card-dim);padding-top:6px;margin-top:6px}
+.strategy-school summary{font-size:.95rem}
+.card .strategy-school{border:0;box-shadow:none;padding:0;background:transparent}
+.card .strategy-school h3{font-size:1.2rem}
 /* agent and library */
 .sheet .chip{color:var(--card-ink);border-color:var(--card-ink)}
 .sheet .chip:hover{background:var(--yellow);color:var(--ink)}
@@ -946,7 +951,14 @@ function panelProof(){
 /* ---------- code gate (tutor and admin tools) ---------- */
 function cyrb53(str){var h1=0xdeadbeef,h2=0x41c6ce57;for(var i=0,ch;i<str.length;i++){ch=str.charCodeAt(i);h1=Math.imul(h1^ch,2654435761);h2=Math.imul(h2^ch,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return 4294967296*(2097151&h2)+(h1>>>0)}
 var UNLOCKED=false;
-try{if(GATE_MODE==='soft'&&sessionStorage.getItem('tn-ok')==='1')UNLOCKED=true}catch(e){}
+function tnCrypt(bytes,code,salt){var h=cyrb53('tn:'+salt+':'+code),g=cyrb53(code+'|'+salt),a=h>>>0,b=Math.floor(h/4294967296)>>>0,c=g>>>0,d=Math.floor(g/4294967296)>>>0;function r(){a|=0;b|=0;c|=0;d|=0;var t=(a+b|0)+d|0;d=d+1|0;a=b^b>>>9;b=c+(c<<3)|0;c=c<<21|c>>>11;c=c+t|0;return t>>>0}for(var i=0;i<24;i++)r();var out=new Uint8Array(bytes.length),w=0;for(i=0;i<bytes.length;i++){if(i%4===0)w=r();out[i]=bytes[i]^(w>>>(i%4*8)&255)}return out}
+function tnOpen(code){
+  try{var bin=atob(SEALED),n=bin.length,b=new Uint8Array(n);for(var i=0;i<n;i++)b[i]=bin.charCodeAt(i);
+    var o=tnCrypt(b,code,SALT);if(o[0]!==84||o[1]!==78||o[2]!==90||o[3]!==49)return null;
+    return JSON.parse(new TextDecoder().decode(o.subarray(4)))}catch(e){return null}
+}
+var EMPTY_DATA={lib:{},dossier:{},routes:[],connections:[],lens:{}};
+try{if(GATE_MODE==='soft'){var savedCode=sessionStorage.getItem('tn-code');if(savedCode){var savedData=tnOpen(savedCode);if(savedData){DATA=savedData;LENS=DATA.lens||{};UNLOCKED=true}}}}catch(e){}
 function lockedPanel(t){return '<div class="sheet panel lockp"><h3>'+esc(t)+'</h3><p class="why">This area is for the tutor and admin. Enter the code to open it.</p><button class="btn" type="button" data-act="opengate">Enter code</button></div>'}
 function setGateUI(){var b=$('#unlockbtn');if(b)b.textContent=UNLOCKED?'Lock':'Unlock';if(UNLOCKED)$('#gatebox').hidden=true}
 function showGate(){$('#gatebox').hidden=false;setTimeout(function(){var i=$('#codeinput');if(i)i.focus()},0)}
@@ -959,7 +971,7 @@ function doUnlock(){
     else msg.textContent='That code did not work.';
   }
   if(GATE_MODE==='soft'){
-    if(cyrb53('tn:'+code)===CODEHASH){UNLOCKED=true;try{sessionStorage.setItem('tn-ok','1')}catch(e){}finish(true)}else finish(false);
+    var opened=tnOpen(code);if(opened){DATA=opened;LENS=DATA.lens||{};UNLOCKED=true;try{sessionStorage.setItem('tn-code',code)}catch(e){}finish(true)}else finish(false);
     return;
   }
   fetch('/api/unlock',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({code:code})})
@@ -968,8 +980,8 @@ function doUnlock(){
     .catch(function(){finish(false)});
 }
 function doLock(){
-  UNLOCKED=false;try{sessionStorage.removeItem('tn-ok')}catch(e){}
-  if(GATE_MODE!=='soft'){DATA={lib:{},dossier:{},routes:[],connections:[],lens:{}};LENS={}}
+  UNLOCKED=false;try{sessionStorage.removeItem('tn-code')}catch(e){}
+  DATA=EMPTY_DATA;LENS={};
   setGateUI();renderAll();
 }
 
@@ -1299,10 +1311,12 @@ function agentTools(){
    {name:'analyze_text',description:'Computes statistics on a whole document in the page: op "stats" (words, sentences, lexical diversity), "keywords" (top words and repeated phrases), "readability" (Flesch scores), or "speaker_share" (words per speaker in a transcript with "Name:" labels). Use it for counts and patterns instead of estimating.',
     inputSchema:{type:'object',properties:{doc:{type:'string'},op:{type:'string',enum:['stats','keywords','readability','speaker_share']},top:{type:'number'}},required:['doc','op']},
     execute:function(i){var did=findDoc(i.doc);if(!did)throw new Error('No document matches "'+i.doc+'". Call list_sources.');say('Analyzing "'+LIBS.docs[did].title+'"...');return fullText(did).then(function(t){return {title:LIBS.docs[did].title,op:i.op||'stats',result:analyze(t,i.op||'stats',i.top)}})}},
-   {name:'school_data',description:'Returns the site data for one school card: route, deadlines, application fee waiver, aid model, aid forms and dates, veterans benefits, study abroad rules, links, interest policy and, when available, the research brief (degree path, people, who to contact, question to ask). Pass the school name or id.',
+   {name:'school_data',description:'Returns the site data for one school card: route, deadlines, application fee waiver, aid model, aid forms and dates, veterans benefits, study abroad rules, links, interest policy and, when available, the research brief (degree path, people, who to contact, question to ask) and the strategy entry: two-sentence summary, standouts, stats-only rank, and every supplement prompt with its limit and guidance. Pass the school name or id.',
     inputSchema:{type:'object',properties:{school:{type:'string'}},required:['school']},
     execute:function(i){var s=findSchool(i.school);if(!s)throw new Error('No school matches "'+i.school+'". Schools: '+SCHOOLS.map(function(x){return x.name}).join(', '));say('Looking up '+s.name+'...');
-      var L=LENS[s.id]||{};return {name:s.name,route:s.route,priority:s.pri,gate:s.gate||'',oneThing:s.one,facts:s.facts,nextMove:s.next,interestPolicy:s.di,deadlines:DEADLINES.filter(function(d){return d.school===s.id}).map(function(d){return {date:d.date,label:d.label,done:!!S.done[d.id]}}),money:s.fin,studyAbroad:s.abroad,links:s.links,brief:{path:L.path,people:L.know,gap:L.gap,who:L.who,ask:L.ask,show:L.show,avoid:L.dont,diText:L.diText}}}},
+      var L=LENS[s.id]||{};return {name:s.name,route:s.route,priority:s.pri,gate:s.gate||'',oneThing:s.one,facts:s.facts,nextMove:s.next,interestPolicy:s.di,deadlines:DEADLINES.filter(function(d){return d.school===s.id}).map(function(d){return {date:d.date,label:d.label,done:!!S.done[d.id]}}),money:s.fin,studyAbroad:s.abroad,links:s.links,brief:{path:L.path,people:L.know,gap:L.gap,who:L.who,ask:L.ask,show:L.show,avoid:L.dont,diText:L.diText},strategy:(function(){var x=((DATA.strategy||{}).schools||{})[s.id];return x?{summary:x.summary,bullets:x.bullets,statsRank:x.rank+' of 21',numbers:x.stat,checkFirst:x.gate,portal:x.portal,supplements:x.supplements.map(function(q){return {title:q.title,limit:q.limit,status:q.status,prompt:q.prompt,guidance:q.guidance}})}:null})()}}},
+   {name:'about_applicant',description:'Returns the applicant profile kept in this site: life story in order, motivations, academic interests, goals, personality signals, standouts, projects, academic record and gaps, facts still to verify, and the stats-only school ranking. Use it before giving advice about essays or school fit.',
+    execute:function(){say('Reading the profile...');var a=DATA.strategy||{};return {profile:(a.profile||[]).map(function(p){return {topic:p.title,text:p.text}}),ranking:SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).map(function(s){return a.schools[s.id].rank+'. '+s.name+': '+a.schools[s.id].stat}),whatMoves:a.whatMoves||[]}}},
    {name:'tracker_status',description:'Returns the applicant\'s current progress in this site: pipeline stage per school, the next open deadlines, checklist progress, Common App and school-question counts, and RECAP proof counts per school.',
     execute:function(){say('Checking tracker status...');var g=gearAll(),a=appsStats();return {stages:SCHOOLS.map(function(s){return {school:s.name,stage:STAGES[stageOf(s.id)],recap:recapCount(s.id)+'/5'}}),nextDeadlines:DEADLINES.filter(function(d){return !S.done[d.id]&&daysTo(d.date)>=0}).slice(0,6).map(function(d){return {school:d.sname,date:d.date,label:d.label,daysLeft:daysTo(d.date)}}),checklist:g.filter(function(id){return S.check[id]}).length+' of '+g.length,commonApp:a,libraryDocs:Object.keys(LIBS.docs).length}}}
   ];
@@ -1358,7 +1372,7 @@ function renderAgent(){
   var cur=S.ui.lfolder&&(S.ui.lfolder==='all'||LIBS.folders[S.ui.lfolder])?S.ui.lfolder:'all';
   var tgt=LIBS.target&&LIBS.folders[LIBS.target]?LIBS.target:(cur!=='all'?cur:'');
   var docs=Object.keys(LIBS.docs).filter(function(d){return cur==='all'||LIBS.docs[d].folder===cur}).sort(function(a,b){return LIBS.docs[a].added<LIBS.docs[b].added?1:-1});
-  var canAgent=!!AG.sample&&(AG.limit===0||AG.limit>=6);
+  var canAgent=!!AG.sample&&(AG.limit===0||AG.limit>=7);
   var h='<div class="agentgrid"><div class="sheet panel" id="libpanel"><h3>Source library</h3>';
   h+='<p class="stale" style="margin-bottom:10px">'+(LIBS.mode==='db'?'Saved to the page\'s private store. Only editors of this page can read it.':LIBS.mode==='local'?'Saved in this browser only'+(window.claude?' (the shared store did not answer)':'. The agent and a bigger shared library run on the claude.ai version')+'.':'Loading...')+'</p>';
   h+='<div class="chips" role="group" aria-label="Folders" style="margin-bottom:10px"><button type="button" class="chip" data-act="lfolder" data-v="all" aria-pressed="'+(cur==='all')+'">All '+Object.keys(LIBS.docs).length+'</button>'+fids.map(function(f){return '<button type="button" class="chip" data-act="lfolder" data-v="'+f+'" aria-pressed="'+(cur===f)+'">'+esc(LIBS.folders[f].name)+' '+Object.keys(LIBS.docs).filter(function(d){return LIBS.docs[d].folder===f}).length+'</button>'}).join('')+'</div>';
@@ -1425,7 +1439,7 @@ function cardHTML(s){
    '<ul class="facts">'+s.facts.map(function(f){return '<li>'+esc(f)+'</li>'}).join('')+'</ul>'+
    '<div class="dl">'+dls+'</div>'+
    '<div class="pipe"><label for="st-'+s.id+'">Pipeline</label><select id="st-'+s.id+'" data-chg="stage" data-id="'+s.id+'">'+opts+'</select><div class="pips" aria-hidden="true">'+pips+'</div></div>'+
-   moneyDetails(s)+briefDetails(s)+'<details data-key="'+s.id+'"'+(openSet[s.id]?' open':'')+'><summary>Next move and my notes</summary><p class="next">'+esc(s.next)+'</p><label class="sr" for="nt-'+s.id+'">Private notes for '+esc(s.name)+'</label><textarea id="nt-'+s.id+'" data-note="'+s.id+'" placeholder="Private notes. They stay in this browser.">'+esc(S.notes[s.id]||'')+'</textarea><a class="src" href="'+esc(s.src)+'" target="_blank" rel="noopener">Official page &#8599;</a></details>'+
+   moneyDetails(s)+strategyDetails(s)+briefDetails(s)+'<details data-key="'+s.id+'"'+(openSet[s.id]?' open':'')+'><summary>Next move and my notes</summary><p class="next">'+esc(s.next)+'</p><label class="sr" for="nt-'+s.id+'">Private notes for '+esc(s.name)+'</label><textarea id="nt-'+s.id+'" data-note="'+s.id+'" placeholder="Private notes. They stay in this browser.">'+esc(S.notes[s.id]||'')+'</textarea><a class="src" href="'+esc(s.src)+'" target="_blank" rel="noopener">Official page &#8599;</a></details>'+
   '</article>';
 }
 function benchHTML(b){
@@ -1485,20 +1499,29 @@ function bulletHTML(items){return '<ul>'+items.map(function(t){return '<li>'+esc
 function schoolStrategyHTML(id){
  var a=DATA.strategy||{},x=(a.schools||{})[id];if(!x)return '';
  var r=((a.research||{}).schools||[]).filter(function(z){return z.id===id})[0];
- var h='<div class="sheet panel strategy-school"><h3>'+esc(nameOf(id))+' · strategy</h3><p>'+esc(x.summary)+'</p>'+bulletHTML(x.bullets)+'<p><b>Equal-base-rate readiness order #'+x.rank+'/21.</b> '+esc(x.rankReason)+'</p>';
+ var h='<div class="sheet panel strategy-school"><h3>'+esc(nameOf(id))+' · strategy</h3><p class="stale">'+esc(x.path||'')+'</p><p>'+esc(x.summary)+'</p>'+bulletHTML(x.bullets);
+ h+='<p><b>Stats-only order #'+x.rank+' of 21.</b> '+esc(x.rankReason)+'</p>';
+ if(x.stat)h+='<p class="seed"><b>Numbers</b>'+esc(x.stat)+'</p>';
+ if(x.gate)h+='<p><b>Check first:</b> '+esc(x.gate)+'</p>';
+ if(x.portal)h+='<p><b>In your portal now:</b> '+esc(x.portal)+'</p>';
  if(r)h+='<details><summary>Official research · '+esc(r.verifiedDate)+'</summary>'+bulletHTML(r.findings)+'<p class="stale">'+esc(r.limitations)+'</p><a href="'+esc(r.source)+'" target="_blank" rel="noopener">Official source</a></details>';
- h+='<h4>Supplements and guidance</h4><p class="stale">Paraphrased themes. Required, optional, conditional and alternatives stay separate; verify the final portal wording. Guidance supports your own writing.</p>';
- x.supplements.forEach(function(q){h+='<details><summary>'+esc(q.title)+' — '+esc(q.limit)+'</summary><p><b>'+esc(q.status)+'</b></p><p class="stale">'+esc(q.provenance)+'</p>'+bulletHTML(q.guidance)+'</details>'});
+ h+='<h4>Supplements and guidance · '+x.supplements.length+'</h4><p class="stale">Prompts are paraphrased with every part kept. Confirm wording and limits in the live application. Guidance supports your own writing and is never draft text.</p>';
+ x.supplements.forEach(function(q){h+='<details><summary>'+esc(q.title)+' · '+esc(q.limit)+'</summary><p><b>'+esc(q.status)+'</b></p>'+(q.prompt?'<p class="quote">'+esc(q.prompt)+'</p>':'')+bulletHTML(q.guidance)+'<p class="stale">'+esc(q.provenance)+'</p></details>'});
  return h+'</div>';
+}
+function strategyDetails(s){
+ var x=((DATA.strategy||{}).schools||{})[s.id];if(!UNLOCKED||!x)return '';
+ var key='sg-'+s.id;
+ return '<details data-key="'+key+'"'+(openSet[key]?' open':'')+'><summary>Strategy, standouts and '+x.supplements.length+' supplements</summary><div class="brief">'+schoolStrategyHTML(s.id)+'</div></details>';
 }
 function panelStrategy(){
  var a=DATA.strategy||{},id=S.ui.strategySchool||SCHOOLS[0].id;
- var h='<h3>21-school strategy and personal evidence</h3><p>'+esc(a.method||'')+'</p><p class="stale">'+esc(a.inventoryNote||'')+'</p><button class="btn" type="button" data-act="exportStrategy">Download full strategy document (.md)</button>';
+ var h='<h3>21-school strategy and personal evidence</h3><p>'+esc(a.method||'')+'</p><p class="stale">'+esc(a.inventoryNote||'')+'</p><button class="btn" type="button" data-act="exportStrategy">Download full strategy document (.md)</button> <button class="btn alt" type="button" data-act="copyStrategy">Copy it as text</button><p class="stale" id="stratmsg" role="status"></p><textarea id="strattext" hidden readonly style="min-height:160px"></textarea>';
  h+='<details><summary>Your background, interests and evidence boundaries</summary>'+(a.profile||[]).map(function(p){return '<h4>'+esc(p.title)+'</h4><p>'+esc(p.text)+'</p><p class="stale">'+esc(p.source)+'</p>'}).join('')+'</details>';
- h+='<h4>Equal-base-rate academic and route ranking</h4><ol>';
- SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).forEach(function(s){h+='<li><button type="button" class="chip" data-act="strategySchool" data-v="'+s.id+'">'+esc(s.name)+'</button> '+esc(a.schools[s.id].rankReason)+'</li>'});
- h+='</ol><div class="chips">'+SCHOOLS.map(function(s){return '<button class="chip" type="button" data-act="strategySchool" data-v="'+s.id+'" aria-pressed="'+(id===s.id)+'">'+esc(s.name)+'</button>'}).join('')+'</div>'+schoolStrategyHTML(id);
- var b=a.benchSupplement;if(b)h+='<details><summary>Reserve supplement · '+esc(b.school)+'</summary><p>'+esc(b.title)+' · '+esc(b.limit)+'</p><p>'+esc(b.status)+'</p>'+bulletHTML(b.guidance)+'</details>';
+ h+='<h4>Stats-only ranking, acceptance rates set aside</h4><ol>';
+ SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).forEach(function(s){h+='<li><button type="button" class="chip" data-act="strategySchool" data-v="'+s.id+'">'+esc(s.name)+'</button> '+esc(a.schools[s.id].stat||a.schools[s.id].rankReason)+'</li>'});
+ h+='</ol>'+((a.whatMoves||[]).length?'<h4>What would move this order</h4>'+bulletHTML(a.whatMoves):'')+'<div class="chips">'+SCHOOLS.map(function(s){return '<button class="chip" type="button" data-act="strategySchool" data-v="'+s.id+'" aria-pressed="'+(id===s.id)+'">'+esc(s.name)+'</button>'}).join('')+'</div>'+schoolStrategyHTML(id);
+ var b=a.benchSupplement;if(b)h+='<details><summary>Reserve supplement · '+esc(b.school)+'</summary><p>'+esc(b.title)+' · '+esc(b.limit)+'</p><p>'+esc(b.status)+'</p>'+(b.prompt?'<p class="quote">'+esc(b.prompt)+'</p>':'')+bulletHTML(b.guidance)+'</details>';
  return h;
 }
 function planningStats(){
@@ -1527,20 +1550,30 @@ function panelStats(){
   if(s.id==='nd')msg='Recent admitted average 3.75+: pooled planning estimate '+(r.combined>=3.75?'above':'below')+'. Average, not minimum.';
   if(s.id==='uva')msg='24 transferable semester hours plus one year: '+(z.eligible?z.eligible>=24?'entered count sufficient; still verify year and school rules':'entered count short':'transferable count unknown')+'.';
   if(s.id==='amherst')msg='32 transferable liberal-arts credits including in-progress: generic hour total cannot verify liberal-arts classification. Competitive A− guidance is descriptive.';
-  h+='<tr><td><b>'+esc(s.name)+'</b></td><td>'+esc(msg)+'</td><td>'+esc(x.bullets[2])+'</td><td><a href="'+esc((((a.research||{}).schools||[]).filter(function(t){return t.id===s.id})[0]||{}).source||x.source)+'" target="_blank" rel="noopener">Requirements</a></td></tr>';
+  h+='<tr><td><b>'+esc(s.name)+'</b></td><td>'+esc(msg)+'</td><td>'+esc(x.gate||x.bullets[2])+'</td><td><a href="'+esc((((a.research||{}).schools||[]).filter(function(t){return t.id===s.id})[0]||{}).source||x.source)+'" target="_blank" rel="noopener">Requirements</a></td></tr>';
  });return h+'</tbody></table></div>';
 }
 function strategyMarkdown(){
- var a=DATA.strategy||{},lines=['# Kendren Cornish — 21-school transfer strategy','', 'Updated '+a.updated,'',a.method,'',a.inventoryNote,'','## Background and evidence'];
+ var a=DATA.strategy||{},lines=['# Kendren Cornish: 21-school transfer strategy','','Updated '+a.updated,'',a.method,'',a.inventoryNote,'','## About you'];
  (a.profile||[]).forEach(function(p){lines.push('','### '+p.title,p.text,'Source: '+p.source)});
- lines.push('','## Equal-base-rate academic and route compatibility order');
- SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).forEach(function(s){lines.push(a.schools[s.id].rank+'. '+s.name+' — '+a.schools[s.id].rankReason)});
- SCHOOLS.forEach(function(s){var x=a.schools[s.id],r=((a.research||{}).schools||[]).filter(function(t){return t.id===s.id})[0];lines.push('','## '+s.name,x.summary,'');x.bullets.forEach(function(b){lines.push('- '+b)});if(r){lines.push('','### Official research ('+r.verifiedDate+')');r.findings.forEach(function(b){lines.push('- '+b)});lines.push('Limitations: '+r.limitations,'Source: '+r.source)}x.supplements.forEach(function(q){lines.push('','### '+q.title,q.limit+' · '+q.status,q.provenance);q.guidance.forEach(function(b){lines.push('- '+b)})})});
- lines.push('','## New reserve bench');BENCH.forEach(function(b){lines.push('- '+b.name+': '+b.one+' '+b.facts.join(' '))});
- var b=a.benchSupplement;if(b){lines.push('','### '+b.school+' — '+b.title,b.limit+' · '+b.status);b.guidance.forEach(function(x){lines.push('- '+x)})}
+ lines.push('','## Stats-only ranking, acceptance rates set aside');
+ SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).forEach(function(s){var x=a.schools[s.id];lines.push(x.rank+'. '+s.name+': '+(x.stat||x.rankReason))});
+ if((a.whatMoves||[]).length){lines.push('','### What would move this order');a.whatMoves.forEach(function(b){lines.push('- '+b)})}
+ SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).forEach(function(s){var x=a.schools[s.id],r=((a.research||{}).schools||[]).filter(function(t){return t.id===s.id})[0];
+  lines.push('','## '+x.rank+'. '+s.name,x.path||'','',x.summary,'');x.bullets.forEach(function(b){lines.push('- '+b)});
+  lines.push('','Stats-only order: '+x.rank+' of 21. '+x.rankReason);if(x.stat)lines.push('Numbers: '+x.stat);if(x.gate)lines.push('Check first: '+x.gate);if(x.portal)lines.push('In your portal now: '+x.portal);
+  if(r){lines.push('','### Official research ('+r.verifiedDate+')');r.findings.forEach(function(b){lines.push('- '+b)});lines.push('Limitations: '+r.limitations,'Source: '+r.source)}
+  x.supplements.forEach(function(q){lines.push('','### '+q.title,q.limit+' · '+q.status);if(q.prompt)lines.push('Prompt (paraphrased): '+q.prompt);q.guidance.forEach(function(b){lines.push('- '+b)});lines.push(q.provenance)})});
+ lines.push('','## Reserve bench');BENCH.forEach(function(b){lines.push('- '+b.name+': '+b.one+' '+b.facts.join(' '))});
+ var b=a.benchSupplement;if(b){lines.push('','### '+b.school+': '+b.title,b.limit+' · '+b.status);if(b.prompt)lines.push('Prompt (paraphrased): '+b.prompt);b.guidance.forEach(function(x){lines.push('- '+x)})}
  return lines.join('\n');
 }
-function exportStrategy(){var blob=new Blob([strategyMarkdown()],{type:'text/markdown;charset=utf-8'}),url=URL.createObjectURL(blob),el=document.createElement('a');el.href=url;el.download='Kendren_21_School_Strategy_2026-11-10.md';el.click();setTimeout(function(){URL.revokeObjectURL(url)},1000)}
+function copyStrategy(){
+ var ta=$('#strattext'),msg=$('#stratmsg');if(!ta)return;ta.value=strategyMarkdown();ta.hidden=false;
+ function fb(){ta.focus();ta.select();if(msg)msg.textContent='Select the text and copy it with your keyboard.'}
+ try{navigator.clipboard.writeText(ta.value).then(function(){if(msg)msg.textContent='Strategy copied. Paste it into a document.'},fb)}catch(e){fb()}
+}
+function exportStrategy(){var blob=new Blob([strategyMarkdown()],{type:'text/markdown;charset=utf-8'}),url=URL.createObjectURL(blob),el=document.createElement('a');el.href=url;el.download='Kendren_21_School_Strategy.md';el.click();setTimeout(function(){URL.revokeObjectURL(url)},1000)}
 
 function panelScore(){
   var totals={};SCHOOLS.forEach(function(s){totals[s.id]=totalFor(s.id)});
@@ -1677,7 +1710,8 @@ document.addEventListener('click',function(e){
   if(a==='delcustom'){e.preventDefault();var id=b.dataset.id;S.custom=S.custom.filter(function(c){return c.id!==id});delete S.check[id]}
   else if(a==='filter'){S.ui.filter=b.dataset.v}
   else if(a==='strategySchool'){S.ui.strategySchool=b.dataset.v}
-  else if(a==='exportStrategy'){exportStrategy();return}
+  else if(a==='exportStrategy'){exportStrategy();var sm=$('#stratmsg');if(sm)sm.textContent='If no file downloads here, use Copy it as text.';return}
+  else if(a==='copyStrategy'){copyStrategy();return}
   else if(a==='tab'){S.ui.tab=b.dataset.v}
   else if(a==='vfilter'){S.ui.vf=b.dataset.v}
   else if(a==='togglegate'){if(UNLOCKED){doLock()}else{var gb=$('#gatebox');if(gb.hidden)showGate();else gb.hidden=true}return}
