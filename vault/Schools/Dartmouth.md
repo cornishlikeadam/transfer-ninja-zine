@@ -2,7 +2,7 @@
 school: Dartmouth
 id: dartmouth
 route: Transfer Program, D-Plan
-priority: bench
+priority: core
 interest_policy: none
 deadlines:
   - 2027-03-01: Transfer application, CSS Profile, FAFSA and IDOC (confirm Fall 2027 date)

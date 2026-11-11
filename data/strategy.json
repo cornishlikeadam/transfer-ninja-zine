@@ -1,0 +1,1971 @@
+{
+ "updated": "2026-11-10",
+ "method": "Acceptance rates are excluded. Ranks below are a provisional advising order for academic/route compatibility, assuming equal base admit rates, using dated transcript GPA, curricular preparation, pathway eligibility, degree sequencing and evidence quality. They are not statistically estimated likelihoods; no dataset supports calibrated personal probabilities. Adjacent positions are low-confidence and may reverse with current grades, major choice or credit evaluation.",
+ "profile": [
+  {
+   "title": "Life-story spine",
+   "text": "Military service preceded Broward College; housing instability disrupted that period, followed by treatment, transitional housing, nonprofit-program leadership, and SCAD. The August workbook records 900+ program hours and mentoring; exact dates, program name, role and partner relationships still need supporting records.",
+   "source": "Workbook Part I; sensitive context for optional disclosure, not a required essay theme."
+  },
+  {
+   "title": "Academic baseline",
+   "text": "Broward: 3.04 and 22 earned semester credits (January 14, 2025 copy). SCAD: 3.33 and 30 quarter credits (October 3, 2026 copy), with term GPA rising from 3.00 to 3.66 and Dean’s List; roughly 42 earned semester equivalents total.",
+   "source": "October 22 transcript review; stale baseline, not current official standing or transferable-credit determination."
+  },
+  {
+   "title": "Academic strengths and gaps",
+   "text": "A grades in government, criminal law, geometry, business and story foundations; six Broward withdrawals, a D in computer literacy and C in drawing/religion need context. Composition, statistics, economics, science and current completion history matter more than additional project volume.",
+   "source": "October transcript review; do not count developmental literacy as composition without evaluation."
+  },
+  {
+   "title": "Intellectual interests",
+   "text": "People, organizations, Black/Africana studies, technology ethics, public policy, creative ownership, design and human agency form the current center. Robotics/AI are methods; most current school notes explicitly avoid CS as the default major.",
+   "source": "Current schools.json lenses supersede older CS-first planning."
+  },
+  {
+   "title": "Humanities and personality",
+   "text": "Comparative philosophy, faith/theology, Mandarin and creative writing appear in the portfolio audit. The screenshot quick answers suggest playful superhero and science-fiction interests, music, curiosity, and ambition; these are cues to explore, not personality diagnoses.",
+   "source": "July portfolio audit and November screenshots; language proficiency, publications and metrics require verification."
+  },
+  {
+   "title": "Campus contribution",
+   "text": "SCADhome mentoring/residence-life work, veteran lacrosse participation and residence-hall technology appear in the records. Rice screenshot drafts describe a four-floor responsibility, a Lacoste opportunity, and interactive floor plans; verify titles, scope, dates and individual contribution before using them.",
+   "source": "Fact sheet, October review and user-written screenshot draft; self-reported details require confirmation."
+  },
+  {
+   "title": "Community and family",
+   "text": "Nonprofit mentoring and family/church legacy, including grandmother’s Black women’s conference, could connect personal meaning to current service. Explain your specific contribution without borrowing the organization’s entire impact.",
+   "source": "Deep Research 25-School Working List and workbook; family organization name/role/outcomes unverified."
+  },
+  {
+   "title": "Projects with useful evidence",
+   "text": "Great Books Semantic Engine and NYC Best Structure were reviewed as working artifacts in July; use disclosed scale, method and limitations. LocalOps, Dirty Water/Savannah Water, KEEPER-0, COMMONS, BOOK.NOTE and GlowOS appear as work or plans in later notes; establish which features shipped, were tested, or remain proposed.",
+   "source": "July portfolio audit and October fact sheet; no assumed validation, deployment or client result."
+  },
+  {
+   "title": "Conflicts to resolve",
+   "text": "Older notes mention military diving, while the October fact sheet says Army combat engineer training for eight months in 2020–21. SCAD major/degree labels and schedules differ; 1540+ SAT, PTK status, service eligibility and benefit availability are asserted in planning notes but need original verification.",
+   "source": "Use JST/service records, current transcript and official score report; do not merge conflicting versions."
+  },
+  {
+   "title": "Voice and boundaries",
+   "text": "Lead with a true scene, a choice, a consequence and a changed question. Let the story show reliability, curiosity and collaborative leadership; treatment and housing details stay optional, and private health/service records do not belong in public portfolio pages.",
+   "source": "Application workbook and evidence inventory."
+  }
+ ],
+ "schools": {
+  "brown": {
+   "path": "Veterans Application; STS / Africana / policy candidates",
+   "summary": "Brown fits a veteran whose questions cross technology, institutions and lived experience. Use the Open Curriculum to explain a disciplined concentration plan rather than a collection of unrelated interests.",
+   "bullets": [
+    "Best approach: Nonprofit mentoring linked to a question about technological responsibility.",
+    "Reason to transfer: A policy-oriented concentration, Africana Studies, Science, Technology and Society, or Modern Culture and Media. Not computer science first. On your call Brown noted that a concentration is like a major with its own requirements, and that even a policy concentration can carry a math requirement, so statistics helps. Confirm the exact concentration.",
+    "Academic gate: Confirm veteran-route eligibility and concentration requirements; service does not replace academic readiness."
+   ],
+   "rank": 5,
+   "rankReason": "Strong route alignment and contextual review; dated GPA remains a weakness.",
+   "source": "https://admission.brown.edu/veterans/application-details",
+   "supplements": [
+    {
+     "id": "brown-1",
+     "title": "Academic interests",
+     "limit": "50–150 words",
+     "status": "required",
+     "kind": "academic",
+     "guidance": [
+      "Name the actual degree or concentration and one question you want to study.",
+      "Connect a recent course or paper to that question. Possible evidence: Nonprofit mentoring linked to a question about technological responsibility.",
+      "Explain a specific academic gap in your current preparation.",
+      "Use a program resource to explain a learning action, not guaranteed access.",
+      "End with a realistic goal; check that the selected school offers the path."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "brown-2",
+     "title": "Why Brown and activities",
+     "limit": "100–250 words",
+     "status": "required",
+     "kind": "why",
+     "guidance": [
+      "Distinguish personal/community reasons from the academic answer.",
+      "Choose one daily practice or community contribution that matters to you. Possible evidence: Nonprofit mentoring linked to a question about technological responsibility.",
+      "Show how you would participate through an existing undergraduate opportunity.",
+      "Use one precise connection rather than a list of campus features.",
+      "Check credit/time and financial assumptions before calling the school essential."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "brown-3",
+     "title": "Upbringing and community contribution",
+     "limit": "200–250 words; field shows conflicting 100-word minimum",
+     "status": "required; resolve limit conflict",
+     "kind": "community",
+     "guidance": [
+      "Choose one real interaction with a person or group you helped.",
+      "Describe what you heard before describing what you did. Possible evidence: Nonprofit mentoring linked to a question about technological responsibility.",
+      "Show a decision, your specific responsibility and its effect.",
+      "Reflect on reciprocity and something the community taught you.",
+      "Connect the habit you developed to campus participation without promising impact."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "brown-4",
+     "title": "Military growth and future plans",
+     "limit": "300–500 words",
+     "status": "required",
+     "kind": "military",
+     "guidance": [
+      "Verify branch, service dates, training and role against original records.",
+      "Choose one ordinary responsibility rather than heroic generalities. Possible evidence: Nonprofit mentoring linked to a question about technological responsibility.",
+      "Translate military terminology into language a civilian understands.",
+      "Explain the transition into current study and the growth you can demonstrate.",
+      "Connect future plans to a verified experience; do not assume benefit eligibility."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "brown-5",
+     "title": "Additional information",
+     "limit": "150 words",
+     "status": "optional",
+     "kind": "context",
+     "guidance": [
+      "Use this field only for information needed to interpret the record.",
+      "State dates, the affected term and the factual academic effect. Possible evidence: Nonprofit mentoring linked to a question about technological responsibility.",
+      "Distinguish earned credits, withdrawals and incomplete courses.",
+      "Explain the change in circumstances and current evidence of stability.",
+      "Avoid duplicating the personal essay or adding unsupported accomplishments."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "brown-6",
+     "title": "Video introduction",
+     "limit": "90 seconds",
+     "status": "strongly recommended on official page",
+     "kind": "video",
+     "guidance": [
+      "Use a natural introduction in your own spoken voice.",
+      "Show one interest or object that invites a real conversation. Possible evidence: Nonprofit mentoring linked to a question about technological responsibility.",
+      "Add a detail the written essays do not cover.",
+      "Stay within the time limit and test sound and framing.",
+      "Follow current upload rules and preserve a copy of the submitted file."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "cornell": {
+   "path": "ILR BS",
+   "summary": "Cornell ILR gives your interest in organizations, labor and technology a concrete degree home. Use nonprofit team leadership to ask how institutions shape opportunity and how technology changes work.",
+   "bullets": [
+    "Best approach: A mentoring or work-allocation decision with a clear consequence.",
+    "Reason to transfer: ILR BS: labor, technology, workplace systems, policy and economics. Africana Studies is available as a minor, and as a transfer you cannot double major across two Cornell colleges (Kyle, call). The earlier faculty research was written for Information Science, so treat it as method context until ILR faculty are researched.",
+    "Academic gate: Most admitted ILR transfers report 3.4+; map composition, economics, statistics/calculus and science."
+   ],
+   "rank": 12,
+   "rankReason": "Dated SCAD 3.33 and estimated pooled 3.18 sit below the stated common benchmark; prerequisites matter.",
+   "source": "https://www.ilr.cornell.edu/programs/undergraduate-admissions/apply-ilr/transfer-guidelines",
+   "supplements": [
+    {
+     "id": "cornell-1",
+     "title": "Educational path and future goals",
+     "limit": "Screenshot: 1,250–3,250 characters; official transfer page: 250–650 words. Follow current field.",
+     "status": "required educational-path essay; separate from ILR supplement",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: A mentoring or work-allocation decision with a clear consequence.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "cornell-ilr",
+     "title": "ILR issues, experiences and intellectual fit",
+     "limit": "650 words on current ILR guidelines; confirm live character cap",
+     "status": "required ILR writing supplement; newly verified November 10",
+     "kind": "academic",
+     "provenance": "Official ILR transfer guidelines, updated July 2026: https://www.ilr.cornell.edu/programs/undergraduate-admissions/apply-ilr/transfer-guidelines",
+     "guidance": [
+      "Choose a labor, organizational, policy or workplace issue you care about.",
+      "Connect it to your own nonprofit team or mentoring experience.",
+      "Explain why the issue matters and how your understanding has changed.",
+      "Show intellectual fit through the question rather than a list of courses, alumni or career outcomes.",
+      "Keep the overall educational-path essay distinct, and verify the current portal limit."
+     ]
+    }
+   ]
+  },
+  "nd": {
+   "path": "Arts & Letters Africana Studies candidate",
+   "summary": "Notre Dame connects your community commitments with questions about institutions, ethics and service. Show what responsible leadership looked like in a specific mentoring decision and connect that question to Africana Studies.",
+   "bullets": [
+    "Best approach: Nonprofit mentorship grounded in an ordinary, verifiable scene.",
+    "Reason to transfer: College of Arts and Letters with Africana Studies as the likely major, plus the cross-college Tech Ethics minor. Law school is the long-term aim, and the veterans law clinic came up on your call. The IDEA Center is a resource, not a degree.",
+    "Academic gate: Recent admitted transfers average 3.75+; verify intended-major capacity and transferable prerequisites."
+   ],
+   "rank": 20,
+   "rankReason": "Dated SCAD 3.33 is materially below the descriptive academic benchmark.",
+   "source": "https://admissions.nd.edu/information-for/transfer-applicants/",
+   "supplements": [
+    {
+     "id": "nd-1",
+     "title": "Academic journey and postgraduate goals",
+     "limit": "500 words",
+     "status": "required",
+     "kind": "goals",
+     "guidance": [
+      "Identify the academic problem you want to understand next.",
+      "Link an earlier experience to the question without narrating every year. Possible evidence: Nonprofit mentorship grounded in an ordinary, verifiable scene.",
+      "Describe the missing methods or knowledge you need.",
+      "Name the degree path and explain how it prepares the next step.",
+      "Keep law/graduate-school/career goals exploratory unless a plan is settled."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "nd-2",
+     "title": "Transfer reasons",
+     "limit": "50–100 words",
+     "status": "required",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: Nonprofit mentorship grounded in an ordinary, verifiable scene.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "nd-3",
+     "title": "Mission and values",
+     "limit": "50–100 words",
+     "status": "required",
+     "kind": "service",
+     "guidance": [
+      "Name the real organization/program and your exact relationship.",
+      "Describe a task and the people involved without borrowing their stories. Possible evidence: Nonprofit mentorship grounded in an ordinary, verifiable scene.",
+      "Show what mentoring or public-facing work taught you about responsibility.",
+      "Use 900+ hours only with documentation and accurate role dates.",
+      "Connect a lesson to continued service rather than promising to rescue a community."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "nd-4",
+     "title": "Challenge and resilience",
+     "limit": "50–100 words",
+     "status": "required",
+     "kind": "challenge",
+     "guidance": [
+      "Choose a bounded, true challenge.",
+      "State the circumstance briefly. Possible evidence: Nonprofit mentorship grounded in an ordinary, verifiable scene.",
+      "Spend most space on actions and support you sought.",
+      "Show current evidence of a changed practice.",
+      "Avoid implying that a single success erased every academic weakness."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "nd-5",
+     "title": "Community",
+     "limit": "50–100 words",
+     "status": "required",
+     "kind": "community",
+     "guidance": [
+      "Choose one real interaction with a person or group you helped.",
+      "Describe what you heard before describing what you did. Possible evidence: Nonprofit mentorship grounded in an ordinary, verifiable scene.",
+      "Show a decision, your specific responsibility and its effect.",
+      "Reflect on reciprocity and something the community taught you.",
+      "Connect the habit you developed to campus participation without promising impact."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "nd-6",
+     "title": "Additional information",
+     "limit": "300 words",
+     "status": "conditional",
+     "kind": "context",
+     "guidance": [
+      "Use this field only for information needed to interpret the record.",
+      "State dates, the affected term and the factual academic effect. Possible evidence: Nonprofit mentorship grounded in an ordinary, verifiable scene.",
+      "Distinguish earned credits, withdrawals and incomplete courses.",
+      "Explain the change in circumstances and current evidence of stability.",
+      "Avoid duplicating the personal essay or adding unsupported accomplishments."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "yale": {
+   "path": "Eli Whitney; Ethnicity, Race and Migration candidate",
+   "summary": "Yale’s Eli Whitney route gives your interrupted education a coherent application context. Connect community leadership and creative technology to a sustained question about who gains agency within institutions.",
+   "bullets": [
+    "Best approach: A recent analytical paper alongside the mentoring scene.",
+    "Reason to transfer: Ethnicity, Race and Migration through Eli Whitney is the pick in your notes. Computing and the Arts and African American Studies also appear in your research. Confirm the order.",
+    "Academic gate: confirm at least five years out of high school and no prior bachelor’s degree; broad recent academic strength is still needed."
+   ],
+   "rank": 6,
+   "rankReason": "Nontraditional route fit is meaningful, but writing, quantitative and science breadth need current proof.",
+   "source": "https://admissions.yale.edu/eli-whitney-apply",
+   "supplements": [
+    {
+     "id": "yale-1",
+     "title": "EWSP essay inventory",
+     "limit": "Current portal required",
+     "status": "no screenshots; exact prompts and limits unverified",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: A recent analytical paper alongside the mentoring scene.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "No supplied screenshot; official research or clearly marked portal placeholder."
+    }
+   ]
+  },
+  "princeton": {
+   "path": "African American Studies / Sociology interests; final path unresolved",
+   "summary": "Princeton connects your nontraditional path with an interest in how institutions distribute agency and opportunity. Ground that ambition in an excellent graded paper and a focused liberal-arts plan supported by your actual coursework.",
+   "bullets": [
+    "Best approach: Graded academic paper with assignment, grade and instructor feedback.",
+    "Reason to transfer: Top three on your list: Operations Research and Financial Engineering (ORFE), African American Studies and Computer Science. Your notes name African American Studies as the Princeton pick. The overview you prepared for Alex Bustin points to a BSE in Mechanical and Aerospace Engineering, so settle the final order before the essays.",
+    "Academic gate: Settle conflicting major plans; ORFE/engineering require much more math and science than the known record shows."
+   ],
+   "rank": 21,
+   "rankReason": "Current technical prerequisites and limited recent academic breadth make readiness especially uncertain; rank is not based on admit rate.",
+   "source": "https://admission.princeton.edu/apply/application-dates-deadlines/transfer-application-dates-deadlines",
+   "supplements": [
+    {
+     "id": "princeton-1",
+     "title": "Academic interests",
+     "limit": "About 250 words",
+     "status": "required",
+     "kind": "academic",
+     "guidance": [
+      "Name the actual degree or concentration and one question you want to study.",
+      "Connect a recent course or paper to that question. Possible evidence: Graded academic paper with assignment, grade and instructor feedback.",
+      "Explain a specific academic gap in your current preparation.",
+      "Use a program resource to explain a learning action, not guaranteed access.",
+      "End with a realistic goal; check that the selected school offers the path."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "princeton-2",
+     "title": "Lived experience and conversations",
+     "limit": "400–500 words",
+     "status": "required",
+     "kind": "community",
+     "guidance": [
+      "Choose one real interaction with a person or group you helped.",
+      "Describe what you heard before describing what you did. Possible evidence: Graded academic paper with assignment, grade and instructor feedback.",
+      "Show a decision, your specific responsibility and its effect.",
+      "Reflect on reciprocity and something the community taught you.",
+      "Connect the habit you developed to campus participation without promising impact."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "princeton-3",
+     "title": "Service and civic engagement",
+     "limit": "About 250 words",
+     "status": "required",
+     "kind": "service",
+     "guidance": [
+      "Name the real organization/program and your exact relationship.",
+      "Describe a task and the people involved without borrowing their stories. Possible evidence: Graded academic paper with assignment, grade and instructor feedback.",
+      "Show what mentoring or public-facing work taught you about responsibility.",
+      "Use 900+ hours only with documentation and accurate role dates.",
+      "Connect a lesson to continued service rather than promising to rescue a community."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "princeton-4",
+     "title": "A new skill you want to learn",
+     "limit": "About 50 words",
+     "status": "required",
+     "kind": "skill",
+     "guidance": [
+      "Choose a skill you actually want to learn.",
+      "Explain the curiosity behind it with one concrete detail. Possible evidence: Graded academic paper with assignment, grade and instructor feedback.",
+      "Let it reveal a side absent from the longer essays.",
+      "Avoid turning the answer into another achievement list.",
+      "Keep the response within the short field and in your own voice."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "princeton-5",
+     "title": "What brings you joy",
+     "limit": "About 50 words",
+     "status": "required",
+     "kind": "joy",
+     "guidance": [
+      "Pick an everyday source of joy that is actually yours.",
+      "Use a sensory or situational detail. Possible evidence: Graded academic paper with assignment, grade and instructor feedback.",
+      "Show why the experience matters without announcing a virtue.",
+      "Allow playfulness and warmth.",
+      "Do not force the answer back to admissions or career ambition."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "princeton-6",
+     "title": "Your current soundtrack",
+     "limit": "About 50 words",
+     "status": "required",
+     "kind": "music",
+     "guidance": [
+      "Name a real song and artist accurately.",
+      "Describe the personal association in your own words. Possible evidence: Graded academic paper with assignment, grade and instructor feedback.",
+      "Explain why it fits this moment rather than your entire life.",
+      "Avoid quoting lyrics.",
+      "Let the answer add personality beyond the academic narrative."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "princeton-7",
+     "title": "Educational gap timeline",
+     "limit": "About 150 words",
+     "status": "conditional",
+     "kind": "gap",
+     "guidance": [
+      "List every relevant institution and interruption in chronological order.",
+      "Give month/year dates and the reason for each gap or reduced load. Possible evidence: Graded academic paper with assignment, grade and instructor feedback.",
+      "Keep the language factual and concise.",
+      "Mention housing or treatment at your chosen level of disclosure.",
+      "Check consistency with transcripts, activities and education-history fields."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "princeton-8",
+     "title": "Higher education and future plans",
+     "limit": "About 150 words",
+     "status": "required",
+     "kind": "goals",
+     "guidance": [
+      "Identify the academic problem you want to understand next.",
+      "Link an earlier experience to the question without narrating every year. Possible evidence: Graded academic paper with assignment, grade and instructor feedback.",
+      "Describe the missing methods or knowledge you need.",
+      "Name the degree path and explain how it prepares the next step.",
+      "Keep law/graduate-school/career goals exploratory unless a plan is settled."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "princeton-9",
+     "title": "Graded academic paper",
+     "limit": "Confirm current upload rules",
+     "status": "required",
+     "kind": "paper",
+     "guidance": [
+      "Choose sustained analysis with a clear argument and sources.",
+      "Include the assignment, original paper and required feedback/grade. Possible evidence: Graded academic paper with assignment, grade and instructor feedback.",
+      "Verify whether the school accepts that course and paper type.",
+      "Keep authorship intact; do not substitute an AI rewrite for original work.",
+      "Check upload format and remove confidential third-party information."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "princeton-10",
+     "title": "Transfer personal essay",
+     "limit": "About 650 words",
+     "status": "required",
+     "kind": "personal",
+     "guidance": [
+      "Build around one true scene rather than reciting the résumé.",
+      "Show a choice you made and a consequence you can substantiate. Possible evidence: Graded academic paper with assignment, grade and instructor feedback.",
+      "Let reflection connect the experience to your current intellectual direction.",
+      "Treat adversity as context; give your actions and growth adequate space.",
+      "Write in your own voice and check both word and character limits."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "tufts": {
+   "path": "REAL; Arts & Sciences social science / cognitive path",
+   "summary": "Tufts REAL could make your adult return to college legible as an academic choice. Show how mentoring and human-centered technology brought you to a specific Arts & Sciences question.",
+   "bullets": [
+    "Best approach: A design revision shaped by another person’s needs.",
+    "Reason to transfer: Arts and Sciences social-science or cognitive path: sociology, Science, Technology and Society, cognitive and brain science or economics. Computer science appears only as coursework, not the major. SMFA studio work needs written confirmation from REAL and SMFA.",
+    "Academic gate: Verify REAL eligibility and Arts & Sciences degree choice; do not assume access to a BFA route."
+   ],
+   "rank": 10,
+   "rankReason": "Adult pathway alignment helps contextualize the record; prerequisites and degree choice remain open.",
+   "source": "https://admissions.tufts.edu/apply/applying-as-a-transfer-candida/real-application/",
+   "supplements": [
+    {
+     "id": "tufts-1",
+     "title": "Actual engagement with Tufts",
+     "limit": "450–650 characters",
+     "status": "required",
+     "kind": "engagement",
+     "guidance": [
+      "List only Tufts interactions or resources you actually used.",
+      "Identify what you learned rather than counting contacts. Possible evidence: A design revision shaped by another person’s needs.",
+      "Explain how that information changed your academic plan.",
+      "Do not imply an admissions relationship or endorsement.",
+      "Use characters carefully and omit generic campus praise."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "tufts-2",
+     "title": "Academic path, REAL interest and goals",
+     "limit": "2,500–3,500 characters",
+     "status": "required",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: A design revision shaped by another person’s needs.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "washu": {
+   "path": "Arts & Sciences sociology / PNP / anthropology candidates",
+   "summary": "WashU could help you study the human and institutional side of systems you already build. Tie a design decision to a question in sociology or cognition and explain the specific degree plan.",
+   "bullets": [
+    "Best approach: A design case study showing a changed assumption about users.",
+    "Reason to transfer: Arts and Sciences: Sociology, Philosophy-Neuroscience-Psychology, or anthropology with digital humanities. Sam Fox (Design) only with a portfolio. Not computer science. A new 15-credit computational AI minor is open across schools.",
+    "Academic gate: Strong candidates generally present 3.5+ across broad preparation; composition equivalency is unresolved."
+   ],
+   "rank": 17,
+   "rankReason": "Current dated record is below the stated usual benchmark; breadth and writing need review.",
+   "source": "https://admissions.washu.edu/how-to-apply/transfer-students-us-and-international/",
+   "supplements": [
+    {
+     "id": "washu-1",
+     "title": "Academic interests",
+     "limit": "About 250 words AND 1,750 characters",
+     "status": "required",
+     "kind": "academic",
+     "guidance": [
+      "Name the actual degree or concentration and one question you want to study.",
+      "Connect a recent course or paper to that question. Possible evidence: A design case study showing a changed assumption about users.",
+      "Explain a specific academic gap in your current preparation.",
+      "Use a program resource to explain a learning action, not guaranteed access.",
+      "End with a realistic goal; check that the selected school offers the path."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "washu-2",
+     "title": "Transfer reasons",
+     "limit": "About 250 words AND 1,750 characters",
+     "status": "required",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: A design case study showing a changed assumption about users.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "washu-3",
+     "title": "Personal statement",
+     "limit": "Up to 650 words AND 3,250 characters",
+     "status": "required",
+     "kind": "personal",
+     "guidance": [
+      "Build around one true scene rather than reciting the résumé.",
+      "Show a choice you made and a consequence you can substantiate. Possible evidence: A design case study showing a changed assumption about users.",
+      "Let reflection connect the experience to your current intellectual direction.",
+      "Treat adversity as context; give your actions and growth adequate space.",
+      "Write in your own voice and check both word and character limits."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "nu": {
+   "path": "SESP / Weinberg candidates; major unresolved",
+   "summary": "Northwestern could connect your interest in people and organizations with design methods. Choose the undergraduate school first, then explain how its degree would deepen a question raised by your campus work.",
+   "bullets": [
+    "Best approach: A residence-life system tested and revised with user feedback.",
+    "Reason to transfer: Not Computer Science. Your target major is not recorded yet. Candidates close to your ILR and Peabody interest are the School of Education and Social Policy (Learning and Organizational Change, Social Policy) and Weinberg (Sociology, African American Studies). Confirm the exact names with Northwestern before choosing.",
+    "Academic gate: Do not default to CS; settle SESP versus Weinberg and verify breadth/credits."
+   ],
+   "rank": 13,
+   "rankReason": "Plausible interdisciplinary preparation; unsettled school and major reduce confidence.",
+   "source": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+   "supplements": [
+    {
+     "id": "nu-1",
+     "title": "Background and engagement with Northwestern community",
+     "limit": "Under 300 words",
+     "status": "required",
+     "kind": "community",
+     "guidance": [
+      "Choose one real interaction with a person or group you helped.",
+      "Describe what you heard before describing what you did. Possible evidence: A residence-life system tested and revised with user feedback.",
+      "Show a decision, your specific responsibility and its effect.",
+      "Reflect on reciprocity and something the community taught you.",
+      "Connect the habit you developed to campus participation without promising impact."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "nu-2",
+     "title": "Reasons for transferring",
+     "limit": "Under 300 words",
+     "status": "required",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: A residence-life system tested and revised with user feedback.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "nu-3",
+     "title": "Personal essay or additional information upload",
+     "limit": "Confirm in portal",
+     "status": "optional",
+     "kind": "context",
+     "guidance": [
+      "Use this field only for information needed to interpret the record.",
+      "State dates, the affected term and the factual academic effect. Possible evidence: A residence-life system tested and revised with user feedback.",
+      "Distinguish earned credits, withdrawals and incomplete courses.",
+      "Explain the change in circumstances and current evidence of stability.",
+      "Avoid duplicating the personal essay or adding unsupported accomplishments."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "gt": {
+   "path": "SFS Science, Technology and International Affairs candidate",
+   "summary": "Georgetown could connect your government and law strengths with the institutional effects of technology. Explain a concrete public problem and why its analysis requires policy, economics and global context.",
+   "bullets": [
+    "Best approach: Veteran resource access or environmental data as a policy problem.",
+    "Reason to transfer: BS in Science, Technology and International Affairs (STIA) in the School of Foreign Service. The Beeck Center is a center, not a degree.",
+    "Academic gate: SFS economics, quantitative and language preparation need explicit mapping."
+   ],
+   "rank": 16,
+   "rankReason": "Government A is useful; economics, quantitative and language gaps constrain readiness.",
+   "source": "https://uadmissions.georgetown.edu/apply/transfer-applicants/",
+   "supplements": [
+    {
+     "id": "gt-1",
+     "title": "School-specific transfer essay inventory",
+     "limit": "Current portal required",
+     "status": "no screenshots; exact prompts and limits unverified",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: Veteran resource access or environmental data as a policy problem.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "No supplied screenshot; official research or clearly marked portal placeholder."
+    }
+   ]
+  },
+  "vandy": {
+   "path": "Peabody Human and Organizational Development",
+   "summary": "Vanderbilt’s HOD path connects especially well to your experience of rebuilding structure and then mentoring others. Explain how people, organizations and incentives became questions you now want to study systematically.",
+   "bullets": [
+    "Best approach: A nonprofit training process you improved for newer participants.",
+    "Reason to transfer: Peabody College: Human and Organizational Development (HOD), your ILR equivalent. Not computer science.",
+    "Academic gate: Keep the application aligned to Peabody HOD and verify credit sequencing."
+   ],
+   "rank": 11,
+   "rankReason": "Excellent thematic fit; recent rigor and school-specific academic readiness still need strengthening.",
+   "source": "https://admissions.vanderbilt.edu/apply/transfer-process",
+   "supplements": [
+    {
+     "id": "vandy-1",
+     "title": "Identity, growth and community contribution",
+     "limit": "About 250 words AND 2,000 characters",
+     "status": "required",
+     "kind": "community",
+     "guidance": [
+      "Choose one real interaction with a person or group you helped.",
+      "Describe what you heard before describing what you did. Possible evidence: A nonprofit training process you improved for newer participants.",
+      "Show a decision, your specific responsibility and its effect.",
+      "Reflect on reciprocity and something the community taught you.",
+      "Connect the habit you developed to campus participation without promising impact."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "vandy-2",
+     "title": "Transfer essay",
+     "limit": "250–650 words",
+     "status": "required",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: A nonprofit training process you improved for newer participants.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "vandy-3",
+     "title": "Additional information",
+     "limit": "6,500 characters",
+     "status": "optional",
+     "kind": "context",
+     "guidance": [
+      "Use this field only for information needed to interpret the record.",
+      "State dates, the affected term and the factual academic effect. Possible evidence: A nonprofit training process you improved for newer participants.",
+      "Distinguish earned credits, withdrawals and incomplete courses.",
+      "Explain the change in circumstances and current evidence of stability.",
+      "Avoid duplicating the personal essay or adding unsupported accomplishments."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "williams": {
+   "path": "Africana Studies / Cognitive Science candidates",
+   "summary": "Williams could help you turn broad curiosity into close, sustained inquiry. Show how an experience in service or design changed the question you wanted to investigate, then name the academic direction.",
+   "bullets": [
+    "Best approach: A compact graded essay showing revision and analytical precision.",
+    "Reason to transfer: Majors on file are Africana Studies and Cognitive Science (older dossier). Your target is not recorded yet. Confirm it.",
+    "Academic gate: Confirm major and two-year residence requirement, including effects on study away."
+   ],
+   "rank": 14,
+   "rankReason": "Liberal-arts fit is plausible; academic breadth and remaining degree time are unresolved.",
+   "source": "https://www.williams.edu/admission-aid/apply/transfer/",
+   "supplements": [
+    {
+     "id": "williams-1",
+     "title": "Academic/cocurricular interests and prior experiences",
+     "limit": "4,000 characters",
+     "status": "required",
+     "kind": "academic",
+     "guidance": [
+      "Name the actual degree or concentration and one question you want to study.",
+      "Connect a recent course or paper to that question. Possible evidence: A compact graded essay showing revision and analytical precision.",
+      "Explain a specific academic gap in your current preparation.",
+      "Use a program resource to explain a learning action, not guaranteed access.",
+      "End with a realistic goal; check that the selected school offers the path."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "williams-2",
+     "title": "Academic paper with assignment description",
+     "limit": "Confirm upload rules; no lab reports",
+     "status": "optional; graded or ungraded per official page",
+     "kind": "paper",
+     "guidance": [
+      "Choose sustained analysis with a clear argument and sources.",
+      "Include the assignment, original paper and required feedback/grade. Possible evidence: A compact graded essay showing revision and analytical precision.",
+      "Verify whether the school accepts that course and paper type.",
+      "Keep authorship intact; do not substitute an AI rewrite for original work.",
+      "Check upload format and remove confidential third-party information."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "williams-3",
+     "title": "Additional information",
+     "limit": "4,000 characters",
+     "status": "optional",
+     "kind": "context",
+     "guidance": [
+      "Use this field only for information needed to interpret the record.",
+      "State dates, the affected term and the factual academic effect. Possible evidence: A compact graded essay showing revision and analytical precision.",
+      "Distinguish earned credits, withdrawals and incomplete courses.",
+      "Explain the change in circumstances and current evidence of stability.",
+      "Avoid duplicating the personal essay or adding unsupported accomplishments."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "wesleyan": {
+   "path": "Liberal arts; major undecided",
+   "summary": "Wesleyan could support the conversation between your creative practice and questions about society. Select a real major and explain what sustained academic inquiry would add to your existing making practice.",
+   "bullets": [
+    "Best approach: Creative work paired with a critical reflection on its social assumptions.",
+    "Reason to transfer: No major is on file for Wesleyan, and your notes do not cover it. Name the one you want.",
+    "Academic gate: Intended major and transfer-credit map are unresolved; choose before final drafting."
+   ],
+   "rank": 7,
+   "rankReason": "Broad curricular fit; ranking carries low confidence without a settled major.",
+   "source": "https://www.wesleyan.edu/admission/apply/transfer.html",
+   "supplements": [
+    {
+     "id": "wesleyan-1",
+     "title": "Transfer reasons and objectives",
+     "limit": "250–650 words AND 6,500 characters",
+     "status": "required",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: Creative work paired with a critical reflection on its social assumptions.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "amherst": {
+   "path": "Black Studies candidate; Open Curriculum",
+   "summary": "Amherst connects your interest in Black community life with a flexible liberal-arts education. Make the case through one specific intellectual question and the habits of reading, writing and listening you have developed.",
+   "bullets": [
+    "Best approach: Family/community legacy connected to a documented current contribution.",
+    "Reason to transfer: Black Studies and the Open Curriculum are on file (older dossier). Your target is not recorded yet. Confirm it.",
+    "Academic gate: Confirm Black Studies interest and recent graded academic writing; open curriculum is not absence of rigor."
+   ],
+   "rank": 9,
+   "rankReason": "Potentially strong route and curricular flexibility; current academic depth needs evidence.",
+   "source": "https://www.amherst.edu/admission/apply/transfer",
+   "supplements": [
+    {
+     "id": "amherst-1",
+     "title": "Educational journey and transfer objectives",
+     "limit": "250–650 words AND 4,000 characters",
+     "status": "required",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: Family/community legacy connected to a documented current contribution.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "amherst-2",
+     "title": "Life experiences and personal circumstances",
+     "limit": "250–650 words AND 4,000 characters",
+     "status": "required",
+     "kind": "background",
+     "guidance": [
+      "Select one formative setting or relationship rather than a complete autobiography.",
+      "Include a concrete detail you personally remember. Possible evidence: Family/community legacy connected to a documented current contribution.",
+      "Explain how that experience changed a value or habit.",
+      "Share sensitive details only to the extent you want them in the application.",
+      "Show how your perspective will shape a specific academic or community choice."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "amherst-3",
+     "title": "Analytical academic writing sample",
+     "limit": "Confirm upload rules",
+     "status": "optional",
+     "kind": "paper",
+     "guidance": [
+      "Choose sustained analysis with a clear argument and sources.",
+      "Include the assignment, original paper and required feedback/grade. Possible evidence: Family/community legacy connected to a documented current contribution.",
+      "Verify whether the school accepts that course and paper type.",
+      "Keep authorship intact; do not substitute an AI rewrite for original work.",
+      "Check upload format and remove confidential third-party information."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "usc": {
+   "path": "Iovine and Young BS; liberal-arts alternates",
+   "summary": "USC Iovine and Young is a clear interest match for your combination of design, technology and enterprise. Show one project with your role, revision process and limits, then explain why this particular curriculum is necessary.",
+   "bullets": [
+    "Best approach: A prototype with process evidence and a clear account of authorship.",
+    "Reason to transfer: Iovine and Young Academy BS. Dornsife BA Cognitive Science and Annenberg are the liberal-arts alternates. The sequential curriculum can mean 3 to 4 years.",
+    "Academic gate: Confirm IYA transfer materials and three-to-four-year sequential degree implications."
+   ],
+   "rank": 18,
+   "rankReason": "Strong creative fit, but academic preparation and sequential degree constraints need substantial review.",
+   "source": "https://admission.usc.edu/prospective-students/how-to-apply/transfer-students/",
+   "supplements": [
+    {
+     "id": "usc-1",
+     "title": "Academic interests and degree choices",
+     "limit": "About 300 words AND 2,000 characters",
+     "status": "required",
+     "kind": "academic",
+     "guidance": [
+      "Name the actual degree or concentration and one question you want to study.",
+      "Connect a recent course or paper to that question. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Explain a specific academic gap in your current preparation.",
+      "Use a program resource to explain a learning action, not guaranteed access.",
+      "End with a realistic goal; check that the selected school offers the path."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-2",
+     "title": "Transfer reasons",
+     "limit": "About 300 words AND 2,000 characters",
+     "status": "required",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-3",
+     "title": "Disagreement and dialogue",
+     "limit": "About 250 words AND 1,500 characters",
+     "status": "optional",
+     "kind": "disagreement",
+     "guidance": [
+      "Use a real conversation rather than inventing a conflict.",
+      "Represent the other view fairly. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Show how you listened or changed your approach.",
+      "Explain the remaining difference without claiming a perfect resolution.",
+      "Keep identifiable private details out unless you have permission."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-4",
+     "title": "Educational gaps",
+     "limit": "2,500 characters",
+     "status": "conditional",
+     "kind": "gap",
+     "guidance": [
+      "List every relevant institution and interruption in chronological order.",
+      "Give month/year dates and the reason for each gap or reduced load. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Keep the language factual and concise.",
+      "Mention housing or treatment at your chosen level of disclosure.",
+      "Check consistency with transcripts, activities and education-history fields."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-5",
+     "title": "Terms below full-time enrollment",
+     "limit": "About 250 words AND 2,500 characters",
+     "status": "conditional",
+     "kind": "gap",
+     "guidance": [
+      "List every relevant institution and interruption in chronological order.",
+      "Give month/year dates and the reason for each gap or reduced load. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Keep the language factual and concise.",
+      "Mention housing or treatment at your chosen level of disclosure.",
+      "Check consistency with transcripts, activities and education-history fields."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-6",
+     "title": "IYA SlideRoom and optional original work",
+     "limit": "Confirm current SlideRoom essays/video and file rules",
+     "status": "SlideRoom supplement required; original-work uploads optional (up to four) on official page",
+     "kind": "portfolio",
+     "guidance": [
+      "Select a small number of original works showing your contribution.",
+      "Document sketches, iterations and decisions as well as the result. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Label team roles, AI assistance and proposed features accurately.",
+      "Show one failure or change made after feedback.",
+      "Verify file limits, required components and program-specific submission rules."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-7",
+     "title": "IYA collaborative contribution",
+     "limit": "Older workbook: 500 words",
+     "status": "workbook only; confirm current portal",
+     "kind": "collaboration",
+     "guidance": [
+      "Choose one real collaborative project.",
+      "Identify your individual role and the team’s shared goal. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Describe a disagreement or coordination problem factually.",
+      "Explain the change you made and what others contributed.",
+      "Reflect on how you would approach the next collaboration differently."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-8",
+     "title": "IYA area of expertise and interest",
+     "limit": "Older workbook: 300 words",
+     "status": "workbook only; confirm current portal",
+     "kind": "academic",
+     "guidance": [
+      "Name the actual degree or concentration and one question you want to study.",
+      "Connect a recent course or paper to that question. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Explain a specific academic gap in your current preparation.",
+      "Use a program resource to explain a learning action, not guaranteed access.",
+      "End with a realistic goal; check that the selected school offers the path."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-9",
+     "title": "IYA external-transfer essay",
+     "limit": "Older workbook: 600 words",
+     "status": "workbook only; confirm current portal",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-10",
+     "title": "IYA introduction video",
+     "limit": "60 seconds on current official page",
+     "status": "verify current portal",
+     "kind": "video",
+     "guidance": [
+      "Use a natural introduction in your own spoken voice.",
+      "Show one interest or object that invites a real conversation. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Add a detail the written essays do not cover.",
+      "Stay within the time limit and test sound and framing.",
+      "Follow current upload rules and preserve a copy of the submitted file."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-11",
+     "title": "Three words that describe you",
+     "limit": "Confirm individual field cap",
+     "status": "quick answer in supplied screenshot",
+     "kind": "quick",
+     "guidance": [
+      "Answer the individual question directly and honestly.",
+      "Use a detail you would enjoy discussing in person. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Avoid repeating the same theme across all quick answers.",
+      "Treat earlier screenshot answers as choices to review, not fixed facts.",
+      "Check the exact field cap and keep your own phrasing."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-12",
+     "title": "Favorite snack",
+     "limit": "Confirm individual field cap",
+     "status": "quick answer in supplied screenshot",
+     "kind": "quick",
+     "guidance": [
+      "Answer the individual question directly and honestly.",
+      "Use a detail you would enjoy discussing in person. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Avoid repeating the same theme across all quick answers.",
+      "Treat earlier screenshot answers as choices to review, not fixed facts.",
+      "Check the exact field cap and keep your own phrasing."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-13",
+     "title": "Best movie",
+     "limit": "Confirm individual field cap",
+     "status": "quick answer in supplied screenshot",
+     "kind": "quick",
+     "guidance": [
+      "Answer the individual question directly and honestly.",
+      "Use a detail you would enjoy discussing in person. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Avoid repeating the same theme across all quick answers.",
+      "Treat earlier screenshot answers as choices to review, not fixed facts.",
+      "Check the exact field cap and keep your own phrasing."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-14",
+     "title": "Dream job",
+     "limit": "Confirm individual field cap",
+     "status": "quick answer in supplied screenshot",
+     "kind": "quick",
+     "guidance": [
+      "Answer the individual question directly and honestly.",
+      "Use a detail you would enjoy discussing in person. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Avoid repeating the same theme across all quick answers.",
+      "Treat earlier screenshot answers as choices to review, not fixed facts.",
+      "Check the exact field cap and keep your own phrasing."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-15",
+     "title": "Theme song",
+     "limit": "Confirm individual field cap",
+     "status": "quick answer in supplied screenshot",
+     "kind": "quick",
+     "guidance": [
+      "Answer the individual question directly and honestly.",
+      "Use a detail you would enjoy discussing in person. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Avoid repeating the same theme across all quick answers.",
+      "Treat earlier screenshot answers as choices to review, not fixed facts.",
+      "Check the exact field cap and keep your own phrasing."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-16",
+     "title": "Dream trip",
+     "limit": "Confirm individual field cap",
+     "status": "quick answer in supplied screenshot",
+     "kind": "quick",
+     "guidance": [
+      "Answer the individual question directly and honestly.",
+      "Use a detail you would enjoy discussing in person. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Avoid repeating the same theme across all quick answers.",
+      "Treat earlier screenshot answers as choices to review, not fixed facts.",
+      "Check the exact field cap and keep your own phrasing."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-17",
+     "title": "Next show to binge",
+     "limit": "Confirm individual field cap",
+     "status": "quick answer in supplied screenshot",
+     "kind": "quick",
+     "guidance": [
+      "Answer the individual question directly and honestly.",
+      "Use a detail you would enjoy discussing in person. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Avoid repeating the same theme across all quick answers.",
+      "Treat earlier screenshot answers as choices to review, not fixed facts.",
+      "Check the exact field cap and keep your own phrasing."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-18",
+     "title": "Ideal roommate",
+     "limit": "Confirm individual field cap",
+     "status": "quick answer in supplied screenshot",
+     "kind": "quick",
+     "guidance": [
+      "Answer the individual question directly and honestly.",
+      "Use a detail you would enjoy discussing in person. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Avoid repeating the same theme across all quick answers.",
+      "Treat earlier screenshot answers as choices to review, not fixed facts.",
+      "Check the exact field cap and keep your own phrasing."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-19",
+     "title": "Favorite book",
+     "limit": "Confirm individual field cap",
+     "status": "quick answer in supplied screenshot",
+     "kind": "quick",
+     "guidance": [
+      "Answer the individual question directly and honestly.",
+      "Use a detail you would enjoy discussing in person. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Avoid repeating the same theme across all quick answers.",
+      "Treat earlier screenshot answers as choices to review, not fixed facts.",
+      "Check the exact field cap and keep your own phrasing."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "usc-20",
+     "title": "Class you would teach",
+     "limit": "Confirm individual field cap",
+     "status": "quick answer in supplied screenshot",
+     "kind": "quick",
+     "guidance": [
+      "Answer the individual question directly and honestly.",
+      "Use a detail you would enjoy discussing in person. Possible evidence: A prototype with process evidence and a clear account of authorship.",
+      "Avoid repeating the same theme across all quick answers.",
+      "Treat earlier screenshot answers as choices to review, not fixed facts.",
+      "Check the exact field cap and keep your own phrasing."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "smu": {
+   "path": "Creative Computing / media alternatives",
+   "summary": "Your creative systems work has a direct degree connection at SMU. Use a small, inspectable project to connect design, technology and communication to your next academic step.",
+   "bullets": [
+    "Best approach: A documented prototype with revision history.",
+    "Reason to transfer: Meadows BA in Creative Computing is the closest fit but leans toward computing. Film and Media Arts or Public Relations and Strategic Communication are the alternates in your plan.",
+    "Academic gate: Confirm 24 transferable hours and the published 2.7 minimum; neither guarantees admission."
+   ],
+   "rank": 1,
+   "rankReason": "Most compatible published baseline in this group; degree-specific credit review remains open.",
+   "source": "https://www.smu.edu/admission/apply/transfer/application-process",
+   "supplements": [
+    {
+     "id": "smu-1",
+     "title": "Optional transfer essay",
+     "limit": "Current portal required",
+     "status": "optional status from existing notes; exact current prompt unverified",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: A documented prototype with revision history.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "No supplied screenshot; official research or clearly marked portal placeholder."
+    }
+   ]
+  },
+  "unc": {
+   "path": "Sociology / public policy / information science candidates",
+   "summary": "UNC gives your service and technology interests a public-facing academic question. Explain how designing for people led you toward studying access, institutions and the evidence behind policy.",
+   "bullets": [
+    "Best approach: A resource-navigation or community-information design example.",
+    "Reason to transfer: Not computer science. Candidates on file in the College of Arts and Sciences: sociology, media and journalism, public policy, or information science. Your target is not recorded yet. Confirm it.",
+    "Academic gate: Confirm major, transferable writing and quantitative breadth; do not infer North Carolina residency."
+   ],
+   "rank": 3,
+   "rankReason": "Broad social-science path can fit existing government and writing strengths; no personal-odds claim.",
+   "source": "https://admissions.unc.edu/apply/types-of-applications/transfer/",
+   "supplements": [
+    {
+     "id": "unc-1",
+     "title": "Common personal statement",
+     "limit": "1,250–3,250 characters",
+     "status": "required; no two additional short answers listed on current official page",
+     "kind": "personal",
+     "guidance": [
+      "Build around one true scene rather than reciting the résumé.",
+      "Show a choice you made and a consequence you can substantiate. Possible evidence: A resource-navigation or community-information design example.",
+      "Let reflection connect the experience to your current intellectual direction.",
+      "Treat adversity as context; give your actions and growth adequate space.",
+      "Write in your own voice and check both word and character limits."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "uva": {
+   "path": "Arts & Sciences sociology / media candidates",
+   "summary": "UVA could help you connect making systems with examining how communities use and govern them. Pair the residence-hall experience with a precise Arts & Sciences plan and a realistic credit map.",
+   "bullets": [
+    "Best approach: One residence-life decision changed after listening to a student.",
+    "Reason to transfer: College of Arts and Sciences: Media Studies, Sociology or Psychology, optionally with the five-course Data Science minor if prerequisites, credit and capacity allow. Your target is not recorded yet. Confirm it.",
+    "Academic gate: Arts & Sciences preparation and composition equivalency require review; geometry is not statistics."
+   ],
+   "rank": 4,
+   "rankReason": "Relevant liberal-arts strengths, with unresolved prerequisite and credit classification questions.",
+   "source": "https://admission.virginia.edu/transfer/about-transfer",
+   "supplements": [
+    {
+     "id": "uva-1",
+     "title": "Educational gaps",
+     "limit": "800 characters",
+     "status": "conditional",
+     "kind": "gap",
+     "guidance": [
+      "List every relevant institution and interruption in chronological order.",
+      "Give month/year dates and the reason for each gap or reduced load. Possible evidence: One residence-life decision changed after listening to a student.",
+      "Keep the language factual and concise.",
+      "Mention housing or treatment at your chosen level of disclosure.",
+      "Check consistency with transcripts, activities and education-history fields."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "uva-2",
+     "title": "Transfer reasons and objectives",
+     "limit": "4,000 characters",
+     "status": "required",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: One residence-life decision changed after listening to a student.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "rice": {
+   "path": "Social Policy Analysis / Cognitive Sciences candidates",
+   "summary": "Rice connects your interest in community responsibility with a focused social-policy or cognitive-science plan. Use residence-life leadership to show how you would contribute while asking deeper questions about systems and people.",
+   "bullets": [
+    "Best approach: Interactive floor plans and a concrete residence-hall listening moment.",
+    "Reason to transfer: Social Policy Analysis or Cognitive Sciences, both from your SCAD plan. Rice also offers a BS in Artificial Intelligence, which is not your target.",
+    "Academic gate: Rice specifies at least 3.2 in the most recent college work; dated SCAD 3.33 exceeds that floor, while broader preparation still matters."
+   ],
+   "rank": 8,
+   "rankReason": "Dated SCAD 3.33 clears the most-recent-college 3.2 minimum; curriculum breadth and degree review remain unresolved.",
+   "source": "https://admission.rice.edu/apply/transfer-applicants",
+   "supplements": [
+    {
+     "id": "rice-1",
+     "title": "Common personal statement",
+     "limit": "1,250–3,250 characters",
+     "status": "required",
+     "kind": "personal",
+     "guidance": [
+      "Build around one true scene rather than reciting the résumé.",
+      "Show a choice you made and a consequence you can substantiate. Possible evidence: Interactive floor plans and a concrete residence-hall listening moment.",
+      "Let reflection connect the experience to your current intellectual direction.",
+      "Treat adversity as context; give your actions and growth adequate space.",
+      "Write in your own voice and check both word and character limits."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "rice-2",
+     "title": "Academic interests and long-term goals",
+     "limit": "150 words",
+     "status": "required",
+     "kind": "academic",
+     "guidance": [
+      "Name the actual degree or concentration and one question you want to study.",
+      "Connect a recent course or paper to that question. Possible evidence: Interactive floor plans and a concrete residence-hall listening moment.",
+      "Explain a specific academic gap in your current preparation.",
+      "Use a program resource to explain a learning action, not guaranteed access.",
+      "End with a realistic goal; check that the selected school offers the path."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "rice-3",
+     "title": "Beyond academics: reasons to transfer to Rice",
+     "limit": "150 words",
+     "status": "required",
+     "kind": "why",
+     "guidance": [
+      "Distinguish personal/community reasons from the academic answer.",
+      "Choose one daily practice or community contribution that matters to you. Possible evidence: Interactive floor plans and a concrete residence-hall listening moment.",
+      "Show how you would participate through an existing undergraduate opportunity.",
+      "Use one precise connection rather than a list of campus features.",
+      "Check credit/time and financial assumptions before calling the school essential."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "rice-4",
+     "title": "Residential college experiences and perspectives",
+     "limit": "500 words",
+     "status": "choose one of two community options",
+     "kind": "community",
+     "guidance": [
+      "Choose one real interaction with a person or group you helped.",
+      "Describe what you heard before describing what you did. Possible evidence: Interactive floor plans and a concrete residence-hall listening moment.",
+      "Show a decision, your specific responsibility and its effect.",
+      "Reflect on reciprocity and something the community taught you.",
+      "Connect the habit you developed to campus participation without promising impact."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "rice-5",
+     "title": "Change-agent background and perspectives",
+     "limit": "500 words",
+     "status": "choose one of two community options",
+     "kind": "service",
+     "guidance": [
+      "Name the real organization/program and your exact relationship.",
+      "Describe a task and the people involved without borrowing their stories. Possible evidence: Interactive floor plans and a concrete residence-hall listening moment.",
+      "Show what mentoring or public-facing work taught you about responsibility.",
+      "Use 900+ hours only with documentation and accurate role dates.",
+      "Connect a lesson to continued service rather than promising to rescue a community."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "rice-6",
+     "title": "Rice Box image",
+     "limit": "Two-dimensional image; confirm format",
+     "status": "required; image speaks for itself, not evaluated",
+     "kind": "image",
+     "guidance": [
+      "Choose a two-dimensional image meaningful to you.",
+      "Use an image you own or have permission to submit. Possible evidence: Interactive floor plans and a concrete residence-hall listening moment.",
+      "Let it show an interest beyond a résumé line.",
+      "Do not add an explanatory essay when the image is meant to speak for itself.",
+      "Check file format, size and current portal instructions."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  },
+  "dartmouth": {
+   "path": "Liberal arts; major undecided",
+   "summary": "Dartmouth could connect your hands-on design habits with sustained liberal-arts inquiry. Choose a major and describe how collaborative making would grow through rigorous study rather than simply naming a lab.",
+   "bullets": [
+    "Best approach: A small interactive prototype plus a question about its human consequences.",
+    "Reason to transfer: A liberal-arts major in the arts and sciences. No major is on file. The research frames a move from making intelligent systems to studying their human meanings and consequences. Name your target.",
+    "Academic gate: Confirm major, required testing or approved waiver, credit limits and time in residence."
+   ],
+   "rank": 19,
+   "rankReason": "Unsettled major and testing status create material gaps beyond the dated academic record.",
+   "source": "https://admissions.dartmouth.edu/apply-dartmouth",
+   "supplements": [
+    {
+     "id": "dartmouth-1",
+     "title": "Why transfer and why Dartmouth",
+     "limit": "500 words on public essay page dated December 2024",
+     "status": "provisional; recheck January 2027 application",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: A small interactive prototype plus a question about its human consequences.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "No supplied screenshot; official research or clearly marked portal placeholder."
+    },
+    {
+     "id": "dartmouth-2",
+     "title": "Upbringing and who you are",
+     "limit": "250 words on older public page",
+     "status": "choose one; provisional",
+     "kind": "background",
+     "guidance": [
+      "Select one formative setting or relationship rather than a complete autobiography.",
+      "Include a concrete detail you personally remember. Possible evidence: A small interactive prototype plus a question about its human consequences.",
+      "Explain how that experience changed a value or habit.",
+      "Share sensitive details only to the extent you want them in the application.",
+      "Show how your perspective will shape a specific academic or community choice."
+     ],
+     "provenance": "No supplied screenshot; official research or clearly marked portal placeholder."
+    },
+    {
+     "id": "dartmouth-3",
+     "title": "Introduce yourself",
+     "limit": "250 words on older public page",
+     "status": "choose one; provisional",
+     "kind": "personal",
+     "guidance": [
+      "Build around one true scene rather than reciting the résumé.",
+      "Show a choice you made and a consequence you can substantiate. Possible evidence: A small interactive prototype plus a question about its human consequences.",
+      "Let reflection connect the experience to your current intellectual direction.",
+      "Treat adversity as context; give your actions and growth adequate space.",
+      "Write in your own voice and check both word and character limits."
+     ],
+     "provenance": "No supplied screenshot; official research or clearly marked portal placeholder."
+    }
+   ]
+  },
+  "northeastern": {
+   "path": "CAMD design / Psychology and Design",
+   "summary": "Northeastern suits the part of your story that learns by building with other people. Connect residence-hall design work to a specific design degree and the questions you want to test through experiential learning.",
+   "bullets": [
+    "Best approach: Interactive residence-hall floor-plan case study.",
+    "Reason to transfer: From your SCAD plan: BFA Design (Interaction Design or Experience Design) or Psychology and Design BS in the College of Arts, Media and Design. The Khoury combined majors in the research lean toward computing. Confirm your target.",
+    "Academic gate: A typical successful cumulative GPA around 3.3 is descriptive, not an eligibility floor."
+   ],
+   "rank": 2,
+   "rankReason": "Current SCAD 3.33 is near the descriptive benchmark, but earlier 3.04 work still counts.",
+   "source": "https://admissions.northeastern.edu/application-information/transfer-applicants/",
+   "supplements": [
+    {
+     "id": "northeastern-1",
+     "title": "General personal statement",
+     "limit": "Not independently verified",
+     "status": "placeholder: inspect current application; no invented required prompt",
+     "kind": "personal",
+     "guidance": [
+      "Build around one true scene rather than reciting the résumé.",
+      "Show a choice you made and a consequence you can substantiate. Possible evidence: Interactive residence-hall floor-plan case study.",
+      "Let reflection connect the experience to your current intellectual direction.",
+      "Treat adversity as context; give your actions and growth adequate space.",
+      "Write in your own voice and check both word and character limits."
+     ],
+     "provenance": "No supplied screenshot; official research or clearly marked portal placeholder."
+    },
+    {
+     "id": "northeastern-2",
+     "title": "CAMD portfolio personal statement",
+     "limit": "500 words on official page",
+     "status": "optional portfolio route; confirm degree rules",
+     "kind": "portfolio",
+     "guidance": [
+      "Select a small number of original works showing your contribution.",
+      "Document sketches, iterations and decisions as well as the result. Possible evidence: Interactive residence-hall floor-plan case study.",
+      "Label team roles, AI assistance and proposed features accurately.",
+      "Show one failure or change made after feedback.",
+      "Verify file limits, required components and program-specific submission rules."
+     ],
+     "provenance": "No supplied screenshot; official research or clearly marked portal placeholder."
+    }
+   ]
+  },
+  "uchicago": {
+   "path": "Sociology / knowledge / ethics candidates",
+   "summary": "UChicago fits your curiosity about how people decide what counts as knowledge. Use the semantic-engine prototype to examine uncertainty and interpretation, while showing enthusiasm for rigorous social inquiry.",
+   "bullets": [
+    "Best approach: One failed cross-cultural retrieval example and what it taught you.",
+    "Reason to transfer: Sociology, computational social science or the sociology of knowledge, or ethics. Your target is not recorded yet. Confirm it.",
+    "Academic gate: Connect to a real undergraduate major and Core preparation; do not present a lab as a degree."
+   ],
+   "rank": 15,
+   "rankReason": "Strong intellectual match, with limited current evidence of the required analytic breadth.",
+   "source": "https://collegeadmissions.uchicago.edu/counselors-educators/educator-faq",
+   "supplements": [
+    {
+     "id": "uchicago-1",
+     "title": "Extended essay option 1",
+     "limit": "One–two pages",
+     "status": "choose exactly one extended prompt; inspect portal wording",
+     "kind": "extended",
+     "guidance": [
+      "Copy the exact chosen prompt from the current portal before outlining.",
+      "Choose a question you can explore with genuine curiosity. Possible evidence: One failed cross-cultural retrieval example and what it taught you.",
+      "Develop a surprising claim through examples and reasoning.",
+      "Include a complication or counterexample instead of only clever phrasing.",
+      "Use your own voice and the stated page format; do not write all alternatives."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "uchicago-2",
+     "title": "Extended essay option 2",
+     "limit": "One–two pages",
+     "status": "alternative; inspect portal wording",
+     "kind": "extended",
+     "guidance": [
+      "Copy the exact chosen prompt from the current portal before outlining.",
+      "Choose a question you can explore with genuine curiosity. Possible evidence: One failed cross-cultural retrieval example and what it taught you.",
+      "Develop a surprising claim through examples and reasoning.",
+      "Include a complication or counterexample instead of only clever phrasing.",
+      "Use your own voice and the stated page format; do not write all alternatives."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "uchicago-3",
+     "title": "Extended essay option 3",
+     "limit": "One–two pages",
+     "status": "alternative; inspect portal wording",
+     "kind": "extended",
+     "guidance": [
+      "Copy the exact chosen prompt from the current portal before outlining.",
+      "Choose a question you can explore with genuine curiosity. Possible evidence: One failed cross-cultural retrieval example and what it taught you.",
+      "Develop a surprising claim through examples and reasoning.",
+      "Include a complication or counterexample instead of only clever phrasing.",
+      "Use your own voice and the stated page format; do not write all alternatives."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "uchicago-4",
+     "title": "Extended essay option 4",
+     "limit": "One–two pages",
+     "status": "alternative; inspect portal wording",
+     "kind": "extended",
+     "guidance": [
+      "Copy the exact chosen prompt from the current portal before outlining.",
+      "Choose a question you can explore with genuine curiosity. Possible evidence: One failed cross-cultural retrieval example and what it taught you.",
+      "Develop a surprising claim through examples and reasoning.",
+      "Include a complication or counterexample instead of only clever phrasing.",
+      "Use your own voice and the stated page format; do not write all alternatives."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "uchicago-5",
+     "title": "Extended essay option 5",
+     "limit": "One–two pages",
+     "status": "alternative; inspect portal wording",
+     "kind": "extended",
+     "guidance": [
+      "Copy the exact chosen prompt from the current portal before outlining.",
+      "Choose a question you can explore with genuine curiosity. Possible evidence: One failed cross-cultural retrieval example and what it taught you.",
+      "Develop a surprising claim through examples and reasoning.",
+      "Include a complication or counterexample instead of only clever phrasing.",
+      "Use your own voice and the stated page format; do not write all alternatives."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "uchicago-6",
+     "title": "Extended essay option 6",
+     "limit": "One–two pages",
+     "status": "alternative; inspect portal wording",
+     "kind": "extended",
+     "guidance": [
+      "Copy the exact chosen prompt from the current portal before outlining.",
+      "Choose a question you can explore with genuine curiosity. Possible evidence: One failed cross-cultural retrieval example and what it taught you.",
+      "Develop a surprising claim through examples and reasoning.",
+      "Include a complication or counterexample instead of only clever phrasing.",
+      "Use your own voice and the stated page format; do not write all alternatives."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "uchicago-7",
+     "title": "Transfer essay",
+     "limit": "About 500 words",
+     "status": "required in supplied portal screenshot",
+     "kind": "transfer",
+     "guidance": [
+      "Credit SCAD with a specific skill or insight you gained.",
+      "Explain the next question that current coursework cannot fully answer. Possible evidence: One failed cross-cultural retrieval example and what it taught you.",
+      "Name the intended school and real degree, with preparation still needed.",
+      "Use one documented example to connect past action to the academic objective.",
+      "Close with what you will study and contribute, avoiding prestige comparisons."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    },
+    {
+     "id": "uchicago-8",
+     "title": "Common App personal essay",
+     "limit": "Confirm portal limit",
+     "status": "optional",
+     "kind": "personal",
+     "guidance": [
+      "Build around one true scene rather than reciting the résumé.",
+      "Show a choice you made and a consequence you can substantiate. Possible evidence: One failed cross-cultural retrieval example and what it taught you.",
+      "Let reflection connect the experience to your current intellectual direction.",
+      "Treat adversity as context; give your actions and growth adequate space.",
+      "Write in your own voice and check both word and character limits."
+     ],
+     "provenance": "Provided November 10 screenshots (paraphrased); official page additions explicitly identified."
+    }
+   ]
+  }
+ },
+ "research": {
+  "verifiedDate": "2026-11-10",
+  "schools": [
+   {
+    "id": "unc",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admissions.unc.edu/apply/types-of-applications/transfer/",
+    "findings": [
+     "Any college coursework after high school uses transfer route; February 15 application deadline.",
+     "Current required writing listing is personal essay, with no two short answers listed.",
+     "One recommendation; all high-school and college transcripts including withdrawals/non-degree coursework.",
+     "Testing exemption if 21+, 24+ transferable credits excluding exams, OR veteran/active duty with 3+ active-duty years. Broad English/language/math/science preparation recommended."
+    ],
+    "limitations": "Screenshot short answers may be superseded; do not present them as current required supplements. Major-specific applications may add requirements."
+   },
+   {
+    "id": "uva",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admission.virginia.edu/transfer/transfer-faq",
+    "findings": [
+     "24 transferable semester hours completed/in progress plus one full year after high school; AP and dual enrollment excluded from minimum.",
+     "No bachelor degree except rare engineering exceptions. Apply to intended school and meet school-specific course requirements.",
+     "Fall deadline March 1; use separate requirements page for prerequisites."
+    ],
+    "limitations": "Exact Fall 2027 supplement wording not verified on public requirements page; use supplied portal screenshot as dated evidence, not universal prompt. GAA only if VCCS conditions documented."
+   },
+   {
+    "id": "rice",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admission.rice.edu/apply/transfer-applicants",
+    "findings": [
+     "12 post-high-school semester hours and at least 3.2 GPA in most recent college work defines transfer applicant.",
+     "Four full-time Rice semesters/60 hours required; no fixed major prerequisites but relevant preparation evaluated.",
+     "Fall application March15, two college instructor letters, college report and all transcripts.",
+     "Official page explicitly labels 2026-2027 prompts:150 academic interests/long-term goals;150 beyond academics why transfer Rice; choose500 residential-college life experience or change-agent background/perspective.",
+     "Domestic need-blind and full demonstrated need without loans.",
+     "Rice Box asks all applicants for a two-dimensional image that speaks for itself;not evaluated."
+    ],
+    "limitations": "2026-2027 essay label verified. Summaries paraphrase prompts;confirm portal fields;architecture applicants have separate250-word essays and portfolio."
+   },
+   {
+    "id": "dartmouth",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admissions.dartmouth.edu/apply-dartmouth",
+    "findings": [
+     "Own Dartmouth Transfer Application;2027 application opens January2027;March1 application and aid.",
+     "Two or fewer years college coursework; interruptions/non-enrollment allowed; no prior bachelors.",
+     "Two college instructor evaluations; college report; syllabi for credit review.",
+     "Testing required; transfer applicants can request waiver for no prior test, tests older than5 years, or hardship. Military status alone is not a stated automatic testing waiver."
+    ],
+    "limitations": "Transfer essay page updated December2024:500 why transfer/Dartmouth;choose250 upbringing or introduce yourself. Current public prompts should be rechecked when January2027 application opens."
+   },
+   {
+    "id": "northeastern",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admissions.northeastern.edu/application-information/transfer-applicants/",
+    "findings": [
+     "Fall deadline April15.",
+     "Successful transfers generally cumulative3.3+; this is descriptive, not a hard cutoff.",
+     "Select major; coursework requirements vary. Quantitative Finance unavailable effective Fall2027; see program exclusions.",
+     "All college and final high-school transcripts;college report;academic evaluation can be advisor/professor/employer;official current-course record.",
+     "Test optional. JST/CCAF recommended for veterans. CAMD portfolio encouraged; portfolio personal statement500 words.",
+     "Transfer classification:12 semester credits OR attempted one fulltime semester and stayed beyond add/drop;not a30-credit minimum."
+    ],
+    "limitations": "No standalone general supplemental essay wording verified; personal statement included in holistic review. Confirm co-op eligibility and campus/major availability after credit review."
+   },
+   {
+    "id": "uchicago",
+    "verifiedDate": "2026-11-10",
+    "source": "https://collegeadmissions.uchicago.edu/apply/application/required-materials/",
+    "findings": [
+     "College/transfer report and two academic recommendations; college instructors for transfer applicants.",
+     "Current official 2026-2027 Essay Questions page lists why UChicago and choose-one extended essay; archived options permitted on essay page.",
+     "Treat Core curriculum completion and available residency as planning factors, not numerical probability."
+    ],
+    "limitations": "Official transfer-specific landing page returned no readable content; transfer-specific why-transfer wording/deadline cannot be independently confirmed here. Do not substitute first-year general essay wording for transfer portal wording."
+   },
+   {
+    "id": "brown",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admission.brown.edu/veterans/application-details",
+    "findings": [
+     "Separate Veterans Application March1; tests neither required nor expected.",
+     "Two letters; prefer recent instructor plus military supervisor, with civilian substitute allowed.",
+     "90-second video strongly recommended;rolling binding option requires withdrawal of other applications if admitted."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "cornell",
+    "verifiedDate": "2026-11-10",
+    "source": "https://www.ilr.cornell.edu/programs/undergraduate-admissions/apply-ilr/transfer-guidelines",
+    "findings": [
+     "Fall only March15;most admitted3.4+ cumulative, not cutoff.",
+     "Sophomore:writing,intro micro OR macro,next math through stats/calculus,science/technology or language elective; junior needs two writing,both economics,math,science,two electives.",
+     "60 credits/four fulltime Cornell semesters;SAT/ACT not required;military training alone not academic transfer credit.",
+     "ILR-specific writing supplement: 650-word limit on July 2026 guidelines; separate educational-path essay. Portal character caps must also be checked."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "nd",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admissions.nd.edu/information-for/transfer-applicants/",
+    "findings": [
+     "One full degree-seeking college academic year after high school.",
+     "Choose college/major;B or higher in required courses;recent admitted average3.75+."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "yale",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admissions.yale.edu/eli-whitney",
+    "findings": [
+     "Eli Whitney:no bachelor degree and at least five years out of high school.",
+     "Full/part-time options;nearly half veterans or active service;full demonstrated need met."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "princeton",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admission.princeton.edu/apply/application-dates-deadlines/transfer-application-dates-deadlines",
+    "findings": [
+     "March1 application,graded paper,Princeton-specific questions;March9 PFAA/optional arts.",
+     "Explicit encouragement for veterans,community-college,lower-income and first-generation students;dates subject to change."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "tufts",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admissions.tufts.edu/apply/applying-as-a-transfer-candida/real-application/",
+    "findings": [
+     "REAL eligibility includes24+,parents,married,current military,or veterans;some college within past five years;fulltime degree study required.",
+     "Explicit Fall2027 deadline March15,2027;two academic recommendations;SAT/ACT not required."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "washu",
+    "verifiedDate": "2026-11-10",
+    "source": "https://bulletin.wustl.edu/undergrad/admissions/",
+    "findings": [
+     "Choose undergraduate school;submit all college and high-school transcripts,academic evaluation,college report.",
+     "At least four consecutive fulltime semesters excluding summers required;program credit rules vary.",
+     "Current admission page describes successful applicants as presenting at least 3.5 across broad coursework and completed first-year composition; not a guarantee of admission."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "nu",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admissions.northwestern.edu/apply/identities/transfer.html",
+    "findings": [
+     "Welcomes transfers from2-/4-year institutions.",
+     "Successful transfers typically at least one fulltime college year24 semester/36 quarter hours per undergraduate catalog;school-specific registration rules apply."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "gt",
+    "verifiedDate": "2026-11-10",
+    "source": "https://uadmissions.georgetown.edu/apply/transfer-applicants/preparing-for-georgetown-transfer/",
+    "findings": [
+     "At least one fulltime college semester12 credits recommended;no more than four fulltime semesters.",
+     "Major/Core-aligned coursework is competitive preparation;credit/semester ceiling needs written review."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "vandy",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admissions.vanderbilt.edu/apply/transfer-process",
+    "findings": [
+     "Veterans and active military have same transfer application requirements as other applicants.",
+     "School/major selection matters;Blair has audition process."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "williams",
+    "verifiedDate": "2026-11-10",
+    "source": "https://www.williams.edu/admission-aid/how-to-apply/transfer/",
+    "findings": [
+     "Two years residency;junior entrant planning study away may need to relinquish credit;ask about degree timeline.",
+     "Current page replaces older/apply/transfer URL.",
+     "Current transfer page explicitly states March3 application deadline,without year label;one required CommonApp essay,optional academic writing sample that need not be graded,include assignment description,no lab reports.",
+     "Normally one fulltime college year by enrollment;exceptions can be reviewed;no maximum credit cutoff but no bachelor degree."
+    ],
+    "limitations": "March3 current generic date supersedes conflicting older March1/March2 sources, but recheck cycle-specific portal before submission."
+   },
+   {
+    "id": "wesleyan",
+    "verifiedDate": "2026-11-10",
+    "source": "https://www.wesleyan.edu/admission/undergraduate-admission/transfer.html",
+    "findings": [
+     "Transfer SAT/ACT not required.",
+     "Current admissions calendar March15 application/aid and lateApril notification;older PDFs conflict and should not override current page."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "amherst",
+    "verifiedDate": "2026-11-10",
+    "source": "https://www.amherst.edu/admission/apply/transfer",
+    "findings": [
+     "32 transferable liberal-arts semester hours including in-progress;competitive A- average;no prior bachelor.",
+     "Two instructor letters;March1 fall deadline;two250-650 essays educational journey/whyAmherst and life experiences/personal circumstances.",
+     "Optional analytical course paper;SAT/ACT optional."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "usc",
+    "verifiedDate": "2026-11-10",
+    "source": "https://iovine-young.usc.edu/apply/undergraduate/undergraduate-admissions-buin",
+    "findings": [
+     "External transfers use CommonApp plus Academy-specific essays and60-second introduction video on SlideRoom;up to four optional original-work submissions.",
+     "Current page states select IYA:Arts,Technology and the Business of Innovation BS;despite buin URL it describes this degree.",
+     "Sequential Academy curriculum may require three to four years at USC;transfer coursework not guaranteed to count toward Academy graduation."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "smu",
+    "verifiedDate": "2026-11-10",
+    "source": "https://www.smu.edu/admission/apply/transfer/application-process",
+    "findings": [
+     "Personal essay,resume,recommendations optional and encouraged for scholarship consideration.",
+     "Business applicants also need separate Cox admission;university admission is not automatic business admission.",
+     "Official transfer FAQ: at least one semester after high school, 24 transferable credits and 2.7 minimum GPA. https://www.smu.edu/admission/apply/transfer/faqs"
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   }
+  ],
+  "bench": [
+   {
+    "id": "columbia",
+    "verifiedDate": "2026-11-10",
+    "source": "https://www.gs.columbia.edu/content/nontraditional-student-admissions-columbia-university",
+    "findings": [
+     "GS requires one-year educational break or compelling parttime reason;up to60 credits accepted.",
+     "Strong nontraditional fit;verify aid/net cost independently;do not assume Columbia College aid applies."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "michigan",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admissions.umich.edu/apply/transfer-applicants/requirements-deadlines",
+    "findings": [
+     "Select school/college first;prerequisites and GPA expectations vary.",
+     "LSA may align social science interests;compare out-of-state cost and transferable-credit plan before activating."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "emory",
+    "verifiedDate": "2026-11-10",
+    "source": "https://admissions.drupal.emory.edu/apply/transfer",
+    "findings": [
+     "One year fulltime degree-seeking work,28 credits completed/inprogress before applying.",
+     "Good interdisciplinary social-science option;verify transcript threshold and aid."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "gwu",
+    "verifiedDate": "2026-11-10",
+    "source": "https://undergraduate.admissions.gwu.edu/apply/transfer-applicants",
+    "findings": [
+     "No standard minimum credit/GPA requirement;under30 college credits requires high-school transcripts.",
+     "Policy/civic-service setting aligns interests;activate after written aid and credit estimate."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   },
+   {
+    "id": "case",
+    "verifiedDate": "2026-11-10",
+    "source": "https://case.edu/admission/apply/transfer-applicants",
+    "findings": [
+     "Transfer applicants considered for need-based grants,loans,workstudy.",
+     "Veteran office says apply transfer if attended any college,even one semester;fit depends on selecting actual social-science/design direction."
+    ],
+    "limitations": "Dates and requirements are current webpage findings, not an admissions prediction. Recheck application portal before submission."
+   }
+  ],
+  "supplementSources": [
+   {
+    "id": "dartmouth",
+    "url": "https://admissions.dartmouth.edu/apply-dartmouth/dartmouth-transfer-application-essays"
+   },
+   {
+    "id": "uchicago",
+    "url": "https://collegeadmissions.uchicago.edu/apply/essay/"
+   }
+  ]
+ },
+ "inventoryNote": "A paraphrased inventory from 37 supplied screenshots covers 16 active schools plus Columbia GS. Five active schools lack screenshots. Missing prompts are labeled unverified; Cornell ILR’s writing supplement is now verified from its official guidelines; exact UChicago extended-option wording and the other flagged portal fields still need capture. The screenshots are evidence of displayed fields, not proof every field is current for Fall 2027.",
+ "benchSupplement": {
+  "school": "Columbia General Studies",
+  "title": "Autobiography",
+  "limit": "1,500–2,000 words",
+  "status": "Reserve only; submit via post-application essay form. Screenshot prohibits generative AI writing or editing; use your own writing process.",
+  "guidance": [
+   "Build an accurate education and work timeline.",
+   "Explain the reasons for interruptions at your chosen level of detail.",
+   "Connect your current academic interests to the GS curriculum.",
+   "Show readiness through recent coursework and specific responsibilities.",
+   "Follow the application’s prohibition on generative AI writing/editing."
+  ]
+ }
+}

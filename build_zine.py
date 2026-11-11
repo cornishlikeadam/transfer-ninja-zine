@@ -14,7 +14,7 @@ Writes:
   - vault/                        (Obsidian vault: one note per school, Common App and questions)
 
 Deliberately NOT read or embedded: transcripts, GPA figures, call debriefs, essay drafts,
-personal odds. The page is meant to be shared with a tutor, not to expose the record.
+personal odds on the public page. Private strategy is behind the existing code. The page is meant to be shared with a tutor, not to expose the record.
 
 Run:  python3 build_zine.py   (needs TUTOR_CODE in .env)
 """
@@ -201,10 +201,10 @@ def parse_routes():
     try:
         import openpyxl
     except ImportError:
-        print("WARN openpyxl missing: routes skipped", file=sys.stderr)
-        return []
+        print("INFO openpyxl missing: using preserved route-plan snapshot", file=sys.stderr)
+        return json.load(open(os.path.join(HERE, "data", "route-plans.json"), encoding="utf-8"))
     if not os.path.exists(XLSX):
-        return []
+        return json.load(open(os.path.join(HERE, "data", "route-plans.json"), encoding="utf-8"))
     ws = openpyxl.load_workbook(XLSX, data_only=True)["School Plans"]
     rows = [r for r in ws.iter_rows(values_only=True) if any(c is not None for c in r)]
     head = [str(c) for c in rows[0]]
@@ -345,7 +345,8 @@ def main():
         if sid in lib:
             lib[sid]["channel"], lib[sid]["safest"] = m["channel"], m["safest"]
     gated = {"lib": lib, "dossier": parse_dossiers(), "routes": parse_routes(),
-             "connections": parse_connections(), "lens": sj["lens"]}
+             "connections": parse_connections(), "lens": sj["lens"],
+             "strategy": json.load(open(os.path.join(HERE, "data", "strategy.json"), encoding="utf-8"))}
     pub = {"schools": sj["schools"], "bench": sj["bench"]}
     os.makedirs(os.path.join(HERE, "data"), exist_ok=True)
     json.dump(gated, open(os.path.join(HERE, "data", "zine-data.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

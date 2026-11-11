@@ -2,7 +2,7 @@
 school: UVA
 id: uva
 route: College of Arts and Sciences Transfer
-priority: bench
+priority: core
 interest_policy: none
 deadlines:
   - 2027-03-01: Fall transfer application, decisions by May 1 (confirm Fall 2027 date)

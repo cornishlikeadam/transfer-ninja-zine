@@ -2,7 +2,7 @@
 school: UChicago
 id: uchicago
 route: Transfer Program, The College
-priority: bench
+priority: core
 interest_policy: ted
 deadlines:
   - 2027-03-01: Transfer Early Decision and rolling opening deadline (page still shows the prior cycle)

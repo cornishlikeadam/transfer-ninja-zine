@@ -346,7 +346,7 @@
    "route": "REAL, for adults and veterans",
    "pri": "core",
    "talked": 0,
-   "one": "Ask REAL how your credits count and whether you must study full-time.",
+   "one": "Confirm the REAL degree and credit map; the current page requires full-time degree study.",
    "facts": [
     "Financial-aid materials are due in mid-April 2027. The official page does not publish the exact day."
    ],
@@ -641,16 +641,16 @@
    "facts": [
     "Transfer credit is capped at two years of credit, and Williams requires two years in residence.",
     "Offers only need-based aid, with no merit scholarships. The CSS Profile is required for non-federal aid.",
-    "Official dates conflict: the aid page lists March 3, the Common App March 2, an older catalog March 1."
+    "Current transfer admissions page lists March 3 without a year; recheck the Fall 2027 portal and aid date."
    ],
    "next": "Confirm the March date on the official page, decide sophomore or junior entry, and ask the admission office how a veteran transfer is reviewed.",
    "src": "https://www.williams.edu/admission-aid/apply/transfer/",
    "d": [
     [
-     "2027-03-01",
-     "Application and financial aid (official page may list March 3)",
-     "x",
-     "https://www.williams.edu/admission-aid/apply/transfer/"
+     "2027-03-03",
+     "Application; verify Fall 2027 year and separate aid date",
+     "p",
+     "https://www.williams.edu/admission-aid/how-to-apply/transfer/"
     ]
    ],
    "di": "ask",
@@ -741,7 +741,7 @@
    "route": "Liberal Arts Transfer",
    "pri": "core",
    "talked": 1,
-   "one": "Send the transfer essay (250 to 500 words on your reasons for transferring) and confirm the Fall 2027 date.",
+   "one": "Prepare both screenshot essays (250–650 words with 4,000-character caps) and confirm the live limits.",
    "facts": [
     "Transfer applicants submit the Common App or Coalition transfer application plus the Amherst supplement.",
     "A Veteran Fee Waiver is listed on the Common App, and the fee can also be waived through Quick Pass.",
@@ -902,13 +902,13 @@
    "id": "unc",
    "name": "UNC Chapel Hill",
    "route": "Transfer, College of Arts and Sciences",
-   "pri": "bench",
+   "pri": "core",
    "talked": 0,
    "one": "Settle residency and net cost first: in-state versus out-of-state changes everything, and veterans using Post-9/11 benefits are granted in-state tuition.",
    "facts": [
     "Transfer application is due Feb 15 with an $85 fee, or a veteran waiver.",
     "UNC admitted 1,970 of 5,330 transfer applicants in 2025-26 (37%), school-wide, with no published residency split.",
-    "A weighted GPA of 2.8 or higher means no test is required."
+    "Testing exemptions include age 21+, 24 transferable credits (excluding exams), or at least three years of qualifying active service. Confirm which applies."
    ],
    "next": "Choose the liberal-arts major, confirm how SCAD quarter credits count toward the 24-credit testing exemption, and get a written net-cost estimate.",
    "src": "https://admissions.unc.edu/apply/types-of-applications/transfer/",
@@ -970,7 +970,7 @@
    "id": "uva",
    "name": "UVA",
    "route": "College of Arts and Sciences Transfer",
-   "pri": "bench",
+   "pri": "core",
    "talked": 0,
    "one": "Choose a College of Arts and Sciences major now: the BS in Data Science does not admit external transfers.",
    "facts": [
@@ -1024,20 +1024,21 @@
    "id": "rice",
    "name": "Rice",
    "route": "Transfer Program",
-   "pri": "bench",
+   "pri": "core",
    "talked": 0,
    "one": "Meet the 3.2 minimum recent-college GPA and plan for four full-time semesters at Rice.",
    "facts": [
     "Rice admitted 102 of 1,473 transfer applicants in 2024-25 (6.9%). Admitted transfers typically have a 3.5 or higher GPA.",
     "Needs two college-instructor recommendations and the College Report. There are no transfer interviews.",
-    "Rice asks transfers to explain their specific interest, so write it precisely."
+    "Rice asks transfers to explain their specific interest, so write it precisely.",
+    "Rice specifies a 3.2 minimum GPA in the most recent college work; meeting it does not guarantee admission."
    ],
    "next": "Check how credits map to Social Policy Analysis or Cognitive Sciences, confirm the Fall 2027 prompts when they post, and get an aid estimate.",
    "src": "https://admission.rice.edu/apply/transfer-applicants",
    "d": [
     [
      "2027-03-15",
-     "Fall transfer application (Fall 2027 prompts not yet republished)",
+     "Fall transfer application (2026–2027 essay prompts published)",
      "x",
      "https://admission.rice.edu/apply/transfer-applicants"
     ],
@@ -1080,7 +1081,7 @@
    "id": "dartmouth",
    "name": "Dartmouth",
    "route": "Transfer Program, D-Plan",
-   "pri": "bench",
+   "pri": "core",
    "talked": 0,
    "one": "Line up two college-instructor evaluations and syllabi, and request the testing waiver if you qualify as a veteran.",
    "facts": [
@@ -1142,7 +1143,7 @@
    "id": "northeastern",
    "name": "Northeastern",
    "route": "College-specific Transfer",
-   "pri": "bench",
+   "pri": "core",
    "talked": 0,
    "one": "Get a preliminary credit map and co-op timeline before you decide it is affordable.",
    "facts": [
@@ -1196,7 +1197,7 @@
    "id": "uchicago",
    "name": "UChicago",
    "route": "Transfer Program, The College",
-   "pri": "bench",
+   "pri": "core",
    "talked": 0,
    "one": "Decide whether Transfer Early Decision is worth the binding commitment before you compare aid.",
    "facts": [
@@ -1255,7 +1256,53 @@
    ]
   }
  ],
- "bench": [],
+ "bench": [
+  {
+   "id": "columbia",
+   "name": "Columbia General Studies",
+   "one": "Resolve financing and confirm the nontraditional route before adding another application.",
+   "facts": [
+    "Your interrupted education fits the route to investigate; aid and credit loss remain decisive.",
+    "Reserve only: excluded from the active 21-school calculators and application count."
+   ]
+  },
+  {
+   "id": "michigan",
+   "name": "University of Michigan",
+   "one": "Map liberal-arts prerequisites and choose a specific school before activation.",
+   "facts": [
+    "Connect technology and institutions through a real undergraduate degree, rather than a generic AI pitch.",
+    "Reserve only: excluded from the active 21-school calculators and application count."
+   ]
+  },
+  {
+   "id": "emory",
+   "name": "Emory University",
+   "one": "Confirm transferable hours, writing preparation and a viable degree timeline.",
+   "facts": [
+    "Sociology and human-centered inquiry could extend the service-to-systems story.",
+    "Reserve only: excluded from the active 21-school calculators and application count."
+   ]
+  },
+  {
+   "id": "gwu",
+   "name": "George Washington University",
+   "one": "Build a net-cost estimate and a specific policy or social-science plan.",
+   "facts": [
+    "Use veteran resource access and institutional accountability as a focused policy question.",
+    "Reserve only: excluded from the active 21-school calculators and application count."
+   ]
+  },
+  {
+   "id": "case",
+   "name": "Case Western Reserve University",
+   "one": "Confirm a social-science/design path and transferable quantitative preparation.",
+   "facts": [
+    "Use design evidence to show how technical systems affect people; avoid defaulting to engineering without prerequisites.",
+    "Reserve only: excluded from the active 21-school calculators and application count."
+   ]
+  }
+ ],
  "lens": {
   "brown": {
    "di": "none",

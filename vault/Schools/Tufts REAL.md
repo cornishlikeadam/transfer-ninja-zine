@@ -12,7 +12,7 @@ tags: [school, transfer-2027]
 
 **Route:** REAL, for adults and veterans
 
-> The one thing: Ask REAL how your credits count and whether you must study full-time.
+> The one thing: Confirm the REAL degree and credit map; the current page requires full-time degree study.
 
 ## Facts
 - Financial-aid materials are due in mid-April 2027. The official page does not publish the exact day.

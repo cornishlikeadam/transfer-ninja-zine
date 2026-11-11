@@ -2,7 +2,7 @@
 school: UNC Chapel Hill
 id: unc
 route: Transfer, College of Arts and Sciences
-priority: bench
+priority: core
 interest_policy: none
 deadlines:
   - 2027-02-15: Transfer application and fee or waiver (confirm Fall 2027 date)
@@ -18,7 +18,7 @@ tags: [school, transfer-2027]
 ## Facts
 - Transfer application is due Feb 15 with an $85 fee, or a veteran waiver.
 - UNC admitted 1,970 of 5,330 transfer applicants in 2025-26 (37%), school-wide, with no published residency split.
-- A weighted GPA of 2.8 or higher means no test is required.
+- Testing exemptions include age 21+, 24 transferable credits (excluding exams), or at least three years of qualifying active service. Confirm which applies.
 
 ## Next move
 Choose the liberal-arts major, confirm how SCAD quarter credits count toward the 24-credit testing exemption, and get a written net-cost estimate.

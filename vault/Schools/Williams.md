@@ -5,7 +5,7 @@ route: Liberal Arts Transfer
 priority: core
 interest_policy: ask
 deadlines:
-  - 2027-03-01: Application and financial aid (official page may list March 3)
+  - 2027-03-03: Application; verify Fall 2027 year and separate aid date
 tags: [school, transfer-2027]
 ---
 # Williams
@@ -17,7 +17,7 @@ tags: [school, transfer-2027]
 ## Facts
 - Transfer credit is capped at two years of credit, and Williams requires two years in residence.
 - Offers only need-based aid, with no merit scholarships. The CSS Profile is required for non-federal aid.
-- Official dates conflict: the aid page lists March 3, the Common App March 2, an older catalog March 1.
+- Current transfer admissions page lists March 3 without a year; recheck the Fall 2027 portal and aid date.
 
 ## Next move
 Confirm the March date on the official page, decide sophomore or junior entry, and ask the admission office how a veteran transfer is reviewed.

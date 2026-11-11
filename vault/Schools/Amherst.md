@@ -12,7 +12,7 @@ tags: [school, transfer-2027]
 
 **Route:** Liberal Arts Transfer
 
-> The one thing: Send the transfer essay (250 to 500 words on your reasons for transferring) and confirm the Fall 2027 date.
+> The one thing: Prepare both screenshot essays (250–650 words with 4,000-character caps) and confirm the live limits.
 
 ## Facts
 - Transfer applicants submit the Common App or Coalition transfer application plus the Amherst supplement.

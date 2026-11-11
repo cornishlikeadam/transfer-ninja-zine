@@ -2,7 +2,7 @@
 school: Northeastern
 id: northeastern
 route: College-specific Transfer
-priority: bench
+priority: core
 interest_policy: firstyear
 deadlines:
   - 2027-04-15: Fall transfer application and aid priority (older sources say April 1)

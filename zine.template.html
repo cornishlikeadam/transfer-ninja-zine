@@ -549,7 +549,7 @@ footer p{max-width:80ch;margin:0 0 8px}
   <section class="sec" id="dojo">
     <div class="wrap">
       <div class="kick"><svg aria-hidden="true"><use href="#sh"/></svg>The dojo</div>
-      <h2>Four <em>trackers</em></h2>
+      <h2>Your <em>planning tools</em></h2>
       <p class="sec-lede">Score the schools, inventory the credits, keep the recommenders moving, and log every conversation. Rows marked <span class="ex" style="margin:0">example</span> are samples. Clear them when you start.</p>
       <div class="tabs" role="tablist" aria-label="Trackers" id="tabs"></div>
       <div id="tabpanel"></div>
@@ -598,7 +598,7 @@ footer p{max-width:80ch;margin:0 0 8px}
   <div class="wrap">
     <p>Dates and routes follow the November 2026 audit of each school's official transfer pages, linked on every card and on the clock. Standing dates can change for Fall 2027. Recheck the official page before you rely on any date, rate or aid rule.</p>
     <p>Admit rates and GPA figures describe past cohorts at the school or program level. They are not personal odds. Faculty names are research anchors, not contacts or recommenders.</p>
-    <p>Left out on purpose: transcripts, grades, call debriefs and essay drafts. The research briefs were written in July 2026, so check any date or step against the Clock before acting.</p>
+    <p>Personal background and dated academic planning figures appear only after unlocking the private strategy tools. Older research is labeled; the November 10 audit links current official sources. Verify final prompts and dates in your application.</p>
   </div>
 </footer>
 
@@ -660,14 +660,14 @@ var GEAR=[
  ['v2','Check every date, hour, project outcome and credit against proof'],
  ['v3','Decide how much personal history to share with each school'],
  ['v4','Log any AI help used, and keep it to organizing and questions']]},
-{id:'launch',title:'Launch pad',why:'Ten to twelve applications, not twenty.',items:[
+{id:'launch',title:'Launch pad',why:'Twenty-one active schools; use route, credit and cost checks to plan the workload.',items:[
  ['l1','Cut any school that fails its route, fit, credit or cost gate'],
  ['l2','Choose the college and major for each remaining school'],
  ['l3','Put every date on the calendar from the Clock section'],
  ['l4','Submit a week early and confirm each portal shows the file complete'],
  ['l5','Send grade updates to schools that ask for them after submission']]}
 ];
-var CRIT=[{k:'adm',n:'Admission chance',w:40},{k:'fit',n:'Academic fit',w:30},{k:'joy',n:'Enjoyment',w:20},{k:'cost',n:'Cost and time',w:6},{k:'near',n:'St. Louis or Texas',w:4}];
+var CRIT=[{k:'adm',n:'Academic / route readiness',w:40},{k:'fit',n:'Academic fit',w:30},{k:'joy',n:'Enjoyment',w:20},{k:'cost',n:'Cost and time',w:6},{k:'near',n:'St. Louis or Texas',w:4}];
 var CATS=['Writing','Quantitative','Economics','Science','Humanities','Design and tech','Other'];
 var RSTAT=[['toask','To ask'],['asked','Asked'],['agreed','Agreed'],['sent','Submitted']];
 var TODAYISO=isoOf(TODAY);
@@ -731,7 +731,7 @@ var LENS=DATA.lens||{};
 
 
 /* ---------- the vault: every school found on this computer ---------- */
-var VG={core:'Core 12',bench:'Bench',alt:'Other alternate',researched:'Researched',dossier:'Dossier only',routes:'Route plan'};
+var VG={core:'Active 21',bench:'Bench',alt:'Other alternate',researched:'Researched',dossier:'Dossier only',routes:'Route plan'};
 var VAULT=[
 ['duke','Duke','alt','Dossier on file. Revisit if recent grades get substantially stronger.'],
 ['columbia','Columbia General Studies','alt','Research brief and dossier. Needs a verified financing plan first.'],
@@ -854,7 +854,7 @@ function renderTutor(){
 /* ---------- vault ---------- */
 function vaultItems(){
   var items=[];
-  VAULT.forEach(function(v){items.push({key:'v-'+v[0],id:v[0],name:v[1],group:v[2],note:v[3],kind:'inst'})});
+  VAULT.forEach(function(v){items.push({key:'v-'+v[0],id:v[0],name:v[1],group:BENCH.some(function(b){return b.id===v[0]})?'bench':v[2],note:v[3],kind:'inst'})});
   (DATA.routes||[]).forEach(function(r,i){items.push({key:'vr-'+i,id:String(i),name:r.name,group:'routes',note:r.type,kind:'route'})});
   SCHOOLS.forEach(function(s){items.push({key:'v-'+s.id,id:s.id,name:s.name,group:'core',note:s.route+'. Already on the lineup above.',kind:'core'})});
   return items;
@@ -1081,6 +1081,7 @@ function renderApps(){
     var cnt=function(id){return Object.keys(ENT).filter(function(k){return k.indexOf('q-'+id+'-')===0}).length};
     h+='<div class="chips" style="margin-bottom:14px" role="group" aria-label="School">'+SCHOOLS.map(function(s){return '<button type="button" class="chip" data-act="aschool" data-v="'+s.id+'" aria-pressed="'+(cur===s.id)+'">'+esc(s.name)+(cnt(s.id)?' '+cnt(s.id):'')+'</button>'}).join('')+'</div>';
     var qs=Object.keys(ENT).filter(function(k){return k.indexOf('q-'+cur+'-')===0}).sort(function(a,b){return (ENT[a].created||'')<(ENT[b].created||'')?-1:1});
+    h+=schoolStrategyHTML(cur);
     h+='<div class="sheet panel"><h3>'+esc(SCH[cur].name)+' questions</h3><p class="why">Paste each prompt from the application, then draft your answer. Track the status as it moves to Entered.</p><div class="egroup">'+(qs.length?qs.map(questionHTML).join(''):'<p class="empty">No questions added for '+esc(SCH[cur].name)+' yet.</p>')+'</div>'+(CANEDIT?'<div class="row" style="margin-top:12px"><button type="button" class="btn" data-act="qadd" data-id="'+cur+'">Add a question</button></div>':'')+'</div>';
   }
   box.innerHTML=h;renderAppsSummary();
@@ -1431,7 +1432,7 @@ function benchHTML(b){
   return '<article class="sheet card mini" id="s-'+b.id+'"><div class="card-head"><span class="pri bench">On the bench</span></div><h3>'+esc(b.name)+'</h3><div class="one"><span class="tag">Revisit when</span><p>'+esc(b.one)+'</p></div><ul class="facts">'+b.facts.map(function(f){return '<li>'+esc(f)+'</li>'}).join('')+'</ul></article>';
 }
 function renderLineup(){
-  var f=S.ui.filter,defs=[['all','All '+SCHOOLS.length],['core','Core'],['conditional','Conditional'],['bench','Bench']];
+  var f=S.ui.filter,defs=[['all','All '+SCHOOLS.length],['core','Core'],['conditional','Conditional'],['bench','Reserve bench']];
   $('#filters').innerHTML=defs.map(function(d){return '<button type="button" class="chip" data-act="filter" data-v="'+d[0]+'" aria-pressed="'+(f===d[0])+'">'+d[1]+'</button>'}).join('');
   $('#sortsel').value=S.ui.sort;
   var list=SCHOOLS.filter(function(s){return f==='all'||f===s.pri});
@@ -1442,7 +1443,7 @@ function renderLineup(){
     list=list.slice().sort(function(a,b){return stageOf(b.id)-stageOf(a.id)});
   }
   $('#grid').innerHTML=list.map(cardHTML).join('');
-  $('#benchwrap').innerHTML='';
+  $('#benchwrap').innerHTML=BENCH.length?'<h3 class="bench-title">Reserve bench <span>separate from the active 21</span></h3><div class="grid">'+BENCH.map(benchHTML).join('')+'</div>':'';
 }
 function renderClock(){
   $('#hidedone').checked=!!S.ui.hideDone;
@@ -1479,6 +1480,68 @@ function hasEx(arr){return arr.some(function(r){return r.ex})}
 function clearBtn(which,arr){return hasEx(arr)?'<div class="clearex"><button type="button" class="btn alt" data-act="clearex" data-v="'+which+'">Clear example rows</button></div>':''}
 function exTag(r){return r.ex?'<span class="ex">example</span>':''}
 
+
+function bulletHTML(items){return '<ul>'+items.map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ul>'}
+function schoolStrategyHTML(id){
+ var a=DATA.strategy||{},x=(a.schools||{})[id];if(!x)return '';
+ var r=((a.research||{}).schools||[]).filter(function(z){return z.id===id})[0];
+ var h='<div class="sheet panel strategy-school"><h3>'+esc(nameOf(id))+' · strategy</h3><p>'+esc(x.summary)+'</p>'+bulletHTML(x.bullets)+'<p><b>Equal-base-rate readiness order #'+x.rank+'/21.</b> '+esc(x.rankReason)+'</p>';
+ if(r)h+='<details><summary>Official research · '+esc(r.verifiedDate)+'</summary>'+bulletHTML(r.findings)+'<p class="stale">'+esc(r.limitations)+'</p><a href="'+esc(r.source)+'" target="_blank" rel="noopener">Official source</a></details>';
+ h+='<h4>Supplements and guidance</h4><p class="stale">Paraphrased themes. Required, optional, conditional and alternatives stay separate; verify the final portal wording. Guidance supports your own writing.</p>';
+ x.supplements.forEach(function(q){h+='<details><summary>'+esc(q.title)+' — '+esc(q.limit)+'</summary><p><b>'+esc(q.status)+'</b></p><p class="stale">'+esc(q.provenance)+'</p>'+bulletHTML(q.guidance)+'</details>'});
+ return h+'</div>';
+}
+function panelStrategy(){
+ var a=DATA.strategy||{},id=S.ui.strategySchool||SCHOOLS[0].id;
+ var h='<h3>21-school strategy and personal evidence</h3><p>'+esc(a.method||'')+'</p><p class="stale">'+esc(a.inventoryNote||'')+'</p><button class="btn" type="button" data-act="exportStrategy">Download full strategy document (.md)</button>';
+ h+='<details><summary>Your background, interests and evidence boundaries</summary>'+(a.profile||[]).map(function(p){return '<h4>'+esc(p.title)+'</h4><p>'+esc(p.text)+'</p><p class="stale">'+esc(p.source)+'</p>'}).join('')+'</details>';
+ h+='<h4>Equal-base-rate academic and route ranking</h4><ol>';
+ SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).forEach(function(s){h+='<li><button type="button" class="chip" data-act="strategySchool" data-v="'+s.id+'">'+esc(s.name)+'</button> '+esc(a.schools[s.id].rankReason)+'</li>'});
+ h+='</ol><div class="chips">'+SCHOOLS.map(function(s){return '<button class="chip" type="button" data-act="strategySchool" data-v="'+s.id+'" aria-pressed="'+(id===s.id)+'">'+esc(s.name)+'</button>'}).join('')+'</div>'+schoolStrategyHTML(id);
+ var b=a.benchSupplement;if(b)h+='<details><summary>Reserve supplement · '+esc(b.school)+'</summary><p>'+esc(b.title)+' · '+esc(b.limit)+'</p><p>'+esc(b.status)+'</p>'+bulletHTML(b.guidance)+'</details>';
+ return h;
+}
+function planningStats(){
+ var z=S.stats||{};function v(k,d){return z[k]==null?d:Number(z[k])}
+ return {bg:v('bg',3.04),bc:v('bc',22),sg:v('sg',3.33),sq:v('sq',30),nq:v('nq',15),ng:v('ng',4),eligible:v('eligible',0)};
+}
+function statsResult(z){
+ var sem=z.sq*2/3,total=z.bc+sem,combined=total?(z.bg*z.bc+z.sg*sem)/total:null;
+ var projected=(z.sq+z.nq)?(z.sg*z.sq+z.ng*z.nq)/(z.sq+z.nq):null;
+ var projectedCombined=(total+z.nq*2/3)?(z.bg*z.bc+z.sg*sem+z.ng*z.nq*2/3)/(total+z.nq*2/3):null;
+ return {sem:sem,total:total,combined:combined,projected:projected,projectedCombined:projectedCombined};
+}
+function panelStats(){
+ var z=planningStats(),r=statsResult(z),a=DATA.strategy||{};
+ function fmt(n){return n==null?'Unknown':n.toFixed(3)}
+ var fields=[['bg','Broward GPA',z.bg,4],['bc','Broward GPA-bearing semester hours (planning estimate)',z.bc,300],['sg','SCAD GPA',z.sg,4],['sq','SCAD GPA-bearing quarter hours (planning estimate)',z.sq,450],['nq','Next graded SCAD quarter hours',z.nq,100],['ng','Next-term target GPA',z.ng,4],['eligible','School-confirmed transferable semester credits (0 = unknown)',z.eligible,300]];
+ var h='<h3>Stats checker and GPA scenarios · all 21</h3><p>Defaults come from dated transcript summaries: Broward January 2025 and SCAD October 2026. GPA calculations require GPA-bearing hours, which may differ from earned credits. Replace estimated hours with the transcript’s actual GPA hours. Withdrawals are not assigned zero grades here. Developmental courses and JST recommendations are not automatically transferable.</p><div class="form">';
+ fields.forEach(function(f){h+='<label>'+esc(f[1])+'<input type="number" min="0" max="'+f[3]+'" step="0.01" data-chg="stats" data-k="'+f[0]+'" value="'+f[2]+'"></label>'});
+ h+='</div><div class="cov"><span>Pooled planning GPA <b>'+fmt(r.combined)+'</b></span><span>Projected SCAD GPA <b>'+fmt(r.projected)+'</b></span><span>Projected pooled GPA <b>'+fmt(r.projectedCombined)+'</b></span><span>GPA-hour semester equivalents <b>'+r.total.toFixed(2)+'</b></span></div><p class="stale">Quarter hours × 2/3. Pooled GPA is an estimate, not any school’s official calculation. Planned grades and credits are scenarios, not completed work. The readiness order is a fixed, dated advising judgment and does not change automatically when a scenario changes. Acceptance rates are excluded from this checker.</p><div class="tbl"><table><thead><tr><th>School</th><th>GPA / credit comparison</th><th>Preparation and route check</th><th>Official source</th></tr></thead><tbody>';
+ SCHOOLS.forEach(function(s){var x=a.schools[s.id],msg='No verified numeric threshold used; review the official requirements.',needs='';
+  if(s.id==='smu')msg='Published minimum 2.7: pooled planning estimate '+(r.combined>=2.7?'above':'below')+'; 24 transferable hours '+(z.eligible?z.eligible>=24?'entered count sufficient':'entered count short':'not verified')+'.';
+  if(s.id==='rice')msg='Most recent college minimum 3.2: SCAD input '+(z.sg>=3.2?'above':'below')+'; 12 post-high-school semester hours require evaluation.';
+  if(s.id==='northeastern')msg='Typical successful cumulative 3.3+: pooled planning estimate '+(r.combined>=3.3?'above':'below')+'. Descriptive, not minimum; school recomputes.';
+  if(s.id==='cornell')msg='Most admitted ILR 3.4+: pooled planning estimate '+(r.combined>=3.4?'above':'below')+'. Descriptive, not minimum.';
+  if(s.id==='washu')msg='Strongest applicants usually 3.5+: pooled planning estimate '+(r.combined>=3.5?'above':'below')+'. Descriptive, not minimum.';
+  if(s.id==='nd')msg='Recent admitted average 3.75+: pooled planning estimate '+(r.combined>=3.75?'above':'below')+'. Average, not minimum.';
+  if(s.id==='uva')msg='24 transferable semester hours plus one year: '+(z.eligible?z.eligible>=24?'entered count sufficient; still verify year and school rules':'entered count short':'transferable count unknown')+'.';
+  if(s.id==='amherst')msg='32 transferable liberal-arts credits including in-progress: generic hour total cannot verify liberal-arts classification. Competitive A− guidance is descriptive.';
+  h+='<tr><td><b>'+esc(s.name)+'</b></td><td>'+esc(msg)+'</td><td>'+esc(x.bullets[2])+'</td><td><a href="'+esc((((a.research||{}).schools||[]).filter(function(t){return t.id===s.id})[0]||{}).source||x.source)+'" target="_blank" rel="noopener">Requirements</a></td></tr>';
+ });return h+'</tbody></table></div>';
+}
+function strategyMarkdown(){
+ var a=DATA.strategy||{},lines=['# Kendren Cornish — 21-school transfer strategy','', 'Updated '+a.updated,'',a.method,'',a.inventoryNote,'','## Background and evidence'];
+ (a.profile||[]).forEach(function(p){lines.push('','### '+p.title,p.text,'Source: '+p.source)});
+ lines.push('','## Equal-base-rate academic and route compatibility order');
+ SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).forEach(function(s){lines.push(a.schools[s.id].rank+'. '+s.name+' — '+a.schools[s.id].rankReason)});
+ SCHOOLS.forEach(function(s){var x=a.schools[s.id],r=((a.research||{}).schools||[]).filter(function(t){return t.id===s.id})[0];lines.push('','## '+s.name,x.summary,'');x.bullets.forEach(function(b){lines.push('- '+b)});if(r){lines.push('','### Official research ('+r.verifiedDate+')');r.findings.forEach(function(b){lines.push('- '+b)});lines.push('Limitations: '+r.limitations,'Source: '+r.source)}x.supplements.forEach(function(q){lines.push('','### '+q.title,q.limit+' · '+q.status,q.provenance);q.guidance.forEach(function(b){lines.push('- '+b)})})});
+ lines.push('','## New reserve bench');BENCH.forEach(function(b){lines.push('- '+b.name+': '+b.one+' '+b.facts.join(' '))});
+ var b=a.benchSupplement;if(b){lines.push('','### '+b.school+' — '+b.title,b.limit+' · '+b.status);b.guidance.forEach(function(x){lines.push('- '+x)})}
+ return lines.join('\n');
+}
+function exportStrategy(){var blob=new Blob([strategyMarkdown()],{type:'text/markdown;charset=utf-8'}),url=URL.createObjectURL(blob),el=document.createElement('a');el.href=url;el.download='Kendren_21_School_Strategy_2026-11-10.md';el.click();setTimeout(function(){URL.revokeObjectURL(url)},1000)}
+
 function panelScore(){
   var totals={};SCHOOLS.forEach(function(s){totals[s.id]=totalFor(s.id)});
   var ranked=SCHOOLS.filter(function(s){return totals[s.id]!=null}).sort(function(a,b){return totals[b.id]-totals[a.id]});
@@ -1493,7 +1556,7 @@ function panelScore(){
     var t=totals[s.id];
     return '<tr><td><b>'+esc(s.name)+'</b></td>'+cells+'<td class="n">'+(t==null?'<span class="lbl">unscored</span>':'<span class="tot">'+t+'</span>')+'</td><td>'+(rk[s.id]?'<span class="rank">#'+rk[s.id]+'</span>':'')+'</td></tr>';
   }).join('');
-  return '<h3>School scorecard</h3><p class="why">Score each school from 1 to 5 on each row. The weights set what matters most: admission chance and academic fit lead, then enjoyment. The total is out of 100 and appears once all five are scored. These are decision weights, not an admissions formula.</p>'+
+  return '<h3>School scorecard</h3><p class="why">Score each school from 1 to 5 on each row. The weights set what matters most: academic/route readiness and academic fit lead, then enjoyment. The total is out of 100 and appears once all five are scored. These are decision weights, not an admissions formula.</p>'+
    '<div class="tbl"><table><thead><tr><th>School</th>'+head+'<th>Total</th><th>Rank</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
 }
 function panelCourses(){
@@ -1546,9 +1609,9 @@ function panelLog(){
 }
 function renderDojo(){
   if(!UNLOCKED){$('#tabs').innerHTML='';$('#tabpanel').innerHTML=lockedPanel('Trackers');return}
-  var tabs=[['score','Scorecard'],['courses','Courses'],['recs','Recommenders'],['log','Conversations'],['proof','Proof inventory']];
+  var tabs=[['score','Scorecard'],['courses','Courses'],['recs','Recommenders'],['log','Conversations'],['proof','Proof inventory'],['strategy','School strategy'],['stats','Stats and GPA']];
   $('#tabs').innerHTML=tabs.map(function(t){return '<button type="button" role="tab" class="chip" data-act="tab" data-v="'+t[0]+'" aria-selected="'+(S.ui.tab===t[0])+'">'+t[1]+'</button>'}).join('');
-  var fn={score:panelScore,courses:panelCourses,recs:panelRecs,log:panelLog,proof:panelProof}[S.ui.tab]||panelScore;
+  var fn={score:panelScore,courses:panelCourses,recs:panelRecs,log:panelLog,proof:panelProof,strategy:panelStrategy,stats:panelStats}[S.ui.tab]||panelScore;
   $('#tabpanel').innerHTML='<div class="sheet panel" role="tabpanel">'+fn()+'</div>';
 }
 function enc(){try{return btoa(unescape(encodeURIComponent(JSON.stringify(S))))}catch(e){return ''}}
@@ -1597,6 +1660,7 @@ document.addEventListener('change',function(e){
   else if(c==='check'){if(t.checked)S.check[t.dataset.id]=1;else delete S.check[t.dataset.id]}
   else if(c==='hidedone'){S.ui.hideDone=t.checked}
   else if(c==='sort'){S.ui.sort=t.value}
+  else if(c==='stats'){S.stats=S.stats||{};S.stats[t.dataset.k]=t.value}
   else if(c==='score'){var id=t.dataset.id;S.score[id]=S.score[id]||{};if(t.value)S.score[id][t.dataset.k]=+t.value;else delete S.score[id][t.dataset.k]}
   else if(c==='recstatus'){S.recs[+t.dataset.i].status=t.value}
   else if(c==='offer'){S.offer[t.dataset.id]=t.value}
@@ -1612,6 +1676,8 @@ document.addEventListener('click',function(e){
   var a=b.dataset.act;
   if(a==='delcustom'){e.preventDefault();var id=b.dataset.id;S.custom=S.custom.filter(function(c){return c.id!==id});delete S.check[id]}
   else if(a==='filter'){S.ui.filter=b.dataset.v}
+  else if(a==='strategySchool'){S.ui.strategySchool=b.dataset.v}
+  else if(a==='exportStrategy'){exportStrategy();return}
   else if(a==='tab'){S.ui.tab=b.dataset.v}
   else if(a==='vfilter'){S.ui.vf=b.dataset.v}
   else if(a==='togglegate'){if(UNLOCKED){doLock()}else{var gb=$('#gatebox');if(gb.hidden)showGate();else gb.hidden=true}return}

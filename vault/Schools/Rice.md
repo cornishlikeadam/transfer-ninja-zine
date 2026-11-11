@@ -2,10 +2,10 @@
 school: Rice
 id: rice
 route: Transfer Program
-priority: bench
+priority: core
 interest_policy: firstyear
 deadlines:
-  - 2027-03-15: Fall transfer application (Fall 2027 prompts not yet republished)
+  - 2027-03-15: Fall transfer application (2026–2027 essay prompts published)
   - 2027-04-15: Transfer financial aid application (aid office date)
 tags: [school, transfer-2027]
 ---
@@ -19,6 +19,7 @@ tags: [school, transfer-2027]
 - Rice admitted 102 of 1,473 transfer applicants in 2024-25 (6.9%). Admitted transfers typically have a 3.5 or higher GPA.
 - Needs two college-instructor recommendations and the College Report. There are no transfer interviews.
 - Rice asks transfers to explain their specific interest, so write it precisely.
+- Rice specifies a 3.2 minimum GPA in the most recent college work; meeting it does not guarantee admission.
 
 ## Next move
 Check how credits map to Social Policy Analysis or Cognitive Sciences, confirm the Fall 2027 prompts when they post, and get an aid estimate.
