@@ -324,6 +324,7 @@ footer p{max-width:80ch;margin:0 0 8px}
 .strategy-school summary{font-size:.95rem}
 .card .strategy-school{border:0;box-shadow:none;padding:0;background:transparent}
 .di-open{background:var(--blush)}
+.savestat{position:fixed;left:12px;bottom:12px;z-index:60;font:400 .75rem/1.3 var(--f-type);background:var(--card);color:var(--ink);border:2px solid var(--ink);padding:6px 10px;max-width:calc(100vw - 24px);box-shadow:3px 3px 0 var(--ink)}
 .ut{display:inline-block;font:400 .75rem/1 var(--f-type);text-transform:uppercase;letter-spacing:.06em;padding:4px 8px;border:2px solid var(--ink);color:var(--ink);background:var(--card-sub);white-space:nowrap}
 .ut-campus{background:var(--lime)}
 .ut-cross{background:var(--yellow)}
@@ -418,6 +419,7 @@ footer p{max-width:80ch;margin:0 0 8px}
     </nav>
     <button type="button" class="chip unlockbtn" id="unlockbtn" data-act="togglegate">Unlock</button>
   </div>
+  <div id="savestat" class="savestat" role="status" aria-live="polite" hidden></div>
   <div id="gatebox" hidden>
     <div class="wrap">
       <form class="gateform" data-form="gate" autocomplete="off">
@@ -710,7 +712,135 @@ function load(){
   return f;
 }
 var S=load();
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function save(){saveLocal();if(stamp())syncQueue()}
+/* ---------- saving everywhere: this browser, then the online store ---------- */
+var CODEKEY='tn-code',LIBTKEY='transfer-ninja-zine.libt';
+var SY={mode:'off',ready:false,snap:{},dirty:{},timer:null,lastPush:0,lastPull:0,busy:false,status:'',when:0,code:'',db:null,libDirty:false,pendingRender:false,err:''};
+function rememberCode(c){SY.code=c;try{localStorage.setItem(CODEKEY,c)}catch(e){}try{sessionStorage.setItem(CODEKEY,c)}catch(e){}}
+function savedCode(){var c='';try{c=localStorage.getItem(CODEKEY)||''}catch(e){}if(!c){try{c=sessionStorage.getItem(CODEKEY)||''}catch(e){}}return c}
+function forgetCode(){SY.code='';try{localStorage.removeItem(CODEKEY)}catch(e){}try{sessionStorage.removeItem(CODEKEY)}catch(e){}}
+function syncKeys(){return Object.keys(S).filter(function(k){return k!=='v'&&k!=='ui'&&k!=='_t'})}
+function stamp(){
+  S._t=S._t||{};var ch=false;
+  syncKeys().forEach(function(k){var j=JSON.stringify(S[k]);if(SY.snap[k]!==j){SY.snap[k]=j;if(SY.ready){S._t[k]=Date.now();SY.dirty[k]=1;ch=true}}});
+  return ch;
+}
+function saveLocal(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function setSaveStatus(t){SY.status=t;var el=$('#savestat');if(!el)return;el.hidden=!UNLOCKED;el.textContent=t}
+function clock(ms){return new Date(ms).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}
+function syncQueue(){
+  if(!UNLOCKED||SY.mode==='off'||SY.mode==='local')return;
+  setSaveStatus('Saving...');
+  clearTimeout(SY.timer);
+  var wait=Math.max(SY.mode==='db'?1500:6000,(SY.mode==='db'?0:15000)-(Date.now()-SY.lastPush));
+  SY.timer=setTimeout(syncPush,wait);
+}
+function syncApply(keys){
+  var changed=false;S._t=S._t||{};
+  Object.keys(keys||{}).forEach(function(k){var x=keys[k];if(!x||typeof x.t!=='number'||k==='ui'||k==='v'||k==='_t')return;
+    if(!(S._t[k]>=x.t)){S[k]=x.v;S._t[k]=x.t;SY.snap[k]=JSON.stringify(x.v);delete SY.dirty[k];changed=true}
+    else if(S._t[k]===x.t)delete SY.dirty[k];});
+  if(changed){
+    if(ESTORE.mode==='local'){ENT=S.ent||(S.ent={})}
+    saveLocal();
+    if(typingSynced())SY.pendingRender=true;else renderAll();
+  }
+  return changed;
+}
+function markNewer(keys){S._t=S._t||{};syncKeys().forEach(function(k){if(!S._t[k])return;var x=(keys||{})[k];if(!x||!(x.t>=S._t[k]))SY.dirty[k]=1})}
+function payload(){var o={};Object.keys(SY.dirty).forEach(function(k){if(k in S)o[k]={v:S[k],t:(S._t&&S._t[k])||1}});return o}
+function postState(body){body.code=SY.code;return fetch('/api/state',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body),keepalive:JSON.stringify(body).length<60000}).then(function(r){return r.json().then(function(j){j.status=r.status;return j},function(){return {ok:false,status:r.status}})})}
+function typingSynced(){var a=document.activeElement,d=a&&a.dataset;return !!(d&&(d.note||d.ent||d.recap||d.lnote||d.agdraft)&&a.offsetParent!==null)}
+function syncPush(){
+  if(SY.busy){SY.timer=setTimeout(syncPush,3000);return}
+  var keys=payload(),lib=SY.libDirty;
+  if(!Object.keys(keys).length&&!lib){setSaveStatus('Saved · '+clock(SY.when||Date.now()));return}
+  SY.busy=true;SY.lastPush=Date.now();
+  if(SY.mode==='db'){
+    var ids=Object.keys(keys),chain=Promise.resolve();
+    ids.forEach(function(k){chain=chain.then(function(){
+      if(JSON.stringify(keys[k]).length>250000){SY.err='"'+k+'" is too large for the shared store; it stays in this browser.';delete SY.dirty[k];return}
+      return SY.db.collection('state').doc(k).set(keys[k]).then(function(){if(S._t[k]===keys[k].t)delete SY.dirty[k]})})});
+    chain.then(function(){SY.busy=false;SY.when=Date.now();setSaveStatus('Saved to claude.ai · '+clock(SY.when)+(SY.err?' · '+SY.err:''))},
+      function(){SY.busy=false;setSaveStatus('Saved in this browser. The claude.ai store did not answer; retrying.');SY.timer=setTimeout(syncPush,30000)});
+    return;
+  }
+  var jobs=[];
+  if(Object.keys(keys).length)jobs.push(postState({op:'put',keys:keys}).then(function(j){
+    if(j.status===503){SY.mode='local';throw 'nostore'}
+    if(!j.ok)throw 'fail';
+    Object.keys(keys).forEach(function(k){if(S._t[k]===keys[k].t)delete SY.dirty[k]});
+    syncApply(j.keys)}));
+  if(lib){var lt=Date.now(),lv={folders:LIBS.folders,docs:LIBS.docs,chunks:LIBS.local.chunks};
+    jobs.push(postState({op:'put',part:'library',keys:{lib:{v:lv,t:lt}}}).then(function(j){if(j.ok){SY.libDirty=false;try{localStorage.setItem(LIBTKEY,String(lt))}catch(e){}}else if(j.status===503){SY.mode='local';throw 'nostore'}else throw 'fail'}));}
+  Promise.all(jobs).then(function(){SY.busy=false;SY.when=Date.now();setSaveStatus('Saved online · '+clock(SY.when))},
+    function(e){SY.busy=false;if(e==='nostore'){setSaveStatus('Saved in this browser only. The online store is not set up yet.');return}
+      setSaveStatus('Saved in this browser. Online save failed; retrying in a minute.');SY.timer=setTimeout(syncPush,60000)});
+}
+function syncPull(){
+  if(!UNLOCKED||SY.mode!=='server'||SY.busy)return Promise.resolve();
+  SY.lastPull=Date.now();
+  return Promise.all([postState({op:'get'}),postState({op:'get',part:'library'})]).then(function(r){
+    var st=r[0],lb=r[1];
+    if(st.status===503){SY.mode='local';setSaveStatus('Saved in this browser only. The online store is not set up yet.');return}
+    if(st.ok){syncApply(st.keys);markNewer(st.keys)}
+    if(lb.ok&&lb.keys&&lb.keys.lib){var lt=0;try{lt=+localStorage.getItem(LIBTKEY)||0}catch(e){}
+      if(lb.keys.lib.t>lt&&LIBS.mode==='local'){var v=lb.keys.lib.v||{};LIBS.folders=v.folders||{};LIBS.docs=v.docs||{};LIBS.local={chunks:v.chunks||{}};
+        try{localStorage.setItem(LIBKEY,JSON.stringify(v));localStorage.setItem(LIBTKEY,String(lb.keys.lib.t))}catch(e){}renderAgent()}}
+    var lt2=0;try{lt2=+localStorage.getItem(LIBTKEY)||0}catch(e){}
+    if(LIBS.mode==='local'&&!lt2&&Object.keys(LIBS.docs||{}).length)SY.libDirty=true;
+    if(Object.keys(SY.dirty).length||SY.libDirty)syncQueue();else{SY.when=st.savedAt||Date.now();setSaveStatus('Saved online · '+clock(SY.when))}
+  }).catch(function(){setSaveStatus('Saved in this browser. Could not reach the online store.')});
+}
+function syncStart(){
+  if(!UNLOCKED||SY.mode==='server'||SY.mode==='db')return;
+  SY.code=SY.code||savedCode();
+  S._t=S._t||{};
+  stamp();
+  var F=fresh(),now=Date.now();
+  syncKeys().forEach(function(k){if(S._t[k]!=null)return;var v=S[k];
+    var blank=v==null||JSON.stringify(v)===JSON.stringify(F[k])||(Array.isArray(v)&&v.every(function(x){return x&&x.ex}))||(typeof v==='object'&&!Array.isArray(v)&&!Object.keys(v).length);
+    if(blank)S._t[k]=0;else{S._t[k]=now;SY.dirty[k]=1}});
+  saveLocal();
+  SY.ready=true;
+  if(GATE_MODE==='server'){SY.mode='server';setSaveStatus('Checking the online store...');syncPull();return}
+  if(window.claude&&window.claude.use){
+    SY.mode='local';setSaveStatus('Saved in this browser.');
+    window.claude.use('db').then(function(db){
+      if(!db){setSaveStatus('Saved in this browser only.');return}
+      SY.db=db;SY.mode='db';
+      var timer=setTimeout(function(){setSaveStatus('Saved in this browser. The claude.ai store is slow to answer.')},10000);
+      db.collection('state').onSnapshot(function(snap){clearTimeout(timer);var m={};snap.docs.forEach(function(d){m[d.id]=d.data()});syncApply(m);if(!SY.seen){SY.seen=true;markNewer(m)}
+        if(Object.keys(SY.dirty).length)syncQueue();else{SY.when=SY.when||Date.now();setSaveStatus('Saved to claude.ai · '+clock(SY.when))}},
+        function(){clearTimeout(timer);SY.mode='local';setSaveStatus('Saved in this browser. The claude.ai store refused the save.')});
+    }).catch(function(){setSaveStatus('Saved in this browser only.')});
+    return;
+  }
+  SY.mode='local';setSaveStatus('Saved in this browser only.');
+}
+function syncFlush(){
+  if(SY.mode!=='server'||!SY.code)return;
+  var keys=payload();if(!Object.keys(keys).length)return;
+  var b=JSON.stringify({code:SY.code,op:'put',keys:keys});
+  try{if(navigator.sendBeacon&&b.length<60000)navigator.sendBeacon('/api/state',new Blob([b],{type:'application/json'}))}catch(e){}
+}
+function syncBoot(){
+  if(!window.addEventListener)return;
+  window.addEventListener('pagehide',syncFlush);
+  document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')syncFlush();else if(SY.mode==='server'&&Date.now()-SY.lastPull>60000)syncPull()});
+  window.addEventListener('focus',function(){if(SY.mode==='server'&&Date.now()-SY.lastPull>60000)syncPull()});
+  document.addEventListener('focusout',function(){if(SY.pendingRender){SY.pendingRender=false;setTimeout(function(){if(!typingSynced())renderAll();else SY.pendingRender=true},0)}});
+  if(UNLOCKED){syncStart();return}
+  var c=savedCode();
+  if(GATE_MODE==='server'&&c){
+    setSaveStatus('Unlocking...');
+    fetch('/api/unlock',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({code:c})})
+      .then(function(r){return r.ok?r.json():null})
+      .then(function(j){if(j&&j.ok){DATA=j.data;LENS=DATA.lens||{};UNLOCKED=true;SY.code=c;setGateUI();entryStoreInit();libInit();renderAll();syncStart()}else forgetCode()})
+      .catch(function(){});
+  }
+}
+
 function stageOf(id){var v=S.stage[id];return v==null?(SCH[id]&&SCH[id].talked?1:0):v}
 var openSet={};
 
@@ -971,7 +1101,7 @@ function tnOpen(code){
     return JSON.parse(new TextDecoder().decode(o.subarray(4)))}catch(e){return null}
 }
 var EMPTY_DATA={lib:{},dossier:{},routes:[],connections:[],lens:{}};
-try{if(GATE_MODE==='soft'){var savedCode=sessionStorage.getItem('tn-code');if(savedCode){var savedData=tnOpen(savedCode);if(savedData){DATA=savedData;LENS=DATA.lens||{};UNLOCKED=true}}}}catch(e){}
+try{if(GATE_MODE==='soft'){var bootCode=savedCode();if(bootCode){var savedData=tnOpen(bootCode);if(savedData){DATA=savedData;LENS=DATA.lens||{};UNLOCKED=true;SY.code=bootCode}else forgetCode()}}}catch(e){}
 function lockedPanel(t){return '<div class="sheet panel lockp"><h3>'+esc(t)+'</h3><p class="why">This area is for the tutor and admin. Enter the code to open it.</p><button class="btn" type="button" data-act="opengate">Enter code</button></div>'}
 function setGateUI(){var b=$('#unlockbtn');if(b)b.textContent=UNLOCKED?'Lock':'Unlock';if(UNLOCKED)$('#gatebox').hidden=true}
 function showGate(){$('#gatebox').hidden=false;setTimeout(function(){var i=$('#codeinput');if(i)i.focus()},0)}
@@ -980,11 +1110,11 @@ function doUnlock(){
   if(!code){msg.textContent='Enter the code.';return}
   msg.textContent='Checking.';
   function finish(ok){
-    if(ok){msg.textContent='';$('#codeinput').value='';setGateUI();renderAll();entryStoreInit();libInit()}
+    if(ok){msg.textContent='';$('#codeinput').value='';rememberCode(code);setGateUI();entryStoreInit();libInit();renderAll();syncStart()}
     else msg.textContent='That code did not work.';
   }
   if(GATE_MODE==='soft'){
-    var opened=tnOpen(code);if(opened){DATA=opened;LENS=DATA.lens||{};UNLOCKED=true;try{sessionStorage.setItem('tn-code',code)}catch(e){}finish(true)}else finish(false);
+    var opened=tnOpen(code);if(opened){DATA=opened;LENS=DATA.lens||{};UNLOCKED=true;finish(true)}else finish(false);
     return;
   }
   fetch('/api/unlock',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({code:code})})
@@ -993,7 +1123,8 @@ function doUnlock(){
     .catch(function(){finish(false)});
 }
 function doLock(){
-  UNLOCKED=false;try{sessionStorage.removeItem('tn-code')}catch(e){}
+  syncFlush();clearTimeout(SY.timer);if(SY.mode==='db'&&Object.keys(SY.dirty).length)syncPush();
+  UNLOCKED=false;forgetCode();SY.mode='off';SY.ready=false;setSaveStatus('');
   DATA=EMPTY_DATA;LENS={};
   setGateUI();renderAll();
 }
@@ -1061,6 +1192,7 @@ function queueEntry(id,patch){
 }
 function appsNote(){
   if(ESTORE.mode==='db')return 'Entries save to the shared store: people you invite through Share see them live'+(CANEDIT?'. Only editors can change them.':'. You can read them but not change them.');
+  if(SY.mode==='server')return 'Entries save in this browser and to the online store, so they follow you to any device where you unlock.';
   return 'Entries save in this browser only'+(ESTORE.err&&ESTORE.err!=='slow'?' (the shared store did not answer)':'')+'. Use the backup code under Rules to keep or move them. The shared store runs on the claude.ai version.';
 }
 function renderAppsNote(){var n=$('#appsnote');if(n)n.textContent=appsNote()}
@@ -1158,7 +1290,7 @@ function libLocal(){
   var raw={};try{raw=JSON.parse(localStorage.getItem(LIBKEY)||'{}')}catch(e){}
   LIBS.folders=raw.folders||{};LIBS.docs=raw.docs||{};LIBS.local={chunks:raw.chunks||{}};LIBS.ready=true;renderAgent();
 }
-function libPersist(){try{localStorage.setItem(LIBKEY,JSON.stringify({folders:LIBS.folders,docs:LIBS.docs,chunks:LIBS.local.chunks}))}catch(e){LIBS.err='quota';libSetStatus('Browser storage is full. Remove documents or use the claude.ai version for a bigger library.')}}
+function libPersist(){if(SY.mode==='server'){SY.libDirty=true;syncQueue()}try{localStorage.setItem(LIBKEY,JSON.stringify({folders:LIBS.folders,docs:LIBS.docs,chunks:LIBS.local.chunks}))}catch(e){LIBS.err='quota';libSetStatus('Browser storage is full. Remove documents or use the claude.ai version for a bigger library.')}}
 function dbOk(p){return p}
 function libPutFolder(id,o){LIBS.folders[id]=o;if(LIBS.mode==='db')return LIBS.db.collection('folders').doc(id).set(o);libPersist();return Promise.resolve()}
 function libPutDocMeta(id,o){LIBS.docs[id]=o;if(LIBS.mode==='db')return LIBS.db.collection('docs').doc(id).set(o);libPersist();return Promise.resolve()}
@@ -1889,6 +2021,7 @@ document.addEventListener('submit',function(e){
 });
 
 setGateUI();renderAll();entryStoreInit();libInit();
+syncBoot();
 })();
 </script>
 </body></html>

@@ -58,6 +58,10 @@ source. A 4-digit code can still be guessed by trying every value.
 python3 data/add_penn.py && python3 data/apply_boost.py && python3 build_zine.py && python3 scripts/export_strategy.py && node scripts/validate_zine.cjs
 ```
 
+## Saving
+
+After unlocking, every change saves in the browser right away. On Vercel it also saves to a private, encrypted Vercel Blob store (`transfer-ninja-zine-saves`) through `vercel/api/state.js`, so unlocking on another device brings everything back. Sections merge by timestamp. The claude.ai copy saves the same sections to its private `state` collection. The unlock is remembered per device until you press Lock. `vercel/package.json` pins `@vercel/blob` 2.9.0.
+
 ## The code lock
 
 - Tutor board, research briefs, the vault, the Common App log, trackers and backup/reset need the code.
