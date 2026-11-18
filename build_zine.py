@@ -413,6 +413,7 @@ def main():
     gated = {"lib": lib, "dossier": parse_dossiers(), "routes": parse_routes(),
              "connections": parse_connections(), "lens": sj["lens"],
              "strategy": json.load(open(os.path.join(HERE, "data", "strategy.json"), encoding="utf-8"))}
+    gated["writingPlan"] = json.load(open(os.path.join(HERE, "data", "writing-plan.json"), encoding="utf-8"))
     pub = {"schools": sj["schools"], "bench": sj["bench"]}
     os.makedirs(os.path.join(HERE, "data"), exist_ok=True)
     json.dump(gated, open(os.path.join(HERE, "data", "zine-data.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

@@ -380,6 +380,8 @@ footer p{max-width:80ch;margin:0 0 8px}
   .card:hover{transform:none}
   .btn:hover,.btn:active{transform:none}
 }
+
+.writing-text{min-height:360px;font:400 1rem/1.65 var(--f-body);resize:vertical}.writing-text:focus{outline:3px solid var(--focus);outline-offset:2px}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -440,7 +442,7 @@ footer p{max-width:80ch;margin:0 0 8px}
           <span class="tape">Fall 2027 transfer cycle</span>
           <h1>Transfer<br>Ninja<br>Zine</h1>
           <p class="lede">One move per school. A checklist, trackers and a Common App log you can run from this page.</p>
-          <p class="byline">Field guide by Kendren Cornish. Your ticks and notes save in this browser only.</p>
+          <p class="byline">Field guide by Kendren Cornish. Unlock to keep your notes and writing together, with a browser backup and online saves.</p>
         </div>
         <div class="mascot" aria-hidden="true"><svg viewBox="0 0 214 232"><use href="#pn"/></svg></div>
       </div>
@@ -712,49 +714,57 @@ function load(){
   return f;
 }
 var S=load();
-function save(){saveLocal();if(stamp())syncQueue()}
+function save(){var changed=stamp();saveLocal();if(changed)syncQueue()}
 /* ---------- saving everywhere: this browser, then the online store ---------- */
 var CODEKEY='tn-code',LIBTKEY='transfer-ninja-zine.libt';
 var SY={mode:'off',ready:false,snap:{},dirty:{},timer:null,lastPush:0,lastPull:0,busy:false,status:'',when:0,code:'',db:null,libDirty:false,pendingRender:false,err:''};
 function rememberCode(c){SY.code=c;try{localStorage.setItem(CODEKEY,c)}catch(e){}try{sessionStorage.setItem(CODEKEY,c)}catch(e){}}
 function savedCode(){var c='';try{c=localStorage.getItem(CODEKEY)||''}catch(e){}if(!c){try{c=sessionStorage.getItem(CODEKEY)||''}catch(e){}}return c}
 function forgetCode(){SY.code='';try{localStorage.removeItem(CODEKEY)}catch(e){}try{sessionStorage.removeItem(CODEKEY)}catch(e){}}
-function syncKeys(){return Object.keys(S).filter(function(k){return k!=='v'&&k!=='ui'&&k!=='_t'})}
+function syncKeys(){
+ var keys=Object.keys(S).filter(function(k){return ['v','ui','_t','ent','notes'].indexOf(k)<0});
+ ['ent','notes'].forEach(function(section){Object.keys(S[section]||{}).forEach(function(id){keys.push(section+':'+encodeURIComponent(id))})});
+ Object.keys(S._t||{}).forEach(function(k){if(/^(ent|notes):/.test(k)&&keys.indexOf(k)<0)keys.push(k)});return keys;
+}
+function syncValue(k){var m=/^(ent|notes):(.*)$/.exec(k);return m?((S[m[1]]||{})[decodeURIComponent(m[2])]==null?null:S[m[1]][decodeURIComponent(m[2])]):S[k]}
+function syncAssign(k,v){var m=/^(ent|notes):(.*)$/.exec(k);if(!m){S[k]=v;return}var target=S[m[1]]=S[m[1]]||{},id=decodeURIComponent(m[2]);if(v===null)delete target[id];else target[id]=v}
+function nextStamp(old){return Math.max(Date.now(),(old||0)+1)}
 function stamp(){
   S._t=S._t||{};var ch=false;
-  syncKeys().forEach(function(k){var j=JSON.stringify(S[k]);if(SY.snap[k]!==j){SY.snap[k]=j;if(SY.ready){S._t[k]=Date.now();SY.dirty[k]=1;ch=true}}});
+  syncKeys().forEach(function(k){var j=JSON.stringify(syncValue(k));if(SY.snap[k]!==j){SY.snap[k]=j;if(SY.ready){S._t[k]=nextStamp(S._t[k]);SY.dirty[k]=1;ch=true}}});
   return ch;
 }
-function saveLocal(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
-function setSaveStatus(t){SY.status=t;var el=$('#savestat');if(!el)return;el.hidden=!UNLOCKED;el.textContent=t}
+function saveLocal(){try{localStorage.setItem(KEY,JSON.stringify(S));SY.localError=false;return true}catch(e){SY.localError=true;setSaveStatus('Browser save failed. Download a writing backup now; online save will still be attempted.');return false}}
+function setSaveStatus(t){SY.status=t;var el=$('#savestat');if(!el)return;el.hidden=!UNLOCKED;el.textContent=t;if(typeof renderAppsNote==='function')renderAppsNote()}
 function clock(ms){return new Date(ms).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}
 function syncQueue(){
   if(!UNLOCKED||SY.mode==='off'||SY.mode==='local')return;
   setSaveStatus('Saving...');
   clearTimeout(SY.timer);
-  var wait=Math.max(SY.mode==='db'?1500:6000,(SY.mode==='db'?0:15000)-(Date.now()-SY.lastPush));
+  var wait=Math.max(SY.mode==='db'?800:1200,(SY.mode==='db'?0:2000)-(Date.now()-SY.lastPush));
   SY.timer=setTimeout(syncPush,wait);
 }
 function syncApply(keys){
   var changed=false;S._t=S._t||{};
-  Object.keys(keys||{}).forEach(function(k){var x=keys[k];if(!x||typeof x.t!=='number'||k==='ui'||k==='v'||k==='_t')return;
-    if(!(S._t[k]>=x.t)){S[k]=x.v;S._t[k]=x.t;SY.snap[k]=JSON.stringify(x.v);delete SY.dirty[k];changed=true}
+  Object.keys(keys||{}).forEach(function(k){var x=keys[k];
+    if((k==='ent'||k==='notes')&&x&&x.v){Object.keys(x.v).forEach(function(id){var leaf=k+':'+encodeURIComponent(id),v=x.v[id];if((S[k]||{})[id]==null){syncAssign(leaf,v);S._t[leaf]=x.t;SY.dirty[leaf]=1;changed=true}});return} if(!x||typeof x.t!=='number'||k==='ui'||k==='v'||k==='_t')return;
+    if(!(S._t[k]>=x.t)){syncAssign(k,x.v);S._t[k]=x.t;SY.snap[k]=JSON.stringify(syncValue(k));delete SY.dirty[k];changed=true}
     else if(S._t[k]===x.t)delete SY.dirty[k];});
   if(changed){
-    if(ESTORE.mode==='local'){ENT=S.ent||(S.ent={})}
+    if(ESTORE.mode==='local'){ENT=S.ent||(S.ent={})}LIBS.paste=S.libraryPaste||LIBS.paste;AG.draft=S.agentDraft||AG.draft;
     saveLocal();
     if(typingSynced())SY.pendingRender=true;else renderAll();
   }
   return changed;
 }
 function markNewer(keys){S._t=S._t||{};syncKeys().forEach(function(k){if(!S._t[k])return;var x=(keys||{})[k];if(!x||!(x.t>=S._t[k]))SY.dirty[k]=1})}
-function payload(){var o={};Object.keys(SY.dirty).forEach(function(k){if(k in S)o[k]={v:S[k],t:(S._t&&S._t[k])||1}});return o}
+function payload(){var o={};Object.keys(SY.dirty).forEach(function(k){o[k]={v:syncValue(k),t:(S._t&&S._t[k])||1}});return o}
 function postState(body){body.code=SY.code;return fetch('/api/state',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body),keepalive:JSON.stringify(body).length<60000}).then(function(r){return r.json().then(function(j){j.status=r.status;return j},function(){return {ok:false,status:r.status}})})}
 function typingSynced(){var a=document.activeElement,d=a&&a.dataset;return !!(d&&(d.note||d.ent||d.recap||d.lnote||d.agdraft)&&a.offsetParent!==null)}
 function syncPush(){
   if(SY.busy){SY.timer=setTimeout(syncPush,3000);return}
   var keys=payload(),lib=SY.libDirty;
-  if(!Object.keys(keys).length&&!lib){setSaveStatus('Saved · '+clock(SY.when||Date.now()));return}
+  if(!Object.keys(keys).length&&!lib){setSaveStatus(SY.when?'Saved online · '+clock(SY.when):'Saved in this browser; no online changes pending.');return Promise.resolve()}
   SY.busy=true;SY.lastPush=Date.now();
   if(SY.mode==='db'){
     var ids=Object.keys(keys),chain=Promise.resolve();
@@ -773,7 +783,7 @@ function syncPush(){
     syncApply(j.keys)}));
   if(lib){var lt=Date.now(),lv={folders:LIBS.folders,docs:LIBS.docs,chunks:LIBS.local.chunks};
     jobs.push(postState({op:'put',part:'library',keys:{lib:{v:lv,t:lt}}}).then(function(j){if(j.ok){SY.libDirty=false;try{localStorage.setItem(LIBTKEY,String(lt))}catch(e){}}else if(j.status===503){SY.mode='local';throw 'nostore'}else throw 'fail'}));}
-  Promise.all(jobs).then(function(){SY.busy=false;SY.when=Date.now();setSaveStatus('Saved online · '+clock(SY.when))},
+  return Promise.all(jobs).then(function(){SY.busy=false;SY.when=Date.now();if(Object.keys(SY.dirty).length||SY.libDirty)syncQueue();else setSaveStatus('Saved online · '+clock(SY.when)+(SY.localError?' · browser backup unavailable':''))},
     function(e){SY.busy=false;if(e==='nostore'){setSaveStatus('Saved in this browser only. The online store is not set up yet.');return}
       setSaveStatus('Saved in this browser. Online save failed; retrying in a minute.');SY.timer=setTimeout(syncPush,60000)});
 }
@@ -783,6 +793,7 @@ function syncPull(){
   return Promise.all([postState({op:'get'}),postState({op:'get',part:'library'})]).then(function(r){
     var st=r[0],lb=r[1];
     if(st.status===503){SY.mode='local';setSaveStatus('Saved in this browser only. The online store is not set up yet.');return}
+    if(!st.ok){throw new Error('Online read failed')}
     if(st.ok){syncApply(st.keys);markNewer(st.keys)}
     if(lb.ok&&lb.keys&&lb.keys.lib){var lt=0;try{lt=+localStorage.getItem(LIBTKEY)||0}catch(e){}
       if(lb.keys.lib.t>lt&&LIBS.mode==='local'){var v=lb.keys.lib.v||{};LIBS.folders=v.folders||{};LIBS.docs=v.docs||{};LIBS.local={chunks:v.chunks||{}};
@@ -798,9 +809,9 @@ function syncStart(){
   S._t=S._t||{};
   stamp();
   var F=fresh(),now=Date.now();
-  syncKeys().forEach(function(k){if(S._t[k]!=null)return;var v=S[k];
+  syncKeys().forEach(function(k){if(S._t[k]!=null)return;var v=syncValue(k);
     var blank=v==null||JSON.stringify(v)===JSON.stringify(F[k])||(Array.isArray(v)&&v.every(function(x){return x&&x.ex}))||(typeof v==='object'&&!Array.isArray(v)&&!Object.keys(v).length);
-    if(blank)S._t[k]=0;else{S._t[k]=now;SY.dirty[k]=1}});
+    if(blank)S._t[k]=0;else{var leaf=/^(ent|notes):/.exec(k);S._t[k]=leaf&&S._t[leaf[1]]?S._t[leaf[1]]:now;SY.dirty[k]=1}});
   saveLocal();
   SY.ready=true;
   if(GATE_MODE==='server'){SY.mode='server';setSaveStatus('Checking the online store...');syncPull();return}
@@ -819,6 +830,7 @@ function syncStart(){
   SY.mode='local';setSaveStatus('Saved in this browser only.');
 }
 function syncFlush(){
+  flushEntries();stamp();saveLocal();
   if(SY.mode!=='server'||!SY.code)return;
   var keys=payload();if(!Object.keys(keys).length)return;
   var b=JSON.stringify({code:SY.code,op:'put',keys:keys});
@@ -1123,6 +1135,7 @@ function doUnlock(){
     .catch(function(){finish(false)});
 }
 function doLock(){
+  flushEntries();save();
   syncFlush();clearTimeout(SY.timer);if(SY.mode==='db'&&Object.keys(SY.dirty).length)syncPush();
   UNLOCKED=false;forgetCode();SY.mode='off';SY.ready=false;setSaveStatus('');
   DATA=EMPTY_DATA;LENS={};
@@ -1150,7 +1163,7 @@ var CAPP=[
  {g:'Notes',items:[['ca-edu','Education history notes',0,''],['ca-test','Testing notes',0,'']]}
 ];
 (function(){for(var n=1;n<=10;n++)CAPP[1].items.push(['ca-act-'+n,'Activity '+n,150,'chars','act']);for(n=1;n<=5;n++)CAPP[2].items.push(['ca-hon-'+n,'Honor '+n,100,'chars','hon'])})();
-var EST=[['none','Not started'],['draft','Drafting'],['ready','Ready'],['entered','Entered']];
+var EST=[['none','Not started'],['draft','Drafting'],['rough','Complete rough draft'],['ready','Ready'],['entered','Entered']];
 var ENT={},ESTORE={mode:'local',started:false,err:''},CANEDIT=true,saveTimers={},pendingEnt={};
 function countOf(text,unit){text=text||'';return unit==='words'?(text.trim()?text.trim().split(/\s+/).length:0):text.length}
 function entryStoreInit(){
@@ -1186,13 +1199,11 @@ function deleteEntry(id){
   else{S.ent=ENT;save()}
 }
 function queueEntry(id,patch){
-  var p=pendingEnt[id]=pendingEnt[id]||{};for(var k in patch)p[k]=patch[k];
-  clearTimeout(saveTimers[id]);
-  saveTimers[id]=setTimeout(function(){var pp=pendingEnt[id];delete pendingEnt[id];if(pp)saveEntry(id,pp);renderAppsSummary()},700);
+  saveEntry(id,patch);renderAppsSummary();updateWritingCount();
 }
 function appsNote(){
   if(ESTORE.mode==='db')return 'Entries save to the shared store: people you invite through Share see them live'+(CANEDIT?'. Only editors can change them.':'. You can read them but not change them.');
-  if(SY.mode==='server')return 'Entries save in this browser and to the online store, so they follow you to any device where you unlock.';
+  if(SY.mode==='server')return 'Writing saves on this device as you type. The save indicator confirms when the online copy is saved. Unlock the same site on another device to load it.';
   return 'Entries save in this browser only'+(ESTORE.err&&ESTORE.err!=='slow'?' (the shared store did not answer)':'')+'. Use the backup code under Rules to keep or move them. The shared store runs on the claude.ai version.';
 }
 function renderAppsNote(){var n=$('#appsnote');if(n)n.textContent=appsNote()}
@@ -1224,14 +1235,50 @@ function renderAppsSummary(){
     '<div class="sheet stat"><span class="lbl">Common App ready</span><b>'+a.caReady+'<small> / '+a.caTotal+'</small></b></div>'+
     '<div class="sheet stat"><span class="lbl">School questions</span><b>'+a.qTotal+'</b><span class="why" style="font-size:.85rem">'+a.qReady+' ready, '+a.qEntered+' entered</span></div>';
 }
+
+/* ---------- a focused, private writing desk ---------- */
+function sprintDocuments(){
+ var plan=DATA.writingPlan||{},docs=[{id:'ca-essay',title:'Personal statement',prompt:'A personal-growth story in your own words. Check the specific application prompt before submitting.',limit:'Draft toward 450–550 words; verify each portal’s character cap.',outline:'Start with one true scene. Show a complication, a choice you made, its effect, and what changed in you.'},{id:'ca-transfer',title:'Transfer foundation',prompt:'A reusable working explanation of your reasons for transferring and academic objectives. Tailor it for each school.',limit:'Working target: 350–500 words.',outline:'What SCAD gave me → the question I now need to study → methods or subjects I need next → what I hope to do with that learning.'}];
+ (plan.schools||[]).concat(plan.stretch?[plan.stretch]:[]).forEach(function(sid){var school=((DATA.strategy||{}).schools||{})[sid];if(!school)return;school.supplements.forEach(function(q){if(/optional|additional information/i.test(q.status+' '+q.title))return;docs.push({id:'q-'+sid+'-desk-'+q.id,school:sid,title:nameOf(sid)+' · '+q.title,prompt:q.prompt||q.title,limit:q.limit,requirement:q.status,guidance:q.guidance,outline:'Collect your own evidence here. Then write a complete rough answer, using [VERIFY] for facts to check.'})})});Object.keys(ENT).forEach(function(id){if(!docs.some(function(d){return d.id===id}))docs.push({id:id,school:ENT[id].school,title:ENT[id].title||ENT[id].prompt||('Saved writing · '+id),prompt:ENT[id].prompt||'Your saved writing',limit:'Use the limits in your application.',outline:'Continue your own saved work.'})});return docs;
+}
+function ensureSprintEntry(d){if(!ENT[d.id])saveEntry(d.id,{kind:'question',school:d.school||'',prompt:d.prompt,text:'',status:'none',created:new Date().toISOString()});return ENT[d.id]}
+function writingDeskHTML(){
+ var p=DATA.writingPlan||{},docs=sprintDocuments(),id=S.ui.wdoc||'ca-essay',d=docs.filter(function(x){return x.id===id})[0]||docs[0],e=ENT[d.id]||{};
+ var h='<div class="sheet panel"><h3>'+esc(p.title||'Your writing desk')+'</h3><p>'+esc(p.definition||'')+'</p><p><b>Core: Cornell ILR, Tufts REAL and Vanderbilt. Stretch: Rice.</b> Finish all required responses for the first three before expanding.</p><details><summary>The plan and what goes in each essay</summary><ol>'+(p.start||[]).map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ol><div class="tbl"><table><thead><tr><th>Work block</th><th>Finish</th><th>Approach</th></tr></thead><tbody>'+(p.blocks||[]).map(function(b){return '<tr><td>'+esc(b[0])+'</td><td>'+esc(b[1])+'</td><td>'+esc(b[2])+'</td></tr>'}).join('')+'</tbody></table></div>'+(p.storyMap||[]).map(function(b){return '<h4>'+esc(b[0])+'</h4><p>'+esc(b[1])+'</p><p>'+esc(b[2])+'</p>'}).join('')+'</details>';
+ h+='<label for="writing-scratch">Story bank · messy notes, scenes and questions</label><textarea id="writing-scratch" data-note="writing-story-bank" placeholder="Where were you? What happened? What did you do? What changed?">'+esc((S.notes||{})['writing-story-bank']||'')+'</textarea>';
+ h+='<label for="writing-doc">Choose a draft</label><select id="writing-doc" data-chg="writingDoc">'+docs.map(function(x){return '<option value="'+esc(x.id)+'"'+(x.id===d.id?' selected':'')+'>'+esc(x.title)+'</option>'}).join('')+'</select>';
+ h+='<p><b>'+esc(d.limit)+'</b> '+esc(d.requirement||'Working draft')+'</p><p>'+esc(d.prompt)+'</p><details><summary>Guidance and a starting structure</summary><p>'+esc(d.outline)+'</p>'+bulletHTML(d.guidance||[])+'</details>';
+ h+='<label for="writing-notes">Notes for this response · facts, outline and things to verify</label><textarea id="writing-notes" data-note="outline-'+esc(d.id)+'">'+esc((S.notes||{})['outline-'+d.id]||'')+'</textarea>';
+ h+='<label for="writing-text">Your rough draft</label><textarea id="writing-text" class="writing-text" data-ent="'+esc(d.id)+'" data-f="text" placeholder="Write the middle first. Leave [VERIFY] wherever a fact needs checking.">'+esc(e.text||'')+'</textarea><p id="writing-count" class="why">'+countOf(e.text,'words')+' words · '+(e.text||'').length+' characters</p>';
+ h+='<label for="writing-status">Draft stage</label><select id="writing-status" data-chg="ent" data-id="'+esc(d.id)+'" data-k="status">'+[['none','Not started'],['draft','Drafting'],['rough','Complete rough draft'],['ready','Reviewed'],['entered','Entered in application']].map(function(t){return '<option value="'+t[0]+'"'+((e.status||'none')===t[0]?' selected':'')+'>'+t[1]+'</option>'}).join('')+'</select>';
+ h+='<h4>Draft checklist</h4><p>Each response is saved separately. Rice community options are alternatives: choose one. Mark optional fields only when they add necessary information.</p><ul>'+docs.map(function(x){var en=ENT[x.id]||{};return '<li>'+esc(x.title)+' — '+esc(en.status==='rough'?'complete rough draft':en.status||'not started')+' · '+countOf(en.text,'words')+' words</li>'}).join('')+'</ul></div>';return h;
+}
+function updateWritingCount(){var input=$('#writing-text'),count=$('#writing-count');if(input&&count)count.textContent=countOf(input.value,'words')+' words · '+input.value.length+' characters'}
+function saveWritingNow(){flushEntries();save();if(!UNLOCKED)return;if(SY.mode==='server'){clearTimeout(SY.timer);syncPush()}else setSaveStatus(SY.localError?'Browser save failed. Download all writing now.':'Saved in this browser. Online storage is not currently connected.');}
+function writingBackup(){
+ flushEntries();saveLocal();var lines=['# My transfer writing','', 'Exported '+new Date().toLocaleString('en-US',{timeZone:'America/New_York'}),''];
+ Object.keys(S.notes||{}).forEach(function(k){if(S.notes[k])lines.push('## Notes: '+k,String(S.notes[k]),'')});
+ Object.keys(ENT).forEach(function(id){var e=ENT[id];if(e.text||e.prompt){lines.push('## '+(e.title||e.prompt||id),'ID: '+id+' | Stage: '+(e.status||'none'),e.text||'[No draft yet]','')}});
+ return {v:1,exportedAt:new Date().toISOString(),state:S,markdown:lines.join('\n')};
+}
+function restoreWriting(file){
+ if(!file)return;file.text().then(function(text){var b=JSON.parse(text);if(b.v!==1||!b.state||typeof b.state!=='object')throw new Error('Wrong format');var st=b.state,suffix='-restored-'+Date.now(),n=0;
+ Object.keys(st.notes||{}).forEach(function(k){var target=k;if(S.notes[k]&&S.notes[k]!==st.notes[k])target=k+suffix;S.notes[target]=st.notes[k];n++});
+ Object.keys(st.ent||{}).forEach(function(k){var target=k;if(ENT[k]&&ENT[k].text&&ENT[k].text!==st.ent[k].text)target=k+suffix;saveEntry(target,st.ent[k]);n++});
+ save();renderAll();setSaveStatus('Restored '+n+' writing items. Different existing drafts were kept as separate copies.');syncQueue();
+ }).catch(function(){setSaveStatus('That backup could not be read. Choose a JSON file made by Download all writing. Your existing writing is unchanged.')});
+}
+function exportWriting(){var b=writingBackup(),blob=new Blob([JSON.stringify(b,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Transfer-Writing-Backup-'+isoOf(new Date())+'.json';a.click();setTimeout(function(){URL.revokeObjectURL(url)},1000)}
+
 function renderApps(){
   var box=$('#appsbox');if(!box)return;
   if(!UNLOCKED){$('#appslede').textContent='Entry tracking is an admin tool.';box.innerHTML=lockedPanel('Common App and school questions');return}
   $('#appslede').innerHTML='Enter, update and track every Common App entry and every school question here. Write the words yourself: these boxes organize your drafts, they do not write them. Limits are starting values: set each from your application screenshots.';
-  var tab=S.ui.atab||'common',tabs=[['common','Common App'],['questions','School questions']];
+  var tab=S.ui.atab||'desk',tabs=[['desk','Writing desk'],['common','Common App'],['questions','School questions']];
   var h='<div class="tabs" role="tablist" aria-label="Applications">'+tabs.map(function(t){return '<button type="button" role="tab" class="chip" data-act="atab" data-v="'+t[0]+'" aria-selected="'+(tab===t[0])+'">'+t[1]+'</button>'}).join('')+'</div>';
+  h+='<div class="row"><button class="btn" type="button" data-act="saveWriting">Save online now</button><button class="btn alt" type="button" data-act="exportWriting">Download all writing</button><label class="btn alt" for="writing-import">Restore writing backup<input id="writing-import" type="file" accept="application/json,.json" data-chg="writingImport" style="max-width:200px"></label></div>';
   h+='<div class="legend" id="appssum" style="margin:0 0 18px"></div><p class="stale" id="appsnote" style="margin-bottom:14px">'+esc(appsNote())+'</p>';
-  if(tab==='common'){
+  if(tab==='desk'){h+=writingDeskHTML()}else if(tab==='common'){
     h+=CAPP.map(function(g){return '<div class="sheet panel" style="margin-bottom:18px"><h3>'+esc(g.g)+'</h3><div class="egroup">'+g.items.map(entryHTML).join('')+'</div></div>'}).join('');
   }else{
     var cur=S.ui.aschool&&SCH[S.ui.aschool]?S.ui.aschool:SCHOOLS[0].id;
@@ -1266,7 +1313,7 @@ function flushEntries(){Object.keys(pendingEnt).forEach(function(id){clearTimeou
 var LIBKEY='transfer-ninja-zine.lib.v1',CH_SIZE=60000,PDFJS_VER='3.11.174';
 var LIBS={folders:{},docs:{},ready:false,mode:'none',started:false,err:'',cache:{},status:'',confirm:'',view:'',viewText:'',target:'',paste:{title:'',text:''},local:{chunks:{}}};
 var AG={sample:null,checked:false,busy:false,status:'',draft:'',ctl:null,think:false,limit:0};
-var CHAT=[];
+var CHAT=[];LIBS.paste=S.libraryPaste||LIBS.paste;AG.draft=S.agentDraft||'';
 function rid(p){return p+Date.now().toString(36)+Math.random().toString(36).slice(2,5)}
 function slugId(n){return (String(n).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'folder').slice(0,40)+'-'+Math.random().toString(36).slice(2,5)}
 function libSetStatus(m){LIBS.status=m;var e=$('#lstatus');if(e)e.textContent=m}
@@ -1662,7 +1709,7 @@ function strategyDetails(s){
 function panelStrategy(){
  var a=DATA.strategy||{},id=S.ui.strategySchool||SCHOOLS[0].id;
  var h='<h3>'+SCHOOLS.length+'-school strategy and personal evidence</h3><p>'+esc(a.method||'')+'</p><p class="stale">'+esc(a.inventoryNote||'')+'</p><button class="btn" type="button" data-act="exportStrategy">Download full strategy document (.md)</button> <button class="btn alt" type="button" data-act="copyStrategy">Copy it as text</button><p class="stale" id="stratmsg" role="status"></p><textarea id="strattext" hidden readonly style="min-height:160px"></textarea>';
- h+='<details><summary>Your background, interests and evidence boundaries</summary>'+(a.profile||[]).map(function(p){return '<h4>'+esc(p.title)+'</h4><p>'+esc(p.text)+'</p><p class="stale">'+esc(p.source)+'</p>'}).join('')+'</details>';
+ h+='<details><summary>Your background, interests and evidence boundaries</summary>'+(a.profile||[]).map(function(p){return '<h4>'+esc(p.title)+'</h4><p>'+esc(p.text)+'</p><p class="stale">'+esc(p.source)+'</p><label>My notes and corrections<textarea data-note="profile-'+esc(p.title)+'">'+esc((S.notes||{})['profile-'+p.title]||'')+'</textarea></label>'}).join('')+'</details>';
  h+='<h4>Stats-only ranking, acceptance rates set aside</h4><ol>';
  SCHOOLS.slice().sort(function(x,y){return a.schools[x.id].rank-a.schools[y.id].rank}).forEach(function(s){h+='<li><button type="button" class="chip" data-act="strategySchool" data-v="'+s.id+'">'+esc(s.name)+'</button> '+esc(a.schools[s.id].stat||a.schools[s.id].rankReason)+'</li>'});
  h+='</ol>'+((a.whatMoves||[]).length?'<h4>What would move this order</h4>'+bulletHTML(a.whatMoves):'')+'<div class="chips">'+SCHOOLS.map(function(s){return '<button class="chip" type="button" data-act="strategySchool" data-v="'+s.id+'" aria-pressed="'+(id===s.id)+'">'+esc(s.name)+'</button>'}).join('')+'</div>'+schoolStrategyHTML(id);
@@ -1921,8 +1968,8 @@ document.addEventListener('input',function(e){
   if(t.dataset&&t.dataset.note){S.notes[t.dataset.note]=t.value;save();renderBack()}
   else if(t.dataset&&t.dataset.recap){var r=S.recap[t.dataset.recap]=S.recap[t.dataset.recap]||{};r[t.dataset.f]=t.value;save();renderTutor();renderBack()}
   else if(t.dataset&&t.dataset.ent){entryInput(t)}
-  else if(t.dataset&&t.dataset.lpaste){LIBS.paste[t.dataset.lpaste]=t.value}
-  else if(t.dataset&&t.dataset.agdraft){AG.draft=t.value}
+  else if(t.dataset&&t.dataset.lpaste){LIBS.paste[t.dataset.lpaste]=t.value;S.libraryPaste=LIBS.paste;save()}
+  else if(t.dataset&&t.dataset.agdraft){AG.draft=t.value;S.agentDraft=t.value;save()}
   else if(t.dataset&&t.dataset.lnote){libNoteInput(t.dataset.lnote,t.value)}
   else if(t.id==='vsearch'){S.ui.vq=t.value;save();renderVaultList()}
 });
@@ -1933,6 +1980,8 @@ document.addEventListener('change',function(e){
   else if(c==='check'){if(t.checked)S.check[t.dataset.id]=1;else delete S.check[t.dataset.id]}
   else if(c==='hidedone'){S.ui.hideDone=t.checked}
   else if(c==='sort'){S.ui.sort=t.value}
+  else if(c==='writingImport'){restoreWriting(t.files&&t.files[0]);return}
+  else if(c==='writingDoc'){S.ui.wdoc=t.value;var wd=sprintDocuments().filter(function(x){return x.id===t.value})[0];if(wd)ensureSprintEntry(wd)}
   else if(c==='stats'){S.stats=S.stats||{};S.stats[t.dataset.k]=t.value}
   else if(c==='recg'){recSt().g[t.dataset.i]=t.value}
   else if(c==='recn'){recSt()[t.dataset.k]=t.value}
@@ -1960,6 +2009,8 @@ document.addEventListener('click',function(e){
   else if(a==='opengate'){showGate();return}
   else if(a==='atab'){S.ui.atab=b.dataset.v}
   else if(a==='aschool'){S.ui.aschool=b.dataset.v}
+  else if(a==='saveWriting'){saveWritingNow();return}
+  else if(a==='exportWriting'){exportWriting();return}
   else if(a==='qadd'){saveEntry('q-'+b.dataset.id+'-'+Date.now().toString(36),{kind:'question',school:b.dataset.id,prompt:'',text:'',limit:'',unit:'words',status:'none',created:new Date().toISOString()})}
   else if(a==='qdel'){deleteEntry(b.dataset.id)}
   else if(a==='lfolder'){S.ui.lfolder=b.dataset.v;LIBS.confirm=''}

@@ -75,3 +75,11 @@ After unlocking, every change saves in the browser right away. On Vercel it also
 
 Transcripts, GPA, withdrawals, call debriefs and essay drafts are deliberately not read or embedded.
 The research briefs and the vault do include contact names and call notes, which is why the repo is private.
+
+## November 18 writing desk and save repair
+
+After unlocking, **Apps → Writing desk** has the November 19, 8 p.m. Eastern plan: Cornell ILR, Tufts REAL and Vanderbilt, with Rice as a stretch. Each response has separate notes, a draft, counts and a complete-rough-draft stage. The profile’s background sections now have saved personal notes/corrections. No essay prose is generated or prefilled as the applicant’s work.
+
+Keystrokes now persist immediately, together with revision timestamps. Online saves are debounced separately. Entries and notes sync individually so edits to different essays on different devices do not replace an entire writing collection. Legacy sections migrate. Same-response concurrent edits still use the newest timestamp. Save failures are shown, and **Download all writing** produces a JSON backup with readable Markdown inside; **Restore writing backup** preserves differing current text as separate restored copies. The separate source library retains its existing synchronization.
+
+Validation: `node scripts/test-writing-save.cjs` tests immediate refresh, timestamp persistence, Unicode, two-device merges, deletion tombstones, legacy migration, profile notes and export. Browser QA uses an isolated save store, not production notes.

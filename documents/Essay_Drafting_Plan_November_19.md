@@ -1,0 +1,68 @@
+# Drafting plan: November 19, 2026, 8 p.m. Eastern
+
+Core schools: Cornell ILR, Tufts REAL, Vanderbilt. Stretch: Rice.
+
+Done means every required part is answered in a complete beginning-to-end draft, with [VERIFY] beside missing facts. It does not mean polished or ready to submit. Optional additional-information fields are only needed if they add necessary context.
+
+## Start here
+- For 12 minutes, write messy notes about one real moment: where you were, who needed something, what you did, what changed.
+- Circle the sentence that sounds most like you. Use it to find the story’s center; you do not need a clever hook.
+- Write the middle first: what you did, why, and what you now understand. Draft the opening after that.
+
+## Tonight · 20 min — Scene notes
+Collect one nonprofit mentoring scene and one residence-life or design scene. Record details you remember; mark unknowns.
+
+## Tonight · 60 min — Personal statement
+Draft a true scene, complication, choice, consequence and reflection. Aim around 450–550 words, then check the live character cap.
+
+## Tonight · 45 min — Transfer foundation
+What SCAD gave you → the question it raised → the learning you need next → your objective. Keep this separate from the personal-growth story.
+
+## Tomorrow · 75 min — Cornell ILR
+Draft the 650-word ILR issue essay. Then adapt the transfer foundation to the educational-path statement and its character cap.
+
+## Tomorrow · 60 min — Tufts REAL
+Draft the academic-path/REAL/goals response, then the 450–650-character engagement answer. Only list engagement that actually happened.
+
+## Tomorrow · 60 min — Vanderbilt
+Write the 250-word identity/growth/community response. Tailor the transfer foundation to HOD and your objectives.
+
+## Tomorrow · 60–90 min, only if the first three are complete — Rice stretch
+Reuse the personal statement where appropriate, draft both 150-word answers, and choose ONE 500-word community option. Select the Rice Box image.
+
+## Tomorrow · 6:30–7:30 p.m. — Read and repair
+Check every prompt part, both limits where present, facts, school/degree names and obvious repetition. Read aloud once.
+
+## Tomorrow · 7:30–8 p.m. — Finish and back up
+Mark complete rough drafts. Confirm Saved online, download the writing backup, and leave fact questions visible.
+
+## Personal statement
+An individual change in how you act. The mentoring scene is a candidate if you can tell a specific true moment.
+Scene → what you believed → a complication → your choice → the effect → what changed in you.
+
+## Transfer foundation
+An academic reason to move, with appreciation for what SCAD has given you.
+A real course/project → question about people or institutions → missing academic methods → next learning objective.
+
+## Cornell ILR issue essay
+A question about work, organizations or labor that has become important through experience.
+Observed issue → your responsibility → what you learned → unresolved question → why ILR’s field fits.
+
+## Tufts REAL long response
+The educational path and why an adult/nontraditional route serves a specific academic goal.
+Accurate short timeline → what changed → degree direction → why REAL/Tufts → concrete next goals.
+
+## Vanderbilt community response
+A different scene showing a habit you would bring to a community.
+Background/value → small action → growth → contribution. Avoid retelling the entire personal statement.
+
+## Rice community option A
+Residence-life experience and the perspective you would bring.
+One encounter → what you learned about belonging → a habit you practice → what you would share.
+
+## Finish check
+- Every required prompt part has an answer.
+- Each factual uncertainty is marked [VERIFY].
+- Both character and word limits have been checked where present.
+- Schools and degree names match the intended route.
+- Save indicator confirms the online copy; a writing backup is downloaded.
